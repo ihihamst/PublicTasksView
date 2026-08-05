@@ -122,6 +122,17 @@ body.hide-completed .card.is-done{display:none}
 .card h3{margin:0;font-size:.9rem;font-weight:700;letter-spacing:-.01em;flex:1 1 260px}
 .card.is-done h3{color:var(--green)}
 
+/* Weekly index — fixed per task, independent of sort order or filters. */
+.idx{
+  display:inline-grid;place-items:center;min-width:17px;height:17px;padding:0 4px;
+  margin-right:6px;vertical-align:1px;border-radius:5px;
+  background:var(--indigo);color:#fff;font-size:.68rem;font-weight:800;line-height:1;
+}
+.card.is-done .idx{background:var(--green-mid)}
+.card.is-progress .idx{background:var(--violet)}
+.card.is-low .idx{background:#94a3b8}
+.card.is-high .idx{background:var(--rose)}
+
 .badge{
   font-size:.62rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;
   padding:2px 7px;border-radius:999px;white-space:nowrap;flex:none;

@@ -50,6 +50,7 @@ can edit `tasks.json` in the GitHub web editor and see the result a minute later
       "tasks": [
         {
           "id": "ch-taxi-fare",        // stable kebab-case slug, unique within the file
+          "index": 1,                  // weekly index: 1..n over ALL tasks in the week
           "heading": "Main Heading",   // the task title
           "status": "pending",         // optional: pending | in-progress | done
           "priority": "low",           // optional: high | normal (default) | low
@@ -104,6 +105,13 @@ Nothing below is stored in the JSON; it is all computed at render time.
 - **Status** — an explicit `"status"` wins. Otherwise it is derived from the points: all `done` →
   `done`, some → `progress`, none → `pending`. `statusOf()` is the single source of truth; do not
   re-derive status inline anywhere else.
+- **Weekly index** — `indexWeek()` fills in any missing `index` from the task's position in the week's
+  array, then the badge renders `task.index`. Scope is **the week**, counting pending and completed
+  tasks alike, so a week's tasks read 1..n with no gaps. It is stored data, not a render-time counter,
+  precisely so priority sorting, the status filters, and the hide-completed toggle cannot renumber it
+  (the same reason point numbers use `data-n` instead of a CSS counter). When adding a task to a week,
+  give it the next unused number; when removing one, leave the rest alone rather than renumbering —
+  the numbers are how the owner refers to a task in conversation.
 - **Priority ordering** — `byPriority()` is a *stable* sort: `high` floats up, `low` sinks, and equal
   priorities keep their file order. Applied to the current week, last week, and history alike.
 - **Date trail** — `dateTrail(obj, parent)` renders "Added … · Updated … · Completed …", dropping any

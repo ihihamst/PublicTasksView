@@ -113,6 +113,18 @@
     return PRIO_RANK.hasOwnProperty(p) ? p : 'normal';
   }
 
+  /**
+   * Weekly index: 1..n across every task in the week, pending and completed alike.
+   * Explicit "index" values in the file win; anything missing falls back to file order,
+   * so the number stays fixed no matter how the cards are sorted or filtered on screen.
+   */
+  function indexWeek(week) {
+    (week.tasks || []).forEach(function (t, i) {
+      if (t.index === undefined || t.index === null || t.index === '') t.index = i + 1;
+    });
+    return week;
+  }
+
   /** Keeps the given order, but floats high priority up and sinks low priority down. */
   function byPriority(tasks) {
     return (tasks || []).map(function (t, i) { return { t: t, i: i }; })
@@ -146,7 +158,8 @@
         (prio === 'low' ? ' is-low' : prio === 'high' ? ' is-high' : '') +
         '" data-status="' + st + '" data-priority="' + prio + '">' +
         '<div class="card-head">' +
-          '<h3>' + (st === 'done' ? '✓ ' : '') + esc(task.heading || task.title || 'Untitled task') + '</h3>' +
+          '<h3><span class="idx">' + esc(task.index) + '</span>' +
+            (st === 'done' ? '✓ ' : '') + esc(task.heading || task.title || 'Untitled task') + '</h3>' +
           (PRIO_LABEL[prio] ? '<span class="badge badge-prio-' + prio + '">' + PRIO_LABEL[prio] + '</span>' : '') +
           '<span class="badge badge-' + st + '">' + LABEL[st] + '</span>' +
         '</div>' +
@@ -268,7 +281,7 @@
     document.getElementById('updatedChip').textContent =
       'Updated ' + (meta.lastUpdated ? fmtDate(parseDate(meta.lastUpdated)) || meta.lastUpdated : '—');
 
-    var weeks = (data.weeks || []).slice().sort(function (a, b) {
+    var weeks = (data.weeks || []).map(indexWeek).sort(function (a, b) {
       return String(b.weekStart).localeCompare(String(a.weekStart));
     });
 

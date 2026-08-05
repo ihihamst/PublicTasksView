@@ -35,6 +35,7 @@ The site will be published at `https://<user>.github.io/PublicTasksView/`.
       "tasks": [
         {
           "id": "short-slug",
+          "index": 1,                   // weekly index, 1..n across the whole week
           "heading": "Main Heading",
           "status": "pending",          // optional: pending | in-progress | done
           "priority": "normal",         // optional: high | normal (default) | low
@@ -73,6 +74,11 @@ The site will be published at `https://<user>.github.io/PublicTasksView/`.
 - **Last week** — the next-newest week after the current one. Everything older falls into *Task History*.
 - **Status** — an explicit `"status"` wins. Otherwise it is derived from the bullets: all bullets
   `done` → **Done**, some → **In Progress**, none → **Pending**.
+- **Index** — each task shows a numbered badge. Numbering is **per week** and covers **every** task in
+  that week, pending and completed alike, so the numbers stay 1..n. It comes from the `index` field;
+  if you leave it out, the task's position in the week's `tasks` array is used instead. Because it is
+  data rather than display order, the number does not change when cards are re-sorted by priority,
+  filtered, or hidden by the completed-points toggle.
 - **Priority** — optional. `high` floats a task to the top of its week with a red edge and a **High**
   badge; `low` sinks it to the bottom, muted grey with a **Low** badge. Anything else keeps the order
   it has in the file and shows no priority badge.

@@ -13,6 +13,7 @@
       "tasks": [
         {
           "id": "ch-taxi-fare",
+          "index": 1,
           "heading": "CH Taxi - Fare Not calculating properly",
           "status": "pending",
           "addedDate": "2026-08-03",
@@ -39,6 +40,7 @@
         },
         {
           "id": "silverride-affiliate-merger",
+          "index": 2,
           "heading": "SilverRide 3 affiliates into 1 Affiliate Merger (SR - Element PACE & SR - Harbor Health Boston into SR - Boston PACE)",
           "status": "pending",
           "addedDate": "2026-08-03",
@@ -57,6 +59,7 @@
         },
         {
           "id": "account-based-zone-changes",
+          "index": 3,
           "heading": "Account based Zone Changes",
           "status": "pending",
           "addedDate": "2026-08-03",
@@ -83,6 +86,7 @@
         },
         {
           "id": "sts-migration-allegany",
+          "index": 4,
           "heading": "STS Migration to Allegany",
           "status": "pending",
           "addedDate": "2026-08-03",
@@ -117,6 +121,7 @@
         },
         {
           "id": "send-trip-update-to-device",
+          "index": 5,
           "heading": "SendTripUpdateToDevice (move implementation from Inload API to Separate Utility)",
           "status": "pending",
           "addedDate": "2026-08-03",
@@ -159,6 +164,7 @@
         },
         {
           "id": "silverride-sf-bay-pricing",
+          "index": 6,
           "heading": "SilverRide SF Bay area pricing",
           "status": "pending",
           "addedDate": "2026-08-03",
@@ -185,6 +191,7 @@
         },
         {
           "id": "annapolis-stations-rcz-sync",
+          "index": 7,
           "heading": "Annapolis Stations and RCZ Syncing",
           "status": "pending",
           "priority": "low",
