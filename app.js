@@ -77,10 +77,29 @@
 
   var LABEL = { done: 'Done', pending: 'Pending', progress: 'In Progress' };
 
+  var PRIO_LABEL = { high: 'High', low: 'Low' };
+  var PRIO_RANK = { high: 0, normal: 1, low: 2 };
+
+  function priorityOf(task) {
+    var p = String(task.priority || 'normal').toLowerCase();
+    return PRIO_RANK.hasOwnProperty(p) ? p : 'normal';
+  }
+
+  /** Keeps the given order, but floats high priority up and sinks low priority down. */
+  function byPriority(tasks) {
+    return (tasks || []).map(function (t, i) { return { t: t, i: i }; })
+      .sort(function (a, b) {
+        var d = PRIO_RANK[priorityOf(a.t)] - PRIO_RANK[priorityOf(b.t)];
+        return d !== 0 ? d : a.i - b.i;
+      })
+      .map(function (x) { return x.t; });
+  }
+
   /* ---------------- rendering ---------------- */
 
   function taskCard(task) {
     var st = statusOf(task);
+    var prio = priorityOf(task);
     var done = doneCount(task), total = totalCount(task);
     var pct = total ? Math.round((done / total) * 100) : 0;
 
@@ -93,9 +112,12 @@
     }).join('');
 
     return '' +
-      '<article class="card ' + (st === 'done' ? 'is-done' : st === 'progress' ? 'is-progress' : '') + '" data-status="' + st + '">' +
+      '<article class="card ' + (st === 'done' ? 'is-done' : st === 'progress' ? 'is-progress' : '') +
+        (prio === 'low' ? ' is-low' : prio === 'high' ? ' is-high' : '') +
+        '" data-status="' + st + '" data-priority="' + prio + '">' +
         '<div class="card-head">' +
           '<h3>' + (st === 'done' ? '✓ ' : '') + esc(task.heading || task.title || 'Untitled task') + '</h3>' +
+          (PRIO_LABEL[prio] ? '<span class="badge badge-prio-' + prio + '">' + PRIO_LABEL[prio] + '</span>' : '') +
           '<span class="badge badge-' + st + '">' + LABEL[st] + '</span>' +
         '</div>' +
         (items ? '<ol class="items">' + items + '</ol>' : '') +
@@ -111,7 +133,7 @@
       container.innerHTML = '<div class="empty">' + esc(emptyMsg) + '</div>';
       return;
     }
-    container.innerHTML = tasks.map(taskCard).join('');
+    container.innerHTML = byPriority(tasks).map(taskCard).join('');
   }
 
   function renderStats(tasks) {
@@ -156,7 +178,7 @@
           '<span class="pill' + (allDone ? ' all-done' : '') + '">' + done + '/' + tasks.length + ' done</span>' +
         '</summary>' +
         '<div class="week-body">' +
-          (tasks.length ? tasks.map(taskCard).join('') : '<div class="empty">No tasks recorded for this week.</div>') +
+          (tasks.length ? byPriority(tasks).map(taskCard).join('') : '<div class="empty">No tasks recorded for this week.</div>') +
         '</div>' +
       '</details>';
     }).join('');

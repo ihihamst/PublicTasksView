@@ -37,6 +37,7 @@ The site will be published at `https://<user>.github.io/PublicTasksView/`.
           "id": "short-slug",
           "heading": "Main Heading",
           "status": "pending",          // optional: pending | in-progress | done
+          "priority": "normal",         // optional: high | normal (default) | low
           "items": [
             { "text": "Bullet point 1", "done": true,  "notes": "" },
             { "text": "Bullet point 2", "done": false, "notes": "ABC def" }
@@ -55,6 +56,9 @@ The site will be published at `https://<user>.github.io/PublicTasksView/`.
 - **Last week** — the next-newest week after the current one. Everything older falls into *Task History*.
 - **Status** — an explicit `"status"` wins. Otherwise it is derived from the bullets: all bullets
   `done` → **Done**, some → **In Progress**, none → **Pending**.
+- **Priority** — optional. `high` floats a task to the top of its week with a red edge and a **High**
+  badge; `low` sinks it to the bottom, muted grey with a **Low** badge. Anything else keeps the order
+  it has in the file and shows no priority badge.
 - **Done styling** — done tasks and done bullets render in green with a ✓ tick.
 - **Notes** — use the `notes` field, or write them inline as `Bullet point 2 (notes: ABC def)`; both
   render as a highlighted note under the bullet.

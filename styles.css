@@ -122,6 +122,13 @@ body{
 .badge-done{background:var(--green-soft);color:var(--green);border:1px solid var(--green-line)}
 .badge-pending{background:var(--amber-soft);color:var(--amber);border:1px solid var(--amber-line)}
 .badge-progress{background:#f5f3ff;color:var(--violet);border:1px solid #ddd6fe}
+.badge-prio-low{background:#f1f5f9;color:#64748b;border:1px solid #e2e8f0}
+.badge-prio-high{background:#fff1f2;color:var(--rose);border:1px solid #fecdd3}
+
+/* Low priority sits quieter; high priority gets a warmer edge. */
+.card.is-low{border-left-color:#94a3b8;background:#fcfcfd}
+.card.is-low h3{color:var(--ink-2);font-weight:600}
+.card.is-high{border-left-color:var(--rose)}
 
 .items{list-style:none;margin:4px 0 0;padding:0;counter-reset:item}
 .items li{

@@ -117,6 +117,19 @@
               "notes": "Table Route Surcharge [Polygon Coordinates, Percentage Route Covered, Surcharge Amount]"
             }
           ]
+        },
+        {
+          "id": "annapolis-stations-rcz-sync",
+          "heading": "Annapolis Stations and RCZ Syncing",
+          "status": "pending",
+          "priority": "low",
+          "items": [
+            {
+              "text": "Annapolis needs Stations and RCZ syncing enabled via old path.",
+              "done": false,
+              "notes": ""
+            }
+          ]
         }
       ]
     }
