@@ -163,8 +163,18 @@
           ]
         },
         {
-          "id": "silverride-sf-bay-pricing",
+          "id": "auto-oara-dotnet-core",
           "index": 6,
+          "heading": "Convert Auto Oara to .net Core Stand Alone Service",
+          "status": "pending",
+          "addedDate": "2026-08-05",
+          "modifiedDate": "2026-08-05",
+          "completedDate": null,
+          "items": []
+        },
+        {
+          "id": "silverride-sf-bay-pricing",
+          "index": 7,
           "heading": "SilverRide SF Bay area pricing",
           "status": "pending",
           "addedDate": "2026-08-03",
@@ -191,7 +201,7 @@
         },
         {
           "id": "annapolis-stations-rcz-sync",
-          "index": 7,
+          "index": 8,
           "heading": "Annapolis Stations and RCZ Syncing",
           "status": "pending",
           "priority": "low",
