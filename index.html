@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tasks Assignment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%E2%9C%85</text></svg>">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <span class="brand-mark">✔</span>
+      <div>
+        <h1 id="siteTitle">Tasks Assignment</h1>
+        <p class="brand-sub" id="siteSub">Weekly task board</p>
+      </div>
+    </div>
+    <div class="header-meta">
+      <span class="chip chip-week" id="weekRangeChip">—</span>
+      <span class="chip chip-muted" id="updatedChip">—</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- Summary -->
+  <section class="stats" id="stats" aria-label="Current week summary"></section>
+
+  <!-- Current week -->
+  <section class="block" id="currentWeekBlock">
+    <div class="block-head">
+      <h2><span class="accent-bar bar-current"></span>Current Week</h2>
+      <span class="range" id="currentRange"></span>
+    </div>
+
+    <div class="filters" role="tablist" aria-label="Filter tasks">
+      <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="filter" data-filter="pending" role="tab" aria-selected="false">Pending</button>
+      <button class="filter" data-filter="done" role="tab" aria-selected="false">Done</button>
+    </div>
+
+    <div class="cards" id="currentTasks"></div>
+  </section>
+
+  <!-- Last week -->
+  <section class="block" id="lastWeekBlock">
+    <div class="block-head">
+      <h2><span class="accent-bar bar-last"></span>Last Week</h2>
+      <span class="range" id="lastRange"></span>
+    </div>
+    <div class="cards" id="lastTasks"></div>
+  </section>
+
+  <!-- History -->
+  <section class="block" id="historyBlock">
+    <div class="block-head">
+      <h2><span class="accent-bar bar-history"></span>Task History</h2>
+      <span class="range" id="historyCount"></span>
+    </div>
+    <p class="block-note">All past weeks, newest first. Click a week to expand.</p>
+    <div class="history" id="history"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Task data is maintained in <code>tasks.json</code> — the full, all-time history.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
