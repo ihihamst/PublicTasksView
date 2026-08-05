@@ -38,9 +38,26 @@ The site will be published at `https://<user>.github.io/PublicTasksView/`.
           "heading": "Main Heading",
           "status": "pending",          // optional: pending | in-progress | done
           "priority": "normal",         // optional: high | normal (default) | low
+          "addedDate": "2026-08-03",
+          "modifiedDate": "2026-08-05",
+          "completedDate": null,        // null until finished
           "items": [
-            { "text": "Bullet point 1", "done": true,  "notes": "" },
-            { "text": "Bullet point 2", "done": false, "notes": "ABC def" }
+            {
+              "text": "Bullet point 1",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-05",
+              "completedDate": "2026-08-05"
+            },
+            {
+              "text": "Bullet point 2",
+              "done": false,
+              "notes": "ABC def",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            }
           ]
         }
       ]
@@ -62,6 +79,17 @@ The site will be published at `https://<user>.github.io/PublicTasksView/`.
 - **Done styling** — done tasks and done bullets render in green with a ✓ tick.
 - **Notes** — use the `notes` field, or write them inline as `Bullet point 2 (notes: ABC def)`; both
   render as a highlighted note under the bullet.
+- **Dates** — every task *and* every bullet carries `addedDate`, `modifiedDate` and `completedDate`
+  (`YYYY-MM-DD`, or `null` for a completion that hasn't happened). They render as a small grey trail
+  under the heading/bullet. A bullet's date is hidden when it just repeats its task's date, so only
+  genuinely new information shows. Set `addedDate` once, bump `modifiedDate` on every edit (both on
+  the bullet and its parent task), and fill `completedDate` when something is marked done.
+
+### Header controls
+
+- **Show completed points** — a checkbox in the top header. Unchecking it hides every completed bullet
+  and any fully completed task, leaving only outstanding work on screen. The choice is remembered in
+  the browser. Clicking the **Done** filter turns it back on, since otherwise there'd be nothing to see.
 
 ## Adding a new week
 

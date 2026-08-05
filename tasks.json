@@ -15,16 +15,25 @@
           "id": "ch-taxi-fare",
           "heading": "CH Taxi - Fare Not calculating properly",
           "status": "pending",
+          "addedDate": "2026-08-03",
+          "modifiedDate": "2026-08-05",
+          "completedDate": null,
           "items": [
             {
               "text": "For CH Taxi FS = API Global Solutions, Fare zone is not getting computed properly.",
               "done": true,
-              "notes": "Fix: Entry was missed in dtl_AffiliateClassOfService table, due to which for this FS, fare zone were not computing."
+              "notes": "Fix: Entry was missed in dtl_AffiliateClassOfService table, due to which for this FS, fare zone were not computing.",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-05",
+              "completedDate": "2026-08-05"
             },
             {
               "text": "Write a script which inserts a missing entry in dtl_AffiliateClassofService table, if entry for FS or COS is missing in this table for a given affiliate.",
               "done": false,
-              "notes": ""
+              "notes": "",
+              "addedDate": "2026-08-05",
+              "modifiedDate": "2026-08-05",
+              "completedDate": null
             }
           ]
         },
@@ -32,11 +41,17 @@
           "id": "silverride-affiliate-merger",
           "heading": "SilverRide 3 affiliates into 1 Affiliate Merger (SR - Element PACE & SR - Harbor Health Boston into SR - Boston PACE)",
           "status": "pending",
+          "addedDate": "2026-08-03",
+          "modifiedDate": "2026-08-03",
+          "completedDate": null,
           "items": [
             {
               "text": "Write merger script",
               "done": false,
-              "notes": ""
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
             }
           ]
         },
@@ -44,16 +59,25 @@
           "id": "account-based-zone-changes",
           "heading": "Account based Zone Changes",
           "status": "pending",
+          "addedDate": "2026-08-03",
+          "modifiedDate": "2026-08-03",
+          "completedDate": null,
           "items": [
             {
               "text": "Deploy releases on STS.",
               "done": false,
-              "notes": ""
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
             },
             {
               "text": "Create a Account based Zone (setup on STS), verify on call taker that account based zone is getting applied.",
               "done": false,
-              "notes": ""
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
             }
           ]
         },
@@ -61,21 +85,33 @@
           "id": "sts-migration-allegany",
           "heading": "STS Migration to Allegany",
           "status": "pending",
+          "addedDate": "2026-08-03",
+          "modifiedDate": "2026-08-03",
+          "completedDate": null,
           "items": [
             {
               "text": "Deploy and verify latest release changes on Allegany/Cat staging server. All Allegany/Cat existing business flow should work.",
               "done": false,
-              "notes": ""
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
             },
             {
               "text": "Deploy and verify latest release changes on Annapolis staging server. All Annapolis existing business flow should work.",
               "done": false,
-              "notes": ""
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
             },
             {
               "text": "Prepare migration utility to migrate the STS data into Allegany/Cat server.",
               "done": false,
-              "notes": ""
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
             }
           ]
         },
@@ -83,26 +119,41 @@
           "id": "send-trip-update-to-device",
           "heading": "SendTripUpdateToDevice (move implementation from Inload API to Separate Utility)",
           "status": "pending",
+          "addedDate": "2026-08-03",
+          "modifiedDate": "2026-08-03",
+          "completedDate": null,
           "items": [
             {
               "text": "Migrate the existing utility into .net core service/console.",
               "done": false,
-              "notes": ""
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
             },
             {
               "text": "Move the code of SendTripUpdateToDevice to this utility with timer configuration. Also optimize its code.",
               "done": false,
-              "notes": ""
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
             },
             {
               "text": "Implement new udp layer to register/send the udp messages",
               "done": false,
-              "notes": ""
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
             },
             {
               "text": "Implement file based logging in it.",
               "done": false,
-              "notes": ""
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
             }
           ]
         },
@@ -110,16 +161,25 @@
           "id": "silverride-sf-bay-pricing",
           "heading": "SilverRide SF Bay area pricing",
           "status": "pending",
+          "addedDate": "2026-08-03",
+          "modifiedDate": "2026-08-03",
+          "completedDate": null,
           "items": [
             {
               "text": "We need to add new zones (City/County) & (Peninsula [areas between two cities])",
               "done": false,
-              "notes": ""
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
             },
             {
               "text": "Route Surcharge (if trip covers a route (stored as polygons) defined percentage, then apply surcharge)",
               "done": false,
-              "notes": "Table Route Surcharge [Polygon Coordinates, Percentage Route Covered, Surcharge Amount]"
+              "notes": "Table Route Surcharge [Polygon Coordinates, Percentage Route Covered, Surcharge Amount]",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
             }
           ]
         },
@@ -128,11 +188,17 @@
           "heading": "Annapolis Stations and RCZ Syncing",
           "status": "pending",
           "priority": "low",
+          "addedDate": "2026-08-05",
+          "modifiedDate": "2026-08-05",
+          "completedDate": null,
           "items": [
             {
               "text": "Annapolis needs Stations and RCZ syncing enabled via old path.",
               "done": false,
-              "notes": ""
+              "notes": "",
+              "addedDate": "2026-08-05",
+              "modifiedDate": "2026-08-05",
+              "completedDate": null
             }
           ]
         }

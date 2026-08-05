@@ -22,6 +22,34 @@
     return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   }
 
+  /** Short form used in the date trail: "Aug 5" (year only when it isn't the current one). */
+  function fmtShort(s) {
+    var d = parseDate(s);
+    if (!d) return '';
+    var opts = d.getFullYear() === new Date().getFullYear()
+      ? { month: 'short', day: 'numeric' }
+      : { month: 'short', day: 'numeric', year: 'numeric' };
+    return d.toLocaleDateString('en-US', opts);
+  }
+
+  /**
+   * "Added … · Updated … · Completed …". Each part is dropped when it carries no new
+   * information — so a bullet added with its task, and never touched since, shows nothing.
+   */
+  function dateTrail(obj, parent) {
+    var added = fmtShort(obj.addedDate);
+    var mod = fmtShort(obj.modifiedDate);
+    var comp = fmtShort(obj.completedDate);
+    var pAdded = parent ? fmtShort(parent.addedDate) : '';
+    var pMod = parent ? fmtShort(parent.modifiedDate) : '';
+
+    var parts = [];
+    if (added && added !== pAdded) parts.push('<span>Added <b>' + added + '</b></span>');
+    if (mod && mod !== added && mod !== pMod) parts.push('<span>Updated <b>' + mod + '</b></span>');
+    if (comp) parts.push('<span class="t-done">Completed <b>' + comp + '</b></span>');
+    return parts.length ? '<div class="dates">' + parts.join('') + '</div>' : '';
+  }
+
   function fmtRange(week) {
     var s = parseDate(week.weekStart), e = parseDate(week.weekEnd);
     if (s && e) {
@@ -103,11 +131,13 @@
     var done = doneCount(task), total = totalCount(task);
     var pct = total ? Math.round((done / total) * 100) : 0;
 
-    var items = (task.items || []).map(function (item) {
+    // Numbers come from the data, not a CSS counter: hiding completed points must not renumber the rest.
+    var items = (task.items || []).map(function (item, i) {
       var parts = splitNotes(item);
       var isDone = st === 'done' ? true : !!item.done;
-      return '<li class="' + (isDone ? 'done' : '') + '">' + esc(parts.text) +
+      return '<li class="' + (isDone ? 'done' : '') + '" data-n="' + (i + 1) + '.">' + esc(parts.text) +
         (parts.notes ? '<span class="notes"><b>Notes:</b> ' + esc(parts.notes) + '</span>' : '') +
+        dateTrail(item, task) +
         '</li>';
     }).join('');
 
@@ -120,6 +150,7 @@
           (PRIO_LABEL[prio] ? '<span class="badge badge-prio-' + prio + '">' + PRIO_LABEL[prio] + '</span>' : '') +
           '<span class="badge badge-' + st + '">' + LABEL[st] + '</span>' +
         '</div>' +
+        dateTrail(task) +
         (items ? '<ol class="items">' + items + '</ol>' : '') +
         ((task.items || []).length > 1
           ? '<div class="progress-mini"><div class="bar"><span style="width:' + pct + '%"></span></div>' +
@@ -184,6 +215,22 @@
     }).join('');
   }
 
+  var STORE_KEY = 'tasksview:showCompleted';
+
+  function applyShowCompleted(show) {
+    document.body.classList.toggle('hide-completed', !show);
+    try { localStorage.setItem(STORE_KEY, show ? '1' : '0'); } catch (e) { /* private mode */ }
+  }
+
+  function wireCompletedToggle() {
+    var box = document.getElementById('toggleCompleted');
+    var saved = null;
+    try { saved = localStorage.getItem(STORE_KEY); } catch (e) { /* private mode */ }
+    if (saved !== null) box.checked = saved === '1';
+    applyShowCompleted(box.checked);
+    box.addEventListener('change', function () { applyShowCompleted(box.checked); });
+  }
+
   function wireFilters() {
     var buttons = [].slice.call(document.querySelectorAll('.filter'));
     buttons.forEach(function (btn) {
@@ -194,6 +241,11 @@
           b.setAttribute('aria-selected', on ? 'true' : 'false');
         });
         var f = btn.dataset.filter;
+        // Asking for Done while completed work is hidden would show nothing — reveal it.
+        if (f === 'done') {
+          var box = document.getElementById('toggleCompleted');
+          if (!box.checked) { box.checked = true; applyShowCompleted(true); }
+        }
         [].slice.call(document.querySelectorAll('#currentTasks .card')).forEach(function (card) {
           var st = card.dataset.status;
           // "pending" also surfaces partially-complete work.
@@ -250,6 +302,7 @@
     renderTasks(document.getElementById('lastTasks'), last && last.tasks,
       last ? 'No tasks recorded for last week.' : 'No previous week recorded yet.');
     renderHistory(history);
+    wireCompletedToggle();
     wireFilters();
   }
 
