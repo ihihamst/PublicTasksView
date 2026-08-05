@@ -18,6 +18,11 @@
           "items": [
             {
               "text": "For CH Taxi FS = API Global Solutions, Fare zone is not getting computed properly.",
+              "done": true,
+              "notes": ""
+            },
+            {
+              "text": "Write a script which inserts a missing entry in dtl_AffiliateClassofService table, if entry for FS or COS is missing in this table for a given affiliate.",
               "done": false,
               "notes": ""
             }
