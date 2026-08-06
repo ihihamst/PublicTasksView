@@ -40,6 +40,7 @@ can edit `tasks.json` in the GitHub web editor and see the result a minute later
     "title": "Tasks Assignment",       // page <title> and header text
     "owner": "ihihamst",               // shown in the header subtitle
     "weekStartsOn": "monday",          // documentation only; not read by the code
+    "timezone": "Asia/Karachi (PKT, UTC+05:00)",  // shown in the footer; see §3.1
     "lastUpdated": "2026-08-05"        // shown as the "Updated …" chip — bump on every edit
   },
   "weeks": [                           // any order; the page sorts by weekStart descending
@@ -82,8 +83,29 @@ can edit `tasks.json` in the GitHub web editor and see the result a minute later
 | `modifiedDate` | last time its text, notes, or done state changed | bump on **every** edit to that object |
 | `completedDate` | the day it was finished | set when `done` flips to `true`; `null` otherwise |
 
-All dates are plain `YYYY-MM-DD` strings (no times, no timezones — the renderer parses them as local
-dates, so a bare `new Date("2026-08-03")` UTC-shift bug is avoided).
+### Timezone — **PKT for everything**
+
+**Every date and time in this repository is Pakistan Time (PKT, UTC+05:00).** Declared once in
+`meta.timezone` and shown in the page footer. There is no per-entry timezone.
+
+Two accepted formats, both fine to mix in the same file:
+
+| Format | Example | Use when |
+| --- | --- | --- |
+| Date only | `"2026-08-03"` | the time of day isn't worth recording |
+| Date + time | `"2026-08-05T15:00:00+05:00"` | the exact moment matters |
+
+Always write the `+05:00` offset on a timestamp. A time without an offset is *read* as PKT wall time
+so nothing breaks, but the explicit offset keeps the file unambiguous to other tools.
+
+`parseStamp()` in `app.js` converts any of these to PKT wall-clock parts and formats them as
+`Aug 5, 3:00 PM PKT`. It deliberately does **not** use the viewer's local timezone — someone opening
+the page from another country still sees PKT. Verified by rendering under `America/Los_Angeles`.
+Never replace this with `new Date(str).toLocaleString()`; that would shift every timestamp to the
+reader's zone and silently break the convention.
+
+Date-only values are never treated as midnight in some other zone — bare `YYYY-MM-DD` is parsed
+field-by-field, which is why the usual `new Date("2026-08-03")` UTC-shift bug can't occur here.
 
 Propagation rules an editor must follow:
 

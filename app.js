@@ -22,14 +22,55 @@
     return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   }
 
-  /** Short form used in the date trail: "Aug 5" (year only when it isn't the current one). */
+  /* Every timestamp in this repository is Pakistan Time (PKT, UTC+05:00), and is displayed
+     as PKT regardless of where the page is being viewed from. */
+  var PKT_OFFSET_MIN = 5 * 60;
+  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+  /**
+   * Accepts "YYYY-MM-DD" or "YYYY-MM-DDTHH:MM[:SS][±HH:MM|Z]" and returns the wall-clock
+   * parts in PKT. A bare date has no time; a time without an offset is read as PKT already.
+   */
+  function parseStamp(s) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})(?:[T ](\d{2}):(\d{2})(?::(\d{2}))?)?\s*(Z|[+-]\d{2}:?\d{2})?$/
+      .exec(String(s == null ? '' : s).trim());
+    if (!m) return null;
+    if (m[4] === undefined) {
+      return { y: +m[1], mo: +m[2], d: +m[3], hasTime: false };
+    }
+    var utcMs = Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4], +m[5], +(m[6] || 0));
+    var off = m[7];
+    if (off && off !== 'Z') {
+      var sign = off.charAt(0) === '-' ? -1 : 1;
+      utcMs -= sign * (parseInt(off.substr(1, 2), 10) * 60 + parseInt(off.slice(-2), 10)) * 60000;
+    } else if (!off) {
+      utcMs -= PKT_OFFSET_MIN * 60000;   // no offset given: the value was already PKT wall time
+    }
+    var p = new Date(utcMs + PKT_OFFSET_MIN * 60000);
+    return {
+      y: p.getUTCFullYear(), mo: p.getUTCMonth() + 1, d: p.getUTCDate(),
+      h: p.getUTCHours(), mi: p.getUTCMinutes(), hasTime: true
+    };
+  }
+
+  /** Short form for the date trail: "Aug 5", or "Aug 5, 3:00 PM PKT" when a time is recorded. */
   function fmtShort(s) {
-    var d = parseDate(s);
-    if (!d) return '';
-    var opts = d.getFullYear() === new Date().getFullYear()
-      ? { month: 'short', day: 'numeric' }
-      : { month: 'short', day: 'numeric', year: 'numeric' };
-    return d.toLocaleDateString('en-US', opts);
+    var p = parseStamp(s);
+    if (!p) return '';
+    var out = MONTHS[p.mo - 1] + ' ' + p.d;
+    if (p.y !== new Date().getFullYear()) out += ', ' + p.y;
+    if (p.hasTime) {
+      var h12 = p.h % 12 === 0 ? 12 : p.h % 12;
+      out += ', ' + h12 + ':' + (p.mi < 10 ? '0' : '') + p.mi + ' ' + (p.h < 12 ? 'AM' : 'PM') + ' PKT';
+    }
+    return out;
+  }
+
+  /** Same instant, ignoring any time — used to tell "new information" from "same day". */
+  function dayOf(s) {
+    var p = parseStamp(s);
+    return p ? p.y + '-' + p.mo + '-' + p.d : '';
   }
 
   /**
@@ -40,12 +81,14 @@
     var added = fmtShort(obj.addedDate);
     var mod = fmtShort(obj.modifiedDate);
     var comp = fmtShort(obj.completedDate);
-    var pAdded = parent ? fmtShort(parent.addedDate) : '';
-    var pMod = parent ? fmtShort(parent.modifiedDate) : '';
+    // Suppression compares calendar days, so a timestamp and a bare date on the same day match.
+    var day = dayOf, added_ = day(obj.addedDate), mod_ = day(obj.modifiedDate);
+    var pAdded = parent ? day(parent.addedDate) : '';
+    var pMod = parent ? day(parent.modifiedDate) : '';
 
     var parts = [];
-    if (added && added !== pAdded) parts.push('<span>Added <b>' + added + '</b></span>');
-    if (mod && mod !== added && mod !== pMod) parts.push('<span>Updated <b>' + mod + '</b></span>');
+    if (added && added_ !== pAdded) parts.push('<span>Added <b>' + added + '</b></span>');
+    if (mod && mod_ !== added_ && mod_ !== pMod) parts.push('<span>Updated <b>' + mod + '</b></span>');
     if (comp) parts.push('<span class="t-done">Completed <b>' + comp + '</b></span>');
     return parts.length ? '<div class="dates">' + parts.join('') + '</div>' : '';
   }
@@ -278,6 +321,7 @@
       document.title = meta.title;
     }
     if (meta.owner) document.getElementById('siteSub').textContent = 'Weekly task board · ' + meta.owner;
+    if (meta.timezone) document.getElementById('tzNote').textContent = meta.timezone;
     document.getElementById('updatedChip').textContent =
       'Updated ' + (meta.lastUpdated ? fmtDate(parseDate(meta.lastUpdated)) || meta.lastUpdated : '—');
 

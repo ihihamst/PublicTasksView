@@ -85,8 +85,12 @@ The site will be published at `https://<user>.github.io/PublicTasksView/`.
 - **Done styling** — done tasks and done bullets render in green with a ✓ tick.
 - **Notes** — use the `notes` field, or write them inline as `Bullet point 2 (notes: ABC def)`; both
   render as a highlighted note under the bullet.
+- **Timezone** — **all dates and times in this repo are Pakistan Time (PKT, UTC+05:00)**, declared in
+  `meta.timezone` and shown in the footer. Write either a plain date (`"2026-08-05"`) or a full
+  timestamp with the offset (`"2026-08-05T15:00:00+05:00"`); timestamps render as `Aug 5, 3:00 PM PKT`
+  and stay PKT even for a reader in another country.
 - **Dates** — every task *and* every bullet carries `addedDate`, `modifiedDate` and `completedDate`
-  (`YYYY-MM-DD`, or `null` for a completion that hasn't happened). They render as a small grey trail
+  (date or timestamp, or `null` for a completion that hasn't happened). They render as a small grey trail
   under the heading/bullet. A bullet's date is hidden when it just repeats its task's date, so only
   genuinely new information shows. Set `addedDate` once, bump `modifiedDate` on every edit (both on
   the bullet and its parent task), and fill `completedDate` when something is marked done.
