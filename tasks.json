@@ -3,7 +3,7 @@
     "title": "Tasks Assignment",
     "owner": "ihihamst",
     "weekStartsOn": "monday",
-    "lastUpdated": "2026-08-05",
+    "lastUpdated": "2026-08-06",
     "timezone": "Asia/Karachi (PKT, UTC+05:00)"
   },
   "weeks": [
@@ -216,6 +216,25 @@
               "notes": "",
               "addedDate": "2026-08-05",
               "modifiedDate": "2026-08-05",
+              "completedDate": null
+            }
+          ]
+        },
+        {
+          "id": "rider-id-on-driver-tablet",
+          "index": 9,
+          "heading": "Drivers need to be able to see the rider's Rider ID on their tablets",
+          "status": "in-progress",
+          "addedDate": "2026-08-06",
+          "modifiedDate": "2026-08-06",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "Add rider ID to all sp's (AdditonalDeviceParameters) which communicates with driver",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-06",
+              "modifiedDate": "2026-08-06",
               "completedDate": null
             }
           ]
