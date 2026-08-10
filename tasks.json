@@ -238,6 +238,33 @@
               "completedDate": null
             }
           ]
+        },
+        {
+          "id": "additional-device-params-riderid-windows",
+          "index": 10,
+          "heading": "Add RiderID and pickup/drop time windows to AdditionalDeviceParameters JSON",
+          "status": "done",
+          "addedDate": "2026-08-06",
+          "modifiedDate": "2026-08-06",
+          "completedDate": "2026-08-06",
+          "items": [
+            {
+              "text": "Add RiderID and pickup/drop time windows to AdditionalDeviceParameters JSON so that they become available on the driver app.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-06",
+              "modifiedDate": "2026-08-06",
+              "completedDate": "2026-08-06"
+            },
+            {
+              "text": "Worked on the recording of the window from Routing algorithm.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-06",
+              "modifiedDate": "2026-08-06",
+              "completedDate": "2026-08-06"
+            }
+          ]
         }
       ]
     }
