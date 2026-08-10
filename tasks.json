@@ -172,6 +172,25 @@
               "completedDate": null
             }
           ]
+        },
+        {
+          "id": "water-taxi-cancel-state-not-synced-ol",
+          "index": 7,
+          "heading": "Water Taxi - Trip cancelled state not synced to OL",
+          "status": "pending",
+          "addedDate": "2026-08-10",
+          "modifiedDate": "2026-08-10",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "For Confirmation No. 1780034693 (WaterTaxi Microtransit, Service ID 4662746, due 8/9/2026 12:55:00PM), trip state (Cancelled) was not synced to OL. Service Status in IL is CancelledARQ.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-10",
+              "modifiedDate": "2026-08-10",
+              "completedDate": null
+            }
+          ]
         }
       ]
     },

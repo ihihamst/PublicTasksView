@@ -61,6 +61,12 @@ Status: **pending** · Priority: **low** · Added 2026-08-05 · Updated 2026-08-
 - [ ] Annapolis needs Stations and RCZ syncing enabled via old path.
   - _Updated 2026-08-05_
 
+### 7. [ ] Water Taxi - Trip cancelled state not synced to OL
+
+Status: **pending** · Added 2026-08-10 · Updated 2026-08-10
+
+- [ ] For Confirmation No. 1780034693 (WaterTaxi Microtransit, Service ID 4662746, due 8/9/2026 12:55:00PM), trip state (Cancelled) was not synced to OL. Service Status in IL is CancelledARQ.
+
 ## Week 2026-08-03 → 2026-08-09
 
 ### 1. [x] CH Taxi - Fare Not calculating properly
