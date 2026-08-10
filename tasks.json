@@ -10,7 +10,170 @@
     {
       "weekStart": "2026-08-10",
       "weekEnd": "2026-08-16",
-      "tasks": []
+      "tasks": [
+        {
+          "id": "account-based-zone-changes",
+          "index": 1,
+          "heading": "Account based Zone Changes",
+          "status": "pending",
+          "addedDate": "2026-08-03",
+          "modifiedDate": "2026-08-10",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "Deploy releases on STS.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            },
+            {
+              "text": "Create a Account based Zone (setup on STS), verify on call taker that account based zone is getting applied.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            }
+          ]
+        },
+        {
+          "id": "sts-migration-allegany",
+          "index": 2,
+          "heading": "STS Migration to Allegany",
+          "status": "pending",
+          "addedDate": "2026-08-03",
+          "modifiedDate": "2026-08-10",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "Deploy and verify latest release changes on Allegany/Cat staging server. All Allegany/Cat existing business flow should work.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            },
+            {
+              "text": "Deploy and verify latest release changes on Annapolis staging server. All Annapolis existing business flow should work.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            },
+            {
+              "text": "Prepare migration utility to migrate the STS data into Allegany/Cat server.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            }
+          ]
+        },
+        {
+          "id": "send-trip-update-to-device",
+          "index": 3,
+          "heading": "SendTripUpdateToDevice (move implementation from Inload API to Separate Utility)",
+          "status": "pending",
+          "addedDate": "2026-08-03",
+          "modifiedDate": "2026-08-10",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "Migrate the existing utility into .net core service/console.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            },
+            {
+              "text": "Move the code of SendTripUpdateToDevice to this utility with timer configuration. Also optimize its code.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            },
+            {
+              "text": "Implement new udp layer to register/send the udp messages",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            },
+            {
+              "text": "Implement file based logging in it.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            }
+          ]
+        },
+        {
+          "id": "auto-oara-dotnet-core",
+          "index": 4,
+          "heading": "Convert Auto Oara to .net Core Stand Alone Service",
+          "status": "pending",
+          "addedDate": "2026-08-05",
+          "modifiedDate": "2026-08-10",
+          "completedDate": null,
+          "items": []
+        },
+        {
+          "id": "silverride-sf-bay-pricing",
+          "index": 5,
+          "heading": "SilverRide SF Bay area pricing",
+          "status": "pending",
+          "addedDate": "2026-08-03",
+          "modifiedDate": "2026-08-10",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "We need to add new zones (City/County) & (Peninsula [areas between two cities])",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            },
+            {
+              "text": "Route Surcharge (if trip covers a route (stored as polygons) defined percentage, then apply surcharge)",
+              "done": false,
+              "notes": "Table Route Surcharge [Polygon Coordinates, Percentage Route Covered, Surcharge Amount]",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            }
+          ]
+        },
+        {
+          "id": "annapolis-stations-rcz-sync",
+          "index": 6,
+          "heading": "Annapolis Stations and RCZ Syncing",
+          "status": "pending",
+          "priority": "low",
+          "addedDate": "2026-08-05",
+          "modifiedDate": "2026-08-10",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "Annapolis needs Stations and RCZ syncing enabled via old path.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-05",
+              "modifiedDate": "2026-08-05",
+              "completedDate": null
+            }
+          ]
+        }
+      ]
     },
     {
       "weekStart": "2026-08-03",
@@ -63,170 +226,8 @@
           ]
         },
         {
-          "id": "account-based-zone-changes",
-          "index": 3,
-          "heading": "Account based Zone Changes",
-          "status": "pending",
-          "addedDate": "2026-08-03",
-          "modifiedDate": "2026-08-03",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "Deploy releases on STS.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            },
-            {
-              "text": "Create a Account based Zone (setup on STS), verify on call taker that account based zone is getting applied.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            }
-          ]
-        },
-        {
-          "id": "sts-migration-allegany",
-          "index": 4,
-          "heading": "STS Migration to Allegany",
-          "status": "pending",
-          "addedDate": "2026-08-03",
-          "modifiedDate": "2026-08-03",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "Deploy and verify latest release changes on Allegany/Cat staging server. All Allegany/Cat existing business flow should work.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            },
-            {
-              "text": "Deploy and verify latest release changes on Annapolis staging server. All Annapolis existing business flow should work.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            },
-            {
-              "text": "Prepare migration utility to migrate the STS data into Allegany/Cat server.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            }
-          ]
-        },
-        {
-          "id": "send-trip-update-to-device",
-          "index": 5,
-          "heading": "SendTripUpdateToDevice (move implementation from Inload API to Separate Utility)",
-          "status": "pending",
-          "addedDate": "2026-08-03",
-          "modifiedDate": "2026-08-03",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "Migrate the existing utility into .net core service/console.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            },
-            {
-              "text": "Move the code of SendTripUpdateToDevice to this utility with timer configuration. Also optimize its code.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            },
-            {
-              "text": "Implement new udp layer to register/send the udp messages",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            },
-            {
-              "text": "Implement file based logging in it.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            }
-          ]
-        },
-        {
-          "id": "auto-oara-dotnet-core",
-          "index": 6,
-          "heading": "Convert Auto Oara to .net Core Stand Alone Service",
-          "status": "pending",
-          "addedDate": "2026-08-05",
-          "modifiedDate": "2026-08-05",
-          "completedDate": null,
-          "items": []
-        },
-        {
-          "id": "silverride-sf-bay-pricing",
-          "index": 7,
-          "heading": "SilverRide SF Bay area pricing",
-          "status": "pending",
-          "addedDate": "2026-08-03",
-          "modifiedDate": "2026-08-03",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "We need to add new zones (City/County) & (Peninsula [areas between two cities])",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            },
-            {
-              "text": "Route Surcharge (if trip covers a route (stored as polygons) defined percentage, then apply surcharge)",
-              "done": false,
-              "notes": "Table Route Surcharge [Polygon Coordinates, Percentage Route Covered, Surcharge Amount]",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            }
-          ]
-        },
-        {
-          "id": "annapolis-stations-rcz-sync",
-          "index": 8,
-          "heading": "Annapolis Stations and RCZ Syncing",
-          "status": "pending",
-          "priority": "low",
-          "addedDate": "2026-08-05",
-          "modifiedDate": "2026-08-05",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "Annapolis needs Stations and RCZ syncing enabled via old path.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-05",
-              "modifiedDate": "2026-08-05",
-              "completedDate": null
-            }
-          ]
-        },
-        {
           "id": "additional-device-params-riderid-windows",
-          "index": 9,
+          "index": 3,
           "heading": "Add RiderID and pickup/drop time windows to AdditionalDeviceParameters JSON",
           "status": "done",
           "addedDate": "2026-08-06",
@@ -253,7 +254,7 @@
         },
         {
           "id": "water-taxi-station-name-mismatch",
-          "index": 10,
+          "index": 4,
           "heading": "Water Taxi Support",
           "status": "done",
           "addedDate": "2026-08-03",
