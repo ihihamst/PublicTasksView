@@ -270,6 +270,25 @@
               "completedDate": "2026-08-09"
             }
           ]
+        },
+        {
+          "id": "chtaxi-booking-cc-not-added",
+          "index": 5,
+          "heading": "CHTAXI Booking App, CC was not getting added",
+          "status": "done",
+          "addedDate": "2026-08-07",
+          "modifiedDate": "2026-08-07",
+          "completedDate": "2026-08-07",
+          "items": [
+            {
+              "text": "In Slim CD CC flow, brand id was not getting saved with CC Profiles. And fetch API rely on CC Profiles being fetched via Brand ID. Fixed.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-07",
+              "modifiedDate": "2026-08-07",
+              "completedDate": "2026-08-07"
+            }
+          ]
         }
       ]
     }
