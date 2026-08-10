@@ -132,8 +132,9 @@ Nothing below is stored in the JSON; it is all computed at render time.
   tasks alike, so a week's tasks read 1..n with no gaps. It is stored data, not a render-time counter,
   precisely so priority sorting, the status filters, and the hide-completed toggle cannot renumber it
   (the same reason point numbers use `data-n` instead of a CSS counter). When adding a task to a week,
-  give it the next unused number; when removing one, leave the rest alone rather than renumbering —
-  the numbers are how the owner refers to a task in conversation.
+  give it the next unused number. When removing one, close the gap so the week stays 1..n — but only
+  renumber the tasks after it, and never reshuffle unrelated numbering, since the owner refers to
+  tasks by number in conversation. An explicit "insert at N" likewise shifts everything from N down.
 - **Priority ordering** — `byPriority()` is a *stable* sort: `high` floats up, `low` sinks, and equal
   priorities keep their file order. Applied to the current week, last week, and history alike.
 - **Date trail** — `dateTrail(obj, parent)` renders "Added … · Updated … · Completed …", dropping any

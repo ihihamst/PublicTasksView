@@ -221,27 +221,8 @@
           ]
         },
         {
-          "id": "rider-id-on-driver-tablet",
-          "index": 9,
-          "heading": "Drivers need to be able to see the rider's Rider ID on their tablets",
-          "status": "in-progress",
-          "addedDate": "2026-08-06",
-          "modifiedDate": "2026-08-06",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "Add rider ID to all sp's (AdditonalDeviceParameters) which communicates with driver",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-06",
-              "modifiedDate": "2026-08-06",
-              "completedDate": null
-            }
-          ]
-        },
-        {
           "id": "additional-device-params-riderid-windows",
-          "index": 10,
+          "index": 9,
           "heading": "Add RiderID and pickup/drop time windows to AdditionalDeviceParameters JSON",
           "status": "done",
           "addedDate": "2026-08-06",
