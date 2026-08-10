@@ -43,18 +43,18 @@
           "id": "silverride-affiliate-merger",
           "index": 2,
           "heading": "SilverRide 3 affiliates into 1 Affiliate Merger (SR - Element PACE & SR - Harbor Health Boston into SR - Boston PACE)",
-          "status": "pending",
+          "status": "done",
           "addedDate": "2026-08-03",
-          "modifiedDate": "2026-08-03",
-          "completedDate": null,
+          "modifiedDate": "2026-08-05",
+          "completedDate": "2026-08-05",
           "items": [
             {
               "text": "Write merger script",
-              "done": false,
-              "notes": "",
+              "done": true,
+              "notes": "Delivered.",
               "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
+              "modifiedDate": "2026-08-05",
+              "completedDate": "2026-08-05"
             }
           ]
         },
