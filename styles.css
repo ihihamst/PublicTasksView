@@ -167,6 +167,8 @@ body.hide-completed .card.is-done{display:none}
   padding:2px 7px;border-radius:0 6px 6px 0;
 }
 .items li.done .notes{background:var(--green-soft);border-left-color:var(--green-line)}
+.task-notes{margin-top:4px}
+.card.is-done .task-notes{background:var(--green-soft);border-left-color:var(--green-line)}
 .notes b{color:var(--ink-2);font-weight:700}
 
 /* ---------- Date trail ---------- */

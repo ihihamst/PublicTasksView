@@ -84,7 +84,8 @@ The site will be published at `https://<user>.github.io/PublicTasksView/`.
   it has in the file and shows no priority badge.
 - **Done styling** — done tasks and done bullets render in green with a ✓ tick.
 - **Notes** — use the `notes` field, or write them inline as `Bullet point 2 (notes: ABC def)`; both
-  render as a highlighted note under the bullet.
+  render as a highlighted note under the bullet. A task can also carry its own `notes`, which renders
+  under the heading and applies to the whole task.
 - **Timezone** — **all dates and times in this repo are Pakistan Time (PKT, UTC+05:00)**, declared in
   `meta.timezone` and shown in the footer. Write either a plain date (`"2026-08-05"`) or a full
   timestamp with the offset (`"2026-08-05T15:00:00+05:00"`); timestamps render as `Aug 5, 3:00 PM PKT`

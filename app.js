@@ -207,6 +207,7 @@
           '<span class="badge badge-' + st + '">' + LABEL[st] + '</span>' +
         '</div>' +
         dateTrail(task) +
+        (task.notes ? '<span class="notes task-notes"><b>Notes:</b> ' + esc(task.notes) + '</span>' : '') +
         (items ? '<ol class="items">' + items + '</ol>' : '') +
         ((task.items || []).length > 1
           ? '<div class="progress-mini"><div class="bar"><span style="width:' + pct + '%"></span></div>' +

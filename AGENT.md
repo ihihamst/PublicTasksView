@@ -55,6 +55,7 @@ can edit `tasks.json` in the GitHub web editor and see the result a minute later
           "heading": "Main Heading",   // the task title
           "status": "pending",         // optional: pending | in-progress | done
           "priority": "low",           // optional: high | normal (default) | low
+          "notes": "Releases provided & uploaded.",  // optional task-level note, renders under the heading
           "addedDate":     "2026-08-03",
           "modifiedDate":  "2026-08-05",
           "completedDate": null,       // null until every point is finished
@@ -142,7 +143,9 @@ Nothing below is stored in the JSON; it is all computed at render time.
   same "Added Aug 3". Keep that suppression when touching this function; without it the page roughly
   doubles in height.
 - **Notes** — read from the `notes` field, or parsed out of a trailing `(notes: …)` in the point text
-  by `splitNotes()`. Both render as the same highlighted callout.
+  by `splitNotes()`. Both render as the same highlighted callout. A task may carry its own `notes`
+  too, rendered under the heading above the points — use it for something that applies to the whole
+  task (a delivery statement, a caveat) rather than to one point.
 
 ### Controls
 

@@ -15,28 +15,45 @@
           "id": "account-based-zone-changes",
           "index": 1,
           "heading": "Account based Zone Changes",
-          "status": "pending",
+          "status": "done",
           "addedDate": "2026-08-03",
           "modifiedDate": "2026-08-10",
-          "completedDate": null,
+          "completedDate": "2026-08-10",
           "items": [
             {
               "text": "Deploy releases on STS.",
-              "done": false,
+              "done": true,
               "notes": "",
               "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
+              "modifiedDate": "2026-08-10",
+              "completedDate": "2026-08-10"
             },
             {
               "text": "Create a Account based Zone (setup on STS), verify on call taker that account based zone is getting applied.",
-              "done": false,
+              "done": true,
               "notes": "",
               "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
+              "modifiedDate": "2026-08-10",
+              "completedDate": "2026-08-10"
+            },
+            {
+              "text": "Call Taker Account based Zone verified. Fixed call triggering issues in call taker. Double message of Service Hours was coming due to it getting invoked from two places. Fixed",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-10",
+              "modifiedDate": "2026-08-10",
+              "completedDate": "2026-08-10"
+            },
+            {
+              "text": "Inload API was missing some account based zone changes. Added and verified.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-10",
+              "modifiedDate": "2026-08-10",
+              "completedDate": "2026-08-10"
             }
-          ]
+          ],
+          "notes": "Releases provided & uploaded."
         },
         {
           "id": "sts-migration-allegany",
