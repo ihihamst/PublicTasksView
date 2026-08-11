@@ -58,6 +58,9 @@ can edit `tasks.json` in the GitHub web editor and see the result a minute later
           "status": "pending",         // optional: pending | in-progress | done
           "priority": "low",           // optional: high | normal (default) | low
           "notes": "Releases provided & uploaded.",  // optional task-level note, renders under the heading
+          "link": "https://track.itcurves.us/?view=ticket_details&ticketId=CAT-TK-63",
+          "linkLabel": "CAT-TK-63",    // optional; defaults to the URL's host. http(s) only — other
+                                       // schemes are dropped by taskLink() rather than rendered
           "addedDate":     "2026-08-03",
           "modifiedDate":  "2026-08-05",
           "completedDate": null,       // null until every point is finished

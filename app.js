@@ -89,7 +89,8 @@
     var parts = [];
     if (added && added_ !== pAdded) parts.push('<span>Added <b>' + added + '</b></span>');
     if (mod && mod_ !== added_ && mod_ !== pMod) parts.push('<span>Updated <b>' + mod + '</b></span>');
-    if (comp) parts.push('<span class="t-done">Completed <b>' + comp + '</b></span>');
+    var pComp = parent ? fmtShort(parent.completedDate) : '';
+    if (comp && comp !== pComp) parts.push('<span class="t-done">Completed <b>' + comp + '</b></span>');
     return parts.length ? '<div class="dates">' + parts.join('') + '</div>' : '';
   }
 
@@ -148,6 +149,15 @@
 
   var LABEL = { done: 'Done', pending: 'Pending', progress: 'In Progress' };
 
+  /** Renders task.link as a chip. Only http(s) is allowed — no javascript: or data: URLs. */
+  function taskLink(task) {
+    var url = String(task.link || '').trim();
+    if (!/^https?:\/\//i.test(url)) return '';
+    var label = task.linkLabel || url.replace(/^https?:\/\//i, '').split('/')[0];
+    return '<a class="task-link" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' +
+      '↗ ' + esc(label) + '</a>';
+  }
+
   var PRIO_LABEL = { high: 'High', low: 'Low' };
   var PRIO_RANK = { high: 0, normal: 1, low: 2 };
 
@@ -203,6 +213,7 @@
         '<div class="card-head">' +
           '<h3><span class="idx">' + esc(task.index) + '</span>' +
             (st === 'done' ? '✓ ' : '') + esc(task.heading || task.title || 'Untitled task') + '</h3>' +
+          taskLink(task) +
           (PRIO_LABEL[prio] ? '<span class="badge badge-prio-' + prio + '">' + PRIO_LABEL[prio] + '</span>' : '') +
           '<span class="badge badge-' + st + '">' + LABEL[st] + '</span>' +
         '</div>' +

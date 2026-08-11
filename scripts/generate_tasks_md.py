@@ -96,6 +96,8 @@ def render(data):
             out.append('### %s. [%s] %s' % (index, 'x' if is_done(task) else ' ',
                                             task.get('heading', 'Untitled task')))
             out += ['', task_meta_line(task), '']
+            if task.get('link'):
+                out += ['Link: [%s](%s)' % (task.get('linkLabel') or task['link'], task['link']), '']
             if task.get('notes'):
                 out += ['_Notes:_ %s' % task['notes'], '']
             if not (task.get('items') or []):

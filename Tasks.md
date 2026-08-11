@@ -60,6 +60,18 @@ Status: **pending** · Added 2026-08-10 · Updated 2026-08-10
 
 - [ ] For Confirmation No. 1780034693 (WaterTaxi Microtransit, Service ID 4662746, due 8/9/2026 12:55:00PM), trip state (Cancelled) was not synced to OL. Service Status in IL is CancelledARQ.
 
+### 8. [x] Edit Treated - applied three fixes
+
+Status: **done** · Added 2026-08-10 · Updated 2026-08-10 22:00:00+05:00 · Completed 2026-08-10 22:00:00+05:00
+
+Link: [CAT-TK-63](https://track.itcurves.us/?view=ticket_details&ticketId=CAT-TK-63)
+
+_Notes:_ All these fixes are deployed on CatTMS.
+
+- [x] Performance issue
+- [x] Cancel reason selection issue
+- [x] Trip Type not auto selecting Normal
+
 ## Week 2026-08-03 → 2026-08-09
 
 ### 1. [x] CH Taxi - Fare Not calculating properly

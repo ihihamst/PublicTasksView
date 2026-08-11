@@ -81,6 +81,8 @@ The site will be published at `https://<user>.github.io/PublicTasksView/`.
   if you leave it out, the task's position in the week's `tasks` array is used instead. Because it is
   data rather than display order, the number does not change when cards are re-sorted by priority,
   filtered, or hidden by the completed-points toggle.
+- **Link** — optional `link` (plus `linkLabel`) puts a clickable chip on the card, for a ticket or
+  tracker URL. Only `http`/`https` links render.
 - **Priority** — optional. `high` floats a task to the top of its week with a red edge and a **High**
   badge; `low` sinks it to the bottom, muted grey with a **Low** badge. Anything else keeps the order
   it has in the file and shows no priority badge.
