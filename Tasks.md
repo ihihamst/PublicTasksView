@@ -6,14 +6,20 @@ Mirror of `tasks.json` in readable form. `tasks.json` remains the source of trut
 
 ## Week 2026-08-10 → 2026-08-16
 
-### 1. [ ] Account based Zone Changes
+### 1. [x] Account based Zone Changes
 
-Status: **pending** · Added 2026-08-03 · Updated 2026-08-10
+Status: **done** · Added 2026-08-03 · Updated 2026-08-10 · Completed 2026-08-10
 
-- [ ] Deploy releases on STS.
-  - _Updated 2026-08-03_
-- [ ] Create a Account based Zone (setup on STS), verify on call taker that account based zone is getting applied.
-  - _Updated 2026-08-03_
+_Notes:_ Releases provided & uploaded.
+
+- [x] Deploy releases on STS.
+  - _Updated 2026-08-10 · Completed 2026-08-10_
+- [x] Create a Account based Zone (setup on STS), verify on call taker that account based zone is getting applied.
+  - _Updated 2026-08-10 · Completed 2026-08-10_
+- [x] Call Taker Account based Zone verified. Fixed call triggering issues in call taker. Double message of Service Hours was coming due to it getting invoked from two places. Fixed
+  - _Added 2026-08-10 · Completed 2026-08-10_
+- [x] Inload API was missing some account based zone changes. Added and verified.
+  - _Added 2026-08-10 · Completed 2026-08-10_
 
 ### 2. [ ] STS Migration to Allegany
 
