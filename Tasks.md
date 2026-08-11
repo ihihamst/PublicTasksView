@@ -77,6 +77,7 @@ _Notes:_ All these fixes are deployed on CatTMS.
 Status: **done** · Added 2026-08-11 · Updated 2026-08-11 · Completed 2026-08-11
 
 - [x] Notes are recorded against only one leg of a brokered trip, so the export currently misses roughly half of them. The block will resolve the counterpart trip via dtl_ServiceRequestThirdPartyMapping (live mapping, both directions) and return its notes on a separate row under the same RefID. Non-brokered trips unchanged. Also applied to the _Western variant.
+  - _Notes:_ Worked on newly added query optimization too.
 
 ## Week 2026-08-03 → 2026-08-09
 

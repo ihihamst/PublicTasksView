@@ -259,7 +259,7 @@
             {
               "text": "Notes are recorded against only one leg of a brokered trip, so the export currently misses roughly half of them. The block will resolve the counterpart trip via dtl_ServiceRequestThirdPartyMapping (live mapping, both directions) and return its notes on a separate row under the same RefID. Non-brokered trips unchanged. Also applied to the _Western variant.",
               "done": true,
-              "notes": "",
+              "notes": "Worked on newly added query optimization too.",
               "addedDate": "2026-08-11",
               "modifiedDate": "2026-08-11",
               "completedDate": "2026-08-11"
