@@ -1,6 +1,6 @@
 # Tasks Assignment
 
-Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-08-10**
+Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-08-11**
 
 Mirror of `tasks.json` in readable form. `tasks.json` remains the source of truth — update it first, then regenerate this file with `python3 scripts/generate_tasks_md.py`.
 
@@ -71,6 +71,12 @@ _Notes:_ All these fixes are deployed on CatTMS.
 - [x] Performance issue
 - [x] Cancel reason selection issue
 - [x] Trip Type not auto selecting Normal
+
+### 9. [x] usp_IBPC_GetAccessExportData — ClientBillingSupport block: show both legs' Agent Notes for Broker-Affiliate trips
+
+Status: **done** · Added 2026-08-11 · Updated 2026-08-11 · Completed 2026-08-11
+
+- [x] Notes are recorded against only one leg of a brokered trip, so the export currently misses roughly half of them. The block will resolve the counterpart trip via dtl_ServiceRequestThirdPartyMapping (live mapping, both directions) and return its notes on a separate row under the same RefID. Non-brokered trips unchanged. Also applied to the _Western variant.
 
 ## Week 2026-08-03 → 2026-08-09
 
