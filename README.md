@@ -12,6 +12,8 @@ A single-page task board hosted on GitHub Pages. It shows **this week's tasks** 
 | `index.html` | Page structure |
 | `styles.css` | Light theme, rich colors |
 | `app.js` | Loads `tasks.json` and renders the board |
+| `Tasks.md` | Readable Markdown mirror — generated, don't edit by hand |
+| `scripts/generate_tasks_md.py` | Regenerates `Tasks.md` from `tasks.json` |
 
 ## Enabling GitHub Pages
 
@@ -107,6 +109,17 @@ The site will be published at `https://<user>.github.io/PublicTasksView/`.
 Prepend a new object to `weeks` with the new Monday/Sunday dates and that week's tasks, then bump
 `meta.lastUpdated`. The previous current week automatically becomes "Last Week", and the one before
 it slides into history — no page changes needed.
+
+## Keeping `Tasks.md` in sync
+
+`Tasks.md` is a generated mirror of `tasks.json` for reading on GitHub. After editing tasks, run:
+
+```bash
+python3 scripts/generate_tasks_md.py          # rewrite Tasks.md
+python3 scripts/generate_tasks_md.py --check  # verify it's current (exit 1 if stale)
+```
+
+Never edit `Tasks.md` by hand — the next regeneration overwrites it.
 
 ## Local preview
 

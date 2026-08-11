@@ -27,6 +27,8 @@ can edit `tasks.json` in the GitHub web editor and see the result a minute later
 | `index.html` | Page skeleton: header, stats strip, three sections, footer. | Rarely |
 | `styles.css` | Light theme, rich colors, deliberately dense spacing. | Rarely |
 | `app.js` | Fetches `tasks.json`, derives status, sorts, renders, wires controls. | Rarely |
+| `Tasks.md` | Readable Markdown mirror of `tasks.json`. **Generated — never hand-edit.** | Every task update |
+| `scripts/generate_tasks_md.py` | Regenerates `Tasks.md` from `tasks.json`. | Rarely |
 | `README.md` | Owner-facing docs: schema, how to add a week. | When schema changes |
 | `AGENT.md` | This file. | When conventions change |
 
@@ -192,8 +194,13 @@ week becomes "Last Week" automatically and the one before it slides into history
 
 ```bash
 python3 -c "import json;json.load(open('tasks.json'));print('json ok')"   # always run this
+python3 scripts/generate_tasks_md.py                                     # keep Tasks.md in sync
 python3 -m http.server 8000                                              # then open localhost:8000
 ```
+
+`Tasks.md` is generated output: edit `tasks.json`, then run the script — never patch the Markdown by
+hand, or the next regeneration silently discards your edit. `--check` verifies the mirror is current
+without writing (exit 1 when stale), which is what a pre-commit hook or CI step should call.
 
 `file://` will not work — `fetch` is blocked on that scheme, and `app.js` shows an explicit error
 message saying so.
