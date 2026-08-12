@@ -265,6 +265,33 @@
               "completedDate": "2026-08-11"
             }
           ]
+        },
+        {
+          "id": "allegany-cat-release-deploy-verification",
+          "index": 10,
+          "heading": "New release deploy on Allegany/CAT. Verification & Support",
+          "status": "done",
+          "addedDate": "2026-08-10",
+          "modifiedDate": "2026-08-10",
+          "completedDate": "2026-08-10",
+          "items": [
+            {
+              "text": "Provided SDHS Service release as setup file to install/uninstall the SDHS.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-10",
+              "modifiedDate": "2026-08-10",
+              "completedDate": "2026-08-10"
+            },
+            {
+              "text": "Zone management portal - has UI issues because of too many Zones. Fixed it.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-10",
+              "modifiedDate": "2026-08-10",
+              "completedDate": "2026-08-10"
+            }
+          ]
         }
       ]
     },
