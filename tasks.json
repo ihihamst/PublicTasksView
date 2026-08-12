@@ -292,6 +292,33 @@
               "completedDate": "2026-08-10"
             }
           ]
+        },
+        {
+          "id": "gta-irtpu-trips-treated-shared-variable",
+          "index": 11,
+          "heading": "GTA - IRTPU trips got treated without any action or reason",
+          "status": "done",
+          "addedDate": "2026-08-11",
+          "modifiedDate": "2026-08-11",
+          "completedDate": "2026-08-11",
+          "items": [
+            {
+              "text": "After investigation, it was found that in manifest one of the trip was marked as Dropped, but it was not treated, instead this innocent trip of same manifest got treated. Issue in SDHS variable which is a shared variable. This shared variable issue, I have fixed too for new releases.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-11",
+              "completedDate": "2026-08-11"
+            },
+            {
+              "text": "In sp usp_MRMC_TreatedRequest I have added protection to protect in this scenario, after discussion with Iqbal sb. This sp is deployed on Eastern2 and GTA to provide immediate remedy until new SDHS release is deployed.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-11",
+              "completedDate": "2026-08-11"
+            }
+          ]
         }
       ]
     },

@@ -86,6 +86,13 @@ Status: **done** · Added 2026-08-10 · Updated 2026-08-10 · Completed 2026-08-
 - [x] Provided SDHS Service release as setup file to install/uninstall the SDHS.
 - [x] Zone management portal - has UI issues because of too many Zones. Fixed it.
 
+### 11. [x] GTA - IRTPU trips got treated without any action or reason
+
+Status: **done** · Added 2026-08-11 · Updated 2026-08-11 · Completed 2026-08-11
+
+- [x] After investigation, it was found that in manifest one of the trip was marked as Dropped, but it was not treated, instead this innocent trip of same manifest got treated. Issue in SDHS variable which is a shared variable. This shared variable issue, I have fixed too for new releases.
+- [x] In sp usp_MRMC_TreatedRequest I have added protection to protect in this scenario, after discussion with Iqbal sb. This sp is deployed on Eastern2 and GTA to provide immediate remedy until new SDHS release is deployed.
+
 ## Week 2026-08-03 → 2026-08-09
 
 ### 1. [x] CH Taxi - Fare Not calculating properly
