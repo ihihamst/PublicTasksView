@@ -30,6 +30,8 @@ Status: **in-progress** · Added 2026-08-03 · Updated 2026-08-11
   - _Added 2026-08-11 · Completed 2026-08-10_
 - [ ] Issues reported in migration - b. For future date, when time is not set, call taker 2.0 act as today date in zone/service hour calculation.
   - _Added 2026-08-11_
+- [ ] Implement the application of booking rules (if setting ApplyZoneBookingRules is true) on the Load & Verify screen.
+  - _Added 2026-08-11_
 
 ### 3. [ ] SendTripUpdateToDevice (move implementation from Inload API to Separate Utility)
 

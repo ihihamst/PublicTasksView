@@ -95,6 +95,14 @@
               "addedDate": "2026-08-11",
               "modifiedDate": "2026-08-11",
               "completedDate": null
+            },
+            {
+              "text": "Implement the application of booking rules (if setting ApplyZoneBookingRules is true) on the Load & Verify screen.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-11",
+              "completedDate": null
             }
           ]
         },
