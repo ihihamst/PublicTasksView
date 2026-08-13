@@ -110,6 +110,16 @@ _Notes:_ Missing and pending functionalities in the new Zone Management portal.
 - [ ] Implement zone polygone plotting for City/State/Zip.
 - [ ] Implement the zone polygone plot by GTFS feed.
 
+### 13. [ ] Web Applications & API Security
+
+Status: **pending** · Added 2026-08-11 · Updated 2026-08-11
+
+- [ ] Legacy Web MRMS security - Dont allow accessing any endpoint without authentication at central handler in Owin pipeline.
+- [ ] Legacy Web MRMS security - Wrong 3 authentication attempts should trigger the lockout for that ip address (keep it in memory, if app restart we would loose it).
+- [ ] Legacy Web MRMS security - Identify any end point that can face problem due to this new security implementation.
+- [ ] Legacy Web MRMS security - This central authentication should also cater the User assigned module security via tags discovery.
+- [ ] Legacy Web MRMS security - If user is not assigned the Service provider A, then they should not see any A service provider or its data.
+
 ## Week 2026-08-03 → 2026-08-09
 
 ### 1. [x] CH Taxi - Fare Not calculating properly

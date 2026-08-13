@@ -379,6 +379,57 @@
               "completedDate": null
             }
           ]
+        },
+        {
+          "id": "web-applications-api-security",
+          "index": 13,
+          "heading": "Web Applications & API Security",
+          "status": "pending",
+          "addedDate": "2026-08-11",
+          "modifiedDate": "2026-08-11",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "Legacy Web MRMS security - Dont allow accessing any endpoint without authentication at central handler in Owin pipeline.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-11",
+              "completedDate": null
+            },
+            {
+              "text": "Legacy Web MRMS security - Wrong 3 authentication attempts should trigger the lockout for that ip address (keep it in memory, if app restart we would loose it).",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-11",
+              "completedDate": null
+            },
+            {
+              "text": "Legacy Web MRMS security - Identify any end point that can face problem due to this new security implementation.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-11",
+              "completedDate": null
+            },
+            {
+              "text": "Legacy Web MRMS security - This central authentication should also cater the User assigned module security via tags discovery.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-11",
+              "completedDate": null
+            },
+            {
+              "text": "Legacy Web MRMS security - If user is not assigned the Service provider A, then they should not see any A service provider or its data.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-11",
+              "completedDate": null
+            }
+          ]
         }
       ]
     },
