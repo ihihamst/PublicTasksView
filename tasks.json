@@ -385,6 +385,7 @@
           "index": 13,
           "heading": "Web Applications & API Security",
           "status": "pending",
+          "priority": "high",
           "addedDate": "2026-08-11",
           "modifiedDate": "2026-08-11",
           "completedDate": null,

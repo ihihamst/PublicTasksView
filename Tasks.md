@@ -112,7 +112,7 @@ _Notes:_ Missing and pending functionalities in the new Zone Management portal.
 
 ### 13. [ ] Web Applications & API Security
 
-Status: **pending** · Added 2026-08-11 · Updated 2026-08-11
+Status: **pending** · Priority: **high** · Added 2026-08-11 · Updated 2026-08-11
 
 - [ ] Legacy Web MRMS security - Dont allow accessing any endpoint without authentication at central handler in Owin pipeline.
 - [ ] Legacy Web MRMS security - Wrong 3 authentication attempts should trigger the lockout for that ip address (keep it in memory, if app restart we would loose it).
