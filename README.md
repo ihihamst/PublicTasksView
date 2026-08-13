@@ -86,6 +86,10 @@ The site will be published at `https://<user>.github.io/PublicTasksView/`.
 - **Priority** — optional. `high` floats a task to the top of its week with a red edge and a **High**
   badge; `low` sinks it to the bottom, muted grey with a **Low** badge. Anything else keeps the order
   it has in the file and shows no priority badge.
+- **Screenshot** — a bullet can carry an optional `image` (plus `imageAlt`) pointing at a file
+  committed in this repo, e.g. `"assets/zone-names-cutoff.png"`. It renders under the bullet text and
+  opens full size when clicked. The path must be relative — absolute paths and external URLs are
+  ignored, so the page keeps working when served from `/PublicTasksView/`.
 - **Done styling** — done tasks and done bullets render in green with a ✓ tick.
 - **Notes** — use the `notes` field, or write them inline as `Bullet point 2 (notes: ABC def)`; both
   render as a highlighted note under the bullet. A task can also carry its own `notes`, which renders

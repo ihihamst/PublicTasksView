@@ -106,6 +106,8 @@ def render(data):
                 out.append('- [%s] %s' % ('x' if item.get('done') else ' ', item.get('text', '')))
                 if item.get('notes'):
                     out.append('  - _Notes:_ %s' % item['notes'])
+                if item.get('image'):
+                    out.append('  - ![%s](%s)' % (item.get('imageAlt', ''), item['image']))
                 trail = item_trail(item, task)
                 if trail:
                     out.append('  - _%s_' % trail)

@@ -148,7 +148,11 @@ Nothing below is stored in the JSON; it is all computed at render time.
   same "Added Aug 3". Keep that suppression when touching this function; without it the page roughly
   doubles in height.
 - **Notes** — read from the `notes` field, or parsed out of a trailing `(notes: …)` in the point text
-  by `splitNotes()`. Both render as the same highlighted callout. A task may carry its own `notes`
+  by `splitNotes()`. Both render as the same highlighted callout.
+- **Point screenshot** — `itemImage()` renders a point's optional `image` (with `imageAlt`) as a
+  thumbnail linking to the full-size file. Only **relative** in-repo paths are accepted; anything
+  absolute, scheme-bearing, or containing `..` is dropped, which keeps the subpath deploy working and
+  stops the data file from pulling in a remote image. Commit the file under `assets/`. A task may carry its own `notes`
   too, rendered under the heading above the points — use it for something that applies to the whole
   task (a delivery statement, a caveat) rather than to one point.
 

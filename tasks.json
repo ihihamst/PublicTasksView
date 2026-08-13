@@ -335,6 +335,50 @@
               "completedDate": "2026-08-11"
             }
           ]
+        },
+        {
+          "id": "zone-management-portal-pending",
+          "index": 12,
+          "heading": "Zone Management",
+          "status": "pending",
+          "notes": "Missing and pending functionalities in the new Zone Management portal.",
+          "addedDate": "2026-08-11",
+          "modifiedDate": "2026-08-11",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "From legacy Web MRMS, we should open new screen of Zone Management via auto login and auto redirect to it.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-11",
+              "completedDate": null
+            },
+            {
+              "text": "If zone names are too many, they cut-off.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-11",
+              "completedDate": null
+            },
+            {
+              "text": "Implement zone polygone plotting for City/State/Zip.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-11",
+              "completedDate": null
+            },
+            {
+              "text": "Implement the zone polygone plot by GTFS feed.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-11",
+              "completedDate": null
+            }
+          ]
         }
       ]
     },

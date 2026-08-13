@@ -99,6 +99,17 @@ Status: **done** · Added 2026-08-11 · Updated 2026-08-11 · Completed 2026-08-
 - [x] After investigation, it was found that in manifest one of the trip was marked as Dropped, but it was not treated, instead this innocent trip of same manifest got treated. Issue in SDHS variable which is a shared variable. This shared variable issue, I have fixed too for new releases.
 - [x] In sp usp_MRMC_TreatedRequest I have added protection to protect in this scenario, after discussion with Iqbal sb. This sp is deployed on Eastern2 and GTA to provide immediate remedy until new SDHS release is deployed.
 
+### 12. [ ] Zone Management
+
+Status: **pending** · Added 2026-08-11 · Updated 2026-08-11
+
+_Notes:_ Missing and pending functionalities in the new Zone Management portal.
+
+- [ ] From legacy Web MRMS, we should open new screen of Zone Management via auto login and auto redirect to it.
+- [ ] If zone names are too many, they cut-off.
+- [ ] Implement zone polygone plotting for City/State/Zip.
+- [ ] Implement the zone polygone plot by GTFS feed.
+
 ## Week 2026-08-03 → 2026-08-09
 
 ### 1. [x] CH Taxi - Fare Not calculating properly

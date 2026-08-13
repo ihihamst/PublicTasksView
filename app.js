@@ -158,6 +158,20 @@
       '↗ ' + esc(label) + '</a>';
   }
 
+  /**
+   * Renders item.image as a screenshot below the point. Relative repo paths only
+   * (e.g. "assets/zone-names-cutoff.png") — no absolute or scheme-bearing URLs, so
+   * the page keeps working from the /PublicTasksView/ subpath and cannot be pointed
+   * at a remote host from the data file.
+   */
+  function itemImage(item) {
+    var src = String(item.image || '').trim();
+    if (!src || /^[a-z][a-z0-9+.-]*:/i.test(src) || src.charAt(0) === '/' || src.indexOf('..') !== -1) return '';
+    var alt = String(item.imageAlt || '').trim();
+    return '<a class="shot" href="' + esc(src) + '" target="_blank" rel="noopener noreferrer">' +
+      '<img src="' + esc(src) + '" alt="' + esc(alt) + '" loading="lazy"></a>';
+  }
+
   var PRIO_LABEL = { high: 'High', low: 'Low' };
   var PRIO_RANK = { high: 0, normal: 1, low: 2 };
 
@@ -202,6 +216,7 @@
       var isDone = st === 'done' ? true : !!item.done;
       return '<li class="' + (isDone ? 'done' : '') + '" data-n="' + (i + 1) + '.">' + esc(parts.text) +
         (parts.notes ? '<span class="notes"><b>Notes:</b> ' + esc(parts.notes) + '</span>' : '') +
+        itemImage(item) +
         dateTrail(item, task) +
         '</li>';
     }).join('');
