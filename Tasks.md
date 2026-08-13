@@ -21,11 +21,15 @@ _Notes:_ Releases provided & uploaded.
 
 ### 2. [ ] STS Migration to Allegany
 
-Status: **pending** · Added 2026-08-03 · Updated 2026-08-10
+Status: **in-progress** · Added 2026-08-03 · Updated 2026-08-11
 
-- [ ] Deploy and verify latest release changes on Allegany/Cat staging server. All Allegany/Cat existing business flow should work.
 - [ ] Deploy and verify latest release changes on Annapolis staging server. All Annapolis existing business flow should work.
-- [ ] Prepare migration utility to migrate the STS data into Allegany/Cat server.
+- [x] Prepare migration utility to migrate the STS data into Allegany/Cat server.
+  - _Updated 2026-08-10 · Completed 2026-08-10_
+- [x] Issues reported in migration - a. Zone zig-zag, it happened due to migrating data missed the order by clause. Re-importing data fixed it.
+  - _Added 2026-08-11 · Completed 2026-08-10_
+- [ ] Issues reported in migration - b. For future date, when time is not set, call taker 2.0 act as today date in zone/service hour calculation.
+  - _Added 2026-08-11_
 
 ### 3. [ ] SendTripUpdateToDevice (move implementation from Inload API to Separate Utility)
 
