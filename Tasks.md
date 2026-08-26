@@ -1,6 +1,6 @@
 # Tasks Assignment
 
-Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-08-11**
+Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-08-26**
 
 Mirror of `tasks.json` in readable form. `tasks.json` remains the source of truth — update it first, then regenerate this file with `python3 scripts/generate_tasks_md.py`.
 
@@ -101,12 +101,14 @@ Status: **done** · Added 2026-08-11 · Updated 2026-08-11 · Completed 2026-08-
 
 ### 12. [ ] Zone Management
 
-Status: **pending** · Added 2026-08-11 · Updated 2026-08-11
+Status: **in-progress** · Added 2026-08-11 · Updated 2026-08-13
 
 _Notes:_ Missing and pending functionalities in the new Zone Management portal.
 
-- [ ] From legacy Web MRMS, we should open new screen of Zone Management via auto login and auto redirect to it.
-- [ ] If zone names are too many, they cut-off.
+- [x] From legacy Web MRMS, we should open new screen of Zone Management via auto login and auto redirect to it.
+  - _Completed 2026-08-13_
+- [x] If zone names are too many, they cut-off.
+  - _Completed 2026-08-13_
 - [ ] Implement zone polygone plotting for City/State/Zip.
 - [ ] Implement the zone polygone plot by GTFS feed.
 

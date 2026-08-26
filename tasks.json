@@ -3,7 +3,7 @@
     "title": "Tasks Assignment",
     "owner": "ihihamst",
     "weekStartsOn": "monday",
-    "lastUpdated": "2026-08-11",
+    "lastUpdated": "2026-08-26",
     "timezone": "Asia/Karachi (PKT, UTC+05:00)"
   },
   "weeks": [
@@ -266,7 +266,7 @@
         {
           "id": "ibpc-access-export-broker-agent-notes",
           "index": 9,
-          "heading": "usp_IBPC_GetAccessExportData \u2014 ClientBillingSupport block: show both legs' Agent Notes for Broker-Affiliate trips",
+          "heading": "usp_IBPC_GetAccessExportData — ClientBillingSupport block: show both legs' Agent Notes for Broker-Affiliate trips",
           "status": "done",
           "addedDate": "2026-08-11",
           "modifiedDate": "2026-08-11",
@@ -340,27 +340,27 @@
           "id": "zone-management-portal-pending",
           "index": 12,
           "heading": "Zone Management",
-          "status": "pending",
+          "status": "in-progress",
           "notes": "Missing and pending functionalities in the new Zone Management portal.",
           "addedDate": "2026-08-11",
-          "modifiedDate": "2026-08-11",
+          "modifiedDate": "2026-08-13",
           "completedDate": null,
           "items": [
             {
               "text": "From legacy Web MRMS, we should open new screen of Zone Management via auto login and auto redirect to it.",
-              "done": false,
+              "done": true,
               "notes": "",
               "addedDate": "2026-08-11",
-              "modifiedDate": "2026-08-11",
-              "completedDate": null
+              "modifiedDate": "2026-08-13",
+              "completedDate": "2026-08-13"
             },
             {
               "text": "If zone names are too many, they cut-off.",
-              "done": false,
+              "done": true,
               "notes": "",
               "addedDate": "2026-08-11",
-              "modifiedDate": "2026-08-11",
-              "completedDate": null
+              "modifiedDate": "2026-08-13",
+              "completedDate": "2026-08-13"
             },
             {
               "text": "Implement zone polygone plotting for City/State/Zip.",
