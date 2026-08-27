@@ -105,11 +105,11 @@
           "id": "web-applications-api-security",
           "index": 3,
           "heading": "Web Applications & API Security",
-          "status": "in-progress",
+          "status": "done",
           "priority": "high",
           "addedDate": "2026-08-11",
           "modifiedDate": "2026-08-28",
-          "completedDate": null,
+          "completedDate": "2026-08-28",
           "items": [
             {
               "text": "Legacy Web MRMS security - Dont allow accessing any endpoint without authentication at central handler in Owin pipeline.",
@@ -145,11 +145,11 @@
             },
             {
               "text": "Legacy Web MRMS security - If user is not assigned the Service provider A, then they should not see any A service provider or its data.",
-              "done": false,
-              "notes": "Partially covered. Affiliate IDs present in a request are validated against the user's assigned affiliates, but some endpoints do not receive affiliate IDs at all and have no way to pass them - those are still pending.",
+              "done": true,
+              "notes": "Affiliate IDs in a request are validated against the user's assigned affiliates; disallowed IDs are removed and the request is refused only if none remain. The endpoints that were not passing affiliate IDs are now covered too.",
               "addedDate": "2026-08-11",
-              "modifiedDate": "2026-08-11",
-              "completedDate": null
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
             },
             {
               "text": "Anti-forgery protection on all login pages, browser-only access, optional session IP binding, and denial logging (user, path, reason) to a protected folder that is not web-accessible.",
@@ -160,12 +160,12 @@
               "completedDate": "2026-08-19"
             },
             {
-              "text": "Deploy the central endpoint security release. Done on SIV-WebMRMSTemp (test, port 8443), SIV-WebMRMS and Eastern production; requested on GTA.",
-              "done": false,
-              "notes": "Eastern production release handed over on Aug 24 (existing release backed up first, no DB scripts needed); GTA deployment requested on Aug 27.",
+              "text": "Deploy the central endpoint security release. Done on SIV-WebMRMSTemp (test, port 8443), SIV-WebMRMS, Eastern production and GTA.",
+              "done": true,
+              "notes": "Eastern production release handed over on Aug 24 (existing release backed up first, no DB scripts needed); GTA deployed this week.",
               "addedDate": "2026-08-19",
-              "modifiedDate": "2026-08-19",
-              "completedDate": null
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
             },
             {
               "text": "UI Parity Check (tgistaging vs 192.168.6.8) - Opened both sites in Chrome, confirmed same database via matching trip counters.",
