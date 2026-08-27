@@ -1,8 +1,148 @@
 # Tasks Assignment
 
-Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-08-26**
+Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-08-28**
 
 Mirror of `tasks.json` in readable form. `tasks.json` remains the source of truth — update it first, then regenerate this file with `python3 scripts/generate_tasks_md.py`.
+
+## Week 2026-08-24 → 2026-08-30
+
+### 1. [ ] Zone Management
+
+Status: **in-progress** · Priority: **high** · Added 2026-08-11 · Updated 2026-08-26
+
+_Notes:_ Missing and pending functionalities in the new Zone Management portal. The remaining GTFS and City/State/Zip plotting is top priority as per Iqbal sb (Aug 24).
+
+- [x] From legacy Web MRMS, we should open new screen of Zone Management via auto login and auto redirect to it.
+  - _Updated 2026-08-13 · Completed 2026-08-13_
+- [x] If zone names are too many, they cut-off.
+  - _Updated 2026-08-13 · Completed 2026-08-13_
+- [ ] Implement zone polygone plotting for City/State/Zip.
+- [ ] Implement the zone polygone plot by GTFS feed.
+
+### 2. [ ] SilverRide SF Bay area pricing
+
+Status: **pending** · Priority: **high** · Added 2026-08-03 · Updated 2026-08-24
+
+_Notes:_ Top priority as per Imran sb (Aug 24).
+
+- [ ] We need to add new zones (City/County) & (Peninsula [areas between two cities])
+- [ ] Route Surcharge (if trip covers a route (stored as polygons) defined percentage, then apply surcharge)
+  - _Notes:_ Table Route Surcharge [Polygon Coordinates, Percentage Route Covered, Surcharge Amount]
+
+### 3. [ ] Web Applications & API Security
+
+Status: **in-progress** · Priority: **high** · Added 2026-08-11 · Updated 2026-08-27
+
+- [x] Legacy Web MRMS security - Dont allow accessing any endpoint without authentication at central handler in Owin pipeline.
+  - _Updated 2026-08-19 · Completed 2026-08-19_
+- [x] Legacy Web MRMS security - Wrong 3 authentication attempts should trigger the lockout for that ip address (keep it in memory, if app restart we would loose it).
+  - _Notes:_ 3 failed attempts lock that IP for 15 minutes. Per-IP only - it does not affect other users or anyone already signed in.
+  - _Updated 2026-08-19 · Completed 2026-08-19_
+- [x] Legacy Web MRMS security - Identify any end point that can face problem due to this new security implementation.
+  - _Notes:_ Endpoint map built: 529 endpoints / 3,127 routes with their tags, shipped as a JSON file loaded at application start.
+  - _Updated 2026-08-19 · Completed 2026-08-19_
+- [x] Legacy Web MRMS security - This central authentication should also cater the User assigned module security via tags discovery.
+  - _Updated 2026-08-19 · Completed 2026-08-19_
+- [ ] Legacy Web MRMS security - If user is not assigned the Service provider A, then they should not see any A service provider or its data.
+  - _Notes:_ Partially covered. Affiliate IDs present in a request are validated against the user's assigned affiliates, but some endpoints do not receive affiliate IDs at all and have no way to pass them - those are still pending.
+- [x] Anti-forgery protection on all login pages, browser-only access, optional session IP binding, and denial logging (user, path, reason) to a protected folder that is not web-accessible.
+  - _Notes:_ 8 Web.config switches: master on/off, skip tag checks, skip affiliate scoping, per-path overrides, lockout policy, anti-forgery + logging, session IP binding, browser filter.
+  - _Added 2026-08-19 · Completed 2026-08-19_
+- [ ] Deploy the central endpoint security release. Done on SIV-WebMRMSTemp (test, port 8443), SIV-WebMRMS and Eastern production; requested on GTA.
+  - _Notes:_ Eastern production release handed over on Aug 24 (existing release backed up first, no DB scripts needed); GTA deployment requested on Aug 27.
+  - _Added 2026-08-19_
+
+### 4. [ ] SendTripUpdateToDevice (move implementation from Inload API to Separate Utility)
+
+Status: **pending** · Added 2026-08-03 · Updated 2026-08-10
+
+- [ ] Migrate the existing utility into .net core service/console.
+- [ ] Move the code of SendTripUpdateToDevice to this utility with timer configuration. Also optimize its code.
+- [ ] Implement new udp layer to register/send the udp messages
+- [ ] Implement file based logging in it.
+
+### 5. [ ] Convert Auto Oara to .net Core Stand Alone Service
+
+Status: **pending** · Added 2026-08-05 · Updated 2026-08-10
+
+### 6. [ ] STS Migration to Allegany
+
+Status: **in-progress** · Added 2026-08-03 · Updated 2026-08-11
+
+- [ ] Deploy and verify latest release changes on Annapolis staging server. All Annapolis existing business flow should work.
+- [x] Prepare migration utility to migrate the STS data into Allegany/Cat server.
+  - _Updated 2026-08-10 · Completed 2026-08-10_
+- [x] Issues reported in migration - a. Zone zig-zag, it happened due to migrating data missed the order by clause. Re-importing data fixed it.
+  - _Added 2026-08-11 · Completed 2026-08-10_
+- [ ] Issues reported in migration - b. For future date, when time is not set, call taker 2.0 act as today date in zone/service hour calculation.
+  - _Added 2026-08-11_
+- [ ] Implement the application of booking rules (if setting ApplyZoneBookingRules is true) on the Load & Verify screen.
+  - _Added 2026-08-11_
+
+### 7. [ ] Annapolis Stations and RCZ Syncing
+
+Status: **pending** · Priority: **low** · Added 2026-08-05 · Updated 2026-08-10
+
+- [ ] Annapolis needs Stations and RCZ syncing enabled via old path.
+
+### 8. [ ] Water Taxi - Trip cancelled state not synced to OL
+
+Status: **pending** · Added 2026-08-10 · Updated 2026-08-10
+
+- [ ] For Confirmation No. 1780034693 (WaterTaxi Microtransit, Service ID 4662746, due 8/9/2026 12:55:00PM), trip state (Cancelled) was not synced to OL. Service Status in IL is CancelledARQ.
+
+### 9. [x] AVL Playback broken - Google retired the Drawing Manager
+
+Status: **done** · Added 2026-08-24 · Updated 2026-08-24 · Completed 2026-08-24
+
+- [x] Playback code used the Google drawing library, which Google has now retired. Replaced it with another drawing tool library and gave the release.
+- [x] Release provided for Eastern production deployment - existing release backed up first, no DB scripts needed.
+
+### 10. [ ] Saint Mary - trip zone becomes UNKWN on trip expansion
+
+Status: **pending** · Added 2026-08-24 · Updated 2026-08-24
+
+- [ ] Saint Mary trips zone become UNKWN on trip expansion. Issue needs to be fixed.
+
+### 11. [ ] CH-Taxi booking app reporting wrong city
+
+Status: **pending** · Added 2026-08-24 · Updated 2026-08-24
+
+- [ ] CH-Taxi booking app is reporting the wrong city. Needs to be investigated with Hinnan.
+
+### 12. [ ] GTA - frplanning API returning wrong affiliate data
+
+Status: **pending** · Added 2026-08-27 · Updated 2026-08-27
+
+- [ ] gtafrplanningapi.itcurves.us/ZoneManagement/GetAllActiveAffiliates is bringing wrong data. Configurations of the frplanning API to be checked.
+
+## Week 2026-08-17 → 2026-08-23
+
+### 1. [x] Taxi US - SDHS down and restart failing
+
+Status: **done** · Added 2026-08-17 · Updated 2026-08-17 · Completed 2026-08-17
+
+- [x] SDHS was down and restarting it kept giving an error. It happened because of the "." in driverno record "318126" - the stored procedure was converting it to integer and failing. Fixed, SDHS is running fine and drivers are logging in.
+
+### 2. [x] Saint Mary app - activation code SMS not received
+
+Status: **done** · Added 2026-08-17 · Updated 2026-08-18 · Completed 2026-08-18
+
+- [x] App ids saintmary_android / saintmary_ios did not exist in the portal, so preActivation answered "contact backoffice" and no SMS was generated. After fixing the app ids on the test server, the activation SMS was received.
+
+### 3. [x] Create "Drivers and Vehicles" role for restricted user access
+
+Status: **done** · Added 2026-08-19 · Updated 2026-08-20 · Completed 2026-08-20
+
+- [x] Added the role through a script into SecMgmt.sec_Roles and assigned it to the user. They have to log out and log back in for it to take effect.
+
+### 4. [x] GTA - trip investigations (110821663, 110821690, 110821992)
+
+Status: **done** · Added 2026-08-21 · Updated 2026-08-21 · Completed 2026-08-21
+
+- [x] Trip 110821663: Dropped never came from the device.
+- [x] Trip 110821690: the driver accepted it nine seconds before departing on 110821663 - he stacked it while starting another ride and never returned to it. The session ended at 16:40, ten minutes before this trip's 16:50 scheduled pickup; the entry log holds exactly one call, the ACCEPTED at 15:52:30.
+- [x] Trip 110821992: dropped due to the SDHS context bug.
 
 ## Week 2026-08-10 → 2026-08-16
 
@@ -19,54 +159,7 @@ _Notes:_ Releases provided & uploaded.
 - [x] Inload API was missing some account based zone changes. Added and verified.
   - _Added 2026-08-10_
 
-### 2. [ ] STS Migration to Allegany
-
-Status: **in-progress** · Added 2026-08-03 · Updated 2026-08-11
-
-- [ ] Deploy and verify latest release changes on Annapolis staging server. All Annapolis existing business flow should work.
-- [x] Prepare migration utility to migrate the STS data into Allegany/Cat server.
-  - _Updated 2026-08-10 · Completed 2026-08-10_
-- [x] Issues reported in migration - a. Zone zig-zag, it happened due to migrating data missed the order by clause. Re-importing data fixed it.
-  - _Added 2026-08-11 · Completed 2026-08-10_
-- [ ] Issues reported in migration - b. For future date, when time is not set, call taker 2.0 act as today date in zone/service hour calculation.
-  - _Added 2026-08-11_
-- [ ] Implement the application of booking rules (if setting ApplyZoneBookingRules is true) on the Load & Verify screen.
-  - _Added 2026-08-11_
-
-### 3. [ ] SendTripUpdateToDevice (move implementation from Inload API to Separate Utility)
-
-Status: **pending** · Added 2026-08-03 · Updated 2026-08-10
-
-- [ ] Migrate the existing utility into .net core service/console.
-- [ ] Move the code of SendTripUpdateToDevice to this utility with timer configuration. Also optimize its code.
-- [ ] Implement new udp layer to register/send the udp messages
-- [ ] Implement file based logging in it.
-
-### 4. [ ] Convert Auto Oara to .net Core Stand Alone Service
-
-Status: **pending** · Added 2026-08-05 · Updated 2026-08-10
-
-### 5. [ ] SilverRide SF Bay area pricing
-
-Status: **pending** · Added 2026-08-03 · Updated 2026-08-10
-
-- [ ] We need to add new zones (City/County) & (Peninsula [areas between two cities])
-- [ ] Route Surcharge (if trip covers a route (stored as polygons) defined percentage, then apply surcharge)
-  - _Notes:_ Table Route Surcharge [Polygon Coordinates, Percentage Route Covered, Surcharge Amount]
-
-### 6. [ ] Annapolis Stations and RCZ Syncing
-
-Status: **pending** · Priority: **low** · Added 2026-08-05 · Updated 2026-08-10
-
-- [ ] Annapolis needs Stations and RCZ syncing enabled via old path.
-
-### 7. [ ] Water Taxi - Trip cancelled state not synced to OL
-
-Status: **pending** · Added 2026-08-10 · Updated 2026-08-10
-
-- [ ] For Confirmation No. 1780034693 (WaterTaxi Microtransit, Service ID 4662746, due 8/9/2026 12:55:00PM), trip state (Cancelled) was not synced to OL. Service Status in IL is CancelledARQ.
-
-### 8. [x] Edit Treated - applied three fixes
+### 2. [x] Edit Treated - applied three fixes
 
 Status: **done** · Added 2026-08-10 · Updated 2026-08-10 22:00:00+05:00 · Completed 2026-08-10 22:00:00+05:00
 
@@ -78,49 +171,26 @@ _Notes:_ All these fixes are deployed on CatTMS.
 - [x] Cancel reason selection issue
 - [x] Trip Type not auto selecting Normal
 
-### 9. [x] usp_IBPC_GetAccessExportData — ClientBillingSupport block: show both legs' Agent Notes for Broker-Affiliate trips
+### 3. [x] usp_IBPC_GetAccessExportData â€” ClientBillingSupport block: show both legs' Agent Notes for Broker-Affiliate trips
 
 Status: **done** · Added 2026-08-11 · Updated 2026-08-11 · Completed 2026-08-11
 
 - [x] Notes are recorded against only one leg of a brokered trip, so the export currently misses roughly half of them. The block will resolve the counterpart trip via dtl_ServiceRequestThirdPartyMapping (live mapping, both directions) and return its notes on a separate row under the same RefID. Non-brokered trips unchanged. Also applied to the _Western variant.
   - _Notes:_ Worked on newly added query optimization too.
 
-### 10. [x] New release deploy on Allegany/CAT. Verification & Support
+### 4. [x] New release deploy on Allegany/CAT. Verification & Support
 
 Status: **done** · Added 2026-08-10 · Updated 2026-08-10 · Completed 2026-08-10
 
 - [x] Provided SDHS Service release as setup file to install/uninstall the SDHS.
 - [x] Zone management portal - has UI issues because of too many Zones. Fixed it.
 
-### 11. [x] GTA - IRTPU trips got treated without any action or reason
+### 5. [x] GTA - IRTPU trips got treated without any action or reason
 
 Status: **done** · Added 2026-08-11 · Updated 2026-08-11 · Completed 2026-08-11
 
 - [x] After investigation, it was found that in manifest one of the trip was marked as Dropped, but it was not treated, instead this innocent trip of same manifest got treated. Issue in SDHS variable which is a shared variable. This shared variable issue, I have fixed too for new releases.
 - [x] In sp usp_MRMC_TreatedRequest I have added protection to protect in this scenario, after discussion with Iqbal sb. This sp is deployed on Eastern2 and GTA to provide immediate remedy until new SDHS release is deployed.
-
-### 12. [ ] Zone Management
-
-Status: **in-progress** · Added 2026-08-11 · Updated 2026-08-13
-
-_Notes:_ Missing and pending functionalities in the new Zone Management portal.
-
-- [x] From legacy Web MRMS, we should open new screen of Zone Management via auto login and auto redirect to it.
-  - _Completed 2026-08-13_
-- [x] If zone names are too many, they cut-off.
-  - _Completed 2026-08-13_
-- [ ] Implement zone polygone plotting for City/State/Zip.
-- [ ] Implement the zone polygone plot by GTFS feed.
-
-### 13. [ ] Web Applications & API Security
-
-Status: **pending** · Priority: **high** · Added 2026-08-11 · Updated 2026-08-11
-
-- [ ] Legacy Web MRMS security - Dont allow accessing any endpoint without authentication at central handler in Owin pipeline.
-- [ ] Legacy Web MRMS security - Wrong 3 authentication attempts should trigger the lockout for that ip address (keep it in memory, if app restart we would loose it).
-- [ ] Legacy Web MRMS security - Identify any end point that can face problem due to this new security implementation.
-- [ ] Legacy Web MRMS security - This central authentication should also cater the User assigned module security via tags discovery.
-- [ ] Legacy Web MRMS security - If user is not assigned the Service provider A, then they should not see any A service provider or its data.
 
 ## Week 2026-08-03 → 2026-08-09
 

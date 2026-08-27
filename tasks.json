@@ -3,61 +3,212 @@
     "title": "Tasks Assignment",
     "owner": "ihihamst",
     "weekStartsOn": "monday",
-    "lastUpdated": "2026-08-26",
+    "lastUpdated": "2026-08-28",
     "timezone": "Asia/Karachi (PKT, UTC+05:00)"
   },
   "weeks": [
     {
-      "weekStart": "2026-08-10",
-      "weekEnd": "2026-08-16",
+      "weekStart": "2026-08-24",
+      "weekEnd": "2026-08-30",
       "tasks": [
         {
-          "id": "account-based-zone-changes",
+          "id": "zone-management-portal-pending",
           "index": 1,
-          "heading": "Account based Zone Changes",
-          "status": "done",
-          "addedDate": "2026-08-03",
-          "modifiedDate": "2026-08-10",
-          "completedDate": "2026-08-10",
+          "heading": "Zone Management",
+          "status": "in-progress",
+          "notes": "Missing and pending functionalities in the new Zone Management portal. The remaining GTFS and City/State/Zip plotting is top priority as per Iqbal sb (Aug 24).",
+          "addedDate": "2026-08-11",
+          "modifiedDate": "2026-08-26",
+          "completedDate": null,
           "items": [
             {
-              "text": "Deploy releases on STS.",
+              "text": "From legacy Web MRMS, we should open new screen of Zone Management via auto login and auto redirect to it.",
               "done": true,
               "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-10",
-              "completedDate": "2026-08-10"
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-13",
+              "completedDate": "2026-08-13"
             },
             {
-              "text": "Create a Account based Zone (setup on STS), verify on call taker that account based zone is getting applied.",
+              "text": "If zone names are too many, they cut-off.",
               "done": true,
               "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-10",
-              "completedDate": "2026-08-10"
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-13",
+              "completedDate": "2026-08-13"
             },
             {
-              "text": "Call Taker Account based Zone verified. Fixed call triggering issues in call taker. Double message of Service Hours was coming due to it getting invoked from two places. Fixed",
-              "done": true,
+              "text": "Implement zone polygone plotting for City/State/Zip.",
+              "done": false,
               "notes": "",
-              "addedDate": "2026-08-10",
-              "modifiedDate": "2026-08-10",
-              "completedDate": "2026-08-10"
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-11",
+              "completedDate": null
             },
             {
-              "text": "Inload API was missing some account based zone changes. Added and verified.",
-              "done": true,
+              "text": "Implement the zone polygone plot by GTFS feed.",
+              "done": false,
               "notes": "",
-              "addedDate": "2026-08-10",
-              "modifiedDate": "2026-08-10",
-              "completedDate": "2026-08-10"
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-11",
+              "completedDate": null
             }
           ],
-          "notes": "Releases provided & uploaded."
+          "priority": "high"
+        },
+        {
+          "id": "silverride-sf-bay-pricing",
+          "index": 2,
+          "heading": "SilverRide SF Bay area pricing",
+          "status": "pending",
+          "addedDate": "2026-08-03",
+          "modifiedDate": "2026-08-24",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "We need to add new zones (City/County) & (Peninsula [areas between two cities])",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            },
+            {
+              "text": "Route Surcharge (if trip covers a route (stored as polygons) defined percentage, then apply surcharge)",
+              "done": false,
+              "notes": "Table Route Surcharge [Polygon Coordinates, Percentage Route Covered, Surcharge Amount]",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            }
+          ],
+          "priority": "high",
+          "notes": "Top priority as per Imran sb (Aug 24)."
+        },
+        {
+          "id": "web-applications-api-security",
+          "index": 3,
+          "heading": "Web Applications & API Security",
+          "status": "in-progress",
+          "priority": "high",
+          "addedDate": "2026-08-11",
+          "modifiedDate": "2026-08-27",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "Legacy Web MRMS security - Dont allow accessing any endpoint without authentication at central handler in Owin pipeline.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-19",
+              "completedDate": "2026-08-19"
+            },
+            {
+              "text": "Legacy Web MRMS security - Wrong 3 authentication attempts should trigger the lockout for that ip address (keep it in memory, if app restart we would loose it).",
+              "done": true,
+              "notes": "3 failed attempts lock that IP for 15 minutes. Per-IP only - it does not affect other users or anyone already signed in.",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-19",
+              "completedDate": "2026-08-19"
+            },
+            {
+              "text": "Legacy Web MRMS security - Identify any end point that can face problem due to this new security implementation.",
+              "done": true,
+              "notes": "Endpoint map built: 529 endpoints / 3,127 routes with their tags, shipped as a JSON file loaded at application start.",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-19",
+              "completedDate": "2026-08-19"
+            },
+            {
+              "text": "Legacy Web MRMS security - This central authentication should also cater the User assigned module security via tags discovery.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-19",
+              "completedDate": "2026-08-19"
+            },
+            {
+              "text": "Legacy Web MRMS security - If user is not assigned the Service provider A, then they should not see any A service provider or its data.",
+              "done": false,
+              "notes": "Partially covered. Affiliate IDs present in a request are validated against the user's assigned affiliates, but some endpoints do not receive affiliate IDs at all and have no way to pass them - those are still pending.",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-11",
+              "completedDate": null
+            },
+            {
+              "text": "Anti-forgery protection on all login pages, browser-only access, optional session IP binding, and denial logging (user, path, reason) to a protected folder that is not web-accessible.",
+              "done": true,
+              "notes": "8 Web.config switches: master on/off, skip tag checks, skip affiliate scoping, per-path overrides, lockout policy, anti-forgery + logging, session IP binding, browser filter.",
+              "addedDate": "2026-08-19",
+              "modifiedDate": "2026-08-19",
+              "completedDate": "2026-08-19"
+            },
+            {
+              "text": "Deploy the central endpoint security release. Done on SIV-WebMRMSTemp (test, port 8443), SIV-WebMRMS and Eastern production; requested on GTA.",
+              "done": false,
+              "notes": "Eastern production release handed over on Aug 24 (existing release backed up first, no DB scripts needed); GTA deployment requested on Aug 27.",
+              "addedDate": "2026-08-19",
+              "modifiedDate": "2026-08-19",
+              "completedDate": null
+            }
+          ]
+        },
+        {
+          "id": "send-trip-update-to-device",
+          "index": 4,
+          "heading": "SendTripUpdateToDevice (move implementation from Inload API to Separate Utility)",
+          "status": "pending",
+          "addedDate": "2026-08-03",
+          "modifiedDate": "2026-08-10",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "Migrate the existing utility into .net core service/console.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            },
+            {
+              "text": "Move the code of SendTripUpdateToDevice to this utility with timer configuration. Also optimize its code.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            },
+            {
+              "text": "Implement new udp layer to register/send the udp messages",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            },
+            {
+              "text": "Implement file based logging in it.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            }
+          ]
+        },
+        {
+          "id": "auto-oara-dotnet-core",
+          "index": 5,
+          "heading": "Convert Auto Oara to .net Core Stand Alone Service",
+          "status": "pending",
+          "addedDate": "2026-08-05",
+          "modifiedDate": "2026-08-10",
+          "completedDate": null,
+          "items": []
         },
         {
           "id": "sts-migration-allegany",
-          "index": 2,
+          "index": 6,
           "heading": "STS Migration to Allegany",
           "status": "in-progress",
           "addedDate": "2026-08-03",
@@ -107,88 +258,8 @@
           ]
         },
         {
-          "id": "send-trip-update-to-device",
-          "index": 3,
-          "heading": "SendTripUpdateToDevice (move implementation from Inload API to Separate Utility)",
-          "status": "pending",
-          "addedDate": "2026-08-03",
-          "modifiedDate": "2026-08-10",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "Migrate the existing utility into .net core service/console.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            },
-            {
-              "text": "Move the code of SendTripUpdateToDevice to this utility with timer configuration. Also optimize its code.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            },
-            {
-              "text": "Implement new udp layer to register/send the udp messages",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            },
-            {
-              "text": "Implement file based logging in it.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            }
-          ]
-        },
-        {
-          "id": "auto-oara-dotnet-core",
-          "index": 4,
-          "heading": "Convert Auto Oara to .net Core Stand Alone Service",
-          "status": "pending",
-          "addedDate": "2026-08-05",
-          "modifiedDate": "2026-08-10",
-          "completedDate": null,
-          "items": []
-        },
-        {
-          "id": "silverride-sf-bay-pricing",
-          "index": 5,
-          "heading": "SilverRide SF Bay area pricing",
-          "status": "pending",
-          "addedDate": "2026-08-03",
-          "modifiedDate": "2026-08-10",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "We need to add new zones (City/County) & (Peninsula [areas between two cities])",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            },
-            {
-              "text": "Route Surcharge (if trip covers a route (stored as polygons) defined percentage, then apply surcharge)",
-              "done": false,
-              "notes": "Table Route Surcharge [Polygon Coordinates, Percentage Route Covered, Surcharge Amount]",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            }
-          ]
-        },
-        {
           "id": "annapolis-stations-rcz-sync",
-          "index": 6,
+          "index": 7,
           "heading": "Annapolis Stations and RCZ Syncing",
           "status": "pending",
           "priority": "low",
@@ -208,7 +279,7 @@
         },
         {
           "id": "water-taxi-cancel-state-not-synced-ol",
-          "index": 7,
+          "index": 8,
           "heading": "Water Taxi - Trip cancelled state not synced to OL",
           "status": "pending",
           "addedDate": "2026-08-10",
@@ -226,8 +297,240 @@
           ]
         },
         {
+          "id": "avl-playback-drawing-library",
+          "index": 9,
+          "heading": "AVL Playback broken - Google retired the Drawing Manager",
+          "status": "done",
+          "addedDate": "2026-08-24",
+          "modifiedDate": "2026-08-24",
+          "completedDate": "2026-08-24",
+          "items": [
+            {
+              "text": "Playback code used the Google drawing library, which Google has now retired. Replaced it with another drawing tool library and gave the release.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-24",
+              "modifiedDate": "2026-08-24",
+              "completedDate": "2026-08-24"
+            },
+            {
+              "text": "Release provided for Eastern production deployment - existing release backed up first, no DB scripts needed.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-24",
+              "modifiedDate": "2026-08-24",
+              "completedDate": "2026-08-24"
+            }
+          ]
+        },
+        {
+          "id": "saintmary-zone-unknwn-trip-expansion",
+          "index": 10,
+          "heading": "Saint Mary - trip zone becomes UNKWN on trip expansion",
+          "status": "pending",
+          "addedDate": "2026-08-24",
+          "modifiedDate": "2026-08-24",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "Saint Mary trips zone become UNKWN on trip expansion. Issue needs to be fixed.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-24",
+              "modifiedDate": "2026-08-24",
+              "completedDate": null
+            }
+          ]
+        },
+        {
+          "id": "chtaxi-booking-app-wrong-city",
+          "index": 11,
+          "heading": "CH-Taxi booking app reporting wrong city",
+          "status": "pending",
+          "addedDate": "2026-08-24",
+          "modifiedDate": "2026-08-24",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "CH-Taxi booking app is reporting the wrong city. Needs to be investigated with Hinnan.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-24",
+              "modifiedDate": "2026-08-24",
+              "completedDate": null
+            }
+          ]
+        },
+        {
+          "id": "gta-frplanning-api-wrong-affiliates",
+          "index": 12,
+          "heading": "GTA - frplanning API returning wrong affiliate data",
+          "status": "pending",
+          "addedDate": "2026-08-27",
+          "modifiedDate": "2026-08-27",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "gtafrplanningapi.itcurves.us/ZoneManagement/GetAllActiveAffiliates is bringing wrong data. Configurations of the frplanning API to be checked.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-27",
+              "modifiedDate": "2026-08-27",
+              "completedDate": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "weekStart": "2026-08-17",
+      "weekEnd": "2026-08-23",
+      "tasks": [
+        {
+          "id": "sdhs-down-taxi-us-driverno",
+          "index": 1,
+          "heading": "Taxi US - SDHS down and restart failing",
+          "status": "done",
+          "addedDate": "2026-08-17",
+          "modifiedDate": "2026-08-17",
+          "completedDate": "2026-08-17",
+          "items": [
+            {
+              "text": "SDHS was down and restarting it kept giving an error. It happened because of the \".\" in driverno record \"318126\" - the stored procedure was converting it to integer and failing. Fixed, SDHS is running fine and drivers are logging in.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-17",
+              "modifiedDate": "2026-08-17",
+              "completedDate": "2026-08-17"
+            }
+          ]
+        },
+        {
+          "id": "saintmary-app-ids-activation-sms",
+          "index": 2,
+          "heading": "Saint Mary app - activation code SMS not received",
+          "status": "done",
+          "addedDate": "2026-08-17",
+          "modifiedDate": "2026-08-18",
+          "completedDate": "2026-08-18",
+          "items": [
+            {
+              "text": "App ids saintmary_android / saintmary_ios did not exist in the portal, so preActivation answered \"contact backoffice\" and no SMS was generated. After fixing the app ids on the test server, the activation SMS was received.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-17",
+              "modifiedDate": "2026-08-18",
+              "completedDate": "2026-08-18"
+            }
+          ]
+        },
+        {
+          "id": "sec-mgmt-drivers-vehicles-role",
+          "index": 3,
+          "heading": "Create \"Drivers and Vehicles\" role for restricted user access",
+          "status": "done",
+          "addedDate": "2026-08-19",
+          "modifiedDate": "2026-08-20",
+          "completedDate": "2026-08-20",
+          "items": [
+            {
+              "text": "Added the role through a script into SecMgmt.sec_Roles and assigned it to the user. They have to log out and log back in for it to take effect.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-19",
+              "modifiedDate": "2026-08-20",
+              "completedDate": "2026-08-20"
+            }
+          ]
+        },
+        {
+          "id": "gta-trip-investigations-aug21",
+          "index": 4,
+          "heading": "GTA - trip investigations (110821663, 110821690, 110821992)",
+          "status": "done",
+          "addedDate": "2026-08-21",
+          "modifiedDate": "2026-08-21",
+          "completedDate": "2026-08-21",
+          "items": [
+            {
+              "text": "Trip 110821663: Dropped never came from the device.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-21",
+              "modifiedDate": "2026-08-21",
+              "completedDate": "2026-08-21"
+            },
+            {
+              "text": "Trip 110821690: the driver accepted it nine seconds before departing on 110821663 - he stacked it while starting another ride and never returned to it. The session ended at 16:40, ten minutes before this trip's 16:50 scheduled pickup; the entry log holds exactly one call, the ACCEPTED at 15:52:30.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-21",
+              "modifiedDate": "2026-08-21",
+              "completedDate": "2026-08-21"
+            },
+            {
+              "text": "Trip 110821992: dropped due to the SDHS context bug.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-21",
+              "modifiedDate": "2026-08-21",
+              "completedDate": "2026-08-21"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "weekStart": "2026-08-10",
+      "weekEnd": "2026-08-16",
+      "tasks": [
+        {
+          "id": "account-based-zone-changes",
+          "index": 1,
+          "heading": "Account based Zone Changes",
+          "status": "done",
+          "addedDate": "2026-08-03",
+          "modifiedDate": "2026-08-10",
+          "completedDate": "2026-08-10",
+          "items": [
+            {
+              "text": "Deploy releases on STS.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-10",
+              "completedDate": "2026-08-10"
+            },
+            {
+              "text": "Create a Account based Zone (setup on STS), verify on call taker that account based zone is getting applied.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-10",
+              "completedDate": "2026-08-10"
+            },
+            {
+              "text": "Call Taker Account based Zone verified. Fixed call triggering issues in call taker. Double message of Service Hours was coming due to it getting invoked from two places. Fixed",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-10",
+              "modifiedDate": "2026-08-10",
+              "completedDate": "2026-08-10"
+            },
+            {
+              "text": "Inload API was missing some account based zone changes. Added and verified.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-10",
+              "modifiedDate": "2026-08-10",
+              "completedDate": "2026-08-10"
+            }
+          ],
+          "notes": "Releases provided & uploaded."
+        },
+        {
           "id": "edit-treated-three-fixes",
-          "index": 8,
+          "index": 2,
           "heading": "Edit Treated - applied three fixes",
           "status": "done",
           "link": "https://track.itcurves.us/?view=ticket_details&ticketId=CAT-TK-63",
@@ -265,8 +568,8 @@
         },
         {
           "id": "ibpc-access-export-broker-agent-notes",
-          "index": 9,
-          "heading": "usp_IBPC_GetAccessExportData — ClientBillingSupport block: show both legs' Agent Notes for Broker-Affiliate trips",
+          "index": 3,
+          "heading": "usp_IBPC_GetAccessExportData \u00e2\u20ac\u201d ClientBillingSupport block: show both legs' Agent Notes for Broker-Affiliate trips",
           "status": "done",
           "addedDate": "2026-08-11",
           "modifiedDate": "2026-08-11",
@@ -284,7 +587,7 @@
         },
         {
           "id": "allegany-cat-release-deploy-verification",
-          "index": 10,
+          "index": 4,
           "heading": "New release deploy on Allegany/CAT. Verification & Support",
           "status": "done",
           "addedDate": "2026-08-10",
@@ -311,7 +614,7 @@
         },
         {
           "id": "gta-irtpu-trips-treated-shared-variable",
-          "index": 11,
+          "index": 5,
           "heading": "GTA - IRTPU trips got treated without any action or reason",
           "status": "done",
           "addedDate": "2026-08-11",
@@ -333,102 +636,6 @@
               "addedDate": "2026-08-11",
               "modifiedDate": "2026-08-11",
               "completedDate": "2026-08-11"
-            }
-          ]
-        },
-        {
-          "id": "zone-management-portal-pending",
-          "index": 12,
-          "heading": "Zone Management",
-          "status": "in-progress",
-          "notes": "Missing and pending functionalities in the new Zone Management portal.",
-          "addedDate": "2026-08-11",
-          "modifiedDate": "2026-08-13",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "From legacy Web MRMS, we should open new screen of Zone Management via auto login and auto redirect to it.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-08-11",
-              "modifiedDate": "2026-08-13",
-              "completedDate": "2026-08-13"
-            },
-            {
-              "text": "If zone names are too many, they cut-off.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-08-11",
-              "modifiedDate": "2026-08-13",
-              "completedDate": "2026-08-13"
-            },
-            {
-              "text": "Implement zone polygone plotting for City/State/Zip.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-11",
-              "modifiedDate": "2026-08-11",
-              "completedDate": null
-            },
-            {
-              "text": "Implement the zone polygone plot by GTFS feed.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-11",
-              "modifiedDate": "2026-08-11",
-              "completedDate": null
-            }
-          ]
-        },
-        {
-          "id": "web-applications-api-security",
-          "index": 13,
-          "heading": "Web Applications & API Security",
-          "status": "pending",
-          "priority": "high",
-          "addedDate": "2026-08-11",
-          "modifiedDate": "2026-08-11",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "Legacy Web MRMS security - Dont allow accessing any endpoint without authentication at central handler in Owin pipeline.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-11",
-              "modifiedDate": "2026-08-11",
-              "completedDate": null
-            },
-            {
-              "text": "Legacy Web MRMS security - Wrong 3 authentication attempts should trigger the lockout for that ip address (keep it in memory, if app restart we would loose it).",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-11",
-              "modifiedDate": "2026-08-11",
-              "completedDate": null
-            },
-            {
-              "text": "Legacy Web MRMS security - Identify any end point that can face problem due to this new security implementation.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-11",
-              "modifiedDate": "2026-08-11",
-              "completedDate": null
-            },
-            {
-              "text": "Legacy Web MRMS security - This central authentication should also cater the User assigned module security via tags discovery.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-11",
-              "modifiedDate": "2026-08-11",
-              "completedDate": null
-            },
-            {
-              "text": "Legacy Web MRMS security - If user is not assigned the Service provider A, then they should not see any A service provider or its data.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-11",
-              "modifiedDate": "2026-08-11",
-              "completedDate": null
             }
           ]
         }
