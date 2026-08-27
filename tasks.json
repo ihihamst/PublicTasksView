@@ -92,7 +92,7 @@
           "status": "in-progress",
           "priority": "high",
           "addedDate": "2026-08-11",
-          "modifiedDate": "2026-08-27",
+          "modifiedDate": "2026-08-28",
           "completedDate": null,
           "items": [
             {
@@ -150,6 +150,142 @@
               "addedDate": "2026-08-19",
               "modifiedDate": "2026-08-19",
               "completedDate": null
+            },
+            {
+              "text": "UI Parity Check (tgistaging vs 192.168.6.8) - Opened both sites in Chrome, confirmed same database via matching trip counters.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "UI Parity Check (tgistaging vs 192.168.6.8) - Compared 6 of 198 screens - all identical, verified by grid hashes.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "UI Parity Check (tgistaging vs 192.168.6.8) - Confirmed menu structure identical on both (371 links, matching hash).",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "UI Parity Check (tgistaging vs 192.168.6.8) - Found Site 1 correctly blocks token-less direct URLs - by design, not a defect.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "UI Parity Check (tgistaging vs 192.168.6.8) - Caught 2 false alarms caused by mid-load screenshots; both matched once settled.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "Diagnostics Dashboard Review - Reviewed Diagnostics.aspx + JSON endpoint; listed 12 issues by severity.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "Diagnostics Dashboard Review - Found CSV formula injection in Export CSV and residual CSRF on \"reload=true\".",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "Diagnostics Dashboard Review - Probed live gtatms anonymously - confirmed both auth gates fire correctly.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "Diagnostics Dashboard Review - Analysed production snapshot: 94% of denials were self-inflicted poller noise.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "Fixes Implemented - Fix 1+2 - added session-death latch + abort prefilter; stops all 25+ pollers.",
+              "done": true,
+              "notes": "923 insertions across 12 files, builds clean.",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "Fixes Implemented - Fix 1+2 - wired up AsyncJSONAjax's error callback, declared but never used.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "Fixes Implemented - Fix 3 - new \"affexempt\" mode; unblocks the global settings lookup on -1.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "Fixes Implemented - Fix 4 - substring recognition of affiliate params; recovers 298 unscoped requests.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "Fixes Implemented - Fix 5 - X-ES-Service header so self-calls survive the User-Agent filter.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "Fixes Implemented - Fix 8 - lockout re-keyed to Username+IP, with coarse per-IP ceiling retained.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "Dashboard Improvements - Active Sessions now records and displays browser info + raw User-Agent.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "Dashboard Improvements - Function Timing rows now clickable, showing request/response detail.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
             }
           ]
         },

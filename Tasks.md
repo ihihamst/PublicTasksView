@@ -31,7 +31,7 @@ _Notes:_ Top priority as per Imran sb (Aug 24).
 
 ### 3. [ ] Web Applications & API Security
 
-Status: **in-progress** · Priority: **high** · Added 2026-08-11 · Updated 2026-08-27
+Status: **in-progress** · Priority: **high** · Added 2026-08-11 · Updated 2026-08-28
 
 - [x] Legacy Web MRMS security - Dont allow accessing any endpoint without authentication at central handler in Owin pipeline.
   - _Updated 2026-08-19 · Completed 2026-08-19_
@@ -51,6 +51,41 @@ Status: **in-progress** · Priority: **high** · Added 2026-08-11 · Updated 202
 - [ ] Deploy the central endpoint security release. Done on SIV-WebMRMSTemp (test, port 8443), SIV-WebMRMS and Eastern production; requested on GTA.
   - _Notes:_ Eastern production release handed over on Aug 24 (existing release backed up first, no DB scripts needed); GTA deployment requested on Aug 27.
   - _Added 2026-08-19_
+- [x] UI Parity Check (tgistaging vs 192.168.6.8) - Opened both sites in Chrome, confirmed same database via matching trip counters.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] UI Parity Check (tgistaging vs 192.168.6.8) - Compared 6 of 198 screens - all identical, verified by grid hashes.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] UI Parity Check (tgistaging vs 192.168.6.8) - Confirmed menu structure identical on both (371 links, matching hash).
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] UI Parity Check (tgistaging vs 192.168.6.8) - Found Site 1 correctly blocks token-less direct URLs - by design, not a defect.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] UI Parity Check (tgistaging vs 192.168.6.8) - Caught 2 false alarms caused by mid-load screenshots; both matched once settled.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Diagnostics Dashboard Review - Reviewed Diagnostics.aspx + JSON endpoint; listed 12 issues by severity.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Diagnostics Dashboard Review - Found CSV formula injection in Export CSV and residual CSRF on "reload=true".
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Diagnostics Dashboard Review - Probed live gtatms anonymously - confirmed both auth gates fire correctly.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Diagnostics Dashboard Review - Analysed production snapshot: 94% of denials were self-inflicted poller noise.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Fixes Implemented - Fix 1+2 - added session-death latch + abort prefilter; stops all 25+ pollers.
+  - _Notes:_ 923 insertions across 12 files, builds clean.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Fixes Implemented - Fix 1+2 - wired up AsyncJSONAjax's error callback, declared but never used.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Fixes Implemented - Fix 3 - new "affexempt" mode; unblocks the global settings lookup on -1.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Fixes Implemented - Fix 4 - substring recognition of affiliate params; recovers 298 unscoped requests.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Fixes Implemented - Fix 5 - X-ES-Service header so self-calls survive the User-Agent filter.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Fixes Implemented - Fix 8 - lockout re-keyed to Username+IP, with coarse per-IP ceiling retained.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Dashboard Improvements - Active Sessions now records and displays browser info + raw User-Agent.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Dashboard Improvements - Function Timing rows now clickable, showing request/response detail.
+  - _Added 2026-08-28 · Completed 2026-08-28_
 
 ### 4. [ ] SendTripUpdateToDevice (move implementation from Inload API to Separate Utility)
 
