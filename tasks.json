@@ -343,59 +343,8 @@
           "items": []
         },
         {
-          "id": "sts-migration-allegany",
-          "index": 6,
-          "heading": "STS Migration to Allegany",
-          "status": "in-progress",
-          "addedDate": "2026-08-03",
-          "modifiedDate": "2026-08-11",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "Deploy and verify latest release changes on Annapolis staging server. All Annapolis existing business flow should work.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            },
-            {
-              "text": "Prepare migration utility to migrate the STS data into Allegany/Cat server.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-10",
-              "completedDate": "2026-08-10"
-            },
-            {
-              "text": "Issues reported in migration - a. Zone zig-zag, it happened due to migrating data missed the order by clause. Re-importing data fixed it.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-08-11",
-              "modifiedDate": "2026-08-11",
-              "completedDate": "2026-08-10"
-            },
-            {
-              "text": "Issues reported in migration - b. For future date, when time is not set, call taker 2.0 act as today date in zone/service hour calculation.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-11",
-              "modifiedDate": "2026-08-11",
-              "completedDate": null
-            },
-            {
-              "text": "Implement the application of booking rules (if setting ApplyZoneBookingRules is true) on the Load & Verify screen.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-11",
-              "modifiedDate": "2026-08-11",
-              "completedDate": null
-            }
-          ]
-        },
-        {
           "id": "annapolis-stations-rcz-sync",
-          "index": 7,
+          "index": 6,
           "heading": "Annapolis Stations and RCZ Syncing",
           "status": "pending",
           "priority": "low",
@@ -415,7 +364,7 @@
         },
         {
           "id": "water-taxi-cancel-state-not-synced-ol",
-          "index": 8,
+          "index": 7,
           "heading": "Water Taxi - Trip cancelled state not synced to OL",
           "status": "pending",
           "addedDate": "2026-08-10",
@@ -434,7 +383,7 @@
         },
         {
           "id": "avl-playback-drawing-library",
-          "index": 9,
+          "index": 8,
           "heading": "AVL Playback broken - Google retired the Drawing Manager",
           "status": "done",
           "addedDate": "2026-08-24",
@@ -461,7 +410,7 @@
         },
         {
           "id": "saintmary-zone-unknwn-trip-expansion",
-          "index": 10,
+          "index": 9,
           "heading": "Saint Mary - trip zone becomes UNKWN on trip expansion",
           "status": "pending",
           "addedDate": "2026-08-24",
@@ -480,38 +429,46 @@
         },
         {
           "id": "chtaxi-booking-app-wrong-city",
-          "index": 11,
+          "index": 10,
           "heading": "CH-Taxi booking app reporting wrong city",
-          "status": "pending",
+          "status": "done",
           "addedDate": "2026-08-24",
-          "modifiedDate": "2026-08-24",
-          "completedDate": null,
+          "modifiedDate": "2026-08-28",
+          "completedDate": "2026-08-28",
           "items": [
             {
               "text": "CH-Taxi booking app is reporting the wrong city. Needs to be investigated with Hinnan.",
-              "done": false,
-              "notes": "",
+              "done": true,
+              "notes": "Checked and handed over to Hinnan for later investigation. Done from my side.",
               "addedDate": "2026-08-24",
-              "modifiedDate": "2026-08-24",
-              "completedDate": null
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
             }
           ]
         },
         {
           "id": "gta-frplanning-api-wrong-affiliates",
-          "index": 12,
+          "index": 11,
           "heading": "GTA - frplanning API returning wrong affiliate data",
-          "status": "pending",
+          "status": "in-progress",
           "addedDate": "2026-08-27",
-          "modifiedDate": "2026-08-27",
+          "modifiedDate": "2026-08-28",
           "completedDate": null,
           "items": [
             {
               "text": "gtafrplanningapi.itcurves.us/ZoneManagement/GetAllActiveAffiliates is bringing wrong data. Configurations of the frplanning API to be checked.",
-              "done": false,
+              "done": true,
               "notes": "",
               "addedDate": "2026-08-27",
-              "modifiedDate": "2026-08-27",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "Zone Management needs a common configuration, not a separate configuration.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
               "completedDate": null
             }
           ]
@@ -772,6 +729,57 @@
               "addedDate": "2026-08-11",
               "modifiedDate": "2026-08-11",
               "completedDate": "2026-08-11"
+            }
+          ]
+        },
+        {
+          "id": "sts-migration-allegany",
+          "index": 6,
+          "heading": "STS Migration to Allegany",
+          "status": "done",
+          "addedDate": "2026-08-03",
+          "modifiedDate": "2026-08-14",
+          "completedDate": "2026-08-14",
+          "items": [
+            {
+              "text": "Deploy and verify latest release changes on Annapolis staging server. All Annapolis existing business flow should work.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-14",
+              "completedDate": "2026-08-14"
+            },
+            {
+              "text": "Prepare migration utility to migrate the STS data into Allegany/Cat server.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-10",
+              "completedDate": "2026-08-10"
+            },
+            {
+              "text": "Issues reported in migration - a. Zone zig-zag, it happened due to migrating data missed the order by clause. Re-importing data fixed it.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-11",
+              "completedDate": "2026-08-10"
+            },
+            {
+              "text": "Issues reported in migration - b. For future date, when time is not set, call taker 2.0 act as today date in zone/service hour calculation.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-14",
+              "completedDate": "2026-08-14"
+            },
+            {
+              "text": "Implement the application of booking rules (if setting ApplyZoneBookingRules is true) on the Load & Verify screen.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-14",
+              "completedDate": "2026-08-14"
             }
           ]
         }

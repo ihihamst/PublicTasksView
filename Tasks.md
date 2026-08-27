@@ -100,56 +100,46 @@ Status: **pending** · Added 2026-08-03 · Updated 2026-08-10
 
 Status: **pending** · Added 2026-08-05 · Updated 2026-08-10
 
-### 6. [ ] STS Migration to Allegany
-
-Status: **in-progress** · Added 2026-08-03 · Updated 2026-08-11
-
-- [ ] Deploy and verify latest release changes on Annapolis staging server. All Annapolis existing business flow should work.
-- [x] Prepare migration utility to migrate the STS data into Allegany/Cat server.
-  - _Updated 2026-08-10 · Completed 2026-08-10_
-- [x] Issues reported in migration - a. Zone zig-zag, it happened due to migrating data missed the order by clause. Re-importing data fixed it.
-  - _Added 2026-08-11 · Completed 2026-08-10_
-- [ ] Issues reported in migration - b. For future date, when time is not set, call taker 2.0 act as today date in zone/service hour calculation.
-  - _Added 2026-08-11_
-- [ ] Implement the application of booking rules (if setting ApplyZoneBookingRules is true) on the Load & Verify screen.
-  - _Added 2026-08-11_
-
-### 7. [ ] Annapolis Stations and RCZ Syncing
+### 6. [ ] Annapolis Stations and RCZ Syncing
 
 Status: **pending** · Priority: **low** · Added 2026-08-05 · Updated 2026-08-10
 
 - [ ] Annapolis needs Stations and RCZ syncing enabled via old path.
 
-### 8. [ ] Water Taxi - Trip cancelled state not synced to OL
+### 7. [ ] Water Taxi - Trip cancelled state not synced to OL
 
 Status: **pending** · Added 2026-08-10 · Updated 2026-08-10
 
 - [ ] For Confirmation No. 1780034693 (WaterTaxi Microtransit, Service ID 4662746, due 8/9/2026 12:55:00PM), trip state (Cancelled) was not synced to OL. Service Status in IL is CancelledARQ.
 
-### 9. [x] AVL Playback broken - Google retired the Drawing Manager
+### 8. [x] AVL Playback broken - Google retired the Drawing Manager
 
 Status: **done** · Added 2026-08-24 · Updated 2026-08-24 · Completed 2026-08-24
 
 - [x] Playback code used the Google drawing library, which Google has now retired. Replaced it with another drawing tool library and gave the release.
 - [x] Release provided for Eastern production deployment - existing release backed up first, no DB scripts needed.
 
-### 10. [ ] Saint Mary - trip zone becomes UNKWN on trip expansion
+### 9. [ ] Saint Mary - trip zone becomes UNKWN on trip expansion
 
 Status: **pending** · Added 2026-08-24 · Updated 2026-08-24
 
 - [ ] Saint Mary trips zone become UNKWN on trip expansion. Issue needs to be fixed.
 
-### 11. [ ] CH-Taxi booking app reporting wrong city
+### 10. [x] CH-Taxi booking app reporting wrong city
 
-Status: **pending** · Added 2026-08-24 · Updated 2026-08-24
+Status: **done** · Added 2026-08-24 · Updated 2026-08-28 · Completed 2026-08-28
 
-- [ ] CH-Taxi booking app is reporting the wrong city. Needs to be investigated with Hinnan.
+- [x] CH-Taxi booking app is reporting the wrong city. Needs to be investigated with Hinnan.
+  - _Notes:_ Checked and handed over to Hinnan for later investigation. Done from my side.
 
-### 12. [ ] GTA - frplanning API returning wrong affiliate data
+### 11. [ ] GTA - frplanning API returning wrong affiliate data
 
-Status: **pending** · Added 2026-08-27 · Updated 2026-08-27
+Status: **in-progress** · Added 2026-08-27 · Updated 2026-08-28
 
-- [ ] gtafrplanningapi.itcurves.us/ZoneManagement/GetAllActiveAffiliates is bringing wrong data. Configurations of the frplanning API to be checked.
+- [x] gtafrplanningapi.itcurves.us/ZoneManagement/GetAllActiveAffiliates is bringing wrong data. Configurations of the frplanning API to be checked.
+  - _Completed 2026-08-28_
+- [ ] Zone Management needs a common configuration, not a separate configuration.
+  - _Added 2026-08-28_
 
 ## Week 2026-08-17 → 2026-08-23
 
@@ -226,6 +216,20 @@ Status: **done** · Added 2026-08-11 · Updated 2026-08-11 · Completed 2026-08-
 
 - [x] After investigation, it was found that in manifest one of the trip was marked as Dropped, but it was not treated, instead this innocent trip of same manifest got treated. Issue in SDHS variable which is a shared variable. This shared variable issue, I have fixed too for new releases.
 - [x] In sp usp_MRMC_TreatedRequest I have added protection to protect in this scenario, after discussion with Iqbal sb. This sp is deployed on Eastern2 and GTA to provide immediate remedy until new SDHS release is deployed.
+
+### 6. [x] STS Migration to Allegany
+
+Status: **done** · Added 2026-08-03 · Updated 2026-08-14 · Completed 2026-08-14
+
+- [x] Deploy and verify latest release changes on Annapolis staging server. All Annapolis existing business flow should work.
+- [x] Prepare migration utility to migrate the STS data into Allegany/Cat server.
+  - _Updated 2026-08-10 · Completed 2026-08-10_
+- [x] Issues reported in migration - a. Zone zig-zag, it happened due to migrating data missed the order by clause. Re-importing data fixed it.
+  - _Added 2026-08-11 · Completed 2026-08-10_
+- [x] Issues reported in migration - b. For future date, when time is not set, call taker 2.0 act as today date in zone/service hour calculation.
+  - _Added 2026-08-11_
+- [x] Implement the application of booking rules (if setting ApplyZoneBookingRules is true) on the Load & Verify screen.
+  - _Added 2026-08-11_
 
 ## Week 2026-08-03 → 2026-08-09
 
