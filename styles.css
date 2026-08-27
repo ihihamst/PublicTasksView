@@ -64,6 +64,26 @@ body{
 .chip-toggle input{margin:0;width:13px;height:13px;accent-color:#fff;cursor:pointer}
 .chip-toggle:hover{background:rgba(255,255,255,.28)}
 
+/* ---------- Week tabs (last four weeks, in the header) ---------- */
+.week-tabs{display:flex;gap:4px;flex-wrap:wrap;padding:0 0 8px}
+.week-tab{
+  display:inline-flex;align-items:center;gap:6px;cursor:pointer;
+  padding:4px 10px;border-radius:8px 8px 0 0;font:inherit;font-size:.74rem;font-weight:600;
+  color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);
+  border-bottom:none;transition:.15s;
+}
+.week-tab:hover{background:rgba(255,255,255,.26)}
+.week-tab.is-active{background:#fff;color:var(--ink);border-color:#fff}
+.wt-now{
+  font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;
+  padding:1px 5px;border-radius:999px;background:rgba(255,255,255,.28);
+}
+.week-tab.is-active .wt-now{background:var(--indigo);color:#fff}
+.wt-count{font-size:.68rem;font-weight:700;opacity:.85}
+.week-tab.is-active .wt-count{color:var(--muted);opacity:1}
+.week-tab .wt-count.all-done{color:var(--green-mid)}
+.week-tab.is-active .wt-count.all-done{color:var(--green-mid)}
+
 /* Completed points (and fully completed tasks) collapse away when unchecked. */
 body.hide-completed .items li.done{display:none}
 body.hide-completed .card.is-done{display:none}

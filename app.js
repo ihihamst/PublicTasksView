@@ -314,6 +314,15 @@
     box.addEventListener('change', function () { applyShowCompleted(box.checked); });
   }
 
+  /** Switching weeks replaces the cards, so the active filter goes back to "All". */
+  function resetFilters() {
+    [].slice.call(document.querySelectorAll('.filter')).forEach(function (b) {
+      var on = b.dataset.filter === 'all';
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+  }
+
   function wireFilters() {
     var buttons = [].slice.call(document.querySelectorAll('.filter'));
     buttons.forEach(function (btn) {
@@ -337,6 +346,63 @@
         });
       });
     });
+  }
+
+  /* ---------------- week tabs ---------------- */
+
+  // The four newest weeks get a tab; the rest stay in Task History. Picking a tab re-renders the
+  // board around that week — it becomes the "current" section, the one before it becomes "last week".
+  var TAB_COUNT = 4;
+  var BOARD = { weeks: [], idx: 0, todayIdx: 0 };
+
+  function renderWeekTabs() {
+    var el = document.getElementById('weekTabs');
+    var weeks = BOARD.weeks.slice(0, TAB_COUNT);
+    if (weeks.length < 2) { el.innerHTML = ''; return; }
+
+    el.innerHTML = weeks.map(function (w, i) {
+      var tasks = w.tasks || [];
+      var done = tasks.filter(function (t) { return statusOf(t) === 'done'; }).length;
+      var on = i === BOARD.idx;
+      return '<button class="week-tab' + (on ? ' is-active' : '') + '" role="tab" data-week="' + i + '"' +
+        ' aria-selected="' + (on ? 'true' : 'false') + '">' +
+        '<span class="wt-range">' + esc(fmtRange(w)) + '</span>' +
+        (i === BOARD.todayIdx ? '<span class="wt-now">Now</span>' : '') +
+        '<span class="wt-count' + (tasks.length && done === tasks.length ? ' all-done' : '') + '">' +
+          done + '/' + tasks.length + '</span>' +
+      '</button>';
+    }).join('');
+
+    [].slice.call(el.querySelectorAll('.week-tab')).forEach(function (btn) {
+      btn.addEventListener('click', function () { selectWeek(Number(btn.dataset.week)); });
+    });
+  }
+
+  function selectWeek(i) {
+    BOARD.idx = i;
+    renderBoard();
+  }
+
+  function renderBoard() {
+    var weeks = BOARD.weeks;
+    var current = weeks[BOARD.idx];
+    var last = weeks[BOARD.idx + 1] || null;
+    var history = weeks.filter(function (w) { return w !== current && w !== last; });
+
+    document.getElementById('weekRangeChip').textContent = fmtRange(current);
+    document.getElementById('currentRange').textContent = fmtRange(current);
+    document.getElementById('lastRange').textContent = last ? fmtRange(last) : '—';
+    document.getElementById('currentHeading').textContent =
+      BOARD.idx === BOARD.todayIdx ? 'Current Week' : 'Week of ' + fmtRange(current);
+
+    renderStats(current.tasks || []);
+    renderTasks(document.getElementById('currentTasks'), current.tasks,
+      'No tasks recorded for this week.');
+    renderTasks(document.getElementById('lastTasks'), last && last.tasks,
+      last ? 'No tasks recorded for that week.' : 'No earlier week recorded yet.');
+    renderHistory(history);
+    renderWeekTabs();
+    resetFilters();
   }
 
   /* ---------------- boot ---------------- */
@@ -372,22 +438,13 @@
     });
     if (idx < 0) idx = 0;
 
-    var current = weeks[idx];
-    var last = weeks[idx + 1] || null;
-    var history = weeks.filter(function (w, i) { return i !== idx && w !== last; });
+    BOARD.weeks = weeks;
+    BOARD.idx = idx;
+    BOARD.todayIdx = idx;
 
-    document.getElementById('weekRangeChip').textContent = fmtRange(current);
-    document.getElementById('currentRange').textContent = fmtRange(current);
-    document.getElementById('lastRange').textContent = last ? fmtRange(last) : '—';
-
-    renderStats(current.tasks || []);
-    renderTasks(document.getElementById('currentTasks'), current.tasks,
-      'No tasks recorded for this week.');
-    renderTasks(document.getElementById('lastTasks'), last && last.tasks,
-      last ? 'No tasks recorded for last week.' : 'No previous week recorded yet.');
-    renderHistory(history);
     wireCompletedToggle();
     wireFilters();
+    renderBoard();
   }
 
   function fail(msg) {
