@@ -8,7 +8,7 @@ Mirror of `tasks.json` in readable form. `tasks.json` remains the source of trut
 
 ### 1. [ ] Zone Management
 
-Status: **in-progress** · Priority: **high** · Added 2026-08-11 · Updated 2026-08-26
+Status: **in-progress** · Priority: **high** · Added 2026-08-11 · Updated 2026-08-28
 
 _Notes:_ Missing and pending functionalities in the new Zone Management portal. The remaining GTFS and City/State/Zip plotting is top priority as per Iqbal sb (Aug 24).
 
@@ -18,6 +18,10 @@ _Notes:_ Missing and pending functionalities in the new Zone Management portal. 
   - _Updated 2026-08-13 · Completed 2026-08-13_
 - [ ] Implement zone polygone plotting for City/State/Zip.
 - [ ] Implement the zone polygone plot by GTFS feed.
+- [ ] It should use common configurations of app or api.
+  - _Added 2026-08-28_
+- [ ] Any api key or url should come from config (only if it can change server to server).
+  - _Added 2026-08-28_
 
 ### 2. [ ] SilverRide SF Bay area pricing
 

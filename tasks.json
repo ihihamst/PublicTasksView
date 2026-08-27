@@ -18,7 +18,7 @@
           "status": "in-progress",
           "notes": "Missing and pending functionalities in the new Zone Management portal. The remaining GTFS and City/State/Zip plotting is top priority as per Iqbal sb (Aug 24).",
           "addedDate": "2026-08-11",
-          "modifiedDate": "2026-08-26",
+          "modifiedDate": "2026-08-28",
           "completedDate": null,
           "items": [
             {
@@ -51,6 +51,22 @@
               "notes": "",
               "addedDate": "2026-08-11",
               "modifiedDate": "2026-08-11",
+              "completedDate": null
+            },
+            {
+              "text": "It should use common configurations of app or api.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": null
+            },
+            {
+              "text": "Any api key or url should come from config (only if it can change server to server).",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
               "completedDate": null
             }
           ],
