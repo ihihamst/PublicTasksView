@@ -428,27 +428,8 @@
           ]
         },
         {
-          "id": "chtaxi-booking-app-wrong-city",
-          "index": 10,
-          "heading": "CH-Taxi booking app reporting wrong city",
-          "status": "done",
-          "addedDate": "2026-08-24",
-          "modifiedDate": "2026-08-28",
-          "completedDate": "2026-08-28",
-          "items": [
-            {
-              "text": "CH-Taxi booking app is reporting the wrong city. Needs to be investigated with Hinnan.",
-              "done": true,
-              "notes": "Checked and handed over to Hinnan for later investigation. Done from my side.",
-              "addedDate": "2026-08-24",
-              "modifiedDate": "2026-08-28",
-              "completedDate": "2026-08-28"
-            }
-          ]
-        },
-        {
           "id": "gta-frplanning-api-wrong-affiliates",
-          "index": 11,
+          "index": 10,
           "heading": "GTA - frplanning API returning wrong affiliate data",
           "status": "in-progress",
           "addedDate": "2026-08-27",
@@ -566,6 +547,25 @@
               "done": true,
               "notes": "",
               "addedDate": "2026-08-21",
+              "modifiedDate": "2026-08-21",
+              "completedDate": "2026-08-21"
+            }
+          ]
+        },
+        {
+          "id": "chtaxi-booking-app-wrong-city",
+          "index": 5,
+          "heading": "CH-Taxi booking app reporting wrong city",
+          "status": "done",
+          "addedDate": "2026-08-17",
+          "modifiedDate": "2026-08-21",
+          "completedDate": "2026-08-21",
+          "items": [
+            {
+              "text": "CH-Taxi booking app is reporting the wrong city. Needs to be investigated with Hinnan.",
+              "done": true,
+              "notes": "Checked and handed over to Hinnan for later investigation. Done from my side.",
+              "addedDate": "2026-08-17",
               "modifiedDate": "2026-08-21",
               "completedDate": "2026-08-21"
             }

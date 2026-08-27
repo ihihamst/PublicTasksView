@@ -125,14 +125,7 @@ Status: **pending** · Added 2026-08-24 · Updated 2026-08-24
 
 - [ ] Saint Mary trips zone become UNKWN on trip expansion. Issue needs to be fixed.
 
-### 10. [x] CH-Taxi booking app reporting wrong city
-
-Status: **done** · Added 2026-08-24 · Updated 2026-08-28 · Completed 2026-08-28
-
-- [x] CH-Taxi booking app is reporting the wrong city. Needs to be investigated with Hinnan.
-  - _Notes:_ Checked and handed over to Hinnan for later investigation. Done from my side.
-
-### 11. [ ] GTA - frplanning API returning wrong affiliate data
+### 10. [ ] GTA - frplanning API returning wrong affiliate data
 
 Status: **in-progress** · Added 2026-08-27 · Updated 2026-08-28
 
@@ -168,6 +161,13 @@ Status: **done** · Added 2026-08-21 · Updated 2026-08-21 · Completed 2026-08-
 - [x] Trip 110821663: Dropped never came from the device.
 - [x] Trip 110821690: the driver accepted it nine seconds before departing on 110821663 - he stacked it while starting another ride and never returned to it. The session ended at 16:40, ten minutes before this trip's 16:50 scheduled pickup; the entry log holds exactly one call, the ACCEPTED at 15:52:30.
 - [x] Trip 110821992: dropped due to the SDHS context bug.
+
+### 5. [x] CH-Taxi booking app reporting wrong city
+
+Status: **done** · Added 2026-08-17 · Updated 2026-08-21 · Completed 2026-08-21
+
+- [x] CH-Taxi booking app is reporting the wrong city. Needs to be investigated with Hinnan.
+  - _Notes:_ Checked and handed over to Hinnan for later investigation. Done from my side.
 
 ## Week 2026-08-10 → 2026-08-16
 
