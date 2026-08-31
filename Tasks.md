@@ -1,10 +1,10 @@
 # Tasks Assignment
 
-Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-08-28**
+Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-01**
 
 Mirror of `tasks.json` in readable form. `tasks.json` remains the source of truth — update it first, then regenerate this file with `python3 scripts/generate_tasks_md.py`.
 
-## Week 2026-08-24 → 2026-08-30
+## Week 2026-08-31 → 2026-09-04
 
 ### 1. [ ] Zone Management
 
@@ -35,18 +35,18 @@ _Notes:_ Top priority as per Imran sb (Aug 24).
 
 ### 3. [ ] Implement PendingAPICallsAndTripUpdatesUtility
 
-Status: **in-progress** · Added 2026-08-03 · Updated 2026-08-28
+Status: **in-progress** · Added 2026-08-03 · Updated 2026-08-31
 
 _Notes:_ The PendingAPICalls side is done and delivered. The points for SendTripUpdateToDevice - moving the implementation out of the Inload API into this utility - are still pending.
 
 - [x] PendingAPICalls - implement the process of invoking the PendingAPICalls from this utility. Maintain sequential lane (one) + configurable concurrent lanes (default 128).
-  - _Added 2026-08-28 · Completed 2026-08-28_
+  - _Added 2026-08-31 · Completed 2026-08-31_
 - [x] PendingAPICalls - both types of lanes will utilize shared threading only when work is being done in the utility, otherwise it will release the thread and wait for the network call to return.
-  - _Added 2026-08-28 · Completed 2026-08-28_
+  - _Added 2026-08-31 · Completed 2026-08-31_
 - [x] PendingAPICalls - implement admin dashboard to view stats, logs, requests/responses, queues.
-  - _Added 2026-08-28 · Completed 2026-08-28_
+  - _Added 2026-08-31 · Completed 2026-08-31_
 - [x] PendingAPICalls - implement the installer (WiX) to install this as a Windows service. The installer also helps in configuring the connection string and app settings.
-  - _Added 2026-08-28 · Completed 2026-08-28_
+  - _Added 2026-08-31 · Completed 2026-08-31_
 - [ ] Migrate the existing utility into .net core service/console.
 - [ ] Move the code of SendTripUpdateToDevice to this utility with timer configuration. Also optimize its code.
 - [ ] Implement new udp layer to register/send the udp messages
@@ -68,20 +68,13 @@ Status: **pending** · Added 2026-08-10 · Updated 2026-08-10
 
 - [ ] For Confirmation No. 1780034693 (WaterTaxi Microtransit, Service ID 4662746, due 8/9/2026 12:55:00PM), trip state (Cancelled) was not synced to OL. Service Status in IL is CancelledARQ.
 
-### 7. [x] AVL Playback broken - Google retired the Drawing Manager
-
-Status: **done** · Added 2026-08-24 · Updated 2026-08-24 · Completed 2026-08-24
-
-- [x] Playback code used the Google drawing library, which Google has now retired. Replaced it with another drawing tool library and gave the release.
-- [x] Release provided for Eastern production deployment - existing release backed up first, no DB scripts needed.
-
-### 8. [ ] Saint Mary - trip zone becomes UNKWN on trip expansion
+### 7. [ ] Saint Mary - trip zone becomes UNKWN on trip expansion
 
 Status: **pending** · Added 2026-08-24 · Updated 2026-08-24
 
 - [ ] Saint Mary trips zone become UNKWN on trip expansion. Issue needs to be fixed.
 
-### 9. [ ] GTA - frplanning API returning wrong affiliate data
+### 8. [ ] GTA - frplanning API returning wrong affiliate data
 
 Status: **in-progress** · Added 2026-08-27 · Updated 2026-08-28
 
@@ -89,6 +82,15 @@ Status: **in-progress** · Added 2026-08-27 · Updated 2026-08-28
   - _Completed 2026-08-28_
 - [ ] Zone Management needs a common configuration, not a separate configuration.
   - _Added 2026-08-28_
+
+## Week 2026-08-24 → 2026-08-30
+
+### 1. [x] AVL Playback broken - Google retired the Drawing Manager
+
+Status: **done** · Added 2026-08-24 · Updated 2026-08-24 · Completed 2026-08-24
+
+- [x] Playback code used the Google drawing library, which Google has now retired. Replaced it with another drawing tool library and gave the release.
+- [x] Release provided for Eastern production deployment - existing release backed up first, no DB scripts needed.
 
 ## Week 2026-08-17 → 2026-08-23
 

@@ -3,13 +3,13 @@
     "title": "Tasks Assignment",
     "owner": "ihihamst",
     "weekStartsOn": "monday",
-    "lastUpdated": "2026-08-28",
+    "lastUpdated": "2026-09-01",
     "timezone": "Asia/Karachi (PKT, UTC+05:00)"
   },
   "weeks": [
     {
-      "weekStart": "2026-08-24",
-      "weekEnd": "2026-08-30",
+      "weekStart": "2026-08-31",
+      "weekEnd": "2026-09-04",
       "tasks": [
         {
           "id": "zone-management-portal-pending",
@@ -107,40 +107,40 @@
           "heading": "Implement PendingAPICallsAndTripUpdatesUtility",
           "status": "in-progress",
           "addedDate": "2026-08-03",
-          "modifiedDate": "2026-08-28",
+          "modifiedDate": "2026-08-31",
           "completedDate": null,
           "items": [
             {
               "text": "PendingAPICalls - implement the process of invoking the PendingAPICalls from this utility. Maintain sequential lane (one) + configurable concurrent lanes (default 128).",
               "done": true,
               "notes": "",
-              "addedDate": "2026-08-28",
-              "modifiedDate": "2026-08-28",
-              "completedDate": "2026-08-28"
+              "addedDate": "2026-08-31",
+              "modifiedDate": "2026-08-31",
+              "completedDate": "2026-08-31"
             },
             {
               "text": "PendingAPICalls - both types of lanes will utilize shared threading only when work is being done in the utility, otherwise it will release the thread and wait for the network call to return.",
               "done": true,
               "notes": "",
-              "addedDate": "2026-08-28",
-              "modifiedDate": "2026-08-28",
-              "completedDate": "2026-08-28"
+              "addedDate": "2026-08-31",
+              "modifiedDate": "2026-08-31",
+              "completedDate": "2026-08-31"
             },
             {
               "text": "PendingAPICalls - implement admin dashboard to view stats, logs, requests/responses, queues.",
               "done": true,
               "notes": "",
-              "addedDate": "2026-08-28",
-              "modifiedDate": "2026-08-28",
-              "completedDate": "2026-08-28"
+              "addedDate": "2026-08-31",
+              "modifiedDate": "2026-08-31",
+              "completedDate": "2026-08-31"
             },
             {
               "text": "PendingAPICalls - implement the installer (WiX) to install this as a Windows service. The installer also helps in configuring the connection string and app settings.",
               "done": true,
               "notes": "",
-              "addedDate": "2026-08-28",
-              "modifiedDate": "2026-08-28",
-              "completedDate": "2026-08-28"
+              "addedDate": "2026-08-31",
+              "modifiedDate": "2026-08-31",
+              "completedDate": "2026-08-31"
             },
             {
               "text": "Migrate the existing utility into .net core service/console.",
@@ -227,35 +227,8 @@
           ]
         },
         {
-          "id": "avl-playback-drawing-library",
-          "index": 7,
-          "heading": "AVL Playback broken - Google retired the Drawing Manager",
-          "status": "done",
-          "addedDate": "2026-08-24",
-          "modifiedDate": "2026-08-24",
-          "completedDate": "2026-08-24",
-          "items": [
-            {
-              "text": "Playback code used the Google drawing library, which Google has now retired. Replaced it with another drawing tool library and gave the release.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-08-24",
-              "modifiedDate": "2026-08-24",
-              "completedDate": "2026-08-24"
-            },
-            {
-              "text": "Release provided for Eastern production deployment - existing release backed up first, no DB scripts needed.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-08-24",
-              "modifiedDate": "2026-08-24",
-              "completedDate": "2026-08-24"
-            }
-          ]
-        },
-        {
           "id": "saintmary-zone-unknwn-trip-expansion",
-          "index": 8,
+          "index": 7,
           "heading": "Saint Mary - trip zone becomes UNKWN on trip expansion",
           "status": "pending",
           "addedDate": "2026-08-24",
@@ -274,7 +247,7 @@
         },
         {
           "id": "gta-frplanning-api-wrong-affiliates",
-          "index": 9,
+          "index": 8,
           "heading": "GTA - frplanning API returning wrong affiliate data",
           "status": "in-progress",
           "addedDate": "2026-08-27",
@@ -296,6 +269,39 @@
               "addedDate": "2026-08-28",
               "modifiedDate": "2026-08-28",
               "completedDate": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "weekStart": "2026-08-24",
+      "weekEnd": "2026-08-30",
+      "tasks": [
+        {
+          "id": "avl-playback-drawing-library",
+          "index": 1,
+          "heading": "AVL Playback broken - Google retired the Drawing Manager",
+          "status": "done",
+          "addedDate": "2026-08-24",
+          "modifiedDate": "2026-08-24",
+          "completedDate": "2026-08-24",
+          "items": [
+            {
+              "text": "Playback code used the Google drawing library, which Google has now retired. Replaced it with another drawing tool library and gave the release.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-24",
+              "modifiedDate": "2026-08-24",
+              "completedDate": "2026-08-24"
+            },
+            {
+              "text": "Release provided for Eastern production deployment - existing release backed up first, no DB scripts needed.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-24",
+              "modifiedDate": "2026-08-24",
+              "completedDate": "2026-08-24"
             }
           ]
         }
