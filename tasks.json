@@ -102,14 +102,329 @@
           "notes": "Top priority as per Imran sb (Aug 24)."
         },
         {
-          "id": "web-applications-api-security",
+          "id": "send-trip-update-to-device",
           "index": 3,
+          "heading": "Implement PendingAPICallsAndTripUpdatesUtility",
+          "status": "in-progress",
+          "addedDate": "2026-08-03",
+          "modifiedDate": "2026-08-28",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "PendingAPICalls - implement the process of invoking the PendingAPICalls from this utility. Maintain sequential lane (one) + configurable concurrent lanes (default 128).",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "PendingAPICalls - both types of lanes will utilize shared threading only when work is being done in the utility, otherwise it will release the thread and wait for the network call to return.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "PendingAPICalls - implement admin dashboard to view stats, logs, requests/responses, queues.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "PendingAPICalls - implement the installer (WiX) to install this as a Windows service. The installer also helps in configuring the connection string and app settings.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "Migrate the existing utility into .net core service/console.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            },
+            {
+              "text": "Move the code of SendTripUpdateToDevice to this utility with timer configuration. Also optimize its code.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            },
+            {
+              "text": "Implement new udp layer to register/send the udp messages",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            },
+            {
+              "text": "Implement file based logging in it.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            }
+          ],
+          "notes": "The PendingAPICalls side is done and delivered. The points for SendTripUpdateToDevice - moving the implementation out of the Inload API into this utility - are still pending."
+        },
+        {
+          "id": "auto-oara-dotnet-core",
+          "index": 4,
+          "heading": "Convert Auto Oara to .net Core Stand Alone Service",
+          "status": "pending",
+          "addedDate": "2026-08-05",
+          "modifiedDate": "2026-08-10",
+          "completedDate": null,
+          "items": []
+        },
+        {
+          "id": "annapolis-stations-rcz-sync",
+          "index": 5,
+          "heading": "Annapolis Stations and RCZ Syncing",
+          "status": "pending",
+          "priority": "low",
+          "addedDate": "2026-08-05",
+          "modifiedDate": "2026-08-10",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "Annapolis needs Stations and RCZ syncing enabled via old path.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-05",
+              "modifiedDate": "2026-08-05",
+              "completedDate": null
+            }
+          ]
+        },
+        {
+          "id": "water-taxi-cancel-state-not-synced-ol",
+          "index": 6,
+          "heading": "Water Taxi - Trip cancelled state not synced to OL",
+          "status": "pending",
+          "addedDate": "2026-08-10",
+          "modifiedDate": "2026-08-10",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "For Confirmation No. 1780034693 (WaterTaxi Microtransit, Service ID 4662746, due 8/9/2026 12:55:00PM), trip state (Cancelled) was not synced to OL. Service Status in IL is CancelledARQ.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-10",
+              "modifiedDate": "2026-08-10",
+              "completedDate": null
+            }
+          ]
+        },
+        {
+          "id": "avl-playback-drawing-library",
+          "index": 7,
+          "heading": "AVL Playback broken - Google retired the Drawing Manager",
+          "status": "done",
+          "addedDate": "2026-08-24",
+          "modifiedDate": "2026-08-24",
+          "completedDate": "2026-08-24",
+          "items": [
+            {
+              "text": "Playback code used the Google drawing library, which Google has now retired. Replaced it with another drawing tool library and gave the release.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-24",
+              "modifiedDate": "2026-08-24",
+              "completedDate": "2026-08-24"
+            },
+            {
+              "text": "Release provided for Eastern production deployment - existing release backed up first, no DB scripts needed.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-24",
+              "modifiedDate": "2026-08-24",
+              "completedDate": "2026-08-24"
+            }
+          ]
+        },
+        {
+          "id": "saintmary-zone-unknwn-trip-expansion",
+          "index": 8,
+          "heading": "Saint Mary - trip zone becomes UNKWN on trip expansion",
+          "status": "pending",
+          "addedDate": "2026-08-24",
+          "modifiedDate": "2026-08-24",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "Saint Mary trips zone become UNKWN on trip expansion. Issue needs to be fixed.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-24",
+              "modifiedDate": "2026-08-24",
+              "completedDate": null
+            }
+          ]
+        },
+        {
+          "id": "gta-frplanning-api-wrong-affiliates",
+          "index": 9,
+          "heading": "GTA - frplanning API returning wrong affiliate data",
+          "status": "in-progress",
+          "addedDate": "2026-08-27",
+          "modifiedDate": "2026-08-28",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "gtafrplanningapi.itcurves.us/ZoneManagement/GetAllActiveAffiliates is bringing wrong data. Configurations of the frplanning API to be checked.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-27",
+              "modifiedDate": "2026-08-28",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "Zone Management needs a common configuration, not a separate configuration.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-08-28",
+              "completedDate": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "weekStart": "2026-08-17",
+      "weekEnd": "2026-08-23",
+      "tasks": [
+        {
+          "id": "sdhs-down-taxi-us-driverno",
+          "index": 1,
+          "heading": "Taxi US - SDHS down and restart failing",
+          "status": "done",
+          "addedDate": "2026-08-17",
+          "modifiedDate": "2026-08-17",
+          "completedDate": "2026-08-17",
+          "items": [
+            {
+              "text": "SDHS was down and restarting it kept giving an error. It happened because of the \".\" in driverno record \"318126\" - the stored procedure was converting it to integer and failing. Fixed, SDHS is running fine and drivers are logging in.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-17",
+              "modifiedDate": "2026-08-17",
+              "completedDate": "2026-08-17"
+            }
+          ]
+        },
+        {
+          "id": "saintmary-app-ids-activation-sms",
+          "index": 2,
+          "heading": "Saint Mary app - activation code SMS not received",
+          "status": "done",
+          "addedDate": "2026-08-17",
+          "modifiedDate": "2026-08-18",
+          "completedDate": "2026-08-18",
+          "items": [
+            {
+              "text": "App ids saintmary_android / saintmary_ios did not exist in the portal, so preActivation answered \"contact backoffice\" and no SMS was generated. After fixing the app ids on the test server, the activation SMS was received.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-17",
+              "modifiedDate": "2026-08-18",
+              "completedDate": "2026-08-18"
+            }
+          ]
+        },
+        {
+          "id": "sec-mgmt-drivers-vehicles-role",
+          "index": 3,
+          "heading": "Create \"Drivers and Vehicles\" role for restricted user access",
+          "status": "done",
+          "addedDate": "2026-08-19",
+          "modifiedDate": "2026-08-20",
+          "completedDate": "2026-08-20",
+          "items": [
+            {
+              "text": "Added the role through a script into SecMgmt.sec_Roles and assigned it to the user. They have to log out and log back in for it to take effect.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-19",
+              "modifiedDate": "2026-08-20",
+              "completedDate": "2026-08-20"
+            }
+          ]
+        },
+        {
+          "id": "gta-trip-investigations-aug21",
+          "index": 4,
+          "heading": "GTA - trip investigations (110821663, 110821690, 110821992)",
+          "status": "done",
+          "addedDate": "2026-08-21",
+          "modifiedDate": "2026-08-21",
+          "completedDate": "2026-08-21",
+          "items": [
+            {
+              "text": "Trip 110821663: Dropped never came from the device.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-21",
+              "modifiedDate": "2026-08-21",
+              "completedDate": "2026-08-21"
+            },
+            {
+              "text": "Trip 110821690: the driver accepted it nine seconds before departing on 110821663 - he stacked it while starting another ride and never returned to it. The session ended at 16:40, ten minutes before this trip's 16:50 scheduled pickup; the entry log holds exactly one call, the ACCEPTED at 15:52:30.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-21",
+              "modifiedDate": "2026-08-21",
+              "completedDate": "2026-08-21"
+            },
+            {
+              "text": "Trip 110821992: dropped due to the SDHS context bug.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-21",
+              "modifiedDate": "2026-08-21",
+              "completedDate": "2026-08-21"
+            }
+          ]
+        },
+        {
+          "id": "chtaxi-booking-app-wrong-city",
+          "index": 5,
+          "heading": "CH-Taxi booking app reporting wrong city",
+          "status": "done",
+          "addedDate": "2026-08-17",
+          "modifiedDate": "2026-08-21",
+          "completedDate": "2026-08-21",
+          "items": [
+            {
+              "text": "CH-Taxi booking app is reporting the wrong city. Needs to be investigated with Hinnan.",
+              "done": true,
+              "notes": "Checked and handed over to Hinnan for later investigation. Done from my side.",
+              "addedDate": "2026-08-17",
+              "modifiedDate": "2026-08-21",
+              "completedDate": "2026-08-21"
+            }
+          ]
+        },
+        {
+          "id": "web-applications-api-security",
+          "index": 6,
           "heading": "Web Applications & API Security",
           "status": "done",
           "priority": "high",
           "addedDate": "2026-08-11",
-          "modifiedDate": "2026-08-28",
-          "completedDate": "2026-08-28",
+          "modifiedDate": "2026-08-23",
+          "completedDate": "2026-08-23",
           "items": [
             {
               "text": "Legacy Web MRMS security - Dont allow accessing any endpoint without authentication at central handler in Owin pipeline.",
@@ -302,288 +617,6 @@
               "addedDate": "2026-08-28",
               "modifiedDate": "2026-08-28",
               "completedDate": "2026-08-28"
-            }
-          ]
-        },
-        {
-          "id": "send-trip-update-to-device",
-          "index": 4,
-          "heading": "SendTripUpdateToDevice (move implementation from Inload API to Separate Utility)",
-          "status": "pending",
-          "addedDate": "2026-08-03",
-          "modifiedDate": "2026-08-10",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "Migrate the existing utility into .net core service/console.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            },
-            {
-              "text": "Move the code of SendTripUpdateToDevice to this utility with timer configuration. Also optimize its code.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            },
-            {
-              "text": "Implement new udp layer to register/send the udp messages",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            },
-            {
-              "text": "Implement file based logging in it.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            }
-          ]
-        },
-        {
-          "id": "auto-oara-dotnet-core",
-          "index": 5,
-          "heading": "Convert Auto Oara to .net Core Stand Alone Service",
-          "status": "pending",
-          "addedDate": "2026-08-05",
-          "modifiedDate": "2026-08-10",
-          "completedDate": null,
-          "items": []
-        },
-        {
-          "id": "annapolis-stations-rcz-sync",
-          "index": 6,
-          "heading": "Annapolis Stations and RCZ Syncing",
-          "status": "pending",
-          "priority": "low",
-          "addedDate": "2026-08-05",
-          "modifiedDate": "2026-08-10",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "Annapolis needs Stations and RCZ syncing enabled via old path.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-05",
-              "modifiedDate": "2026-08-05",
-              "completedDate": null
-            }
-          ]
-        },
-        {
-          "id": "water-taxi-cancel-state-not-synced-ol",
-          "index": 7,
-          "heading": "Water Taxi - Trip cancelled state not synced to OL",
-          "status": "pending",
-          "addedDate": "2026-08-10",
-          "modifiedDate": "2026-08-10",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "For Confirmation No. 1780034693 (WaterTaxi Microtransit, Service ID 4662746, due 8/9/2026 12:55:00PM), trip state (Cancelled) was not synced to OL. Service Status in IL is CancelledARQ.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-10",
-              "modifiedDate": "2026-08-10",
-              "completedDate": null
-            }
-          ]
-        },
-        {
-          "id": "avl-playback-drawing-library",
-          "index": 8,
-          "heading": "AVL Playback broken - Google retired the Drawing Manager",
-          "status": "done",
-          "addedDate": "2026-08-24",
-          "modifiedDate": "2026-08-24",
-          "completedDate": "2026-08-24",
-          "items": [
-            {
-              "text": "Playback code used the Google drawing library, which Google has now retired. Replaced it with another drawing tool library and gave the release.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-08-24",
-              "modifiedDate": "2026-08-24",
-              "completedDate": "2026-08-24"
-            },
-            {
-              "text": "Release provided for Eastern production deployment - existing release backed up first, no DB scripts needed.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-08-24",
-              "modifiedDate": "2026-08-24",
-              "completedDate": "2026-08-24"
-            }
-          ]
-        },
-        {
-          "id": "saintmary-zone-unknwn-trip-expansion",
-          "index": 9,
-          "heading": "Saint Mary - trip zone becomes UNKWN on trip expansion",
-          "status": "pending",
-          "addedDate": "2026-08-24",
-          "modifiedDate": "2026-08-24",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "Saint Mary trips zone become UNKWN on trip expansion. Issue needs to be fixed.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-24",
-              "modifiedDate": "2026-08-24",
-              "completedDate": null
-            }
-          ]
-        },
-        {
-          "id": "gta-frplanning-api-wrong-affiliates",
-          "index": 10,
-          "heading": "GTA - frplanning API returning wrong affiliate data",
-          "status": "in-progress",
-          "addedDate": "2026-08-27",
-          "modifiedDate": "2026-08-28",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "gtafrplanningapi.itcurves.us/ZoneManagement/GetAllActiveAffiliates is bringing wrong data. Configurations of the frplanning API to be checked.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-08-27",
-              "modifiedDate": "2026-08-28",
-              "completedDate": "2026-08-28"
-            },
-            {
-              "text": "Zone Management needs a common configuration, not a separate configuration.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-28",
-              "modifiedDate": "2026-08-28",
-              "completedDate": null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "weekStart": "2026-08-17",
-      "weekEnd": "2026-08-23",
-      "tasks": [
-        {
-          "id": "sdhs-down-taxi-us-driverno",
-          "index": 1,
-          "heading": "Taxi US - SDHS down and restart failing",
-          "status": "done",
-          "addedDate": "2026-08-17",
-          "modifiedDate": "2026-08-17",
-          "completedDate": "2026-08-17",
-          "items": [
-            {
-              "text": "SDHS was down and restarting it kept giving an error. It happened because of the \".\" in driverno record \"318126\" - the stored procedure was converting it to integer and failing. Fixed, SDHS is running fine and drivers are logging in.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-08-17",
-              "modifiedDate": "2026-08-17",
-              "completedDate": "2026-08-17"
-            }
-          ]
-        },
-        {
-          "id": "saintmary-app-ids-activation-sms",
-          "index": 2,
-          "heading": "Saint Mary app - activation code SMS not received",
-          "status": "done",
-          "addedDate": "2026-08-17",
-          "modifiedDate": "2026-08-18",
-          "completedDate": "2026-08-18",
-          "items": [
-            {
-              "text": "App ids saintmary_android / saintmary_ios did not exist in the portal, so preActivation answered \"contact backoffice\" and no SMS was generated. After fixing the app ids on the test server, the activation SMS was received.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-08-17",
-              "modifiedDate": "2026-08-18",
-              "completedDate": "2026-08-18"
-            }
-          ]
-        },
-        {
-          "id": "sec-mgmt-drivers-vehicles-role",
-          "index": 3,
-          "heading": "Create \"Drivers and Vehicles\" role for restricted user access",
-          "status": "done",
-          "addedDate": "2026-08-19",
-          "modifiedDate": "2026-08-20",
-          "completedDate": "2026-08-20",
-          "items": [
-            {
-              "text": "Added the role through a script into SecMgmt.sec_Roles and assigned it to the user. They have to log out and log back in for it to take effect.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-08-19",
-              "modifiedDate": "2026-08-20",
-              "completedDate": "2026-08-20"
-            }
-          ]
-        },
-        {
-          "id": "gta-trip-investigations-aug21",
-          "index": 4,
-          "heading": "GTA - trip investigations (110821663, 110821690, 110821992)",
-          "status": "done",
-          "addedDate": "2026-08-21",
-          "modifiedDate": "2026-08-21",
-          "completedDate": "2026-08-21",
-          "items": [
-            {
-              "text": "Trip 110821663: Dropped never came from the device.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-08-21",
-              "modifiedDate": "2026-08-21",
-              "completedDate": "2026-08-21"
-            },
-            {
-              "text": "Trip 110821690: the driver accepted it nine seconds before departing on 110821663 - he stacked it while starting another ride and never returned to it. The session ended at 16:40, ten minutes before this trip's 16:50 scheduled pickup; the entry log holds exactly one call, the ACCEPTED at 15:52:30.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-08-21",
-              "modifiedDate": "2026-08-21",
-              "completedDate": "2026-08-21"
-            },
-            {
-              "text": "Trip 110821992: dropped due to the SDHS context bug.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-08-21",
-              "modifiedDate": "2026-08-21",
-              "completedDate": "2026-08-21"
-            }
-          ]
-        },
-        {
-          "id": "chtaxi-booking-app-wrong-city",
-          "index": 5,
-          "heading": "CH-Taxi booking app reporting wrong city",
-          "status": "done",
-          "addedDate": "2026-08-17",
-          "modifiedDate": "2026-08-21",
-          "completedDate": "2026-08-21",
-          "items": [
-            {
-              "text": "CH-Taxi booking app is reporting the wrong city. Needs to be investigated with Hinnan.",
-              "done": true,
-              "notes": "Checked and handed over to Hinnan for later investigation. Done from my side.",
-              "addedDate": "2026-08-17",
-              "modifiedDate": "2026-08-21",
-              "completedDate": "2026-08-21"
             }
           ]
         }

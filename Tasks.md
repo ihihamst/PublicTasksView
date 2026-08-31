@@ -33,103 +33,55 @@ _Notes:_ Top priority as per Imran sb (Aug 24).
 - [ ] Route Surcharge (if trip covers a route (stored as polygons) defined percentage, then apply surcharge)
   - _Notes:_ Table Route Surcharge [Polygon Coordinates, Percentage Route Covered, Surcharge Amount]
 
-### 3. [x] Web Applications & API Security
+### 3. [ ] Implement PendingAPICallsAndTripUpdatesUtility
 
-Status: **done** · Priority: **high** · Added 2026-08-11 · Updated 2026-08-28 · Completed 2026-08-28
+Status: **in-progress** · Added 2026-08-03 · Updated 2026-08-28
 
-- [x] Legacy Web MRMS security - Dont allow accessing any endpoint without authentication at central handler in Owin pipeline.
-  - _Updated 2026-08-19 · Completed 2026-08-19_
-- [x] Legacy Web MRMS security - Wrong 3 authentication attempts should trigger the lockout for that ip address (keep it in memory, if app restart we would loose it).
-  - _Notes:_ 3 failed attempts lock that IP for 15 minutes. Per-IP only - it does not affect other users or anyone already signed in.
-  - _Updated 2026-08-19 · Completed 2026-08-19_
-- [x] Legacy Web MRMS security - Identify any end point that can face problem due to this new security implementation.
-  - _Notes:_ Endpoint map built: 529 endpoints / 3,127 routes with their tags, shipped as a JSON file loaded at application start.
-  - _Updated 2026-08-19 · Completed 2026-08-19_
-- [x] Legacy Web MRMS security - This central authentication should also cater the User assigned module security via tags discovery.
-  - _Updated 2026-08-19 · Completed 2026-08-19_
-- [x] Legacy Web MRMS security - If user is not assigned the Service provider A, then they should not see any A service provider or its data.
-  - _Notes:_ Affiliate IDs in a request are validated against the user's assigned affiliates; disallowed IDs are removed and the request is refused only if none remain. The endpoints that were not passing affiliate IDs are now covered too.
-- [x] Anti-forgery protection on all login pages, browser-only access, optional session IP binding, and denial logging (user, path, reason) to a protected folder that is not web-accessible.
-  - _Notes:_ 8 Web.config switches: master on/off, skip tag checks, skip affiliate scoping, per-path overrides, lockout policy, anti-forgery + logging, session IP binding, browser filter.
-  - _Added 2026-08-19 · Completed 2026-08-19_
-- [x] Deploy the central endpoint security release. Done on SIV-WebMRMSTemp (test, port 8443), SIV-WebMRMS, Eastern production and GTA.
-  - _Notes:_ Eastern production release handed over on Aug 24 (existing release backed up first, no DB scripts needed); GTA deployed this week.
-  - _Added 2026-08-19_
-- [x] UI Parity Check (tgistaging vs 192.168.6.8) - Opened both sites in Chrome, confirmed same database via matching trip counters.
-  - _Added 2026-08-28_
-- [x] UI Parity Check (tgistaging vs 192.168.6.8) - Compared 6 of 198 screens - all identical, verified by grid hashes.
-  - _Added 2026-08-28_
-- [x] UI Parity Check (tgistaging vs 192.168.6.8) - Confirmed menu structure identical on both (371 links, matching hash).
-  - _Added 2026-08-28_
-- [x] UI Parity Check (tgistaging vs 192.168.6.8) - Found Site 1 correctly blocks token-less direct URLs - by design, not a defect.
-  - _Added 2026-08-28_
-- [x] UI Parity Check (tgistaging vs 192.168.6.8) - Caught 2 false alarms caused by mid-load screenshots; both matched once settled.
-  - _Added 2026-08-28_
-- [x] Diagnostics Dashboard Review - Reviewed Diagnostics.aspx + JSON endpoint; listed 12 issues by severity.
-  - _Added 2026-08-28_
-- [x] Diagnostics Dashboard Review - Found CSV formula injection in Export CSV and residual CSRF on "reload=true".
-  - _Added 2026-08-28_
-- [x] Diagnostics Dashboard Review - Probed live gtatms anonymously - confirmed both auth gates fire correctly.
-  - _Added 2026-08-28_
-- [x] Diagnostics Dashboard Review - Analysed production snapshot: 94% of denials were self-inflicted poller noise.
-  - _Added 2026-08-28_
-- [x] Fixes Implemented - Fix 1+2 - added session-death latch + abort prefilter; stops all 25+ pollers.
-  - _Notes:_ 923 insertions across 12 files, builds clean.
-  - _Added 2026-08-28_
-- [x] Fixes Implemented - Fix 1+2 - wired up AsyncJSONAjax's error callback, declared but never used.
-  - _Added 2026-08-28_
-- [x] Fixes Implemented - Fix 3 - new "affexempt" mode; unblocks the global settings lookup on -1.
-  - _Added 2026-08-28_
-- [x] Fixes Implemented - Fix 4 - substring recognition of affiliate params; recovers 298 unscoped requests.
-  - _Added 2026-08-28_
-- [x] Fixes Implemented - Fix 5 - X-ES-Service header so self-calls survive the User-Agent filter.
-  - _Added 2026-08-28_
-- [x] Fixes Implemented - Fix 8 - lockout re-keyed to Username+IP, with coarse per-IP ceiling retained.
-  - _Added 2026-08-28_
-- [x] Dashboard Improvements - Active Sessions now records and displays browser info + raw User-Agent.
-  - _Added 2026-08-28_
-- [x] Dashboard Improvements - Function Timing rows now clickable, showing request/response detail.
-  - _Added 2026-08-28_
+_Notes:_ The PendingAPICalls side is done and delivered. The points for SendTripUpdateToDevice - moving the implementation out of the Inload API into this utility - are still pending.
 
-### 4. [ ] SendTripUpdateToDevice (move implementation from Inload API to Separate Utility)
-
-Status: **pending** · Added 2026-08-03 · Updated 2026-08-10
-
+- [x] PendingAPICalls - implement the process of invoking the PendingAPICalls from this utility. Maintain sequential lane (one) + configurable concurrent lanes (default 128).
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] PendingAPICalls - both types of lanes will utilize shared threading only when work is being done in the utility, otherwise it will release the thread and wait for the network call to return.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] PendingAPICalls - implement admin dashboard to view stats, logs, requests/responses, queues.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] PendingAPICalls - implement the installer (WiX) to install this as a Windows service. The installer also helps in configuring the connection string and app settings.
+  - _Added 2026-08-28 · Completed 2026-08-28_
 - [ ] Migrate the existing utility into .net core service/console.
 - [ ] Move the code of SendTripUpdateToDevice to this utility with timer configuration. Also optimize its code.
 - [ ] Implement new udp layer to register/send the udp messages
 - [ ] Implement file based logging in it.
 
-### 5. [ ] Convert Auto Oara to .net Core Stand Alone Service
+### 4. [ ] Convert Auto Oara to .net Core Stand Alone Service
 
 Status: **pending** · Added 2026-08-05 · Updated 2026-08-10
 
-### 6. [ ] Annapolis Stations and RCZ Syncing
+### 5. [ ] Annapolis Stations and RCZ Syncing
 
 Status: **pending** · Priority: **low** · Added 2026-08-05 · Updated 2026-08-10
 
 - [ ] Annapolis needs Stations and RCZ syncing enabled via old path.
 
-### 7. [ ] Water Taxi - Trip cancelled state not synced to OL
+### 6. [ ] Water Taxi - Trip cancelled state not synced to OL
 
 Status: **pending** · Added 2026-08-10 · Updated 2026-08-10
 
 - [ ] For Confirmation No. 1780034693 (WaterTaxi Microtransit, Service ID 4662746, due 8/9/2026 12:55:00PM), trip state (Cancelled) was not synced to OL. Service Status in IL is CancelledARQ.
 
-### 8. [x] AVL Playback broken - Google retired the Drawing Manager
+### 7. [x] AVL Playback broken - Google retired the Drawing Manager
 
 Status: **done** · Added 2026-08-24 · Updated 2026-08-24 · Completed 2026-08-24
 
 - [x] Playback code used the Google drawing library, which Google has now retired. Replaced it with another drawing tool library and gave the release.
 - [x] Release provided for Eastern production deployment - existing release backed up first, no DB scripts needed.
 
-### 9. [ ] Saint Mary - trip zone becomes UNKWN on trip expansion
+### 8. [ ] Saint Mary - trip zone becomes UNKWN on trip expansion
 
 Status: **pending** · Added 2026-08-24 · Updated 2026-08-24
 
 - [ ] Saint Mary trips zone become UNKWN on trip expansion. Issue needs to be fixed.
 
-### 10. [ ] GTA - frplanning API returning wrong affiliate data
+### 9. [ ] GTA - frplanning API returning wrong affiliate data
 
 Status: **in-progress** · Added 2026-08-27 · Updated 2026-08-28
 
@@ -172,6 +124,65 @@ Status: **done** · Added 2026-08-17 · Updated 2026-08-21 · Completed 2026-08-
 
 - [x] CH-Taxi booking app is reporting the wrong city. Needs to be investigated with Hinnan.
   - _Notes:_ Checked and handed over to Hinnan for later investigation. Done from my side.
+
+### 6. [x] Web Applications & API Security
+
+Status: **done** · Priority: **high** · Added 2026-08-11 · Updated 2026-08-23 · Completed 2026-08-23
+
+- [x] Legacy Web MRMS security - Dont allow accessing any endpoint without authentication at central handler in Owin pipeline.
+  - _Updated 2026-08-19 · Completed 2026-08-19_
+- [x] Legacy Web MRMS security - Wrong 3 authentication attempts should trigger the lockout for that ip address (keep it in memory, if app restart we would loose it).
+  - _Notes:_ 3 failed attempts lock that IP for 15 minutes. Per-IP only - it does not affect other users or anyone already signed in.
+  - _Updated 2026-08-19 · Completed 2026-08-19_
+- [x] Legacy Web MRMS security - Identify any end point that can face problem due to this new security implementation.
+  - _Notes:_ Endpoint map built: 529 endpoints / 3,127 routes with their tags, shipped as a JSON file loaded at application start.
+  - _Updated 2026-08-19 · Completed 2026-08-19_
+- [x] Legacy Web MRMS security - This central authentication should also cater the User assigned module security via tags discovery.
+  - _Updated 2026-08-19 · Completed 2026-08-19_
+- [x] Legacy Web MRMS security - If user is not assigned the Service provider A, then they should not see any A service provider or its data.
+  - _Notes:_ Affiliate IDs in a request are validated against the user's assigned affiliates; disallowed IDs are removed and the request is refused only if none remain. The endpoints that were not passing affiliate IDs are now covered too.
+  - _Updated 2026-08-28 · Completed 2026-08-28_
+- [x] Anti-forgery protection on all login pages, browser-only access, optional session IP binding, and denial logging (user, path, reason) to a protected folder that is not web-accessible.
+  - _Notes:_ 8 Web.config switches: master on/off, skip tag checks, skip affiliate scoping, per-path overrides, lockout policy, anti-forgery + logging, session IP binding, browser filter.
+  - _Added 2026-08-19 · Completed 2026-08-19_
+- [x] Deploy the central endpoint security release. Done on SIV-WebMRMSTemp (test, port 8443), SIV-WebMRMS, Eastern production and GTA.
+  - _Notes:_ Eastern production release handed over on Aug 24 (existing release backed up first, no DB scripts needed); GTA deployed this week.
+  - _Added 2026-08-19 · Updated 2026-08-28 · Completed 2026-08-28_
+- [x] UI Parity Check (tgistaging vs 192.168.6.8) - Opened both sites in Chrome, confirmed same database via matching trip counters.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] UI Parity Check (tgistaging vs 192.168.6.8) - Compared 6 of 198 screens - all identical, verified by grid hashes.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] UI Parity Check (tgistaging vs 192.168.6.8) - Confirmed menu structure identical on both (371 links, matching hash).
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] UI Parity Check (tgistaging vs 192.168.6.8) - Found Site 1 correctly blocks token-less direct URLs - by design, not a defect.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] UI Parity Check (tgistaging vs 192.168.6.8) - Caught 2 false alarms caused by mid-load screenshots; both matched once settled.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Diagnostics Dashboard Review - Reviewed Diagnostics.aspx + JSON endpoint; listed 12 issues by severity.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Diagnostics Dashboard Review - Found CSV formula injection in Export CSV and residual CSRF on "reload=true".
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Diagnostics Dashboard Review - Probed live gtatms anonymously - confirmed both auth gates fire correctly.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Diagnostics Dashboard Review - Analysed production snapshot: 94% of denials were self-inflicted poller noise.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Fixes Implemented - Fix 1+2 - added session-death latch + abort prefilter; stops all 25+ pollers.
+  - _Notes:_ 923 insertions across 12 files, builds clean.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Fixes Implemented - Fix 1+2 - wired up AsyncJSONAjax's error callback, declared but never used.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Fixes Implemented - Fix 3 - new "affexempt" mode; unblocks the global settings lookup on -1.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Fixes Implemented - Fix 4 - substring recognition of affiliate params; recovers 298 unscoped requests.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Fixes Implemented - Fix 5 - X-ES-Service header so self-calls survive the User-Agent filter.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Fixes Implemented - Fix 8 - lockout re-keyed to Username+IP, with coarse per-IP ceiling retained.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Dashboard Improvements - Active Sessions now records and displays browser info + raw User-Agent.
+  - _Added 2026-08-28 · Completed 2026-08-28_
+- [x] Dashboard Improvements - Function Timing rows now clickable, showing request/response detail.
+  - _Added 2026-08-28 · Completed 2026-08-28_
 
 ## Week 2026-08-10 → 2026-08-16
 
