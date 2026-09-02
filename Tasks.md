@@ -100,6 +100,19 @@ Status: **done** · Added 2026-09-01 · Updated 2026-09-01 · Completed 2026-09-
 - [x] Dispatch grid was not showing data (SP fixed).
 - [x] BOARA Trips were not moving (SP fixed).
 
+### 11. [x] CAT setup Fare = 0 for Route 7 Fare Zones (#CAT-TK-74)
+
+Status: **done** · Added 2026-09-02 · Updated 2026-09-02 · Completed 2026-09-02
+
+- [x] Imported the fare zones into CAT production from excel file.
+- [x] Done Fare = 0 setup by creating Fare attributes and their combinations.
+
+### 12. [x] Fare Zone screen not opening - drawing library error
+
+Status: **done** · Added 2026-09-02 · Updated 2026-09-02 · Completed 2026-09-02
+
+- [x] Fare zone screen was giving a drawing library error and it was not opening. Currently just fixed this screen by increasing the version. Permanent fix will be done later.
+
 ## Week 2026-08-24 → 2026-08-30
 
 ### 1. [x] AVL Playback broken - Google retired the Drawing Manager

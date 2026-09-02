@@ -334,6 +334,52 @@
               "completedDate": "2026-09-01"
             }
           ]
+        },
+        {
+          "id": "cat-route7-fare-zones-zero-fare",
+          "index": 11,
+          "heading": "CAT setup Fare = 0 for Route 7 Fare Zones (#CAT-TK-74)",
+          "status": "done",
+          "addedDate": "2026-09-02",
+          "modifiedDate": "2026-09-02",
+          "completedDate": "2026-09-02",
+          "items": [
+            {
+              "text": "Imported the fare zones into CAT production from excel file.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-02",
+              "modifiedDate": "2026-09-02",
+              "completedDate": "2026-09-02"
+            },
+            {
+              "text": "Done Fare = 0 setup by creating Fare attributes and their combinations.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-02",
+              "modifiedDate": "2026-09-02",
+              "completedDate": "2026-09-02"
+            }
+          ]
+        },
+        {
+          "id": "fare-zone-screen-drawing-library-error",
+          "index": 12,
+          "heading": "Fare Zone screen not opening - drawing library error",
+          "status": "done",
+          "addedDate": "2026-09-02",
+          "modifiedDate": "2026-09-02",
+          "completedDate": "2026-09-02",
+          "items": [
+            {
+              "text": "Fare zone screen was giving a drawing library error and it was not opening. Currently just fixed this screen by increasing the version. Permanent fix will be done later.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-02",
+              "modifiedDate": "2026-09-02",
+              "completedDate": "2026-09-02"
+            }
+          ]
         }
       ]
     },
