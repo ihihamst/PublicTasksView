@@ -1,6 +1,6 @@
 # Tasks Assignment
 
-Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-01**
+Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-02**
 
 Mirror of `tasks.json` in readable form. `tasks.json` remains the source of truth — update it first, then regenerate this file with `python3 scripts/generate_tasks_md.py`.
 
@@ -82,6 +82,23 @@ Status: **in-progress** · Added 2026-08-27 · Updated 2026-08-28
   - _Completed 2026-08-28_
 - [ ] Zone Management needs a common configuration, not a separate configuration.
   - _Added 2026-08-28_
+
+### 9. [x] Web MRMS Security - support fixes
+
+Status: **done** · Added 2026-09-01 · Updated 2026-09-01 · Completed 2026-09-01
+
+_Notes:_ Fixes were done in the central class.
+
+- [x] Export not working from Processing Center.
+- [x] FS were not filtering on affiliate change.
+- [x] Investigated frequent sign out and app crashes.
+
+### 10. [x] Bigger RefID value needs BIGINT - stored procedure errors
+
+Status: **done** · Added 2026-09-01 · Updated 2026-09-01 · Completed 2026-09-01
+
+- [x] Dispatch grid was not showing data (SP fixed).
+- [x] BOARA Trips were not moving (SP fixed).
 
 ## Week 2026-08-24 → 2026-08-30
 

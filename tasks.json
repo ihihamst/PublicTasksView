@@ -3,7 +3,7 @@
     "title": "Tasks Assignment",
     "owner": "ihihamst",
     "weekStartsOn": "monday",
-    "lastUpdated": "2026-09-01",
+    "lastUpdated": "2026-09-02",
     "timezone": "Asia/Karachi (PKT, UTC+05:00)"
   },
   "weeks": [
@@ -269,6 +269,69 @@
               "addedDate": "2026-08-28",
               "modifiedDate": "2026-08-28",
               "completedDate": null
+            }
+          ]
+        },
+        {
+          "id": "web-mrms-security-support-fixes",
+          "index": 9,
+          "heading": "Web MRMS Security - support fixes",
+          "status": "done",
+          "notes": "Fixes were done in the central class.",
+          "addedDate": "2026-09-01",
+          "modifiedDate": "2026-09-01",
+          "completedDate": "2026-09-01",
+          "items": [
+            {
+              "text": "Export not working from Processing Center.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-01",
+              "modifiedDate": "2026-09-01",
+              "completedDate": "2026-09-01"
+            },
+            {
+              "text": "FS were not filtering on affiliate change.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-01",
+              "modifiedDate": "2026-09-01",
+              "completedDate": "2026-09-01"
+            },
+            {
+              "text": "Investigated frequent sign out and app crashes.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-01",
+              "modifiedDate": "2026-09-01",
+              "completedDate": "2026-09-01"
+            }
+          ]
+        },
+        {
+          "id": "bigint-refid-stored-procedure-errors",
+          "index": 10,
+          "heading": "Bigger RefID value needs BIGINT - stored procedure errors",
+          "status": "done",
+          "addedDate": "2026-09-01",
+          "modifiedDate": "2026-09-01",
+          "completedDate": "2026-09-01",
+          "items": [
+            {
+              "text": "Dispatch grid was not showing data (SP fixed).",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-01",
+              "modifiedDate": "2026-09-01",
+              "completedDate": "2026-09-01"
+            },
+            {
+              "text": "BOARA Trips were not moving (SP fixed).",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-01",
+              "modifiedDate": "2026-09-01",
+              "completedDate": "2026-09-01"
             }
           ]
         }
