@@ -1,6 +1,6 @@
 # Tasks Assignment
 
-Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-02**
+Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-04**
 
 Mirror of `tasks.json` in readable form. `tasks.json` remains the source of truth — update it first, then regenerate this file with `python3 scripts/generate_tasks_md.py`.
 
@@ -112,6 +112,18 @@ Status: **done** · Added 2026-09-02 · Updated 2026-09-02 · Completed 2026-09-
 Status: **done** · Added 2026-09-02 · Updated 2026-09-02 · Completed 2026-09-02
 
 - [x] Fare zone screen was giving a drawing library error and it was not opening. Currently just fixed this screen by increasing the version. Permanent fix will be done later.
+
+### 13. [x] usp_GetNUpdateAffiliateServiceHours - ambiguous dtModified
+
+Status: **done** · Added 2026-09-04 · Updated 2026-09-04 · Completed 2026-09-04
+
+- [x] dtModified was added to Interest Points, causing it to become ambiguous in the sp usp_GetNUpdateAffiliateServiceHours. Fixed by applying alias.
+
+### 14. [x] Duplicate Access Trips in Outload
+
+Status: **done** · Added 2026-09-04 · Updated 2026-09-04 · Completed 2026-09-04
+
+- [x] Investigated via stats and found that they were getting duplicated in Inload. Fix applied on the Inload side with Umar.
 
 ## Week 2026-08-24 → 2026-08-30
 
