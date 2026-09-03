@@ -115,13 +115,13 @@ Status: **done** · Added 2026-09-02 · Updated 2026-09-02 · Completed 2026-09-
 
 ### 13. [x] usp_GetNUpdateAffiliateServiceHours - ambiguous dtModified
 
-Status: **done** · Added 2026-09-04 · Updated 2026-09-04 · Completed 2026-09-04
+Status: **done** · Added 2026-09-03 · Updated 2026-09-03 · Completed 2026-09-03
 
 - [x] dtModified was added to Interest Points, causing it to become ambiguous in the sp usp_GetNUpdateAffiliateServiceHours. Fixed by applying alias.
 
 ### 14. [x] Duplicate Access Trips in Outload
 
-Status: **done** · Added 2026-09-04 · Updated 2026-09-04 · Completed 2026-09-04
+Status: **done** · Added 2026-09-03 · Updated 2026-09-03 · Completed 2026-09-03
 
 - [x] Investigated via stats and found that they were getting duplicated in Inload. Fix applied on the Inload side with Umar.
 

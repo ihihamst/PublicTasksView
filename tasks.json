@@ -386,17 +386,17 @@
           "index": 13,
           "heading": "usp_GetNUpdateAffiliateServiceHours - ambiguous dtModified",
           "status": "done",
-          "addedDate": "2026-09-04",
-          "modifiedDate": "2026-09-04",
-          "completedDate": "2026-09-04",
+          "addedDate": "2026-09-03",
+          "modifiedDate": "2026-09-03",
+          "completedDate": "2026-09-03",
           "items": [
             {
               "text": "dtModified was added to Interest Points, causing it to become ambiguous in the sp usp_GetNUpdateAffiliateServiceHours. Fixed by applying alias.",
               "done": true,
               "notes": "",
-              "addedDate": "2026-09-04",
-              "modifiedDate": "2026-09-04",
-              "completedDate": "2026-09-04"
+              "addedDate": "2026-09-03",
+              "modifiedDate": "2026-09-03",
+              "completedDate": "2026-09-03"
             }
           ]
         },
@@ -405,17 +405,17 @@
           "index": 14,
           "heading": "Duplicate Access Trips in Outload",
           "status": "done",
-          "addedDate": "2026-09-04",
-          "modifiedDate": "2026-09-04",
-          "completedDate": "2026-09-04",
+          "addedDate": "2026-09-03",
+          "modifiedDate": "2026-09-03",
+          "completedDate": "2026-09-03",
           "items": [
             {
               "text": "Investigated via stats and found that they were getting duplicated in Inload. Fix applied on the Inload side with Umar.",
               "done": true,
               "notes": "",
-              "addedDate": "2026-09-04",
-              "modifiedDate": "2026-09-04",
-              "completedDate": "2026-09-04"
+              "addedDate": "2026-09-03",
+              "modifiedDate": "2026-09-03",
+              "completedDate": "2026-09-03"
             }
           ]
         }
