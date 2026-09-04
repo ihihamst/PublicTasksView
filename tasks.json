@@ -418,6 +418,44 @@
               "completedDate": "2026-09-03"
             }
           ]
+        },
+        {
+          "id": "ol-duplicate-trip-protection-jobid",
+          "index": 15,
+          "heading": "OL - prevent duplicate trip insertion by JobID for Access TSPs",
+          "status": "done",
+          "addedDate": "2026-09-04",
+          "modifiedDate": "2026-09-04",
+          "completedDate": "2026-09-04",
+          "items": [
+            {
+              "text": "Implemented the protection on OL to prevent duplicate trips insertion by JobID, only for Access TSPs. An Access TSP trip can be duplicate by inload confirmation no, so it has to be checked by JobID.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-04",
+              "modifiedDate": "2026-09-04",
+              "completedDate": "2026-09-04"
+            }
+          ]
+        },
+        {
+          "id": "sts-zones-service-hours-sstap",
+          "index": 16,
+          "heading": "STS - zones and service hours setup for FS = SSTAP",
+          "status": "done",
+          "addedDate": "2026-09-04",
+          "modifiedDate": "2026-09-04",
+          "completedDate": "2026-09-04",
+          "items": [
+            {
+              "text": "Helped in setting up zones / service hours in STS for FS = SSTAP in meeting.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-04",
+              "modifiedDate": "2026-09-04",
+              "completedDate": "2026-09-04"
+            }
+          ]
         }
       ]
     },

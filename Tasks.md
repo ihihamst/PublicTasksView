@@ -125,6 +125,18 @@ Status: **done** · Added 2026-09-03 · Updated 2026-09-03 · Completed 2026-09-
 
 - [x] Investigated via stats and found that they were getting duplicated in Inload. Fix applied on the Inload side with Umar.
 
+### 15. [x] OL - prevent duplicate trip insertion by JobID for Access TSPs
+
+Status: **done** · Added 2026-09-04 · Updated 2026-09-04 · Completed 2026-09-04
+
+- [x] Implemented the protection on OL to prevent duplicate trips insertion by JobID, only for Access TSPs. An Access TSP trip can be duplicate by inload confirmation no, so it has to be checked by JobID.
+
+### 16. [x] STS - zones and service hours setup for FS = SSTAP
+
+Status: **done** · Added 2026-09-04 · Updated 2026-09-04 · Completed 2026-09-04
+
+- [x] Helped in setting up zones / service hours in STS for FS = SSTAP in meeting.
+
 ## Week 2026-08-24 → 2026-08-30
 
 ### 1. [x] AVL Playback broken - Google retired the Drawing Manager
