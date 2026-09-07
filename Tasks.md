@@ -1,6 +1,6 @@
 # Tasks Assignment
 
-Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-07**
+Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-08**
 
 Mirror of `tasks.json` in readable form. `tasks.json` remains the source of truth — update it first, then regenerate this file with `python3 scripts/generate_tasks_md.py`.
 
@@ -25,13 +25,15 @@ _Notes:_ Missing and pending functionalities in the new Zone Management portal. 
 
 ### 2. [ ] SilverRide SF Bay area pricing
 
-Status: **pending** · Priority: **high** · Added 2026-08-03 · Updated 2026-08-24
+Status: **pending** · Priority: **high** · Added 2026-08-03 · Updated 2026-09-08
 
 _Notes:_ Top priority as per Imran sb (Aug 24).
 
 - [ ] We need to add new zones (City/County) & (Peninsula [areas between two cities])
 - [ ] Route Surcharge (if trip covers a route (stored as polygons) defined percentage, then apply surcharge)
   - _Notes:_ Table Route Surcharge [Polygon Coordinates, Percentage Route Covered, Surcharge Amount]
+- [ ] Make a complete design for this SilverRide SF Bayarea Pricing
+  - _Added 2026-09-08_
 
 ### 3. [ ] Implement PendingAPICallsAndTripUpdatesUtility
 

@@ -3,7 +3,7 @@
     "title": "Tasks Assignment",
     "owner": "ihihamst",
     "weekStartsOn": "monday",
-    "lastUpdated": "2026-09-07",
+    "lastUpdated": "2026-09-08",
     "timezone": "Asia/Karachi (PKT, UTC+05:00)"
   },
   "weeks": [
@@ -78,7 +78,7 @@
           "heading": "SilverRide SF Bay area pricing",
           "status": "pending",
           "addedDate": "2026-08-03",
-          "modifiedDate": "2026-08-24",
+          "modifiedDate": "2026-09-08",
           "completedDate": null,
           "items": [
             {
@@ -95,6 +95,14 @@
               "notes": "Table Route Surcharge [Polygon Coordinates, Percentage Route Covered, Surcharge Amount]",
               "addedDate": "2026-08-03",
               "modifiedDate": "2026-08-03",
+              "completedDate": null
+            },
+            {
+              "text": "Make a complete design for this SilverRide SF Bayarea Pricing",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-09-08",
+              "modifiedDate": "2026-09-08",
               "completedDate": null
             }
           ],
