@@ -3,13 +3,13 @@
     "title": "Tasks Assignment",
     "owner": "ihihamst",
     "weekStartsOn": "monday",
-    "lastUpdated": "2026-09-04",
+    "lastUpdated": "2026-09-07",
     "timezone": "Asia/Karachi (PKT, UTC+05:00)"
   },
   "weeks": [
     {
-      "weekStart": "2026-08-31",
-      "weekEnd": "2026-09-04",
+      "weekStart": "2026-09-07",
+      "weekEnd": "2026-09-13",
       "tasks": [
         {
           "id": "zone-management-portal-pending",
@@ -271,10 +271,16 @@
               "completedDate": null
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "weekStart": "2026-08-31",
+      "weekEnd": "2026-09-04",
+      "tasks": [
         {
           "id": "web-mrms-security-support-fixes",
-          "index": 9,
+          "index": 1,
           "heading": "Web MRMS Security - support fixes",
           "status": "done",
           "notes": "Fixes were done in the central class.",
@@ -310,7 +316,7 @@
         },
         {
           "id": "bigint-refid-stored-procedure-errors",
-          "index": 10,
+          "index": 2,
           "heading": "Bigger RefID value needs BIGINT - stored procedure errors",
           "status": "done",
           "addedDate": "2026-09-01",
@@ -337,7 +343,7 @@
         },
         {
           "id": "cat-route7-fare-zones-zero-fare",
-          "index": 11,
+          "index": 3,
           "heading": "CAT setup Fare = 0 for Route 7 Fare Zones (#CAT-TK-74)",
           "status": "done",
           "addedDate": "2026-09-02",
@@ -364,7 +370,7 @@
         },
         {
           "id": "fare-zone-screen-drawing-library-error",
-          "index": 12,
+          "index": 4,
           "heading": "Fare Zone screen not opening - drawing library error",
           "status": "done",
           "addedDate": "2026-09-02",
@@ -383,7 +389,7 @@
         },
         {
           "id": "affiliate-service-hours-ambiguous-dtmodified",
-          "index": 13,
+          "index": 5,
           "heading": "usp_GetNUpdateAffiliateServiceHours - ambiguous dtModified",
           "status": "done",
           "addedDate": "2026-09-03",
@@ -402,7 +408,7 @@
         },
         {
           "id": "duplicate-access-trips-outload",
-          "index": 14,
+          "index": 6,
           "heading": "Duplicate Access Trips in Outload",
           "status": "done",
           "addedDate": "2026-09-03",
@@ -421,7 +427,7 @@
         },
         {
           "id": "ol-duplicate-trip-protection-jobid",
-          "index": 15,
+          "index": 7,
           "heading": "OL - prevent duplicate trip insertion by JobID for Access TSPs",
           "status": "done",
           "addedDate": "2026-09-04",
@@ -440,7 +446,7 @@
         },
         {
           "id": "sts-zones-service-hours-sstap",
-          "index": 16,
+          "index": 8,
           "heading": "STS - zones and service hours setup for FS = SSTAP",
           "status": "done",
           "addedDate": "2026-09-04",

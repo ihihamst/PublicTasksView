@@ -1,10 +1,10 @@
 # Tasks Assignment
 
-Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-04**
+Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-07**
 
 Mirror of `tasks.json` in readable form. `tasks.json` remains the source of truth — update it first, then regenerate this file with `python3 scripts/generate_tasks_md.py`.
 
-## Week 2026-08-31 → 2026-09-04
+## Week 2026-09-07 → 2026-09-13
 
 ### 1. [ ] Zone Management
 
@@ -83,7 +83,9 @@ Status: **in-progress** · Added 2026-08-27 · Updated 2026-08-28
 - [ ] Zone Management needs a common configuration, not a separate configuration.
   - _Added 2026-08-28_
 
-### 9. [x] Web MRMS Security - support fixes
+## Week 2026-08-31 → 2026-09-04
+
+### 1. [x] Web MRMS Security - support fixes
 
 Status: **done** · Added 2026-09-01 · Updated 2026-09-01 · Completed 2026-09-01
 
@@ -93,45 +95,45 @@ _Notes:_ Fixes were done in the central class.
 - [x] FS were not filtering on affiliate change.
 - [x] Investigated frequent sign out and app crashes.
 
-### 10. [x] Bigger RefID value needs BIGINT - stored procedure errors
+### 2. [x] Bigger RefID value needs BIGINT - stored procedure errors
 
 Status: **done** · Added 2026-09-01 · Updated 2026-09-01 · Completed 2026-09-01
 
 - [x] Dispatch grid was not showing data (SP fixed).
 - [x] BOARA Trips were not moving (SP fixed).
 
-### 11. [x] CAT setup Fare = 0 for Route 7 Fare Zones (#CAT-TK-74)
+### 3. [x] CAT setup Fare = 0 for Route 7 Fare Zones (#CAT-TK-74)
 
 Status: **done** · Added 2026-09-02 · Updated 2026-09-02 · Completed 2026-09-02
 
 - [x] Imported the fare zones into CAT production from excel file.
 - [x] Done Fare = 0 setup by creating Fare attributes and their combinations.
 
-### 12. [x] Fare Zone screen not opening - drawing library error
+### 4. [x] Fare Zone screen not opening - drawing library error
 
 Status: **done** · Added 2026-09-02 · Updated 2026-09-02 · Completed 2026-09-02
 
 - [x] Fare zone screen was giving a drawing library error and it was not opening. Currently just fixed this screen by increasing the version. Permanent fix will be done later.
 
-### 13. [x] usp_GetNUpdateAffiliateServiceHours - ambiguous dtModified
+### 5. [x] usp_GetNUpdateAffiliateServiceHours - ambiguous dtModified
 
 Status: **done** · Added 2026-09-03 · Updated 2026-09-03 · Completed 2026-09-03
 
 - [x] dtModified was added to Interest Points, causing it to become ambiguous in the sp usp_GetNUpdateAffiliateServiceHours. Fixed by applying alias.
 
-### 14. [x] Duplicate Access Trips in Outload
+### 6. [x] Duplicate Access Trips in Outload
 
 Status: **done** · Added 2026-09-03 · Updated 2026-09-03 · Completed 2026-09-03
 
 - [x] Investigated via stats and found that they were getting duplicated in Inload. Fix applied on the Inload side with Umar.
 
-### 15. [x] OL - prevent duplicate trip insertion by JobID for Access TSPs
+### 7. [x] OL - prevent duplicate trip insertion by JobID for Access TSPs
 
 Status: **done** · Added 2026-09-04 · Updated 2026-09-04 · Completed 2026-09-04
 
 - [x] Implemented the protection on OL to prevent duplicate trips insertion by JobID, only for Access TSPs. An Access TSP trip can be duplicate by inload confirmation no, so it has to be checked by JobID.
 
-### 16. [x] STS - zones and service hours setup for FS = SSTAP
+### 8. [x] STS - zones and service hours setup for FS = SSTAP
 
 Status: **done** · Added 2026-09-04 · Updated 2026-09-04 · Completed 2026-09-04
 
