@@ -83,7 +83,7 @@ Status: **in-progress** · Added 2026-08-27 · Updated 2026-08-28
 - [ ] Zone Management needs a common configuration, not a separate configuration.
   - _Added 2026-08-28_
 
-## Week 2026-08-31 → 2026-09-04
+## Week 2026-08-31 → 2026-09-06
 
 ### 1. [x] Web MRMS Security - support fixes
 
