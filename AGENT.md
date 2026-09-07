@@ -229,3 +229,44 @@ under a minute; a stale-looking page is usually browser cache (Ctrl+Shift+R).
   small pre-commit script that diffs `tasks.json` and stamps dates — not a runtime change to `app.js`.
 - **`meta.weekStartsOn` is documentation only.** The code keys off the explicit `weekStart`/`weekEnd`
   values on each week, so changing it alone changes nothing.
+
+---
+
+## 8. `tasks.json` is not the only home
+
+Since 2026-09-07 the same tasks also live on the owner's deployed site, behind its admin login, at
+`https://serverapp.meserver.click` (built in the `WinServerApp` project; full contract in
+`tasks-api.md` there). He edits tasks on that page as well as through an agent here, so **this file
+goes stale unless those edits are pulled back in**.
+
+`GET /api/tasks` returns the board, `POST /api/tasks` upserts `{"tasks": [...]}`. Either header works:
+`Authorization: Bearer <token>` or `X-Task-Token: <token>`. The token is displayed on the site's
+`/Tasks` page, lasts an hour, and dies on every redeploy — ask the owner for a fresh one, and never
+retry a `401 TASK_TOKEN_INVALID` with the same value. A POST returns the whole merged board, so
+push-then-read is a single call.
+
+**The workflow, in order, every time — the order is the point:**
+
+1. `GET` the board.
+2. Process `deletedTasks` **first** and mirror any removal into this file. An upsert of a tombstoned
+   `id` resurrects the task, so pushing before this step undoes his deletion.
+3. Merge anything he changed on the site into `tasks.json`.
+4. Push the new work, then commit here.
+
+Task `id` slugs are the join key and are shared verbatim — never rename one. Drop the API's own
+fields when writing this file: `statusDerived`, item `id`, `doneCount`, `totalCount`, `label`,
+`isCurrent`.
+
+Traps that have already bitten or nearly bitten:
+
+- **`statusDerived`** says whether `status` was computed from the points or explicitly overridden.
+  When `true`, write no `status` key here; when `false`, write the value.
+- **Absent is not null.** An omitted field is left alone; `null` clears it.
+- **`items` is authoritative.** A stale push that omits a point he added deletes it. The server now
+  refuses that with `400 POINT_DELETION_NOT_ALLOWED` unless the task carries
+  `allowPointDeletion: true` — set that flag **only** when he has named a point for removal, and on a
+  rejection re-read and merge rather than retrying with the flag set.
+- It does **not** catch a same-length push carrying stale text, so step 1 is the real protection.
+- **Dates are `yyyy-MM-dd` PKT only** over the wire, stamped against his 07:00 shift cutoff, and
+  `modifiedDate` is stored verbatim when supplied. Timestamps in this file (a couple of old entries
+  carry `+05:00` times) are truncated on the way out.
