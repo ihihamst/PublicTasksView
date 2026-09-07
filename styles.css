@@ -88,6 +88,10 @@ body{
 body.hide-completed .items li.done{display:none}
 body.hide-completed .card.is-done{display:none}
 
+/* The All / Pending / Done filter narrows the points too, current week only. */
+body.filter-pending #currentTasks .items li.done{display:none}
+body.filter-done #currentTasks .items li:not(.done){display:none}
+
 /* ---------- Stats ---------- */
 .stats{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));

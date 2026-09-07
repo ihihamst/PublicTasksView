@@ -321,6 +321,17 @@
       b.classList.toggle('is-active', on);
       b.setAttribute('aria-selected', on ? 'true' : 'false');
     });
+    applyPointFilter('all');
+  }
+
+  /**
+   * The filter narrows the points inside a card as well as the cards themselves: Pending hides
+   * completed bullets, Done hides outstanding ones. Scoped to the current week by the CSS, so last
+   * week and history stay whole.
+   */
+  function applyPointFilter(f) {
+    document.body.classList.toggle('filter-pending', f === 'pending');
+    document.body.classList.toggle('filter-done', f === 'done');
   }
 
   function wireFilters() {
@@ -338,10 +349,15 @@
           var box = document.getElementById('toggleCompleted');
           if (!box.checked) { box.checked = true; applyShowCompleted(true); }
         }
+        applyPointFilter(f);
         [].slice.call(document.querySelectorAll('#currentTasks .card')).forEach(function (card) {
           var st = card.dataset.status;
-          // "pending" also surfaces partially-complete work.
-          var show = f === 'all' || st === f || (f === 'pending' && st === 'progress');
+          // "pending" also surfaces partially-complete work. "done" keeps a partially-complete card
+          // when it holds finished points, since the point filter is about to reveal just those —
+          // otherwise completed work inside an unfinished task would be unreachable.
+          var show = f === 'all' || st === f ||
+            (f === 'pending' && st === 'progress') ||
+            (f === 'done' && card.querySelector('.items li.done'));
           card.style.display = show ? '' : 'none';
         });
       });
