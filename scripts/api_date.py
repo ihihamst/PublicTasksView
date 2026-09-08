@@ -24,7 +24,11 @@ import sys
 
 SHIFT_DAY_START_HOUR = 7          # mirrors the server's Tasks:ShiftDayStartHour
 DATE_ONLY = re.compile(r'^\d{4}-\d{2}-\d{2}$')
-STAMP = re.compile(r'^(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):')
+# The offset is captured so it can be checked, not ignored: the hour is read as PKT wall
+# time, which is only true for +05:00 or a bare time (AGENT.md §3 allows exactly those two).
+# A Z value would otherwise be read as if its digits were local and land a day early.
+STAMP = re.compile(r'^(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):\d{2}(?::\d{2})?\s*(.*)$')
+PKT_OFFSETS = ('+05:00', '+0500')   # a bare time is also fine; it is read as PKT wall time
 
 _MDAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
@@ -57,6 +61,13 @@ def wire_date(value):
     m = STAMP.match(text)
     if not m:
         raise ValueError('unrecognised date value: %r' % value)
+    offset = m.group(5).strip()
+    if offset and offset not in PKT_OFFSETS:
+        # No correct answer exists for an offset this helper wasn't designed for, and
+        # guessing produces a well-formed wrong date the API will happily store.
+        raise ValueError(
+            'date %r carries offset %r; only PKT (+05:00) or a bare time is supported. '
+            'Convert it to PKT before calling wire_date().' % (value, offset))
     y, mo, d, hour = int(m.group(1)), int(m.group(2)), int(m.group(3)), int(m.group(4))
     if hour < SHIFT_DAY_START_HOUR:
         y, mo, d = _previous_day(y, mo, d)
@@ -77,6 +88,8 @@ def _selftest():
         ('2026-01-01T03:00:00+05:00', '2025-12-31'),      # rolls the year
         ('2026-03-01T02:00:00+05:00', '2026-02-28'),      # 2026 is not a leap year
         ('2024-03-01T02:00:00+05:00', '2024-02-29'),      # 2024 is
+        ('2026-08-05 14:30:00', '2026-08-05'),            # bare time is read as PKT, per AGENT.md
+        ('2026-09-08T01:30', '2026-09-07'),               # no seconds, no offset
     ]
     bad = 0
     for given, want in cases:
@@ -84,14 +97,20 @@ def _selftest():
         if got != want:
             bad += 1
             print('FAIL %-30r -> %-12r want %r' % (given, got, want))
-    try:
-        wire_date('05/08/2026')
-    except ValueError:
-        pass
-    else:
+    must_raise = [
+        '05/08/2026',                   # unparseable
+        '2026-09-08T03:00:00Z',         # UTC: digits are not PKT wall time
+        '2026-09-08T03:00:00+00:00',    # ditto, spelled out
+        '2026-09-08T03:00:00-04:00',    # any other zone
+    ]
+    for value in must_raise:
+        try:
+            got = wire_date(value)
+        except ValueError:
+            continue
         bad += 1
-        print('FAIL an unparseable value should raise rather than be sent')
-    print('api_date self-test: %d checks, %d failed' % (len(cases) + 1, bad))
+        print('FAIL %-30r should raise, returned %r' % (value, got))
+    print('api_date self-test: %d checks, %d failed' % (len(cases) + len(must_raise), bad))
     return 1 if bad else 0
 
 
