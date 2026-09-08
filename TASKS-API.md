@@ -15,6 +15,11 @@ that API, for anyone syncing this repository against it.
 **Content type:** `application/json` both ways.
 **Rate limit:** 60 requests/minute per IP across all `/api/*`. Over it → **429**.
 **Dates:** always `yyyy-MM-dd`, Pakistan time, and they are **shift-days, not calendar dates**.
+A date field that is not exactly `yyyy-MM-dd` is **rejected with `400 INVALID_TASK` naming the task,
+never coerced** — the validator matches `^\d{4}-\d{2}-\d{2}$` and nothing else. **Truncating is the
+caller's job**: the `+05:00` timestamps a few older `tasks.json` entries carry must be cut to their
+first 10 characters before they are sent. A slip fails loudly rather than storing a mangled date,
+which is the good failure — but only if you expect it.
 
 ---
 
@@ -108,9 +113,11 @@ Weeks newest first. Tasks within a week in render order: high priority first, lo
 | `statusDerived` | `true` = `status` was computed from the points; `false` = a stored override. When `true` write **no** `status` key to `tasks.json`; when `false` write the value. |
 | `doneCount`, `totalCount`, `label`, `isCurrent` | Render conveniences. |
 
-Everything else matches `tasks.json` field for field. Note this repo may hold richer values in two
-places: dates here can carry a `+05:00` timestamp (§3 of `AGENT.md`), which is truncated to
-`yyyy-MM-dd` on the way out, and that difference is expected rather than drift.
+Everything else matches `tasks.json` field for field. This repo may hold a **richer** value than the
+wire carries: dates here can include a `+05:00` timestamp (§3 of `AGENT.md`), truncated to
+`yyyy-MM-dd` by this side on the way out. That difference is expected rather than drift, and the
+asymmetry runs one way only — the API never returns a value needing widening, so a round trip
+loses time-of-day precision but never anything else.
 
 ---
 
@@ -309,6 +316,10 @@ Observed against production on 2026-09-08, all matching this document:
   naming the task, `applied: []`, and **nothing written** — the task still had 3 points afterwards.
 - At 04:22 PKT on 8 Sep, `currentWeek` and `generatedAt` both returned `2026-09-07`.
 - `deletedTasks` present as `[]`; `items[].id` present on all 91 points.
+
+Also confirmed on this side: every date leaving this repo is truncated to its first 10 characters
+before it is sent, so the two `+05:00` entries in `tasks.json` cannot trip the `yyyy-MM-dd`
+validator.
 
 **Not yet exercised against production by either side:** task deletion and the tombstone mirror, and
 the `allowPointDeletion: true` success path. Both were skipped deliberately — testing them means
