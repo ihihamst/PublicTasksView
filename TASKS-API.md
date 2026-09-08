@@ -17,9 +17,15 @@ that API, for anyone syncing this repository against it.
 **Dates:** always `yyyy-MM-dd`, Pakistan time, and they are **shift-days, not calendar dates**.
 A date field that is not exactly `yyyy-MM-dd` is **rejected with `400 INVALID_TASK` naming the task,
 never coerced** — the validator matches `^\d{4}-\d{2}-\d{2}$` and nothing else. **Truncating is the
-caller's job**: the `+05:00` timestamps a few older `tasks.json` entries carry must be cut to their
-first 10 characters before they are sent. A slip fails loudly rather than storing a mangled date,
-which is the good failure — but only if you expect it.
+caller's job**: the `+05:00` timestamps a few older `tasks.json` entries carry must be converted
+before they are sent — use `scripts/api_date.py`. A slip fails loudly rather than storing a mangled
+date, which is the good failure — but only if you expect it.
+
+**Converting is not truncating.** Because the server stamps shift-days, a timestamp before 07:00
+belongs to the *previous* calendar date: `2026-09-08T01:30:00+05:00` truncates to `2026-09-08` but
+is shift-day `2026-09-07`, and pushing the truncated value disagrees by a day with what the server
+would have stamped for that instant. `wire_date()` in `scripts/api_date.py` does this correctly;
+don't hand-roll `[:10]` at a call site.
 
 ---
 
@@ -317,9 +323,12 @@ Observed against production on 2026-09-08, all matching this document:
 - At 04:22 PKT on 8 Sep, `currentWeek` and `generatedAt` both returned `2026-09-07`.
 - `deletedTasks` present as `[]`; `items[].id` present on all 91 points.
 
-Also confirmed on this side: every date leaving this repo is truncated to its first 10 characters
-before it is sent, so the two `+05:00` entries in `tasks.json` cannot trip the `yyyy-MM-dd`
-validator.
+Also confirmed on this side: `tasks.json` holds **12** timestamped values across two distinct
+timestamps (`2026-08-05T14:30`, `2026-08-10T22:00`) in two tasks. Both are after 07:00, so
+truncation and shift-day agree on every value present today — the difference is latent, not live.
+`scripts/api_date.py` converts correctly either way and self-tests with
+`python3 scripts/api_date.py`; run over all 352 date values in `tasks.json` it agrees with naive
+truncation on all of them, as expected.
 
 **Not yet exercised against production by either side:** task deletion and the tombstone mirror, and
 the `allowPointDeletion: true` success path. Both were skipped deliberately — testing them means

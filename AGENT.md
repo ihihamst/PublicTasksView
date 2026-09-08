@@ -29,6 +29,7 @@ can edit `tasks.json` in the GitHub web editor and see the result a minute later
 | `app.js` | Fetches `tasks.json`, derives status, sorts, renders, wires controls. | Rarely |
 | `Tasks.md` | Readable Markdown mirror of `tasks.json`. **Generated — never hand-edit.** | Every task update |
 | `scripts/generate_tasks_md.py` | Regenerates `Tasks.md` from `tasks.json`. | Rarely |
+| `scripts/api_date.py` | Converts a date for the task API — shift-day aware, **not** plain truncation. | Rarely |
 | `TASKS-API.md` | Contract for the deployed task API this data is mirrored to. **Synced copy — WinServerApp's `tasks-api.md` is authoritative.** | When that contract changes |
 | `README.md` | Owner-facing docs: schema, how to add a week. | When schema changes |
 | `AGENT.md` | This file. | When conventions change |
