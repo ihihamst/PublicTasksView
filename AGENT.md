@@ -281,6 +281,11 @@ step 1 stays the real protection.
   `yyyy-MM-dd` only and rejects anything else rather than coercing it, and because the server stamps
   shift-days a timestamp before 07:00 belongs to the *previous* date. Never hand-roll `[:10]`.
 - An omitted field is left alone; a field sent as `null` is cleared. They are not the same thing.
+- **Unfinished tasks now roll forward on their own.** When a week turns, the API moves anything not
+  `done` into the current week and renumbers it there; finished tasks stay put. So `weekStart`,
+  `weekEnd` and `index` can change with **no** `modifiedDate` bump — expected, not a bug. Mirror it,
+  and **stop carrying unfinished tasks between weeks in `tasks.json` by hand.** Past weeks may show
+  index gaps where a task left; that is history, not corruption.
 
 ### Not yet proven
 

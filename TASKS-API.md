@@ -283,6 +283,31 @@ not in `deletedTasks` is an error, not a deletion.**
 > `"restored": true`. Deliberate — a re-add has to work — but it means pushing a task deleted on the
 > site brings it back. **Process `deletedTasks` before every push.**
 
+## Unfinished work rolls forward
+
+When a week turns, **every unfinished task moves into the current week** — anything deriving to
+`pending` or `in-progress`, or sitting in a week earlier than the current one. A `done` task stays in
+the week it finished, so what was completed in a given week stays legible. It runs **on read**, not on
+a schedule, so downtime cannot make it miss a turn; it is idempotent and writes nothing when nothing
+is stale.
+
+What that means for this repo:
+
+- **`weekStart` and `weekEnd` can change with nobody having edited the task.** Mirror it as an
+  ordinary field change — it is not a conflict.
+- **`modifiedDate` is deliberately not bumped** by a move, because nobody edited the task; the
+  calendar moved. **A changed week with an unchanged `modifiedDate` is expected**, not a contradiction.
+- **`index` is reassigned on arrival**, numbered after whatever is already in the destination week,
+  longest-waiting first. Tasks left behind in a vacated week **keep** their old index, so a past week
+  can show gaps — a lone `#3` in an old week is history, not corruption. Do not "repair" it.
+- **An unfinished task cannot be held in a past week.** Push one there and it is accepted, then undone
+  by the next read. It converges rather than oscillating **only because the sync reads before it
+  pushes**; a blind push would fight the rollover indefinitely. One more reason step 1 of the sync
+  order is not optional.
+
+This replaces what used to be a manual carry-forward on this side — don't move unfinished tasks
+between weeks in `tasks.json` by hand any more, mirror what the API did instead.
+
 ## Error codes
 
 | Code | HTTP | Meaning |
@@ -330,6 +355,14 @@ truncation and shift-day agree on every value present today — the difference i
 `python3 scripts/api_date.py`; run over all 352 date values in `tasks.json` it agrees with naive
 truncation on all of them, as expected.
 
-**Not yet exercised against production by either side:** task deletion and the tombstone mirror, and
-the `allowPointDeletion: true` success path. Both were skipped deliberately — testing them means
-destroying or littering real data. Watch the first real deletion closely.
+**Not yet exercised against production by either side**, and both are time-triggered rather than
+skippable:
+
+- **Task deletion and the tombstone mirror**, plus the `allowPointDeletion: true` success path —
+  skipped deliberately, since testing them means destroying or littering real data.
+- **The weekly rollover.** It cannot run until this week turns. On 2026-09-08 every past week on both
+  stores was 100% done (8 / 1 / 6 / 6 / 5 across `08-31`, `08-24`, `08-17`, `08-10`, `08-03`) and only
+  the current week held unfinished work, so the first run moves nothing and needed no reconciliation
+  here. The behaviour first shows itself when the week turns.
+
+Watch both closely the first time rather than trusting the mirror.
