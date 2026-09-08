@@ -238,20 +238,52 @@ under a minute; a stale-looking page is usually browser cache (Ctrl+Shift+R).
 
 Since 2026-09-07 the same tasks also live on the owner's deployed site, behind its admin login, at
 `https://serverapp.meserver.click`. He edits tasks on that page as well as through an agent here, so
-**this file goes stale unless those edits are pulled back in**.
+**this file goes stale unless those edits are pulled back in**, and **anything added here has to be
+written there too** or the site goes stale instead.
 
 **The full contract is [`TASKS-API.md`](TASKS-API.md)** — endpoints, schema, error codes, the
 point-deletion guard, shift days and tombstones. Read it before syncing. It is a synced copy of
 `tasks-api.md` in the WinServerApp repo, which is authoritative if the two ever disagree.
 
-The order that matters, repeated here because getting it wrong destroys data:
+### The token
 
-1. `GET /api/tasks`.
-2. Process `deletedTasks` **first** and mirror any removal into this file. An upsert of a tombstoned
-   `id` resurrects the task, so pushing before this step undoes his deletion.
-3. Merge anything he changed on the site into `tasks.json`.
-4. Push, then regenerate `Tasks.md` and commit here.
+Every call needs one. It is displayed on the site's `/Tasks` page, behind the admin sign-in, and
+**only the owner can fetch it** — nothing here can mint one. It expires an hour after issue and every
+deployment kills it, so expiry is routine rather than a sign something is broken. On
+`401 TASK_TOKEN_INVALID`, ask him for a fresh one; never retry the same value, it will never succeed.
 
-Task `id` slugs are the join key and are shared verbatim — never rename one. Drop the API's own
-fields when writing this file: `statusDerived`, item `id`, `doneCount`, `totalCount`, `label`,
-`isCurrent`. A stale push can silently overwrite his work, which is why step 1 is not optional.
+### The routine, in this order
+
+The order is not stylistic — steps 1 and 2 cannot be swapped without destroying data.
+
+1. **`GET /api/tasks`.**
+2. **Process `deletedTasks` first** and mirror any removal into this file. An upsert of a tombstoned
+   `id` **resurrects** the task, so pushing before this step silently undoes his deletion.
+3. **Merge** anything he changed on the site into `tasks.json` — new tasks, new points, ticked
+   points, edited text.
+4. **Push** the new work, then regenerate `Tasks.md`, and commit both here.
+
+Skipping step 1 is how his work gets overwritten: `items` is authoritative, so a stale push replaces
+his points with an older list. The server refuses the worst case — a push that would remove a stored
+point is rejected with `400 POINT_DELETION_NOT_ALLOWED` unless that task carries
+`allowPointDeletion: true`. **Set that flag only when he has actually named a point for removal**, and
+on a rejection re-read and merge rather than retrying with the flag set, which would delete exactly
+the work the guard just caught. It does **not** catch a same-length push carrying stale text, so
+step 1 stays the real protection.
+
+### Rules that bite
+
+- Task `id` slugs are the join key, shared verbatim between the two stores. **Never rename one.**
+- Drop the API's own fields when writing this file: `statusDerived`, item `id`, `doneCount`,
+  `totalCount`, `label`, `isCurrent`.
+- `statusDerived` decides whether to write a `status` key at all — see `TASKS-API.md`.
+- **Dates: use `wire_date()` from [`scripts/api_date.py`](scripts/api_date.py).** The API takes
+  `yyyy-MM-dd` only and rejects anything else rather than coercing it, and because the server stamps
+  shift-days a timestamp before 07:00 belongs to the *previous* date. Never hand-roll `[:10]`.
+- An omitted field is left alone; a field sent as `null` is cleared. They are not the same thing.
+
+### Not yet proven
+
+Task deletion and the tombstone mirror have **never run against production** on either side — testing
+it means leaving a permanent tombstone in real data. Watch the first real deletion closely rather than
+trusting the mirror, and report what it does.
