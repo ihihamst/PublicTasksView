@@ -3,7 +3,7 @@
     "title": "Tasks Assignment",
     "owner": "ihihamst",
     "weekStartsOn": "monday",
-    "lastUpdated": "2026-09-08",
+    "lastUpdated": "2026-09-09",
     "timezone": "Asia/Karachi (PKT, UTC+05:00)"
   },
   "weeks": [
@@ -276,6 +276,43 @@
               "notes": "",
               "addedDate": "2026-08-28",
               "modifiedDate": "2026-08-28",
+              "completedDate": null
+            }
+          ]
+        },
+        {
+          "id": "eastern2-dotnet-10-upgrade",
+          "index": 9,
+          "heading": "Upgrade Eastern2 APIs from .NET 6 to .NET 10",
+          "status": "pending",
+          "priority": "high",
+          "notes": "Needed to close server vulnerabilities. Four apps are still on .NET 6: Eastern2-DataSyncAPI, Eastern2.0-CombinedDataAPI, Eastern2.0-GenericManifestAPI and Eastern2.0-ReservationAPI (all under D:\\IISWebs). Due tomorrow, 2026-09-10.",
+          "addedDate": "2026-09-09",
+          "modifiedDate": "2026-09-09",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "Upgrade all four apps from .NET 6 to .NET 10: Eastern2-DataSyncAPI, Eastern2.0-CombinedDataAPI, Eastern2.0-GenericManifestAPI, Eastern2.0-ReservationAPI.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-09-09",
+              "modifiedDate": "2026-09-09",
+              "completedDate": null
+            },
+            {
+              "text": "Write down the main functions of each app so Abubakar can test them on the staging environment (6.13).",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-09-09",
+              "modifiedDate": "2026-09-09",
+              "completedDate": null
+            },
+            {
+              "text": "List any code that will not work on .NET 10, so other teams can be brought in to fix those areas.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-09-09",
+              "modifiedDate": "2026-09-09",
               "completedDate": null
             }
           ]

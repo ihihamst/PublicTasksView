@@ -1,6 +1,6 @@
 # Tasks Assignment
 
-Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-08**
+Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-09**
 
 Mirror of `tasks.json` in readable form. `tasks.json` remains the source of truth — update it first, then regenerate this file with `python3 scripts/generate_tasks_md.py`.
 
@@ -84,6 +84,16 @@ Status: **in-progress** · Added 2026-08-27 · Updated 2026-08-28
   - _Completed 2026-08-28_
 - [ ] Zone Management needs a common configuration, not a separate configuration.
   - _Added 2026-08-28_
+
+### 9. [ ] Upgrade Eastern2 APIs from .NET 6 to .NET 10
+
+Status: **pending** · Priority: **high** · Added 2026-09-09 · Updated 2026-09-09
+
+_Notes:_ Needed to close server vulnerabilities. Four apps are still on .NET 6: Eastern2-DataSyncAPI, Eastern2.0-CombinedDataAPI, Eastern2.0-GenericManifestAPI and Eastern2.0-ReservationAPI (all under D:\IISWebs). Due tomorrow, 2026-09-10.
+
+- [ ] Upgrade all four apps from .NET 6 to .NET 10: Eastern2-DataSyncAPI, Eastern2.0-CombinedDataAPI, Eastern2.0-GenericManifestAPI, Eastern2.0-ReservationAPI.
+- [ ] Write down the main functions of each app so Abubakar can test them on the staging environment (6.13).
+- [ ] List any code that will not work on .NET 10, so other teams can be brought in to fix those areas.
 
 ## Week 2026-08-31 → 2026-09-06
 
