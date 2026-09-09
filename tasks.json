@@ -316,6 +316,25 @@
               "completedDate": null
             }
           ]
+        },
+        {
+          "id": "sdhs-facecard-blank-expiry",
+          "index": 10,
+          "heading": "SDHS - send face card when its expiry is not set",
+          "status": "done",
+          "addedDate": "2026-09-09",
+          "modifiedDate": "2026-09-09",
+          "completedDate": "2026-09-09",
+          "items": [
+            {
+              "text": "On SD Login in SDHS Service, if face card expiry is not set (blank / 1900) then still send this face card no, as it is not expired. Change done in sp usp_SDGetAllDrivers.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-09",
+              "modifiedDate": "2026-09-09",
+              "completedDate": "2026-09-09"
+            }
+          ]
         }
       ]
     },

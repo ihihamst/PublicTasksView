@@ -95,6 +95,12 @@ _Notes:_ Needed to close server vulnerabilities. Four apps are still on .NET 6: 
 - [ ] Write down the main functions of each app so Abubakar can test them on the staging environment (6.13).
 - [ ] List any code that will not work on .NET 10, so other teams can be brought in to fix those areas.
 
+### 10. [x] SDHS - send face card when its expiry is not set
+
+Status: **done** · Added 2026-09-09 · Updated 2026-09-09 · Completed 2026-09-09
+
+- [x] On SD Login in SDHS Service, if face card expiry is not set (blank / 1900) then still send this face card no, as it is not expired. Change done in sp usp_SDGetAllDrivers.
+
 ## Week 2026-08-31 → 2026-09-06
 
 ### 1. [x] Web MRMS Security - support fixes
