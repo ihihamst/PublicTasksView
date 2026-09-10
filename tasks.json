@@ -3,7 +3,7 @@
     "title": "Tasks Assignment",
     "owner": "ihihamst",
     "weekStartsOn": "monday",
-    "lastUpdated": "2026-09-09",
+    "lastUpdated": "2026-09-10",
     "timezone": "Asia/Karachi (PKT, UTC+05:00)"
   },
   "weeks": [
@@ -333,6 +333,41 @@
               "addedDate": "2026-09-09",
               "modifiedDate": "2026-09-09",
               "completedDate": "2026-09-09"
+            }
+          ]
+        },
+        {
+          "id": "imb-tk-20-broker-trips-stuck",
+          "index": 11,
+          "heading": "#IMB-TK-20 - Trips stuck on the broker's screen after being moved to a different provider",
+          "status": "done",
+          "addedDate": "2026-09-10",
+          "modifiedDate": "2026-09-10",
+          "completedDate": "2026-09-10",
+          "items": [
+            {
+              "text": "Two trips for rider Robert Fall (booked by the SanFran broker for Friday 09-05) were first handed to provider TransMetro. The broker then pulled them back and, the next day, handed them instead to Centurion Medical Transport.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-10",
+              "modifiedDate": "2026-09-10",
+              "completedDate": "2026-09-10"
+            },
+            {
+              "text": "The pull-back from TransMetro was only half completed. Our system cancelled the trips at TransMetro correctly, but never recorded on its own side that the cancellation was done - so it kept thinking a cancellation was still pending with TransMetro.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-10",
+              "modifiedDate": "2026-09-10",
+              "completedDate": "2026-09-10"
+            },
+            {
+              "text": "Because of that unfinished bookkeeping, the system refused to send the trips onward to Centurion.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-10",
+              "modifiedDate": "2026-09-10",
+              "completedDate": "2026-09-10"
             }
           ]
         }

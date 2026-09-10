@@ -1,6 +1,6 @@
 # Tasks Assignment
 
-Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-09**
+Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-10**
 
 Mirror of `tasks.json` in readable form. `tasks.json` remains the source of truth — update it first, then regenerate this file with `python3 scripts/generate_tasks_md.py`.
 
@@ -100,6 +100,14 @@ _Notes:_ Needed to close server vulnerabilities. Four apps are still on .NET 6: 
 Status: **done** · Added 2026-09-09 · Updated 2026-09-09 · Completed 2026-09-09
 
 - [x] On SD Login in SDHS Service, if face card expiry is not set (blank / 1900) then still send this face card no, as it is not expired. Change done in sp usp_SDGetAllDrivers.
+
+### 11. [x] #IMB-TK-20 - Trips stuck on the broker's screen after being moved to a different provider
+
+Status: **done** · Added 2026-09-10 · Updated 2026-09-10 · Completed 2026-09-10
+
+- [x] Two trips for rider Robert Fall (booked by the SanFran broker for Friday 09-05) were first handed to provider TransMetro. The broker then pulled them back and, the next day, handed them instead to Centurion Medical Transport.
+- [x] The pull-back from TransMetro was only half completed. Our system cancelled the trips at TransMetro correctly, but never recorded on its own side that the cancellation was done - so it kept thinking a cancellation was still pending with TransMetro.
+- [x] Because of that unfinished bookkeeping, the system refused to send the trips onward to Centurion.
 
 ## Week 2026-08-31 → 2026-09-06
 
