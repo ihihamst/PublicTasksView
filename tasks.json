@@ -389,6 +389,25 @@
               "completedDate": null
             }
           ]
+        },
+        {
+          "id": "email-matthew-ai-usage",
+          "index": 13,
+          "heading": "Email Matthew about my AI usage and its benefits",
+          "status": "pending",
+          "addedDate": "2026-09-10",
+          "modifiedDate": "2026-09-10",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "Send an email to Matthew explaining how my AI use is going and how I am benefitting from it.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-09-10",
+              "modifiedDate": "2026-09-10",
+              "completedDate": null
+            }
+          ]
         }
       ]
     },

@@ -115,6 +115,12 @@ Status: **pending** · Added 2026-09-10 · Updated 2026-09-10
 
 - [ ] Vehicle Live Screen doesn't work when there's a long list of filters, e.g. Affiliates, attributes etc.
 
+### 13. [ ] Email Matthew about my AI usage and its benefits
+
+Status: **pending** · Added 2026-09-10 · Updated 2026-09-10
+
+- [ ] Send an email to Matthew explaining how my AI use is going and how I am benefitting from it.
+
 ## Week 2026-08-31 → 2026-09-06
 
 ### 1. [x] Web MRMS Security - support fixes
