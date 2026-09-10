@@ -109,6 +109,12 @@ Status: **done** · Added 2026-09-10 · Updated 2026-09-10 · Completed 2026-09-
 - [x] The pull-back from TransMetro was only half completed. Our system cancelled the trips at TransMetro correctly, but never recorded on its own side that the cancellation was done - so it kept thinking a cancellation was still pending with TransMetro.
 - [x] Because of that unfinished bookkeeping, the system refused to send the trips onward to Centurion.
 
+### 12. [ ] Vehicle Live Screen does not work with a long list of filters
+
+Status: **pending** · Added 2026-09-10 · Updated 2026-09-10
+
+- [ ] Vehicle Live Screen doesn't work when there's a long list of filters, e.g. Affiliates, attributes etc.
+
 ## Week 2026-08-31 → 2026-09-06
 
 ### 1. [x] Web MRMS Security - support fixes

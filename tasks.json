@@ -370,6 +370,25 @@
               "completedDate": "2026-09-10"
             }
           ]
+        },
+        {
+          "id": "vehicle-live-screen-long-filter-list",
+          "index": 12,
+          "heading": "Vehicle Live Screen does not work with a long list of filters",
+          "status": "pending",
+          "addedDate": "2026-09-10",
+          "modifiedDate": "2026-09-10",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "Vehicle Live Screen doesn't work when there's a long list of filters, e.g. Affiliates, attributes etc.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-09-10",
+              "modifiedDate": "2026-09-10",
+              "completedDate": null
+            }
+          ]
         }
       ]
     },
