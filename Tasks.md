@@ -8,7 +8,7 @@ Mirror of `tasks.json` in readable form. `tasks.json` remains the source of trut
 
 ### 1. [ ] SilverRide SF Bay area pricing
 
-Status: **in-progress** · Priority: **high** · Added 2026-08-03 · Updated 2026-09-07
+Status: **in-progress** · Priority: **high** · Added 2026-08-03 · Updated 2026-09-11
 
 _Notes:_ Top priority as per Imran sb (Aug 24).
 
@@ -16,11 +16,11 @@ _Notes:_ Top priority as per Imran sb (Aug 24).
 - [ ] Route Surcharge (if trip covers a route (stored as polygons) defined percentage, then apply surcharge)
   - _Notes:_ Table Route Surcharge [Polygon Coordinates, Percentage Route Covered, Surcharge Amount]
 - [x] Make a complete design for this SilverRide SF Bayarea Pricing
-  - _Added 2026-09-08 · Completed 2026-09-07_
+  - _Added 2026-09-08 · Updated 2026-09-07 · Completed 2026-09-07_
 
 ### 2. [ ] Implement PendingAPICallsAndTripUpdatesUtility
 
-Status: **in-progress** · Added 2026-08-03 · Updated 2026-08-31
+Status: **in-progress** · Added 2026-08-03 · Updated 2026-09-11
 
 _Notes:_ The PendingAPICalls side is done and delivered. The points for SendTripUpdateToDevice - moving the implementation out of the Inload API into this utility - are still pending.
 
@@ -39,17 +39,17 @@ _Notes:_ The PendingAPICalls side is done and delivered. The points for SendTrip
 
 ### 3. [ ] Convert Auto Oara to .net Core Stand Alone Service
 
-Status: **pending** · Added 2026-08-05 · Updated 2026-08-10
+Status: **pending** · Added 2026-08-05 · Updated 2026-09-11
 
 ### 4. [ ] Annapolis Stations and RCZ Syncing
 
-Status: **pending** · Priority: **low** · Added 2026-08-05 · Updated 2026-08-10
+Status: **pending** · Priority: **low** · Added 2026-08-05 · Updated 2026-09-11
 
 - [ ] Annapolis needs Stations and RCZ syncing enabled via old path.
 
 ### 5. [ ] Water Taxi - Trip cancelled state not synced to OL
 
-Status: **pending** · Added 2026-08-10 · Updated 2026-08-10
+Status: **pending** · Added 2026-08-10 · Updated 2026-09-11
 
 - [ ] For Confirmation No. 1780034693 (WaterTaxi Microtransit, Service ID 4662746, due 8/9/2026 12:55:00PM), trip state (Cancelled) was not synced to OL. Service Status in IL is CancelledARQ.
 
