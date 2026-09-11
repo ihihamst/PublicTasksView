@@ -118,6 +118,12 @@ Status: **pending** · Added 2026-09-11 · Updated 2026-09-11
 
 - [ ] In Saint Mary, Zone to Zone & Service Hours function, we need to allow the booking from another day service hour zone to the destination (which is on this day service hour zone), based on if the rule allows.
 
+### 14. [ ] #IMB-TK-20 - Route not brokering: bTripCanceledInThirdParty not set on take back
+
+Status: **pending** · Added 2026-09-11 · Updated 2026-09-11
+
+- [ ] Route not brokering. Upon take back, bTripCanceledInThirdParty was not getting set for the record of the previous affiliate (when certain conditions happen), and due to this the trip was not going to the new affiliate.
+
 ## Week 2026-08-31 → 2026-09-06
 
 ### 1. [x] Web MRMS Security - support fixes

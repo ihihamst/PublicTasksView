@@ -399,6 +399,25 @@
               "completedDate": null
             }
           ]
+        },
+        {
+          "id": "imb-tk-20-route-not-brokering",
+          "index": 14,
+          "heading": "#IMB-TK-20 - Route not brokering: bTripCanceledInThirdParty not set on take back",
+          "status": "pending",
+          "addedDate": "2026-09-11",
+          "modifiedDate": "2026-09-11",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "Route not brokering. Upon take back, bTripCanceledInThirdParty was not getting set for the record of the previous affiliate (when certain conditions happen), and due to this the trip was not going to the new affiliate.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-09-11",
+              "modifiedDate": "2026-09-11",
+              "completedDate": null
+            }
+          ]
         }
       ]
     },
