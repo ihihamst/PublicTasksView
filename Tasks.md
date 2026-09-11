@@ -55,7 +55,7 @@ Status: **pending** · Added 2026-08-10 · Updated 2026-09-11
 
 ### 6. [ ] Saint Mary - trip zone becomes UNKWN on trip expansion
 
-Status: **pending** · Added 2026-08-24 · Updated 2026-08-24
+Status: **pending** · Added 2026-08-24 · Updated 2026-09-11
 
 - [ ] Saint Mary trips zone become UNKWN on trip expansion. Issue needs to be fixed.
 
@@ -111,6 +111,12 @@ _Notes:_ Reported in the meeting that the SilverRide server crashed once again (
   - _Completed 2026-09-11_
 - [ ] Fix the standard utility dictionary issue (use concurrent dictionary after confirming by doing R & D). Verify the fix. Apply the DLL in major applications which use it.
 - [ ] Scan Inload API, and find and fix other areas in which dictionary is missing the lock during operations, fix and verify.
+
+### 13. [ ] Saint Mary - Zone to Zone & Service Hours: allow booking across service-hour days
+
+Status: **pending** · Added 2026-09-11 · Updated 2026-09-11
+
+- [ ] In Saint Mary, Zone to Zone & Service Hours function, we need to allow the booking from another day service hour zone to the destination (which is on this day service hour zone), based on if the rule allows.
 
 ## Week 2026-08-31 → 2026-09-06
 
