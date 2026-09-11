@@ -8,15 +8,15 @@ Mirror of `tasks.json` in readable form. `tasks.json` remains the source of trut
 
 ### 1. [ ] SilverRide SF Bay area pricing
 
-Status: **pending** · Priority: **high** · Added 2026-08-03 · Updated 2026-09-08
+Status: **in-progress** · Priority: **high** · Added 2026-08-03 · Updated 2026-09-07
 
 _Notes:_ Top priority as per Imran sb (Aug 24).
 
 - [ ] We need to add new zones (City/County) & (Peninsula [areas between two cities])
 - [ ] Route Surcharge (if trip covers a route (stored as polygons) defined percentage, then apply surcharge)
   - _Notes:_ Table Route Surcharge [Polygon Coordinates, Percentage Route Covered, Surcharge Amount]
-- [ ] Make a complete design for this SilverRide SF Bayarea Pricing
-  - _Added 2026-09-08_
+- [x] Make a complete design for this SilverRide SF Bayarea Pricing
+  - _Added 2026-09-08 · Completed 2026-09-07_
 
 ### 2. [ ] Implement PendingAPICallsAndTripUpdatesUtility
 
