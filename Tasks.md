@@ -1,6 +1,6 @@
 # Tasks Assignment
 
-Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-10**
+Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-11**
 
 Mirror of `tasks.json` in readable form. `tasks.json` remains the source of truth — update it first, then regenerate this file with `python3 scripts/generate_tasks_md.py`.
 
@@ -103,6 +103,23 @@ Status: **pending** · Added 2026-09-10 · Updated 2026-09-10
 Status: **pending** · Added 2026-09-10 · Updated 2026-09-10
 
 - [ ] Send an email to Matthew explaining how my AI use is going and how I am benefitting from it.
+
+### 13. [ ] SilverRide/Western server crash investigation
+
+Status: **in-progress** · Added 2026-09-11 · Updated 2026-09-11
+
+_Notes:_ Reported in the meeting that the SilverRide server crashed once again (previous one yesterday), and it only comes back after restarting it.
+
+- [x] Reviewed the event viewer logs (partially), yet no conclusive findings.
+  - _Completed 2026-09-11_
+- [x] Reviewed the SQL struck queries and tables analysis. They seemed to be ok.
+  - _Completed 2026-09-11_
+- [x] Then all of a sudden server CPU usage rose, and I checked and found Inload API was taking 83% CPU. I took the dump, did its analysis, and found that dictionary (inside standard utility) was the culprit.
+  - _Completed 2026-09-11_
+- [x] Setup IIS so that if CPU usage goes above 60%, it will kill the Inload API process.
+  - _Completed 2026-09-11_
+- [ ] Fix the standard utility dictionary issue (use concurrent dictionary after confirming by doing R & D). Verify the fix. Apply the DLL in major applications which use it.
+- [ ] Scan Inload API, and find and fix other areas in which dictionary is missing the lock during operations, fix and verify.
 
 ## Week 2026-08-31 → 2026-09-06
 
