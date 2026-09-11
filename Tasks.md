@@ -6,24 +6,7 @@ Mirror of `tasks.json` in readable form. `tasks.json` remains the source of trut
 
 ## Week 2026-09-07 → 2026-09-13
 
-### 1. [ ] Zone Management
-
-Status: **in-progress** · Priority: **high** · Added 2026-08-11 · Updated 2026-08-28
-
-_Notes:_ Missing and pending functionalities in the new Zone Management portal. The remaining GTFS and City/State/Zip plotting is top priority as per Iqbal sb (Aug 24).
-
-- [x] From legacy Web MRMS, we should open new screen of Zone Management via auto login and auto redirect to it.
-  - _Updated 2026-08-13 · Completed 2026-08-13_
-- [x] If zone names are too many, they cut-off.
-  - _Updated 2026-08-13 · Completed 2026-08-13_
-- [ ] Implement zone polygone plotting for City/State/Zip.
-- [ ] Implement the zone polygone plot by GTFS feed.
-- [ ] It should use common configurations of app or api.
-  - _Added 2026-08-28_
-- [ ] Any api key or url should come from config (only if it can change server to server).
-  - _Added 2026-08-28_
-
-### 2. [ ] SilverRide SF Bay area pricing
+### 1. [ ] SilverRide SF Bay area pricing
 
 Status: **pending** · Priority: **high** · Added 2026-08-03 · Updated 2026-09-08
 
@@ -35,7 +18,7 @@ _Notes:_ Top priority as per Imran sb (Aug 24).
 - [ ] Make a complete design for this SilverRide SF Bayarea Pricing
   - _Added 2026-09-08_
 
-### 3. [ ] Implement PendingAPICallsAndTripUpdatesUtility
+### 2. [ ] Implement PendingAPICallsAndTripUpdatesUtility
 
 Status: **in-progress** · Added 2026-08-03 · Updated 2026-08-31
 
@@ -54,29 +37,29 @@ _Notes:_ The PendingAPICalls side is done and delivered. The points for SendTrip
 - [ ] Implement new udp layer to register/send the udp messages
 - [ ] Implement file based logging in it.
 
-### 4. [ ] Convert Auto Oara to .net Core Stand Alone Service
+### 3. [ ] Convert Auto Oara to .net Core Stand Alone Service
 
 Status: **pending** · Added 2026-08-05 · Updated 2026-08-10
 
-### 5. [ ] Annapolis Stations and RCZ Syncing
+### 4. [ ] Annapolis Stations and RCZ Syncing
 
 Status: **pending** · Priority: **low** · Added 2026-08-05 · Updated 2026-08-10
 
 - [ ] Annapolis needs Stations and RCZ syncing enabled via old path.
 
-### 6. [ ] Water Taxi - Trip cancelled state not synced to OL
+### 5. [ ] Water Taxi - Trip cancelled state not synced to OL
 
 Status: **pending** · Added 2026-08-10 · Updated 2026-08-10
 
 - [ ] For Confirmation No. 1780034693 (WaterTaxi Microtransit, Service ID 4662746, due 8/9/2026 12:55:00PM), trip state (Cancelled) was not synced to OL. Service Status in IL is CancelledARQ.
 
-### 7. [ ] Saint Mary - trip zone becomes UNKWN on trip expansion
+### 6. [ ] Saint Mary - trip zone becomes UNKWN on trip expansion
 
 Status: **pending** · Added 2026-08-24 · Updated 2026-08-24
 
 - [ ] Saint Mary trips zone become UNKWN on trip expansion. Issue needs to be fixed.
 
-### 8. [ ] GTA - frplanning API returning wrong affiliate data
+### 7. [ ] GTA - frplanning API returning wrong affiliate data
 
 Status: **in-progress** · Added 2026-08-27 · Updated 2026-08-28
 
@@ -85,7 +68,7 @@ Status: **in-progress** · Added 2026-08-27 · Updated 2026-08-28
 - [ ] Zone Management needs a common configuration, not a separate configuration.
   - _Added 2026-08-28_
 
-### 9. [ ] Upgrade Eastern2 APIs from .NET 6 to .NET 10
+### 8. [ ] Upgrade Eastern2 APIs from .NET 6 to .NET 10
 
 Status: **pending** · Priority: **high** · Added 2026-09-09 · Updated 2026-09-09
 
@@ -95,13 +78,13 @@ _Notes:_ Needed to close server vulnerabilities. Four apps are still on .NET 6: 
 - [ ] Write down the main functions of each app so Abubakar can test them on the staging environment (6.13).
 - [ ] List any code that will not work on .NET 10, so other teams can be brought in to fix those areas.
 
-### 10. [x] SDHS - send face card when its expiry is not set
+### 9. [x] SDHS - send face card when its expiry is not set
 
 Status: **done** · Added 2026-09-09 · Updated 2026-09-09 · Completed 2026-09-09
 
 - [x] On SD Login in SDHS Service, if face card expiry is not set (blank / 1900) then still send this face card no, as it is not expired. Change done in sp usp_SDGetAllDrivers.
 
-### 11. [x] #IMB-TK-20 - Trips stuck on the broker's screen after being moved to a different provider
+### 10. [x] #IMB-TK-20 - Trips stuck on the broker's screen after being moved to a different provider
 
 Status: **done** · Added 2026-09-10 · Updated 2026-09-10 · Completed 2026-09-10
 
@@ -109,13 +92,13 @@ Status: **done** · Added 2026-09-10 · Updated 2026-09-10 · Completed 2026-09-
 - [x] The pull-back from TransMetro was only half completed. Our system cancelled the trips at TransMetro correctly, but never recorded on its own side that the cancellation was done - so it kept thinking a cancellation was still pending with TransMetro.
 - [x] Because of that unfinished bookkeeping, the system refused to send the trips onward to Centurion.
 
-### 12. [ ] Vehicle Live Screen does not work with a long list of filters
+### 11. [ ] Vehicle Live Screen does not work with a long list of filters
 
 Status: **pending** · Added 2026-09-10 · Updated 2026-09-10
 
 - [ ] Vehicle Live Screen doesn't work when there's a long list of filters, e.g. Affiliates, attributes etc.
 
-### 13. [ ] Email Matthew about my AI usage and its benefits
+### 12. [ ] Email Matthew about my AI usage and its benefits
 
 Status: **pending** · Added 2026-09-10 · Updated 2026-09-10
 
@@ -176,6 +159,23 @@ Status: **done** · Added 2026-09-04 · Updated 2026-09-04 · Completed 2026-09-
 Status: **done** · Added 2026-09-04 · Updated 2026-09-04 · Completed 2026-09-04
 
 - [x] Helped in setting up zones / service hours in STS for FS = SSTAP in meeting.
+
+### 9. [x] Zone Management
+
+Status: **done** · Priority: **high** · Added 2026-08-11 · Updated 2026-09-04 · Completed 2026-09-04
+
+_Notes:_ Missing and pending functionalities in the new Zone Management portal. The remaining GTFS and City/State/Zip plotting is top priority as per Iqbal sb (Aug 24).
+
+- [x] From legacy Web MRMS, we should open new screen of Zone Management via auto login and auto redirect to it.
+  - _Updated 2026-08-13 · Completed 2026-08-13_
+- [x] If zone names are too many, they cut-off.
+  - _Updated 2026-08-13 · Completed 2026-08-13_
+- [x] Implement zone polygone plotting for City/State/Zip.
+- [x] Implement the zone polygone plot by GTFS feed.
+- [x] It should use common configurations of app or api.
+  - _Added 2026-08-28_
+- [x] Any api key or url should come from config (only if it can change server to server).
+  - _Added 2026-08-28_
 
 ## Week 2026-08-24 → 2026-08-30
 

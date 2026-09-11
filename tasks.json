@@ -12,69 +12,8 @@
       "weekEnd": "2026-09-13",
       "tasks": [
         {
-          "id": "zone-management-portal-pending",
-          "index": 1,
-          "heading": "Zone Management",
-          "status": "in-progress",
-          "notes": "Missing and pending functionalities in the new Zone Management portal. The remaining GTFS and City/State/Zip plotting is top priority as per Iqbal sb (Aug 24).",
-          "addedDate": "2026-08-11",
-          "modifiedDate": "2026-08-28",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "From legacy Web MRMS, we should open new screen of Zone Management via auto login and auto redirect to it.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-08-11",
-              "modifiedDate": "2026-08-13",
-              "completedDate": "2026-08-13"
-            },
-            {
-              "text": "If zone names are too many, they cut-off.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-08-11",
-              "modifiedDate": "2026-08-13",
-              "completedDate": "2026-08-13"
-            },
-            {
-              "text": "Implement zone polygone plotting for City/State/Zip.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-11",
-              "modifiedDate": "2026-08-11",
-              "completedDate": null
-            },
-            {
-              "text": "Implement the zone polygone plot by GTFS feed.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-11",
-              "modifiedDate": "2026-08-11",
-              "completedDate": null
-            },
-            {
-              "text": "It should use common configurations of app or api.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-28",
-              "modifiedDate": "2026-08-28",
-              "completedDate": null
-            },
-            {
-              "text": "Any api key or url should come from config (only if it can change server to server).",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-28",
-              "modifiedDate": "2026-08-28",
-              "completedDate": null
-            }
-          ],
-          "priority": "high"
-        },
-        {
           "id": "silverride-sf-bay-pricing",
-          "index": 2,
+          "index": 1,
           "heading": "SilverRide SF Bay area pricing",
           "status": "pending",
           "addedDate": "2026-08-03",
@@ -111,7 +50,7 @@
         },
         {
           "id": "send-trip-update-to-device",
-          "index": 3,
+          "index": 2,
           "heading": "Implement PendingAPICallsAndTripUpdatesUtility",
           "status": "in-progress",
           "addedDate": "2026-08-03",
@@ -187,7 +126,7 @@
         },
         {
           "id": "auto-oara-dotnet-core",
-          "index": 4,
+          "index": 3,
           "heading": "Convert Auto Oara to .net Core Stand Alone Service",
           "status": "pending",
           "addedDate": "2026-08-05",
@@ -197,7 +136,7 @@
         },
         {
           "id": "annapolis-stations-rcz-sync",
-          "index": 5,
+          "index": 4,
           "heading": "Annapolis Stations and RCZ Syncing",
           "status": "pending",
           "priority": "low",
@@ -217,7 +156,7 @@
         },
         {
           "id": "water-taxi-cancel-state-not-synced-ol",
-          "index": 6,
+          "index": 5,
           "heading": "Water Taxi - Trip cancelled state not synced to OL",
           "status": "pending",
           "addedDate": "2026-08-10",
@@ -236,7 +175,7 @@
         },
         {
           "id": "saintmary-zone-unknwn-trip-expansion",
-          "index": 7,
+          "index": 6,
           "heading": "Saint Mary - trip zone becomes UNKWN on trip expansion",
           "status": "pending",
           "addedDate": "2026-08-24",
@@ -255,7 +194,7 @@
         },
         {
           "id": "gta-frplanning-api-wrong-affiliates",
-          "index": 8,
+          "index": 7,
           "heading": "GTA - frplanning API returning wrong affiliate data",
           "status": "in-progress",
           "addedDate": "2026-08-27",
@@ -282,7 +221,7 @@
         },
         {
           "id": "eastern2-dotnet-10-upgrade",
-          "index": 9,
+          "index": 8,
           "heading": "Upgrade Eastern2 APIs from .NET 6 to .NET 10",
           "status": "pending",
           "priority": "high",
@@ -319,7 +258,7 @@
         },
         {
           "id": "sdhs-facecard-blank-expiry",
-          "index": 10,
+          "index": 9,
           "heading": "SDHS - send face card when its expiry is not set",
           "status": "done",
           "addedDate": "2026-09-09",
@@ -338,7 +277,7 @@
         },
         {
           "id": "imb-tk-20-broker-trips-stuck",
-          "index": 11,
+          "index": 10,
           "heading": "#IMB-TK-20 - Trips stuck on the broker's screen after being moved to a different provider",
           "status": "done",
           "addedDate": "2026-09-10",
@@ -373,7 +312,7 @@
         },
         {
           "id": "vehicle-live-screen-long-filter-list",
-          "index": 12,
+          "index": 11,
           "heading": "Vehicle Live Screen does not work with a long list of filters",
           "status": "pending",
           "addedDate": "2026-09-10",
@@ -392,7 +331,7 @@
         },
         {
           "id": "email-matthew-ai-usage",
-          "index": 13,
+          "index": 12,
           "heading": "Email Matthew about my AI usage and its benefits",
           "status": "pending",
           "addedDate": "2026-09-10",
@@ -599,6 +538,67 @@
               "completedDate": "2026-09-04"
             }
           ]
+        },
+        {
+          "id": "zone-management-portal-pending",
+          "index": 9,
+          "heading": "Zone Management",
+          "status": "done",
+          "notes": "Missing and pending functionalities in the new Zone Management portal. The remaining GTFS and City/State/Zip plotting is top priority as per Iqbal sb (Aug 24).",
+          "addedDate": "2026-08-11",
+          "modifiedDate": "2026-09-04",
+          "completedDate": "2026-09-04",
+          "items": [
+            {
+              "text": "From legacy Web MRMS, we should open new screen of Zone Management via auto login and auto redirect to it.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-13",
+              "completedDate": "2026-08-13"
+            },
+            {
+              "text": "If zone names are too many, they cut-off.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-08-13",
+              "completedDate": "2026-08-13"
+            },
+            {
+              "text": "Implement zone polygone plotting for City/State/Zip.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-09-04",
+              "completedDate": "2026-09-04"
+            },
+            {
+              "text": "Implement the zone polygone plot by GTFS feed.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-11",
+              "modifiedDate": "2026-09-04",
+              "completedDate": "2026-09-04"
+            },
+            {
+              "text": "It should use common configurations of app or api.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-09-04",
+              "completedDate": "2026-09-04"
+            },
+            {
+              "text": "Any api key or url should come from config (only if it can change server to server).",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-08-28",
+              "modifiedDate": "2026-09-04",
+              "completedDate": "2026-09-04"
+            }
+          ],
+          "priority": "high"
         }
       ]
     },
