@@ -59,16 +59,7 @@ Status: **pending** · Added 2026-08-24 · Updated 2026-08-24
 
 - [ ] Saint Mary trips zone become UNKWN on trip expansion. Issue needs to be fixed.
 
-### 7. [ ] GTA - frplanning API returning wrong affiliate data
-
-Status: **in-progress** · Added 2026-08-27 · Updated 2026-08-28
-
-- [x] gtafrplanningapi.itcurves.us/ZoneManagement/GetAllActiveAffiliates is bringing wrong data. Configurations of the frplanning API to be checked.
-  - _Completed 2026-08-28_
-- [ ] Zone Management needs a common configuration, not a separate configuration.
-  - _Added 2026-08-28_
-
-### 8. [ ] Upgrade Eastern2 APIs from .NET 6 to .NET 10
+### 7. [ ] Upgrade Eastern2 APIs from .NET 6 to .NET 10
 
 Status: **pending** · Priority: **high** · Added 2026-09-09 · Updated 2026-09-09
 
@@ -78,13 +69,13 @@ _Notes:_ Needed to close server vulnerabilities. Four apps are still on .NET 6: 
 - [ ] Write down the main functions of each app so Abubakar can test them on the staging environment (6.13).
 - [ ] List any code that will not work on .NET 10, so other teams can be brought in to fix those areas.
 
-### 9. [x] SDHS - send face card when its expiry is not set
+### 8. [x] SDHS - send face card when its expiry is not set
 
 Status: **done** · Added 2026-09-09 · Updated 2026-09-09 · Completed 2026-09-09
 
 - [x] On SD Login in SDHS Service, if face card expiry is not set (blank / 1900) then still send this face card no, as it is not expired. Change done in sp usp_SDGetAllDrivers.
 
-### 10. [x] #IMB-TK-20 - Trips stuck on the broker's screen after being moved to a different provider
+### 9. [x] #IMB-TK-20 - Trips stuck on the broker's screen after being moved to a different provider
 
 Status: **done** · Added 2026-09-10 · Updated 2026-09-10 · Completed 2026-09-10
 
@@ -92,19 +83,19 @@ Status: **done** · Added 2026-09-10 · Updated 2026-09-10 · Completed 2026-09-
 - [x] The pull-back from TransMetro was only half completed. Our system cancelled the trips at TransMetro correctly, but never recorded on its own side that the cancellation was done - so it kept thinking a cancellation was still pending with TransMetro.
 - [x] Because of that unfinished bookkeeping, the system refused to send the trips onward to Centurion.
 
-### 11. [ ] Vehicle Live Screen does not work with a long list of filters
+### 10. [ ] Vehicle Live Screen does not work with a long list of filters
 
 Status: **pending** · Added 2026-09-10 · Updated 2026-09-10
 
 - [ ] Vehicle Live Screen doesn't work when there's a long list of filters, e.g. Affiliates, attributes etc.
 
-### 12. [ ] Email Matthew about my AI usage and its benefits
+### 11. [ ] Email Matthew about my AI usage and its benefits
 
 Status: **pending** · Added 2026-09-10 · Updated 2026-09-10
 
 - [ ] Send an email to Matthew explaining how my AI use is going and how I am benefitting from it.
 
-### 13. [ ] SilverRide/Western server crash investigation
+### 12. [ ] SilverRide/Western server crash investigation
 
 Status: **in-progress** · Added 2026-09-11 · Updated 2026-09-11
 
@@ -192,6 +183,15 @@ _Notes:_ Missing and pending functionalities in the new Zone Management portal. 
 - [x] It should use common configurations of app or api.
   - _Added 2026-08-28_
 - [x] Any api key or url should come from config (only if it can change server to server).
+  - _Added 2026-08-28_
+
+### 10. [x] GTA - frplanning API returning wrong affiliate data
+
+Status: **done** · Added 2026-08-27 · Updated 2026-09-04 · Completed 2026-09-04
+
+- [x] gtafrplanningapi.itcurves.us/ZoneManagement/GetAllActiveAffiliates is bringing wrong data. Configurations of the frplanning API to be checked.
+  - _Updated 2026-08-28 · Completed 2026-08-28_
+- [x] Zone Management needs a common configuration, not a separate configuration.
   - _Added 2026-08-28_
 
 ## Week 2026-08-24 → 2026-08-30
