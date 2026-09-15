@@ -117,6 +117,7 @@ Weeks newest first. Tasks within a week in render order: high priority first, lo
 | --- | --- |
 | `items[].id` | Stable, server-minted point id. Never reused. |
 | `statusDerived` | `true` = `status` was computed from the points; `false` = a stored override. When `true` write **no** `status` key to `tasks.json`; when `false` write the value. |
+| `postponedToWeek` | Set while the owner has parked the task until a later week. See **Postponing**. |
 | `doneCount`, `totalCount`, `label`, `isCurrent` | Render conveniences. |
 
 Everything else matches `tasks.json` field for field. This repo may hold a **richer** value than the
@@ -273,6 +274,31 @@ snapped to its Monday, so 02:00 Monday work belongs to the week that is ending.
 
 Dates stamped before this shipped are calendar dates and were deliberately left alone. The same rule
 applies to dates written by hand into `tasks.json`.
+
+## Postponing — reading a change you did not make
+
+The site has a **Postpone** feature: the owner can park a task until a later week. A parked task
+**keeps its `weekStart`**, so it does not vanish from where it belongs; it carries `postponedToWeek`
+until that week arrives, at which point it returns. Drop `postponedToWeek` when writing `tasks.json`,
+alongside `statusDerived` and the counts — this repo has no concept of parking.
+
+Four signatures, and they point at different mechanisms:
+
+| What you observe on a GET | What it was |
+| --- | --- |
+| `modifiedDate` bumped, **nothing else changed** | Parked or brought back. Parking is an edit a person made, so it bumps — but it changes no content and does **not** change the week. |
+| **Week changed**, `modifiedDate` **not** bumped | The roll forward, or parked work whose week arrived. Nobody edited it; the calendar moved. |
+| Week changed **and** bumped | A real edit that also moved it, or two changes since the last read. |
+| `postponedToWeek` set or cleared | Parked or unparked. |
+
+None of these is drift — mirror them. The first row is the one that looks most alarming and is the
+most innocent: six of them appeared on 2026-09-11 and cost real effort to explain.
+
+> **History.** Until WinServerApp `bf9c3ac`, returning parked work set the new `weekStart` but left
+> its index alone, and ran *before* the roll forward seeded its counter from the destination's
+> highest index. Seven returning tasks carrying 2–13 seeded the counter at 13, so the five that
+> genuinely rolled forward took 14–18 — a twelve-task week numbered 2–18 with gaps. If a week ever
+> comes back looking like that again, this is the shape to recognise.
 
 ## Tombstones
 
