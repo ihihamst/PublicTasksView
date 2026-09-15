@@ -392,7 +392,7 @@
       "tasks": [
         {
           "id": "sdhs-facecard-blank-expiry",
-          "index": 1,
+          "index": 8,
           "heading": "SDHS - send face card when its expiry is not set",
           "status": "done",
           "addedDate": "2026-09-09",
@@ -411,7 +411,7 @@
         },
         {
           "id": "imb-tk-20-broker-trips-stuck",
-          "index": 2,
+          "index": 9,
           "heading": "#IMB-TK-20 - Trips stuck on the broker's screen after being moved to a different provider",
           "status": "done",
           "addedDate": "2026-09-10",

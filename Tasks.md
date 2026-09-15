@@ -118,13 +118,13 @@ Status: **pending** · Added 2026-09-15 · Updated 2026-09-15
 
 ## Week 2026-09-07 → 2026-09-13
 
-### 1. [x] SDHS - send face card when its expiry is not set
+### 8. [x] SDHS - send face card when its expiry is not set
 
 Status: **done** · Added 2026-09-09 · Updated 2026-09-09 · Completed 2026-09-09
 
 - [x] On SD Login in SDHS Service, if face card expiry is not set (blank / 1900) then still send this face card no, as it is not expired. Change done in sp usp_SDGetAllDrivers.
 
-### 2. [x] #IMB-TK-20 - Trips stuck on the broker's screen after being moved to a different provider
+### 9. [x] #IMB-TK-20 - Trips stuck on the broker's screen after being moved to a different provider
 
 Status: **done** · Added 2026-09-10 · Updated 2026-09-10 · Completed 2026-09-10
 
