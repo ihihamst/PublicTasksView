@@ -1,6 +1,6 @@
 # Tasks Assignment
 
-Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-16**
+Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-15**
 
 Mirror of `tasks.json` in readable form. `tasks.json` remains the source of truth — update it first, then regenerate this file with `python3 scripts/generate_tasks_md.py`.
 
@@ -109,6 +109,12 @@ _Notes:_ Reported in the meeting that the SilverRide server crashed once again (
 Status: **pending** · Added 2026-09-11 · Updated 2026-09-11
 
 - [ ] Route not brokering. Upon take back, bTripCanceledInThirdParty was not getting set for the record of the previous affiliate (when certain conditions happen), and due to this the trip was not going to the new affiliate.
+
+### 13. [ ] SilverRide/IMB - migrate a merged affiliate back out as a separate affiliate
+
+Status: **pending** · Added 2026-09-15 · Updated 2026-09-15
+
+- [ ] SilverRide/IMB want one of their merged affiliates to be migrated out as a separate affiliate. Discuss with Hassam and plan.
 
 ## Week 2026-09-07 → 2026-09-13
 
