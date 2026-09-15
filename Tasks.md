@@ -4,21 +4,9 @@ Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updat
 
 Mirror of `tasks.json` in readable form. `tasks.json` remains the source of truth — update it first, then regenerate this file with `python3 scripts/generate_tasks_md.py`.
 
-## Week 2026-09-07 → 2026-09-13
+## Week 2026-09-14 → 2026-09-20
 
-### 1. [ ] SilverRide SF Bay area pricing
-
-Status: **in-progress** · Priority: **high** · Added 2026-08-03 · Updated 2026-09-11
-
-_Notes:_ Top priority as per Imran sb (Aug 24).
-
-- [ ] We need to add new zones (City/County) & (Peninsula [areas between two cities])
-- [ ] Route Surcharge (if trip covers a route (stored as polygons) defined percentage, then apply surcharge)
-  - _Notes:_ Table Route Surcharge [Polygon Coordinates, Percentage Route Covered, Surcharge Amount]
-- [x] Make a complete design for this SilverRide SF Bayarea Pricing
-  - _Added 2026-09-08 · Updated 2026-09-07 · Completed 2026-09-07_
-
-### 2. [ ] Implement PendingAPICallsAndTripUpdatesUtility
+### 1. [ ] Implement PendingAPICallsAndTripUpdatesUtility
 
 Status: **in-progress** · Added 2026-08-03 · Updated 2026-09-11
 
@@ -37,29 +25,53 @@ _Notes:_ The PendingAPICalls side is done and delivered. The points for SendTrip
 - [ ] Implement new udp layer to register/send the udp messages
 - [ ] Implement file based logging in it.
 
-### 3. [ ] Convert Auto Oara to .net Core Stand Alone Service
+### 2. [ ] Convert Auto Oara to .net Core Stand Alone Service
 
 Status: **pending** · Added 2026-08-05 · Updated 2026-09-11
 
-### 4. [ ] Annapolis Stations and RCZ Syncing
+### 3. [ ] Annapolis Stations and RCZ Syncing
 
 Status: **pending** · Priority: **low** · Added 2026-08-05 · Updated 2026-09-11
 
 - [ ] Annapolis needs Stations and RCZ syncing enabled via old path.
 
-### 5. [ ] Water Taxi - Trip cancelled state not synced to OL
+### 4. [ ] Water Taxi - Trip cancelled state not synced to OL
 
 Status: **pending** · Added 2026-08-10 · Updated 2026-09-11
 
 - [ ] For Confirmation No. 1780034693 (WaterTaxi Microtransit, Service ID 4662746, due 8/9/2026 12:55:00PM), trip state (Cancelled) was not synced to OL. Service Status in IL is CancelledARQ.
 
-### 6. [ ] Saint Mary - trip zone becomes UNKWN on trip expansion
+### 5. [ ] Saint Mary - trip zone becomes UNKWN on trip expansion
 
 Status: **pending** · Added 2026-08-24 · Updated 2026-09-11
 
 - [ ] Saint Mary trips zone become UNKWN on trip expansion. Issue needs to be fixed.
 
-### 7. [x] Upgrade Eastern2 APIs from .NET 6 to .NET 10
+### 6. [ ] Email Matthew about my AI usage and its benefits
+
+Status: **pending** · Added 2026-09-10 · Updated 2026-09-11
+
+- [ ] Send an email to Matthew explaining how my AI use is going and how I am benefitting from it.
+
+### 7. [ ] Saint Mary - Zone to Zone & Service Hours: allow booking across service-hour days
+
+Status: **pending** · Added 2026-09-11 · Updated 2026-09-11
+
+- [ ] In Saint Mary, Zone to Zone & Service Hours function, we need to allow the booking from another day service hour zone to the destination (which is on this day service hour zone), based on if the rule allows.
+
+### 8. [ ] SilverRide SF Bay area pricing
+
+Status: **in-progress** · Priority: **high** · Added 2026-08-03 · Updated 2026-09-11
+
+_Notes:_ Top priority as per Imran sb (Aug 24).
+
+- [ ] We need to add new zones (City/County) & (Peninsula [areas between two cities])
+- [ ] Route Surcharge (if trip covers a route (stored as polygons) defined percentage, then apply surcharge)
+  - _Notes:_ Table Route Surcharge [Polygon Coordinates, Percentage Route Covered, Surcharge Amount]
+- [x] Make a complete design for this SilverRide SF Bayarea Pricing
+  - _Added 2026-09-08 · Updated 2026-09-07 · Completed 2026-09-07_
+
+### 9. [x] Upgrade Eastern2 APIs from .NET 6 to .NET 10
 
 Status: **done** · Priority: **high** · Added 2026-09-09 · Updated 2026-09-14 · Completed 2026-09-14
 
@@ -69,33 +81,13 @@ _Notes:_ Needed to close server vulnerabilities. Four apps are still on .NET 6: 
 - [x] Write down the main functions of each app so Abubakar can test them on the staging environment (6.13).
 - [x] List any code that will not work on .NET 10, so other teams can be brought in to fix those areas.
 
-### 8. [x] SDHS - send face card when its expiry is not set
-
-Status: **done** · Added 2026-09-09 · Updated 2026-09-09 · Completed 2026-09-09
-
-- [x] On SD Login in SDHS Service, if face card expiry is not set (blank / 1900) then still send this face card no, as it is not expired. Change done in sp usp_SDGetAllDrivers.
-
-### 9. [x] #IMB-TK-20 - Trips stuck on the broker's screen after being moved to a different provider
-
-Status: **done** · Added 2026-09-10 · Updated 2026-09-10 · Completed 2026-09-10
-
-- [x] Two trips for rider Robert Fall (booked by the SanFran broker for Friday 09-05) were first handed to provider TransMetro. The broker then pulled them back and, the next day, handed them instead to Centurion Medical Transport.
-- [x] The pull-back from TransMetro was only half completed. Our system cancelled the trips at TransMetro correctly, but never recorded on its own side that the cancellation was done - so it kept thinking a cancellation was still pending with TransMetro.
-- [x] Because of that unfinished bookkeeping, the system refused to send the trips onward to Centurion.
-
 ### 10. [ ] Vehicle Live Screen does not work with a long list of filters
 
 Status: **pending** · Added 2026-09-10 · Updated 2026-09-10
 
 - [ ] Vehicle Live Screen doesn't work when there's a long list of filters, e.g. Affiliates, attributes etc.
 
-### 11. [ ] Email Matthew about my AI usage and its benefits
-
-Status: **pending** · Added 2026-09-10 · Updated 2026-09-10
-
-- [ ] Send an email to Matthew explaining how my AI use is going and how I am benefitting from it.
-
-### 12. [ ] SilverRide/Western server crash investigation
+### 11. [ ] SilverRide/Western server crash investigation
 
 Status: **in-progress** · Added 2026-09-11 · Updated 2026-09-11
 
@@ -112,17 +104,27 @@ _Notes:_ Reported in the meeting that the SilverRide server crashed once again (
 - [ ] Fix the standard utility dictionary issue (use concurrent dictionary after confirming by doing R & D). Verify the fix. Apply the DLL in major applications which use it.
 - [ ] Scan Inload API, and find and fix other areas in which dictionary is missing the lock during operations, fix and verify.
 
-### 13. [ ] Saint Mary - Zone to Zone & Service Hours: allow booking across service-hour days
-
-Status: **pending** · Added 2026-09-11 · Updated 2026-09-11
-
-- [ ] In Saint Mary, Zone to Zone & Service Hours function, we need to allow the booking from another day service hour zone to the destination (which is on this day service hour zone), based on if the rule allows.
-
-### 14. [ ] #IMB-TK-20 - Route not brokering: bTripCanceledInThirdParty not set on take back
+### 12. [ ] #IMB-TK-20 - Route not brokering: bTripCanceledInThirdParty not set on take back
 
 Status: **pending** · Added 2026-09-11 · Updated 2026-09-11
 
 - [ ] Route not brokering. Upon take back, bTripCanceledInThirdParty was not getting set for the record of the previous affiliate (when certain conditions happen), and due to this the trip was not going to the new affiliate.
+
+## Week 2026-09-07 → 2026-09-13
+
+### 1. [x] SDHS - send face card when its expiry is not set
+
+Status: **done** · Added 2026-09-09 · Updated 2026-09-09 · Completed 2026-09-09
+
+- [x] On SD Login in SDHS Service, if face card expiry is not set (blank / 1900) then still send this face card no, as it is not expired. Change done in sp usp_SDGetAllDrivers.
+
+### 2. [x] #IMB-TK-20 - Trips stuck on the broker's screen after being moved to a different provider
+
+Status: **done** · Added 2026-09-10 · Updated 2026-09-10 · Completed 2026-09-10
+
+- [x] Two trips for rider Robert Fall (booked by the SanFran broker for Friday 09-05) were first handed to provider TransMetro. The broker then pulled them back and, the next day, handed them instead to Centurion Medical Transport.
+- [x] The pull-back from TransMetro was only half completed. Our system cancelled the trips at TransMetro correctly, but never recorded on its own side that the cancellation was done - so it kept thinking a cancellation was still pending with TransMetro.
+- [x] Because of that unfinished bookkeeping, the system refused to send the trips onward to Centurion.
 
 ## Week 2026-08-31 → 2026-09-06
 

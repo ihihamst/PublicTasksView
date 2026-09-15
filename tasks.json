@@ -8,49 +8,12 @@
   },
   "weeks": [
     {
-      "weekStart": "2026-09-07",
-      "weekEnd": "2026-09-13",
+      "weekStart": "2026-09-14",
+      "weekEnd": "2026-09-20",
       "tasks": [
         {
-          "id": "silverride-sf-bay-pricing",
-          "index": 1,
-          "heading": "SilverRide SF Bay area pricing",
-          "status": "in-progress",
-          "addedDate": "2026-08-03",
-          "modifiedDate": "2026-09-11",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "We need to add new zones (City/County) & (Peninsula [areas between two cities])",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            },
-            {
-              "text": "Route Surcharge (if trip covers a route (stored as polygons) defined percentage, then apply surcharge)",
-              "done": false,
-              "notes": "Table Route Surcharge [Polygon Coordinates, Percentage Route Covered, Surcharge Amount]",
-              "addedDate": "2026-08-03",
-              "modifiedDate": "2026-08-03",
-              "completedDate": null
-            },
-            {
-              "text": "Make a complete design for this SilverRide SF Bayarea Pricing",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-09-08",
-              "modifiedDate": "2026-09-07",
-              "completedDate": "2026-09-07"
-            }
-          ],
-          "priority": "high",
-          "notes": "Top priority as per Imran sb (Aug 24)."
-        },
-        {
           "id": "send-trip-update-to-device",
-          "index": 2,
+          "index": 1,
           "heading": "Implement PendingAPICallsAndTripUpdatesUtility",
           "status": "in-progress",
           "addedDate": "2026-08-03",
@@ -126,7 +89,7 @@
         },
         {
           "id": "auto-oara-dotnet-core",
-          "index": 3,
+          "index": 2,
           "heading": "Convert Auto Oara to .net Core Stand Alone Service",
           "status": "pending",
           "addedDate": "2026-08-05",
@@ -136,7 +99,7 @@
         },
         {
           "id": "annapolis-stations-rcz-sync",
-          "index": 4,
+          "index": 3,
           "heading": "Annapolis Stations and RCZ Syncing",
           "status": "pending",
           "priority": "low",
@@ -156,7 +119,7 @@
         },
         {
           "id": "water-taxi-cancel-state-not-synced-ol",
-          "index": 5,
+          "index": 4,
           "heading": "Water Taxi - Trip cancelled state not synced to OL",
           "status": "pending",
           "addedDate": "2026-08-10",
@@ -175,7 +138,7 @@
         },
         {
           "id": "saintmary-zone-unknwn-trip-expansion",
-          "index": 6,
+          "index": 5,
           "heading": "Saint Mary - trip zone becomes UNKWN on trip expansion",
           "status": "pending",
           "addedDate": "2026-08-24",
@@ -193,8 +156,83 @@
           ]
         },
         {
-          "id": "eastern2-dotnet-10-upgrade",
+          "id": "email-matthew-ai-usage",
+          "index": 6,
+          "heading": "Email Matthew about my AI usage and its benefits",
+          "status": "pending",
+          "addedDate": "2026-09-10",
+          "modifiedDate": "2026-09-11",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "Send an email to Matthew explaining how my AI use is going and how I am benefitting from it.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-09-10",
+              "modifiedDate": "2026-09-10",
+              "completedDate": null
+            }
+          ]
+        },
+        {
+          "id": "saintmary-zone-to-zone-service-hours",
           "index": 7,
+          "heading": "Saint Mary - Zone to Zone & Service Hours: allow booking across service-hour days",
+          "status": "pending",
+          "addedDate": "2026-09-11",
+          "modifiedDate": "2026-09-11",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "In Saint Mary, Zone to Zone & Service Hours function, we need to allow the booking from another day service hour zone to the destination (which is on this day service hour zone), based on if the rule allows.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-09-11",
+              "modifiedDate": "2026-09-11",
+              "completedDate": null
+            }
+          ]
+        },
+        {
+          "id": "silverride-sf-bay-pricing",
+          "index": 8,
+          "heading": "SilverRide SF Bay area pricing",
+          "status": "in-progress",
+          "addedDate": "2026-08-03",
+          "modifiedDate": "2026-09-11",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "We need to add new zones (City/County) & (Peninsula [areas between two cities])",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            },
+            {
+              "text": "Route Surcharge (if trip covers a route (stored as polygons) defined percentage, then apply surcharge)",
+              "done": false,
+              "notes": "Table Route Surcharge [Polygon Coordinates, Percentage Route Covered, Surcharge Amount]",
+              "addedDate": "2026-08-03",
+              "modifiedDate": "2026-08-03",
+              "completedDate": null
+            },
+            {
+              "text": "Make a complete design for this SilverRide SF Bayarea Pricing",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-08",
+              "modifiedDate": "2026-09-07",
+              "completedDate": "2026-09-07"
+            }
+          ],
+          "priority": "high",
+          "notes": "Top priority as per Imran sb (Aug 24)."
+        },
+        {
+          "id": "eastern2-dotnet-10-upgrade",
+          "index": 9,
           "heading": "Upgrade Eastern2 APIs from .NET 6 to .NET 10",
           "status": "done",
           "priority": "high",
@@ -230,60 +268,6 @@
           ]
         },
         {
-          "id": "sdhs-facecard-blank-expiry",
-          "index": 8,
-          "heading": "SDHS - send face card when its expiry is not set",
-          "status": "done",
-          "addedDate": "2026-09-09",
-          "modifiedDate": "2026-09-09",
-          "completedDate": "2026-09-09",
-          "items": [
-            {
-              "text": "On SD Login in SDHS Service, if face card expiry is not set (blank / 1900) then still send this face card no, as it is not expired. Change done in sp usp_SDGetAllDrivers.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-09-09",
-              "modifiedDate": "2026-09-09",
-              "completedDate": "2026-09-09"
-            }
-          ]
-        },
-        {
-          "id": "imb-tk-20-broker-trips-stuck",
-          "index": 9,
-          "heading": "#IMB-TK-20 - Trips stuck on the broker's screen after being moved to a different provider",
-          "status": "done",
-          "addedDate": "2026-09-10",
-          "modifiedDate": "2026-09-10",
-          "completedDate": "2026-09-10",
-          "items": [
-            {
-              "text": "Two trips for rider Robert Fall (booked by the SanFran broker for Friday 09-05) were first handed to provider TransMetro. The broker then pulled them back and, the next day, handed them instead to Centurion Medical Transport.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-09-10",
-              "modifiedDate": "2026-09-10",
-              "completedDate": "2026-09-10"
-            },
-            {
-              "text": "The pull-back from TransMetro was only half completed. Our system cancelled the trips at TransMetro correctly, but never recorded on its own side that the cancellation was done - so it kept thinking a cancellation was still pending with TransMetro.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-09-10",
-              "modifiedDate": "2026-09-10",
-              "completedDate": "2026-09-10"
-            },
-            {
-              "text": "Because of that unfinished bookkeeping, the system refused to send the trips onward to Centurion.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-09-10",
-              "modifiedDate": "2026-09-10",
-              "completedDate": "2026-09-10"
-            }
-          ]
-        },
-        {
           "id": "vehicle-live-screen-long-filter-list",
           "index": 10,
           "heading": "Vehicle Live Screen does not work with a long list of filters",
@@ -303,27 +287,8 @@
           ]
         },
         {
-          "id": "email-matthew-ai-usage",
-          "index": 11,
-          "heading": "Email Matthew about my AI usage and its benefits",
-          "status": "pending",
-          "addedDate": "2026-09-10",
-          "modifiedDate": "2026-09-10",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "Send an email to Matthew explaining how my AI use is going and how I am benefitting from it.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-09-10",
-              "modifiedDate": "2026-09-10",
-              "completedDate": null
-            }
-          ]
-        },
-        {
           "id": "silverride-western-server-crash",
-          "index": 12,
+          "index": 11,
           "heading": "SilverRide/Western server crash investigation",
           "status": "in-progress",
           "notes": "Reported in the meeting that the SilverRide server crashed once again (previous one yesterday), and it only comes back after restarting it.",
@@ -382,27 +347,8 @@
           ]
         },
         {
-          "id": "saintmary-zone-to-zone-service-hours",
-          "index": 13,
-          "heading": "Saint Mary - Zone to Zone & Service Hours: allow booking across service-hour days",
-          "status": "pending",
-          "addedDate": "2026-09-11",
-          "modifiedDate": "2026-09-11",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "In Saint Mary, Zone to Zone & Service Hours function, we need to allow the booking from another day service hour zone to the destination (which is on this day service hour zone), based on if the rule allows.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-09-11",
-              "modifiedDate": "2026-09-11",
-              "completedDate": null
-            }
-          ]
-        },
-        {
           "id": "imb-tk-20-route-not-brokering",
-          "index": 14,
+          "index": 12,
           "heading": "#IMB-TK-20 - Route not brokering: bTripCanceledInThirdParty not set on take back",
           "status": "pending",
           "addedDate": "2026-09-11",
@@ -416,6 +362,66 @@
               "addedDate": "2026-09-11",
               "modifiedDate": "2026-09-11",
               "completedDate": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "weekStart": "2026-09-07",
+      "weekEnd": "2026-09-13",
+      "tasks": [
+        {
+          "id": "sdhs-facecard-blank-expiry",
+          "index": 1,
+          "heading": "SDHS - send face card when its expiry is not set",
+          "status": "done",
+          "addedDate": "2026-09-09",
+          "modifiedDate": "2026-09-09",
+          "completedDate": "2026-09-09",
+          "items": [
+            {
+              "text": "On SD Login in SDHS Service, if face card expiry is not set (blank / 1900) then still send this face card no, as it is not expired. Change done in sp usp_SDGetAllDrivers.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-09",
+              "modifiedDate": "2026-09-09",
+              "completedDate": "2026-09-09"
+            }
+          ]
+        },
+        {
+          "id": "imb-tk-20-broker-trips-stuck",
+          "index": 2,
+          "heading": "#IMB-TK-20 - Trips stuck on the broker's screen after being moved to a different provider",
+          "status": "done",
+          "addedDate": "2026-09-10",
+          "modifiedDate": "2026-09-10",
+          "completedDate": "2026-09-10",
+          "items": [
+            {
+              "text": "Two trips for rider Robert Fall (booked by the SanFran broker for Friday 09-05) were first handed to provider TransMetro. The broker then pulled them back and, the next day, handed them instead to Centurion Medical Transport.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-10",
+              "modifiedDate": "2026-09-10",
+              "completedDate": "2026-09-10"
+            },
+            {
+              "text": "The pull-back from TransMetro was only half completed. Our system cancelled the trips at TransMetro correctly, but never recorded on its own side that the cancellation was done - so it kept thinking a cancellation was still pending with TransMetro.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-10",
+              "modifiedDate": "2026-09-10",
+              "completedDate": "2026-09-10"
+            },
+            {
+              "text": "Because of that unfinished bookkeeping, the system refused to send the trips onward to Centurion.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-10",
+              "modifiedDate": "2026-09-10",
+              "completedDate": "2026-09-10"
             }
           ]
         }
