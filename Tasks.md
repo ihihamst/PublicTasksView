@@ -1,6 +1,6 @@
 # Tasks Assignment
 
-Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-11**
+Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-16**
 
 Mirror of `tasks.json` in readable form. `tasks.json` remains the source of truth — update it first, then regenerate this file with `python3 scripts/generate_tasks_md.py`.
 
@@ -59,15 +59,15 @@ Status: **pending** · Added 2026-08-24 · Updated 2026-09-11
 
 - [ ] Saint Mary trips zone become UNKWN on trip expansion. Issue needs to be fixed.
 
-### 7. [ ] Upgrade Eastern2 APIs from .NET 6 to .NET 10
+### 7. [x] Upgrade Eastern2 APIs from .NET 6 to .NET 10
 
-Status: **pending** · Priority: **high** · Added 2026-09-09 · Updated 2026-09-09
+Status: **done** · Priority: **high** · Added 2026-09-09 · Updated 2026-09-14 · Completed 2026-09-14
 
 _Notes:_ Needed to close server vulnerabilities. Four apps are still on .NET 6: Eastern2-DataSyncAPI, Eastern2.0-CombinedDataAPI, Eastern2.0-GenericManifestAPI and Eastern2.0-ReservationAPI (all under D:\IISWebs). Due tomorrow, 2026-09-10.
 
-- [ ] Upgrade all four apps from .NET 6 to .NET 10: Eastern2-DataSyncAPI, Eastern2.0-CombinedDataAPI, Eastern2.0-GenericManifestAPI, Eastern2.0-ReservationAPI.
-- [ ] Write down the main functions of each app so Abubakar can test them on the staging environment (6.13).
-- [ ] List any code that will not work on .NET 10, so other teams can be brought in to fix those areas.
+- [x] Upgrade all four apps from .NET 6 to .NET 10: Eastern2-DataSyncAPI, Eastern2.0-CombinedDataAPI, Eastern2.0-GenericManifestAPI, Eastern2.0-ReservationAPI.
+- [x] Write down the main functions of each app so Abubakar can test them on the staging environment (6.13).
+- [x] List any code that will not work on .NET 10, so other teams can be brought in to fix those areas.
 
 ### 8. [x] SDHS - send face card when its expiry is not set
 
