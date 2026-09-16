@@ -274,7 +274,7 @@ step 1 stays the real protection.
 ### Rules that bite
 
 - Task `id` slugs are the join key, shared verbatim between the two stores. **Never rename one.**
-- **`index` belongs to the server** (since 2026-09-16). Never send it on a push — the server assigns it on create, and the roll forward reassigns it when a week turns. Mirror whatever number the API returns into `tasks.json`, and treat an index difference as the server's numbering to adopt, not drift to correct. The one exception: if a week comes back with gaps in the *current* week, send `index` once to repair it and tell the WinServerApp session, because that means the numbering is broken at source. This overrides the manual renumbering described in §4 for any week that exists on the server.
+- **`index` belongs to the server** (since 2026-09-16). Never send it on a push — the server assigns it on create, and the roll forward reassigns it when a week turns. Mirror whatever number the API returns into `tasks.json`, and treat an index difference as the server's numbering to adopt, not drift to correct. The one exception: if the *current* week comes back with gaps, the numbering is broken at source. **Report it to the WinServerApp session first, with the numbers exactly as the API returned them**, and only then send `index` once to repair it — a hand fix made first erases the evidence of what went wrong. This overrides the manual renumbering described in §4 for any week that exists on the server.
 - Drop the API's own fields when writing this file: `statusDerived`, item `id`, `doneCount`,
   `totalCount`, `label`, `isCurrent`.
 - `statusDerived` decides whether to write a `status` key at all — see `TASKS-API.md`.
