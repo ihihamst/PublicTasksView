@@ -178,26 +178,26 @@
           "id": "saintmary-zone-to-zone-service-hours",
           "index": 7,
           "heading": "Saint Mary - Zone to Zone & Service Hours: allow booking across service-hour days",
-          "status": "pending",
+          "status": "done",
           "addedDate": "2026-09-11",
           "modifiedDate": "2026-09-16",
-          "completedDate": null,
+          "completedDate": "2026-09-16",
           "items": [
             {
               "text": "In Saint Mary, Zone to Zone & Service Hours function, we need to allow the booking from another day service hour zone to the destination (which is on this day service hour zone), based on if the rule allows.",
-              "done": false,
+              "done": true,
               "notes": "",
               "addedDate": "2026-09-11",
-              "modifiedDate": "2026-09-11",
-              "completedDate": null
+              "modifiedDate": "2026-09-16",
+              "completedDate": "2026-09-16"
             },
             {
               "text": "Define the one way rule and return rule separately in the zone booking rules table.",
-              "done": false,
+              "done": true,
               "notes": "",
               "addedDate": "2026-09-16",
               "modifiedDate": "2026-09-16",
-              "completedDate": null
+              "completedDate": "2026-09-16"
             }
           ]
         },
@@ -306,11 +306,11 @@
           "id": "silverride-western-server-crash",
           "index": 11,
           "heading": "SilverRide/Western server crash investigation",
-          "status": "in-progress",
+          "status": "done",
           "notes": "Reported in the meeting that the SilverRide server crashed once again (previous one yesterday), and it only comes back after restarting it.",
           "addedDate": "2026-09-11",
-          "modifiedDate": "2026-09-11",
-          "completedDate": null,
+          "modifiedDate": "2026-09-16",
+          "completedDate": "2026-09-16",
           "items": [
             {
               "text": "Reviewed the event viewer logs (partially), yet no conclusive findings.",
@@ -346,19 +346,19 @@
             },
             {
               "text": "Fix the standard utility dictionary issue (use concurrent dictionary after confirming by doing R & D). Verify the fix. Apply the DLL in major applications which use it.",
-              "done": false,
+              "done": true,
               "notes": "",
               "addedDate": "2026-09-11",
-              "modifiedDate": "2026-09-11",
-              "completedDate": null
+              "modifiedDate": "2026-09-16",
+              "completedDate": "2026-09-16"
             },
             {
               "text": "Scan Inload API, and find and fix other areas in which dictionary is missing the lock during operations, fix and verify.",
-              "done": false,
+              "done": true,
               "notes": "",
               "addedDate": "2026-09-11",
-              "modifiedDate": "2026-09-11",
-              "completedDate": null
+              "modifiedDate": "2026-09-16",
+              "completedDate": "2026-09-16"
             }
           ]
         },

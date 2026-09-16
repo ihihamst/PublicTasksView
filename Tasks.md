@@ -53,12 +53,12 @@ Status: **pending** · Added 2026-09-10 · Updated 2026-09-16
 
 - [ ] Send an email to Matthew explaining how my AI use is going and how I am benefitting from it.
 
-### 7. [ ] Saint Mary - Zone to Zone & Service Hours: allow booking across service-hour days
+### 7. [x] Saint Mary - Zone to Zone & Service Hours: allow booking across service-hour days
 
-Status: **pending** · Added 2026-09-11 · Updated 2026-09-16
+Status: **done** · Added 2026-09-11 · Updated 2026-09-16 · Completed 2026-09-16
 
-- [ ] In Saint Mary, Zone to Zone & Service Hours function, we need to allow the booking from another day service hour zone to the destination (which is on this day service hour zone), based on if the rule allows.
-- [ ] Define the one way rule and return rule separately in the zone booking rules table.
+- [x] In Saint Mary, Zone to Zone & Service Hours function, we need to allow the booking from another day service hour zone to the destination (which is on this day service hour zone), based on if the rule allows.
+- [x] Define the one way rule and return rule separately in the zone booking rules table.
   - _Added 2026-09-16_
 
 ### 8. [ ] SilverRide SF Bay area pricing
@@ -93,9 +93,9 @@ Status: **in-progress** · Added 2026-09-10 · Updated 2026-09-16
   - _Notes:_ Reported by Zahid sb.
   - _Added 2026-09-16_
 
-### 11. [ ] SilverRide/Western server crash investigation
+### 11. [x] SilverRide/Western server crash investigation
 
-Status: **in-progress** · Added 2026-09-11 · Updated 2026-09-11
+Status: **done** · Added 2026-09-11 · Updated 2026-09-16 · Completed 2026-09-16
 
 _Notes:_ Reported in the meeting that the SilverRide server crashed once again (previous one yesterday), and it only comes back after restarting it.
 
@@ -107,8 +107,8 @@ _Notes:_ Reported in the meeting that the SilverRide server crashed once again (
   - _Completed 2026-09-11_
 - [x] Setup IIS so that if CPU usage goes above 60%, it will kill the Inload API process.
   - _Completed 2026-09-11_
-- [ ] Fix the standard utility dictionary issue (use concurrent dictionary after confirming by doing R & D). Verify the fix. Apply the DLL in major applications which use it.
-- [ ] Scan Inload API, and find and fix other areas in which dictionary is missing the lock during operations, fix and verify.
+- [x] Fix the standard utility dictionary issue (use concurrent dictionary after confirming by doing R & D). Verify the fix. Apply the DLL in major applications which use it.
+- [x] Scan Inload API, and find and fix other areas in which dictionary is missing the lock during operations, fix and verify.
 
 ### 12. [ ] #IMB-TK-20 - Route not brokering: bTripCanceledInThirdParty not set on take back
 
