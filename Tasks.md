@@ -1,6 +1,6 @@
 # Tasks Assignment
 
-Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-15**
+Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-16**
 
 Mirror of `tasks.json` in readable form. `tasks.json` remains the source of truth — update it first, then regenerate this file with `python3 scripts/generate_tasks_md.py`.
 
@@ -55,9 +55,11 @@ Status: **pending** · Added 2026-09-10 · Updated 2026-09-11
 
 ### 7. [ ] Saint Mary - Zone to Zone & Service Hours: allow booking across service-hour days
 
-Status: **pending** · Added 2026-09-11 · Updated 2026-09-11
+Status: **pending** · Added 2026-09-11 · Updated 2026-09-16
 
 - [ ] In Saint Mary, Zone to Zone & Service Hours function, we need to allow the booking from another day service hour zone to the destination (which is on this day service hour zone), based on if the rule allows.
+- [ ] Define the one way rule and return rule separately in the zone booking rules table.
+  - _Added 2026-09-16_
 
 ### 8. [ ] SilverRide SF Bay area pricing
 
@@ -83,9 +85,13 @@ _Notes:_ Needed to close server vulnerabilities. Four apps are still on .NET 6: 
 
 ### 10. [ ] Vehicle Live Screen does not work with a long list of filters
 
-Status: **pending** · Added 2026-09-10 · Updated 2026-09-10
+Status: **in-progress** · Added 2026-09-10 · Updated 2026-09-16
 
-- [ ] Vehicle Live Screen doesn't work when there's a long list of filters, e.g. Affiliates, attributes etc.
+- [x] Vehicle Live Screen doesn't work when there's a long list of filters, e.g. Affiliates, attributes etc.
+  - _Updated 2026-09-15 · Completed 2026-09-15_
+- [ ] Vehicle types have strange names or wrong data.
+  - _Notes:_ Reported by Zahid sb.
+  - _Added 2026-09-16_
 
 ### 11. [ ] SilverRide/Western server crash investigation
 

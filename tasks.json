@@ -3,7 +3,7 @@
     "title": "Tasks Assignment",
     "owner": "ihihamst",
     "weekStartsOn": "monday",
-    "lastUpdated": "2026-09-15",
+    "lastUpdated": "2026-09-16",
     "timezone": "Asia/Karachi (PKT, UTC+05:00)"
   },
   "weeks": [
@@ -180,7 +180,7 @@
           "heading": "Saint Mary - Zone to Zone & Service Hours: allow booking across service-hour days",
           "status": "pending",
           "addedDate": "2026-09-11",
-          "modifiedDate": "2026-09-11",
+          "modifiedDate": "2026-09-16",
           "completedDate": null,
           "items": [
             {
@@ -189,6 +189,14 @@
               "notes": "",
               "addedDate": "2026-09-11",
               "modifiedDate": "2026-09-11",
+              "completedDate": null
+            },
+            {
+              "text": "Define the one way rule and return rule separately in the zone booking rules table.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-09-16",
+              "modifiedDate": "2026-09-16",
               "completedDate": null
             }
           ]
@@ -271,17 +279,25 @@
           "id": "vehicle-live-screen-long-filter-list",
           "index": 10,
           "heading": "Vehicle Live Screen does not work with a long list of filters",
-          "status": "pending",
+          "status": "in-progress",
           "addedDate": "2026-09-10",
-          "modifiedDate": "2026-09-10",
+          "modifiedDate": "2026-09-16",
           "completedDate": null,
           "items": [
             {
               "text": "Vehicle Live Screen doesn't work when there's a long list of filters, e.g. Affiliates, attributes etc.",
-              "done": false,
+              "done": true,
               "notes": "",
               "addedDate": "2026-09-10",
-              "modifiedDate": "2026-09-10",
+              "modifiedDate": "2026-09-15",
+              "completedDate": "2026-09-15"
+            },
+            {
+              "text": "Vehicle types have strange names or wrong data.",
+              "done": false,
+              "notes": "Reported by Zahid sb.",
+              "addedDate": "2026-09-16",
+              "modifiedDate": "2026-09-16",
               "completedDate": null
             }
           ]
