@@ -176,6 +176,7 @@ The response carries the full board, so push-then-read is one round trip.
   `null` drops the override and hands the status back to the points.
 - **`weekStart` normalises to its Monday.** `weekEnd` is derived — send it only if it agrees, or 400.
 - **`index`** is stored data, 1-based within the week. Omit on create → next free one.
+  **This repo never sends it** (since 2026-09-16): the server owns numbering, so pushes omit `index` and the number the API returns is mirrored into `tasks.json`. First push under that rule — two tasks updated, both kept their numbers, the week stayed `1..13`.
 - **`addedDate` is write-once.** Supply it **on create** to preserve an imported date; an update never
   moves it.
 - **`modifiedDate` is stored verbatim when supplied**, stamped with today only when omitted.
