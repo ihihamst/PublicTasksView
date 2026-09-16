@@ -8,7 +8,7 @@ Mirror of `tasks.json` in readable form. `tasks.json` remains the source of trut
 
 ### 1. [ ] Implement PendingAPICallsAndTripUpdatesUtility
 
-Status: **in-progress** · Added 2026-08-03 · Updated 2026-09-11
+Status: **in-progress** · Added 2026-08-03 · Updated 2026-09-16
 
 _Notes:_ The PendingAPICalls side is done and delivered. The points for SendTripUpdateToDevice - moving the implementation out of the Inload API into this utility - are still pending.
 
@@ -31,13 +31,13 @@ Status: **pending** · Added 2026-08-05 · Updated 2026-09-11
 
 ### 3. [ ] Annapolis Stations and RCZ Syncing
 
-Status: **pending** · Priority: **low** · Added 2026-08-05 · Updated 2026-09-11
+Status: **pending** · Priority: **low** · Added 2026-08-05 · Updated 2026-09-16
 
 - [ ] Annapolis needs Stations and RCZ syncing enabled via old path.
 
 ### 4. [ ] Water Taxi - Trip cancelled state not synced to OL
 
-Status: **pending** · Added 2026-08-10 · Updated 2026-09-11
+Status: **pending** · Added 2026-08-10 · Updated 2026-09-16
 
 - [ ] For Confirmation No. 1780034693 (WaterTaxi Microtransit, Service ID 4662746, due 8/9/2026 12:55:00PM), trip state (Cancelled) was not synced to OL. Service Status in IL is CancelledARQ.
 
@@ -49,7 +49,7 @@ Status: **pending** · Added 2026-08-24 · Updated 2026-09-11
 
 ### 6. [ ] Email Matthew about my AI usage and its benefits
 
-Status: **pending** · Added 2026-09-10 · Updated 2026-09-11
+Status: **pending** · Added 2026-09-10 · Updated 2026-09-16
 
 - [ ] Send an email to Matthew explaining how my AI use is going and how I am benefitting from it.
 
