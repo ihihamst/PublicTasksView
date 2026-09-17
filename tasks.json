@@ -3,7 +3,7 @@
     "title": "Tasks Assignment",
     "owner": "ihihamst",
     "weekStartsOn": "monday",
-    "lastUpdated": "2026-09-16",
+    "lastUpdated": "2026-09-17",
     "timezone": "Asia/Karachi (PKT, UTC+05:00)"
   },
   "weeks": [
@@ -279,10 +279,10 @@
           "id": "vehicle-live-screen-long-filter-list",
           "index": 10,
           "heading": "Vehicle Live Screen does not work with a long list of filters",
-          "status": "in-progress",
+          "status": "done",
           "addedDate": "2026-09-10",
-          "modifiedDate": "2026-09-16",
-          "completedDate": null,
+          "modifiedDate": "2026-09-17",
+          "completedDate": "2026-09-17",
           "items": [
             {
               "text": "Vehicle Live Screen doesn't work when there's a long list of filters, e.g. Affiliates, attributes etc.",
@@ -294,11 +294,11 @@
             },
             {
               "text": "Vehicle types have strange names or wrong data.",
-              "done": false,
+              "done": true,
               "notes": "Reported by Zahid sb.",
               "addedDate": "2026-09-16",
-              "modifiedDate": "2026-09-16",
-              "completedDate": null
+              "modifiedDate": "2026-09-17",
+              "completedDate": "2026-09-17"
             }
           ]
         },

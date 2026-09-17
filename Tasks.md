@@ -1,6 +1,6 @@
 # Tasks Assignment
 
-Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-16**
+Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-17**
 
 Mirror of `tasks.json` in readable form. `tasks.json` remains the source of truth — update it first, then regenerate this file with `python3 scripts/generate_tasks_md.py`.
 
@@ -83,13 +83,13 @@ _Notes:_ Needed to close server vulnerabilities. Four apps are still on .NET 6: 
 - [x] Write down the main functions of each app so Abubakar can test them on the staging environment (6.13).
 - [x] List any code that will not work on .NET 10, so other teams can be brought in to fix those areas.
 
-### 10. [ ] Vehicle Live Screen does not work with a long list of filters
+### 10. [x] Vehicle Live Screen does not work with a long list of filters
 
-Status: **in-progress** · Added 2026-09-10 · Updated 2026-09-16
+Status: **done** · Added 2026-09-10 · Updated 2026-09-17 · Completed 2026-09-17
 
 - [x] Vehicle Live Screen doesn't work when there's a long list of filters, e.g. Affiliates, attributes etc.
   - _Updated 2026-09-15 · Completed 2026-09-15_
-- [ ] Vehicle types have strange names or wrong data.
+- [x] Vehicle types have strange names or wrong data.
   - _Notes:_ Reported by Zahid sb.
   - _Added 2026-09-16_
 
