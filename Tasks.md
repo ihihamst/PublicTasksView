@@ -1,10 +1,10 @@
 # Tasks Assignment
 
-Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-17**
+Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-21**
 
 Mirror of `tasks.json` in readable form. `tasks.json` remains the source of truth — update it first, then regenerate this file with `python3 scripts/generate_tasks_md.py`.
 
-## Week 2026-09-14 → 2026-09-20
+## Week 2026-09-21 → 2026-09-27
 
 ### 1. [ ] Implement PendingAPICallsAndTripUpdatesUtility
 
@@ -25,43 +25,35 @@ _Notes:_ The PendingAPICalls side is done and delivered. The points for SendTrip
 - [ ] Implement new udp layer to register/send the udp messages
 - [ ] Implement file based logging in it.
 
-### 2. [ ] Convert Auto Oara to .net Core Stand Alone Service
-
-Status: **pending** · Added 2026-08-05 · Updated 2026-09-11
-
-### 3. [ ] Annapolis Stations and RCZ Syncing
+### 2. [ ] Annapolis Stations and RCZ Syncing
 
 Status: **pending** · Priority: **low** · Added 2026-08-05 · Updated 2026-09-16
 
 - [ ] Annapolis needs Stations and RCZ syncing enabled via old path.
 
-### 4. [ ] Water Taxi - Trip cancelled state not synced to OL
+### 3. [ ] Water Taxi - Trip cancelled state not synced to OL
 
 Status: **pending** · Added 2026-08-10 · Updated 2026-09-16
 
 - [ ] For Confirmation No. 1780034693 (WaterTaxi Microtransit, Service ID 4662746, due 8/9/2026 12:55:00PM), trip state (Cancelled) was not synced to OL. Service Status in IL is CancelledARQ.
 
-### 5. [ ] Saint Mary - trip zone becomes UNKWN on trip expansion
-
-Status: **pending** · Added 2026-08-24 · Updated 2026-09-11
-
-- [ ] Saint Mary trips zone become UNKWN on trip expansion. Issue needs to be fixed.
-
-### 6. [ ] Email Matthew about my AI usage and its benefits
+### 4. [ ] Email Matthew about my AI usage and its benefits
 
 Status: **pending** · Added 2026-09-10 · Updated 2026-09-16
 
 - [ ] Send an email to Matthew explaining how my AI use is going and how I am benefitting from it.
 
-### 7. [x] Saint Mary - Zone to Zone & Service Hours: allow booking across service-hour days
+### 5. [ ] Convert Auto Oara to .net Core Stand Alone Service
 
-Status: **done** · Added 2026-09-11 · Updated 2026-09-16 · Completed 2026-09-16
+Status: **pending** · Added 2026-08-05 · Updated 2026-09-11
 
-- [x] In Saint Mary, Zone to Zone & Service Hours function, we need to allow the booking from another day service hour zone to the destination (which is on this day service hour zone), based on if the rule allows.
-- [x] Define the one way rule and return rule separately in the zone booking rules table.
-  - _Added 2026-09-16_
+### 6. [ ] Saint Mary - trip zone becomes UNKWN on trip expansion
 
-### 8. [ ] SilverRide SF Bay area pricing
+Status: **pending** · Added 2026-08-24 · Updated 2026-09-11
+
+- [ ] Saint Mary trips zone become UNKWN on trip expansion. Issue needs to be fixed.
+
+### 7. [ ] SilverRide SF Bay area pricing
 
 Status: **in-progress** · Priority: **high** · Added 2026-08-03 · Updated 2026-09-11
 
@@ -72,6 +64,36 @@ _Notes:_ Top priority as per Imran sb (Aug 24).
   - _Notes:_ Table Route Surcharge [Polygon Coordinates, Percentage Route Covered, Surcharge Amount]
 - [x] Make a complete design for this SilverRide SF Bayarea Pricing
   - _Added 2026-09-08 · Updated 2026-09-07 · Completed 2026-09-07_
+
+### 8. [ ] #IMB-TK-20 - Route not brokering: bTripCanceledInThirdParty not set on take back
+
+Status: **pending** · Added 2026-09-11 · Updated 2026-09-11
+
+- [ ] Route not brokering. Upon take back, bTripCanceledInThirdParty was not getting set for the record of the previous affiliate (when certain conditions happen), and due to this the trip was not going to the new affiliate.
+
+### 9. [ ] SilverRide/IMB - migrate a merged affiliate back out as a separate affiliate
+
+Status: **pending** · Added 2026-09-15 · Updated 2026-09-15
+
+- [ ] SilverRide/IMB want one of their merged affiliates to be migrated out as a separate affiliate. Discuss with Hassam and plan.
+
+### 10. [x] Slack Support Issues
+
+Status: **done** · Added 2026-09-21 · Updated 2026-09-21 · Completed 2026-09-21
+
+- [x] GTA: on call taker, inactive zones were showing too. Fixed in the combined data API to bring only active ones.
+- [x] Web MRMS 2.0: Quick Edit was giving an error on saving. It was already fixed but not deployed - investigated and deployed it.
+- [x] Access trips moved to OL very late. Investigated and shared the cause with Umar Ameen: trips are sent in batches of 5-10 per one-minute iteration, so a bulk insert of 1000 trips can take hours to move.
+
+## Week 2026-09-14 → 2026-09-20
+
+### 7. [x] Saint Mary - Zone to Zone & Service Hours: allow booking across service-hour days
+
+Status: **done** · Added 2026-09-11 · Updated 2026-09-16 · Completed 2026-09-16
+
+- [x] In Saint Mary, Zone to Zone & Service Hours function, we need to allow the booking from another day service hour zone to the destination (which is on this day service hour zone), based on if the rule allows.
+- [x] Define the one way rule and return rule separately in the zone booking rules table.
+  - _Added 2026-09-16_
 
 ### 9. [x] Upgrade Eastern2 APIs from .NET 6 to .NET 10
 
@@ -109,18 +131,6 @@ _Notes:_ Reported in the meeting that the SilverRide server crashed once again (
   - _Completed 2026-09-11_
 - [x] Fix the standard utility dictionary issue (use concurrent dictionary after confirming by doing R & D). Verify the fix. Apply the DLL in major applications which use it.
 - [x] Scan Inload API, and find and fix other areas in which dictionary is missing the lock during operations, fix and verify.
-
-### 12. [ ] #IMB-TK-20 - Route not brokering: bTripCanceledInThirdParty not set on take back
-
-Status: **pending** · Added 2026-09-11 · Updated 2026-09-11
-
-- [ ] Route not brokering. Upon take back, bTripCanceledInThirdParty was not getting set for the record of the previous affiliate (when certain conditions happen), and due to this the trip was not going to the new affiliate.
-
-### 13. [ ] SilverRide/IMB - migrate a merged affiliate back out as a separate affiliate
-
-Status: **pending** · Added 2026-09-15 · Updated 2026-09-15
-
-- [ ] SilverRide/IMB want one of their merged affiliates to be migrated out as a separate affiliate. Discuss with Hassam and plan.
 
 ## Week 2026-09-07 → 2026-09-13
 

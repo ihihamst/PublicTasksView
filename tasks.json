@@ -3,13 +3,13 @@
     "title": "Tasks Assignment",
     "owner": "ihihamst",
     "weekStartsOn": "monday",
-    "lastUpdated": "2026-09-17",
+    "lastUpdated": "2026-09-21",
     "timezone": "Asia/Karachi (PKT, UTC+05:00)"
   },
   "weeks": [
     {
-      "weekStart": "2026-09-14",
-      "weekEnd": "2026-09-20",
+      "weekStart": "2026-09-21",
+      "weekEnd": "2026-09-27",
       "tasks": [
         {
           "id": "send-trip-update-to-device",
@@ -88,18 +88,8 @@
           "notes": "The PendingAPICalls side is done and delivered. The points for SendTripUpdateToDevice - moving the implementation out of the Inload API into this utility - are still pending."
         },
         {
-          "id": "auto-oara-dotnet-core",
-          "index": 2,
-          "heading": "Convert Auto Oara to .net Core Stand Alone Service",
-          "status": "pending",
-          "addedDate": "2026-08-05",
-          "modifiedDate": "2026-09-11",
-          "completedDate": null,
-          "items": []
-        },
-        {
           "id": "annapolis-stations-rcz-sync",
-          "index": 3,
+          "index": 2,
           "heading": "Annapolis Stations and RCZ Syncing",
           "status": "pending",
           "priority": "low",
@@ -119,7 +109,7 @@
         },
         {
           "id": "water-taxi-cancel-state-not-synced-ol",
-          "index": 4,
+          "index": 3,
           "heading": "Water Taxi - Trip cancelled state not synced to OL",
           "status": "pending",
           "addedDate": "2026-08-10",
@@ -137,27 +127,8 @@
           ]
         },
         {
-          "id": "saintmary-zone-unknwn-trip-expansion",
-          "index": 5,
-          "heading": "Saint Mary - trip zone becomes UNKWN on trip expansion",
-          "status": "pending",
-          "addedDate": "2026-08-24",
-          "modifiedDate": "2026-09-11",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "Saint Mary trips zone become UNKWN on trip expansion. Issue needs to be fixed.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-08-24",
-              "modifiedDate": "2026-08-24",
-              "completedDate": null
-            }
-          ]
-        },
-        {
           "id": "email-matthew-ai-usage",
-          "index": 6,
+          "index": 4,
           "heading": "Email Matthew about my AI usage and its benefits",
           "status": "pending",
           "addedDate": "2026-09-10",
@@ -175,35 +146,37 @@
           ]
         },
         {
-          "id": "saintmary-zone-to-zone-service-hours",
-          "index": 7,
-          "heading": "Saint Mary - Zone to Zone & Service Hours: allow booking across service-hour days",
-          "status": "done",
-          "addedDate": "2026-09-11",
-          "modifiedDate": "2026-09-16",
-          "completedDate": "2026-09-16",
+          "id": "auto-oara-dotnet-core",
+          "index": 5,
+          "heading": "Convert Auto Oara to .net Core Stand Alone Service",
+          "status": "pending",
+          "addedDate": "2026-08-05",
+          "modifiedDate": "2026-09-11",
+          "completedDate": null,
+          "items": []
+        },
+        {
+          "id": "saintmary-zone-unknwn-trip-expansion",
+          "index": 6,
+          "heading": "Saint Mary - trip zone becomes UNKWN on trip expansion",
+          "status": "pending",
+          "addedDate": "2026-08-24",
+          "modifiedDate": "2026-09-11",
+          "completedDate": null,
           "items": [
             {
-              "text": "In Saint Mary, Zone to Zone & Service Hours function, we need to allow the booking from another day service hour zone to the destination (which is on this day service hour zone), based on if the rule allows.",
-              "done": true,
+              "text": "Saint Mary trips zone become UNKWN on trip expansion. Issue needs to be fixed.",
+              "done": false,
               "notes": "",
-              "addedDate": "2026-09-11",
-              "modifiedDate": "2026-09-16",
-              "completedDate": "2026-09-16"
-            },
-            {
-              "text": "Define the one way rule and return rule separately in the zone booking rules table.",
-              "done": true,
-              "notes": "",
-              "addedDate": "2026-09-16",
-              "modifiedDate": "2026-09-16",
-              "completedDate": "2026-09-16"
+              "addedDate": "2026-08-24",
+              "modifiedDate": "2026-08-24",
+              "completedDate": null
             }
           ]
         },
         {
           "id": "silverride-sf-bay-pricing",
-          "index": 8,
+          "index": 7,
           "heading": "SilverRide SF Bay area pricing",
           "status": "in-progress",
           "addedDate": "2026-08-03",
@@ -237,6 +210,112 @@
           ],
           "priority": "high",
           "notes": "Top priority as per Imran sb (Aug 24)."
+        },
+        {
+          "id": "imb-tk-20-route-not-brokering",
+          "index": 8,
+          "heading": "#IMB-TK-20 - Route not brokering: bTripCanceledInThirdParty not set on take back",
+          "status": "pending",
+          "addedDate": "2026-09-11",
+          "modifiedDate": "2026-09-11",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "Route not brokering. Upon take back, bTripCanceledInThirdParty was not getting set for the record of the previous affiliate (when certain conditions happen), and due to this the trip was not going to the new affiliate.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-09-11",
+              "modifiedDate": "2026-09-11",
+              "completedDate": null
+            }
+          ]
+        },
+        {
+          "id": "silverride-imb-affiliate-demerge",
+          "index": 9,
+          "heading": "SilverRide/IMB - migrate a merged affiliate back out as a separate affiliate",
+          "status": "pending",
+          "addedDate": "2026-09-15",
+          "modifiedDate": "2026-09-15",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "SilverRide/IMB want one of their merged affiliates to be migrated out as a separate affiliate. Discuss with Hassam and plan.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-09-15",
+              "modifiedDate": "2026-09-15",
+              "completedDate": null
+            }
+          ]
+        },
+        {
+          "id": "slack-support-issues",
+          "index": 10,
+          "heading": "Slack Support Issues",
+          "status": "done",
+          "addedDate": "2026-09-21",
+          "modifiedDate": "2026-09-21",
+          "completedDate": "2026-09-21",
+          "items": [
+            {
+              "text": "GTA: on call taker, inactive zones were showing too. Fixed in the combined data API to bring only active ones.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-21",
+              "modifiedDate": "2026-09-21",
+              "completedDate": "2026-09-21"
+            },
+            {
+              "text": "Web MRMS 2.0: Quick Edit was giving an error on saving. It was already fixed but not deployed - investigated and deployed it.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-21",
+              "modifiedDate": "2026-09-21",
+              "completedDate": "2026-09-21"
+            },
+            {
+              "text": "Access trips moved to OL very late. Investigated and shared the cause with Umar Ameen: trips are sent in batches of 5-10 per one-minute iteration, so a bulk insert of 1000 trips can take hours to move.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-21",
+              "modifiedDate": "2026-09-21",
+              "completedDate": "2026-09-21"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "weekStart": "2026-09-14",
+      "weekEnd": "2026-09-20",
+      "tasks": [
+        {
+          "id": "saintmary-zone-to-zone-service-hours",
+          "index": 7,
+          "heading": "Saint Mary - Zone to Zone & Service Hours: allow booking across service-hour days",
+          "status": "done",
+          "addedDate": "2026-09-11",
+          "modifiedDate": "2026-09-16",
+          "completedDate": "2026-09-16",
+          "items": [
+            {
+              "text": "In Saint Mary, Zone to Zone & Service Hours function, we need to allow the booking from another day service hour zone to the destination (which is on this day service hour zone), based on if the rule allows.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-11",
+              "modifiedDate": "2026-09-16",
+              "completedDate": "2026-09-16"
+            },
+            {
+              "text": "Define the one way rule and return rule separately in the zone booking rules table.",
+              "done": true,
+              "notes": "",
+              "addedDate": "2026-09-16",
+              "modifiedDate": "2026-09-16",
+              "completedDate": "2026-09-16"
+            }
+          ]
         },
         {
           "id": "eastern2-dotnet-10-upgrade",
@@ -359,44 +438,6 @@
               "addedDate": "2026-09-11",
               "modifiedDate": "2026-09-16",
               "completedDate": "2026-09-16"
-            }
-          ]
-        },
-        {
-          "id": "imb-tk-20-route-not-brokering",
-          "index": 12,
-          "heading": "#IMB-TK-20 - Route not brokering: bTripCanceledInThirdParty not set on take back",
-          "status": "pending",
-          "addedDate": "2026-09-11",
-          "modifiedDate": "2026-09-11",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "Route not brokering. Upon take back, bTripCanceledInThirdParty was not getting set for the record of the previous affiliate (when certain conditions happen), and due to this the trip was not going to the new affiliate.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-09-11",
-              "modifiedDate": "2026-09-11",
-              "completedDate": null
-            }
-          ]
-        },
-        {
-          "id": "silverride-imb-affiliate-demerge",
-          "index": 13,
-          "heading": "SilverRide/IMB - migrate a merged affiliate back out as a separate affiliate",
-          "status": "pending",
-          "addedDate": "2026-09-15",
-          "modifiedDate": "2026-09-15",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "SilverRide/IMB want one of their merged affiliates to be migrated out as a separate affiliate. Discuss with Hassam and plan.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-09-15",
-              "modifiedDate": "2026-09-15",
-              "completedDate": null
             }
           ]
         }
