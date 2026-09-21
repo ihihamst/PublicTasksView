@@ -291,6 +291,7 @@ step 1 stays the real protection.
 
 ### Not yet proven
 
-Task deletion and the tombstone mirror have **never run against production** on either side — testing
-it means leaving a permanent tombstone in real data. Watch the first real deletion closely rather than
-trusting the mirror, and report what it does.
+Task deletion and the tombstone mirror are **the one path never run against production** on either
+side — testing it means leaving a permanent tombstone in real data. Watch the first real deletion
+closely rather than trusting the mirror, and report what it does. (The weekly roll forward and
+postponed returns were in the same position until 2026-09-21, when they ran live and matched.)

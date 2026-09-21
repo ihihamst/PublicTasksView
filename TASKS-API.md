@@ -382,14 +382,25 @@ truncation and shift-day agree on every value present today — the difference i
 `python3 scripts/api_date.py`; run over all 352 date values in `tasks.json` it agrees with naive
 truncation on all of them, as expected.
 
-**Not yet exercised against production by either side**, and both are time-triggered rather than
-skippable:
+### Exercised against production, 21 Sep 2026, commit `a6e62a2` — the fix for 2–18
 
-- **Task deletion and the tombstone mirror**, plus the `allowPointDeletion: true` success path —
-  skipped deliberately, since testing them means destroying or littering real data.
-- **The weekly rollover.** It cannot run until this week turns. On 2026-09-08 every past week on both
-  stores was 100% done (8 / 1 / 6 / 6 / 5 across `08-31`, `08-24`, `08-17`, `08-10`, `08-03`) and only
-  the current week held unfinished work, so the first run moves nothing and needed no reconciliation
-  here. The behaviour first shows itself when the week turns.
+The first read after the week turned, taken before anything was written, as the API returned it:
 
-Watch both closely the first time rather than trusting the mirror.
+- `2026-09-21`: 9 tasks, numbered **`1..9` with no gaps**. **#1–#4 returning** from postponement
+  (PendingAPICalls utility, Annapolis, Water Taxi, the Matthew email — all parked to `2026-09-21`),
+  **#5–#9 rolled forward** as overdue. Returning work first, one counter, into an empty week.
+  `postponedToWeek` cleared on all four.
+- Every returner carried the exact overlap that produced 2–18 — both returning *and* unfinished in a
+  past week — so this was the live shape the fix was built from, not a neighbour of it.
+- The vacated `2026-09-14` kept **`[7, 9, 10, 11]`**: gaps preserved as history, as designed.
+- The nine week changes arrived with **zero `modifiedDate` bumps** — the "week changed, not bumped"
+  row of the Postponing table, observed live for the first time.
+- A task then created **without** `index` was numbered **#10**, keeping the week `1..10` — the
+  create-without-index half of the numbering this repo now depends on.
+
+**Now the one path not yet exercised against production by either side: the first genuine task
+deletion and the tombstone mirror**, plus the `allowPointDeletion: true` success path. Both skipped
+deliberately, since testing them means destroying or littering real data. The weekly roll forward and
+postponed returns shared that status until 21 Sep and are now proven.
+
+Watch the first real deletion closely rather than trusting the mirror.
