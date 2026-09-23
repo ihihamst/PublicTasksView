@@ -3,7 +3,7 @@
     "title": "Tasks Assignment",
     "owner": "ihihamst",
     "weekStartsOn": "monday",
-    "lastUpdated": "2026-09-21",
+    "lastUpdated": "2026-09-23",
     "timezone": "Asia/Karachi (PKT, UTC+05:00)"
   },
   "weeks": [
@@ -94,7 +94,7 @@
           "status": "pending",
           "priority": "low",
           "addedDate": "2026-08-05",
-          "modifiedDate": "2026-09-16",
+          "modifiedDate": "2026-09-21",
           "completedDate": null,
           "items": [
             {
@@ -113,7 +113,7 @@
           "heading": "Water Taxi - Trip cancelled state not synced to OL",
           "status": "pending",
           "addedDate": "2026-08-10",
-          "modifiedDate": "2026-09-16",
+          "modifiedDate": "2026-09-21",
           "completedDate": null,
           "items": [
             {

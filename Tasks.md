@@ -1,6 +1,6 @@
 # Tasks Assignment
 
-Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-21**
+Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-09-23**
 
 Mirror of `tasks.json` in readable form. `tasks.json` remains the source of truth — update it first, then regenerate this file with `python3 scripts/generate_tasks_md.py`.
 
@@ -27,13 +27,13 @@ _Notes:_ The PendingAPICalls side is done and delivered. The points for SendTrip
 
 ### 2. [ ] Annapolis Stations and RCZ Syncing
 
-Status: **pending** · Priority: **low** · Added 2026-08-05 · Updated 2026-09-16
+Status: **pending** · Priority: **low** · Added 2026-08-05 · Updated 2026-09-21
 
 - [ ] Annapolis needs Stations and RCZ syncing enabled via old path.
 
 ### 3. [ ] Water Taxi - Trip cancelled state not synced to OL
 
-Status: **pending** · Added 2026-08-10 · Updated 2026-09-16
+Status: **pending** · Added 2026-08-10 · Updated 2026-09-21
 
 - [ ] For Confirmation No. 1780034693 (WaterTaxi Microtransit, Service ID 4662746, due 8/9/2026 12:55:00PM), trip state (Cancelled) was not synced to OL. Service Status in IL is CancelledARQ.
 
