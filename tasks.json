@@ -362,44 +362,6 @@
           "completedDate": "2026-10-19"
         },
         {
-          "id": "imb-tk-25-broker-unroute-takeback",
-          "index": 18,
-          "heading": "#IMB-TK-25 - On broker unroute, take-back did not occur on affiliate side",
-          "priority": "high",
-          "notes": "Created by Ihtesham Hussain on 15 Sep 2026 (IMB Serv). Track: Assigned (since 21 Sep), Critical. Start 6/22/2026, due 7/1/2026, no expected date. Ticket: on un-route on the broker side, the system removes the trip entry from the main trips tables, so broker take-back could not happen because broker expected the parent leg. Fix described in ticket: broker take-back made independent of trip record existence in the main trips table.",
-          "link": "https://track.itcurves.us/?view=ticket_details&ticketId=IMB-TK-25",
-          "linkLabel": "IMB-TK-25",
-          "addedDate": "2026-10-20",
-          "modifiedDate": "2026-10-20",
-          "items": [
-            {
-              "text": "Make broker take-back independent of the trip record existing in the main trips table.",
-              "done": true,
-              "addedDate": "2026-09-15",
-              "modifiedDate": "2026-10-20",
-              "completedDate": "2026-10-20",
-              "notes": ""
-            },
-            {
-              "text": "Confirm the fix is released and deployed on the IMB environments; test unroute then take-back on staging.",
-              "done": true,
-              "addedDate": "2026-10-20",
-              "modifiedDate": "2026-10-20",
-              "notes": "",
-              "completedDate": "2026-10-20"
-            },
-            {
-              "text": "Move the ticket to Fixed/Resolved with the release reference (still shows Assigned).",
-              "done": true,
-              "addedDate": "2026-10-20",
-              "modifiedDate": "2026-10-20",
-              "notes": "",
-              "completedDate": "2026-10-20"
-            }
-          ],
-          "completedDate": "2026-10-20"
-        },
-        {
           "id": "gta-tk-29-overlapping-zones-attributes",
           "index": 21,
           "heading": "#GTA-TK-29 - GTA zones and wrong attributes issue",
@@ -1018,6 +980,44 @@
               "completedDate": "2026-09-16"
             }
           ]
+        },
+        {
+          "id": "imb-tk-25-broker-unroute-takeback",
+          "index": 18,
+          "heading": "#IMB-TK-25 - On broker unroute, take-back did not occur on affiliate side",
+          "priority": "high",
+          "notes": "Created by Ihtesham Hussain on 15 Sep 2026 (IMB Serv). Track: Assigned (since 21 Sep), Critical. Start 6/22/2026, due 7/1/2026, no expected date. Ticket: on un-route on the broker side, the system removes the trip entry from the main trips tables, so broker take-back could not happen because broker expected the parent leg. Fix described in ticket: broker take-back made independent of trip record existence in the main trips table.",
+          "link": "https://track.itcurves.us/?view=ticket_details&ticketId=IMB-TK-25",
+          "linkLabel": "IMB-TK-25",
+          "addedDate": "2026-10-20",
+          "modifiedDate": "2026-09-15",
+          "items": [
+            {
+              "text": "Make broker take-back independent of the trip record existing in the main trips table.",
+              "done": true,
+              "addedDate": "2026-09-15",
+              "modifiedDate": "2026-09-15",
+              "completedDate": "2026-09-15",
+              "notes": ""
+            },
+            {
+              "text": "Confirm the fix is released and deployed on the IMB environments; test unroute then take-back on staging.",
+              "done": true,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-09-15",
+              "notes": "",
+              "completedDate": "2026-09-15"
+            },
+            {
+              "text": "Move the ticket to Fixed/Resolved with the release reference (still shows Assigned).",
+              "done": true,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-09-15",
+              "notes": "",
+              "completedDate": "2026-09-15"
+            }
+          ],
+          "completedDate": "2026-09-15"
         }
       ]
     },

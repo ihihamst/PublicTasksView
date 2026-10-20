@@ -116,19 +116,6 @@ _Notes:_ Created by Abhijeet Nawale on 17 Sep 2026 (Annapolis Transit / Annapoli
 - [x] Merge clients 424593 and 426738 on Annapolis with the new screen, or deploy the release that has it to Annapolis first.
 - [x] Verify trips, history and funding sources moved to the surviving profile, then move the ticket to Testing/Resolved.
 
-### 18. [x] #IMB-TK-25 - On broker unroute, take-back did not occur on affiliate side
-
-Status: **done** · Priority: **high** · Added 2026-10-20 · Updated 2026-10-20 · Completed 2026-10-20
-
-Link: [IMB-TK-25](https://track.itcurves.us/?view=ticket_details&ticketId=IMB-TK-25)
-
-_Notes:_ Created by Ihtesham Hussain on 15 Sep 2026 (IMB Serv). Track: Assigned (since 21 Sep), Critical. Start 6/22/2026, due 7/1/2026, no expected date. Ticket: on un-route on the broker side, the system removes the trip entry from the main trips tables, so broker take-back could not happen because broker expected the parent leg. Fix described in ticket: broker take-back made independent of trip record existence in the main trips table.
-
-- [x] Make broker take-back independent of the trip record existing in the main trips table.
-  - _Added 2026-09-15_
-- [x] Confirm the fix is released and deployed on the IMB environments; test unroute then take-back on staging.
-- [x] Move the ticket to Fixed/Resolved with the release reference (still shows Assigned).
-
 ### 21. [ ] #GTA-TK-29 - GTA zones and wrong attributes issue
 
 Status: **pending** · Priority: **high** · Added 2026-10-20 · Updated 2026-10-20
@@ -319,6 +306,19 @@ _Notes:_ Reported in the meeting that the SilverRide server crashed once again (
   - _Completed 2026-09-11_
 - [x] Fix the standard utility dictionary issue (use concurrent dictionary after confirming by doing R & D). Verify the fix. Apply the DLL in major applications which use it.
 - [x] Scan Inload API, and find and fix other areas in which dictionary is missing the lock during operations, fix and verify.
+
+### 18. [x] #IMB-TK-25 - On broker unroute, take-back did not occur on affiliate side
+
+Status: **done** · Priority: **high** · Added 2026-10-20 · Updated 2026-09-15 · Completed 2026-09-15
+
+Link: [IMB-TK-25](https://track.itcurves.us/?view=ticket_details&ticketId=IMB-TK-25)
+
+_Notes:_ Created by Ihtesham Hussain on 15 Sep 2026 (IMB Serv). Track: Assigned (since 21 Sep), Critical. Start 6/22/2026, due 7/1/2026, no expected date. Ticket: on un-route on the broker side, the system removes the trip entry from the main trips tables, so broker take-back could not happen because broker expected the parent leg. Fix described in ticket: broker take-back made independent of trip record existence in the main trips table.
+
+- [x] Make broker take-back independent of the trip record existing in the main trips table.
+  - _Added 2026-09-15_
+- [x] Confirm the fix is released and deployed on the IMB environments; test unroute then take-back on staging.
+- [x] Move the ticket to Fixed/Resolved with the release reference (still shows Assigned).
 
 ## Week 2026-09-07 → 2026-09-13
 
