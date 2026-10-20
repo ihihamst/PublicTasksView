@@ -59,13 +59,13 @@ Status: **done** · Added 2026-09-15 · Updated 2026-10-16 · Completed 2026-10-
 
 - [x] SilverRide/IMB want one of their merged affiliates to be migrated out as a separate affiliate. Discuss with Hassam and plan.
 
-### 10. [ ] Server Security Issues
+### 10. [x] Server Security Issues
 
-Status: **pending** · Added 2026-09-23 · Updated 2026-09-25
+Status: **done** · Added 2026-09-23 · Updated 2026-10-09 · Completed 2026-10-09
 
 - [x] Update Node.js and the global packages on the server to the latest version via script. Verify the script.
-  - _Completed 2026-09-25_
-- [ ] Upgrade / pin the Node version in all Node apps, and upgrade the outdated Node libraries to the latest version (e.g. axios).
+  - _Updated 2026-09-25 · Completed 2026-09-25_
+- [x] Upgrade / pin the Node version in all Node apps, and upgrade the outdated Node libraries to the latest version (e.g. axios).
 
 ## Week 2026-09-21 → 2026-09-27
 

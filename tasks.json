@@ -198,7 +198,7 @@
           "index": 10,
           "heading": "Server Security Issues",
           "addedDate": "2026-09-23",
-          "modifiedDate": "2026-09-25",
+          "modifiedDate": "2026-10-09",
           "items": [
             {
               "text": "Update Node.js and the global packages on the server to the latest version via script. Verify the script.",
@@ -210,14 +210,14 @@
             },
             {
               "text": "Upgrade / pin the Node version in all Node apps, and upgrade the outdated Node libraries to the latest version (e.g. axios).",
-              "done": false,
+              "done": true,
               "addedDate": "2026-09-23",
-              "modifiedDate": "2026-09-23",
+              "modifiedDate": "2026-10-09",
               "notes": "",
-              "completedDate": null
+              "completedDate": "2026-10-09"
             }
           ],
-          "completedDate": null
+          "completedDate": "2026-10-09"
         }
       ]
     },
