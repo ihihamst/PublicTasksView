@@ -162,18 +162,17 @@
           "id": "imb-tk-20-route-not-brokering",
           "index": 8,
           "heading": "#IMB-TK-20 - Route not brokering: bTripCanceledInThirdParty not set on take back",
-          "status": "pending",
           "addedDate": "2026-09-11",
           "modifiedDate": "2026-10-20",
-          "completedDate": null,
+          "completedDate": "2026-10-20",
           "items": [
             {
               "text": "Route not brokering. Upon take back, bTripCanceledInThirdParty was not getting set for the record of the previous affiliate (when certain conditions happen), and due to this the trip was not going to the new affiliate.",
-              "done": false,
+              "done": true,
               "notes": "",
               "addedDate": "2026-09-11",
-              "modifiedDate": "2026-09-11",
-              "completedDate": null
+              "modifiedDate": "2026-10-20",
+              "completedDate": "2026-10-20"
             }
           ],
           "link": "https://track.itcurves.us/?view=ticket_details&ticketId=IMB-TK-20",
@@ -290,38 +289,38 @@
           "items": [
             {
               "text": "Get the trip/confirmation no from the screenshots and confirm the region (Eastern vs Western TMS).",
-              "done": false,
+              "done": true,
               "addedDate": "2026-10-20",
               "modifiedDate": "2026-10-20",
               "notes": "",
-              "completedDate": null
+              "completedDate": "2026-10-20"
             },
             {
               "text": "Trace the trip on both sides: broker trip and leg tables vs affiliate tables, dtl_PendingAPICalls and third-party logs. Find why the affiliate never received it, or lost it on no-show.",
-              "done": false,
+              "done": true,
               "addedDate": "2026-10-20",
               "modifiedDate": "2026-10-20",
               "notes": "",
-              "completedDate": null
+              "completedDate": "2026-10-20"
             },
             {
               "text": "Fix the data: clear or close the stuck broker trip with the no-show outcome so it flushes and reports correctly.",
-              "done": false,
+              "done": true,
               "addedDate": "2026-10-20",
               "modifiedDate": "2026-10-20",
               "notes": "",
-              "completedDate": null
+              "completedDate": "2026-10-20"
             },
             {
               "text": "Fix the root cause if it is a code path (e.g. a no-show on an unrouted or taken-back trip not propagating), and update the ticket.",
-              "done": false,
+              "done": true,
               "addedDate": "2026-10-20",
               "modifiedDate": "2026-10-20",
               "notes": "",
-              "completedDate": null
+              "completedDate": "2026-10-20"
             }
           ],
-          "completedDate": null
+          "completedDate": "2026-10-20"
         },
         {
           "id": "at-tk-13-merge-client-profiles",
@@ -374,38 +373,38 @@
           "items": [
             {
               "text": "Export GTA zones and list the overlapping polygons; decide the rule (zone priority / smallest-area wins) with the GTA team.",
-              "done": false,
+              "done": true,
               "addedDate": "2026-10-20",
               "modifiedDate": "2026-10-20",
               "notes": "",
-              "completedDate": null
+              "completedDate": "2026-10-20"
             },
             {
               "text": "Make zone resolution deterministic for overlaps in the zone calculation code and SPs, ordered by an explicit priority instead of whatever row comes first.",
-              "done": false,
+              "done": true,
               "addedDate": "2026-10-20",
               "modifiedDate": "2026-10-20",
               "notes": "",
-              "completedDate": null
+              "completedDate": "2026-10-20"
             },
             {
               "text": "Write a script to recompute zones for current and future trips and re-apply zone attributes; run on GTA staging, then production.",
-              "done": false,
+              "done": true,
               "addedDate": "2026-10-20",
               "modifiedDate": "2026-10-20",
               "notes": "",
-              "completedDate": null
+              "completedDate": "2026-10-20"
             },
             {
               "text": "Update the ticket (it is still Open on track).",
-              "done": false,
+              "done": true,
               "addedDate": "2026-10-20",
               "modifiedDate": "2026-10-20",
               "notes": "",
-              "completedDate": null
+              "completedDate": "2026-10-20"
             }
           ],
-          "completedDate": null
+          "completedDate": "2026-10-20"
         },
         {
           "id": "brt-tk-4-cleanup-pim-list",
@@ -420,30 +419,30 @@
           "items": [
             {
               "text": "Query the PIM device table for rows with LastUpdatedDate before 2026-04-01 and share the count/list with Kevin.",
-              "done": false,
+              "done": true,
               "addedDate": "2026-10-20",
               "modifiedDate": "2026-10-20",
               "notes": "",
-              "completedDate": null
+              "completedDate": "2026-10-20"
             },
             {
               "text": "Back up those rows, then delete or deactivate them (check FKs to vehicles and drivers first).",
-              "done": false,
+              "done": true,
               "addedDate": "2026-10-20",
               "modifiedDate": "2026-10-20",
               "notes": "",
-              "completedDate": null
+              "completedDate": "2026-10-20"
             },
             {
               "text": "Confirm with Kevin, then close the track subtask and ticket.",
-              "done": false,
+              "done": true,
               "addedDate": "2026-10-20",
               "modifiedDate": "2026-10-20",
               "notes": "",
-              "completedDate": null
+              "completedDate": "2026-10-20"
             }
           ],
-          "completedDate": null
+          "completedDate": "2026-10-20"
         },
         {
           "id": "imb-tk-9-agent-notes-not-saving",

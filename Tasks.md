@@ -49,13 +49,13 @@ Status: **pending** · Added 2026-09-10 · Updated 2026-10-20
 
 Status: **pending** · Added 2026-08-05 · Updated 2026-09-11
 
-### 8. [ ] #IMB-TK-20 - Route not brokering: bTripCanceledInThirdParty not set on take back
+### 8. [x] #IMB-TK-20 - Route not brokering: bTripCanceledInThirdParty not set on take back
 
-Status: **pending** · Added 2026-09-11 · Updated 2026-10-20
+Status: **done** · Added 2026-09-11 · Updated 2026-10-20 · Completed 2026-10-20
 
 Link: [IMB-TK-20](https://track.itcurves.us/?view=ticket_details&ticketId=IMB-TK-20)
 
-- [ ] Route not brokering. Upon take back, bTripCanceledInThirdParty was not getting set for the record of the previous affiliate (when certain conditions happen), and due to this the trip was not going to the new affiliate.
+- [x] Route not brokering. Upon take back, bTripCanceledInThirdParty was not getting set for the record of the previous affiliate (when certain conditions happen), and due to this the trip was not going to the new affiliate.
 
 ### 11. [x] SDHS crash - second fix
 
@@ -90,18 +90,18 @@ Status: **pending** · Added 2026-10-20 · Updated 2026-10-20
 
 - [ ] Provide a utility which calls our different APIs & endpoints and confirms if TLS works with them.
 
-### 16. [ ] #IMB-TK-36 - Eastern TMS: trip will not clear
+### 16. [x] #IMB-TK-36 - Eastern TMS: trip will not clear
 
-Status: **pending** · Priority: **normal** · Added 2026-10-20 · Updated 2026-10-20
+Status: **done** · Priority: **normal** · Added 2026-10-20 · Updated 2026-10-20 · Completed 2026-10-20
 
 Link: [IMB-TK-36](https://track.itcurves.us/?view=ticket_details&ticketId=IMB-TK-36)
 
 _Notes:_ Created by Tom Durfee on 6 Oct 2026 (IMB Serv). Track: Assigned, High. Start 10/5/2026, due 10/14/2026, no expected date. Ticket: "Western TMS: We have a trip stuck on the broker side, but it does not appear on the affiliate side. This trip will flush and not report correctly. The trip was a no show." 2 screenshots attached. Iqbal Ashraf (6 Oct): "Please look into". Note: the title says Eastern but the text says Western; confirm the region.
 
-- [ ] Get the trip/confirmation no from the screenshots and confirm the region (Eastern vs Western TMS).
-- [ ] Trace the trip on both sides: broker trip and leg tables vs affiliate tables, dtl_PendingAPICalls and third-party logs. Find why the affiliate never received it, or lost it on no-show.
-- [ ] Fix the data: clear or close the stuck broker trip with the no-show outcome so it flushes and reports correctly.
-- [ ] Fix the root cause if it is a code path (e.g. a no-show on an unrouted or taken-back trip not propagating), and update the ticket.
+- [x] Get the trip/confirmation no from the screenshots and confirm the region (Eastern vs Western TMS).
+- [x] Trace the trip on both sides: broker trip and leg tables vs affiliate tables, dtl_PendingAPICalls and third-party logs. Find why the affiliate never received it, or lost it on no-show.
+- [x] Fix the data: clear or close the stuck broker trip with the no-show outcome so it flushes and reports correctly.
+- [x] Fix the root cause if it is a code path (e.g. a no-show on an unrouted or taken-back trip not propagating), and update the ticket.
 
 ### 17. [x] #AT-TK-13 - Annapolis: merge client profiles
 
@@ -116,30 +116,30 @@ _Notes:_ Created by Abhijeet Nawale on 17 Sep 2026 (Annapolis Transit / Annapoli
 - [x] Merge clients 424593 and 426738 on Annapolis with the new screen, or deploy the release that has it to Annapolis first.
 - [x] Verify trips, history and funding sources moved to the surviving profile, then move the ticket to Testing/Resolved.
 
-### 21. [ ] #GTA-TK-29 - GTA zones and wrong attributes issue
+### 21. [x] #GTA-TK-29 - GTA zones and wrong attributes issue
 
-Status: **pending** · Priority: **high** · Added 2026-10-20 · Updated 2026-10-20
+Status: **done** · Priority: **high** · Added 2026-10-20 · Updated 2026-10-20 · Completed 2026-10-20
 
 Link: [GTA-TK-29](https://track.itcurves.us/?view=ticket_details&ticketId=GTA-TK-29)
 
 _Notes:_ Created by Ihtesham Hussain on 6 Aug 2026 (Grant Transit Authority). Track: Open, Critical. Start 6/22/2026, due 7/1/2026, no expected date. Ticket: GTA has overlapping zones and they are not getting calculated consistently; the mechanism needs fixing. Also need to recompute and apply the attributes as per the new zones.
 
-- [ ] Export GTA zones and list the overlapping polygons; decide the rule (zone priority / smallest-area wins) with the GTA team.
-- [ ] Make zone resolution deterministic for overlaps in the zone calculation code and SPs, ordered by an explicit priority instead of whatever row comes first.
-- [ ] Write a script to recompute zones for current and future trips and re-apply zone attributes; run on GTA staging, then production.
-- [ ] Update the ticket (it is still Open on track).
+- [x] Export GTA zones and list the overlapping polygons; decide the rule (zone priority / smallest-area wins) with the GTA team.
+- [x] Make zone resolution deterministic for overlaps in the zone calculation code and SPs, ordered by an explicit priority instead of whatever row comes first.
+- [x] Write a script to recompute zones for current and future trips and re-apply zone attributes; run on GTA staging, then production.
+- [x] Update the ticket (it is still Open on track).
 
-### 22. [ ] #BRT-TK-4 - Barwood & Regency: cleanup PIM list
+### 22. [x] #BRT-TK-4 - Barwood & Regency: cleanup PIM list
 
-Status: **pending** · Priority: **high** · Added 2026-10-20 · Updated 2026-10-20
+Status: **done** · Priority: **high** · Added 2026-10-20 · Updated 2026-10-20 · Completed 2026-10-20
 
 Link: [BRT-TK-4](https://track.itcurves.us/?view=ticket_details&ticketId=BRT-TK-4)
 
 _Notes:_ Created by Kevin Rivas on 22 May 2026 (Barwood & Regency). Track: Assigned, Critical. Start 4/15/2026, due 4/24/2026, no expected date. Ticket: "Kindly remove any PIM devices which have a LastUpdatedDate before April 2026." 1 attachment, 1 pending subtask on track.
 
-- [ ] Query the PIM device table for rows with LastUpdatedDate before 2026-04-01 and share the count/list with Kevin.
-- [ ] Back up those rows, then delete or deactivate them (check FKs to vehicles and drivers first).
-- [ ] Confirm with Kevin, then close the track subtask and ticket.
+- [x] Query the PIM device table for rows with LastUpdatedDate before 2026-04-01 and share the count/list with Kevin.
+- [x] Back up those rows, then delete or deactivate them (check FKs to vehicles and drivers first).
+- [x] Confirm with Kevin, then close the track subtask and ticket.
 
 ### 23. [ ] #IMB-TK-9 - IMB: agent notes are not saving
 
