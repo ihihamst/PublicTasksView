@@ -124,7 +124,9 @@
           ],
           "priority": "high",
           "notes": "Top priority as per Imran sb (Aug 24).",
-          "postponedToWeek": "2026-10-26"
+          "postponedToWeek": "2026-10-26",
+          "link": "https://track.itcurves.us/?view=ticket_details&ticketId=SR-TK-9",
+          "linkLabel": "SR-TK-9"
         },
         {
           "id": "email-matthew-ai-usage",
@@ -162,7 +164,7 @@
           "heading": "#IMB-TK-20 - Route not brokering: bTripCanceledInThirdParty not set on take back",
           "status": "pending",
           "addedDate": "2026-09-11",
-          "modifiedDate": "2026-09-11",
+          "modifiedDate": "2026-10-20",
           "completedDate": null,
           "items": [
             {
@@ -173,7 +175,9 @@
               "modifiedDate": "2026-09-11",
               "completedDate": null
             }
-          ]
+          ],
+          "link": "https://track.itcurves.us/?view=ticket_details&ticketId=IMB-TK-20",
+          "linkLabel": "IMB-TK-20"
         },
         {
           "id": "sdhs-crash-fix-2",
@@ -264,6 +268,372 @@
           "items": [
             {
               "text": "Provide a utility which calls our different APIs & endpoints and confirms if TLS works with them.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            }
+          ],
+          "completedDate": null
+        },
+        {
+          "id": "imb-tk-36-eastern-tms-trip-not-clearing",
+          "index": 16,
+          "heading": "#IMB-TK-36 - Eastern TMS: trip will not clear",
+          "priority": "normal",
+          "notes": "Created by Tom Durfee on 6 Oct 2026 (IMB Serv). Track: Assigned, High. Start 10/5/2026, due 10/14/2026, no expected date. Ticket: \"Western TMS: We have a trip stuck on the broker side, but it does not appear on the affiliate side. This trip will flush and not report correctly. The trip was a no show.\" 2 screenshots attached. Iqbal Ashraf (6 Oct): \"Please look into\". Note: the title says Eastern but the text says Western; confirm the region.",
+          "link": "https://track.itcurves.us/?view=ticket_details&ticketId=IMB-TK-36",
+          "linkLabel": "IMB-TK-36",
+          "addedDate": "2026-10-20",
+          "modifiedDate": "2026-10-20",
+          "items": [
+            {
+              "text": "Get the trip/confirmation no from the screenshots and confirm the region (Eastern vs Western TMS).",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            },
+            {
+              "text": "Trace the trip on both sides: broker trip and leg tables vs affiliate tables, dtl_PendingAPICalls and third-party logs. Find why the affiliate never received it, or lost it on no-show.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            },
+            {
+              "text": "Fix the data: clear or close the stuck broker trip with the no-show outcome so it flushes and reports correctly.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            },
+            {
+              "text": "Fix the root cause if it is a code path (e.g. a no-show on an unrouted or taken-back trip not propagating), and update the ticket.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            }
+          ],
+          "completedDate": null
+        },
+        {
+          "id": "at-tk-13-merge-client-profiles",
+          "index": 17,
+          "heading": "#AT-TK-13 - Annapolis: merge client profiles",
+          "priority": "high",
+          "notes": "Created by Abhijeet Nawale on 17 Sep 2026 (Annapolis Transit / Annapolis Microtransit). Track: Fixed (since 19 Oct), Critical. Start 9/16/2026, due 9/25/2026, no expected date. Assigned to Muhammad Awais and Ihtesham Hussain. Ticket: \"Client id # 424593 and 426738 are for the same client. Can we merge these 2 profiles.\" Awais (19 Oct): a new screen was created for this purpose and integrated in WebMRMS-3.0.",
+          "link": "https://track.itcurves.us/?view=ticket_details&ticketId=AT-TK-13",
+          "linkLabel": "AT-TK-13",
+          "addedDate": "2026-10-20",
+          "modifiedDate": "2026-10-20",
+          "items": [
+            {
+              "text": "Client merge screen created and integrated in WebMRMS-3.0 (Muhammad Awais).",
+              "done": true,
+              "addedDate": "2026-10-19",
+              "modifiedDate": "2026-10-19",
+              "completedDate": "2026-10-19",
+              "notes": ""
+            },
+            {
+              "text": "Merge clients 424593 and 426738 on Annapolis with the new screen, or deploy the release that has it to Annapolis first.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            },
+            {
+              "text": "Verify trips, history and funding sources moved to the surviving profile, then move the ticket to Testing/Resolved.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            }
+          ],
+          "completedDate": null
+        },
+        {
+          "id": "imb-tk-25-broker-unroute-takeback",
+          "index": 18,
+          "heading": "#IMB-TK-25 - On broker unroute, take-back did not occur on affiliate side",
+          "priority": "high",
+          "notes": "Created by Ihtesham Hussain on 15 Sep 2026 (IMB Serv). Track: Assigned (since 21 Sep), Critical. Start 6/22/2026, due 7/1/2026, no expected date. Ticket: on un-route on the broker side, the system removes the trip entry from the main trips tables, so broker take-back could not happen because broker expected the parent leg. Fix described in ticket: broker take-back made independent of trip record existence in the main trips table.",
+          "link": "https://track.itcurves.us/?view=ticket_details&ticketId=IMB-TK-25",
+          "linkLabel": "IMB-TK-25",
+          "addedDate": "2026-10-20",
+          "modifiedDate": "2026-10-20",
+          "items": [
+            {
+              "text": "Make broker take-back independent of the trip record existing in the main trips table.",
+              "done": true,
+              "addedDate": "2026-09-15",
+              "modifiedDate": "2026-09-15",
+              "completedDate": "2026-09-15",
+              "notes": ""
+            },
+            {
+              "text": "Confirm the fix is released and deployed on the IMB environments; test unroute then take-back on staging.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            },
+            {
+              "text": "Move the ticket to Fixed/Resolved with the release reference (still shows Assigned).",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            }
+          ],
+          "completedDate": null
+        },
+        {
+          "id": "sr-tk-40-sdhs-face-card-expiry",
+          "index": 19,
+          "heading": "#SR-TK-40 - SDHS: send face card on login even when its expiry is not set",
+          "priority": "high",
+          "notes": "Created by Ihtesham Hussain on 9 Sep 2026 (Silver Ride). Track: Fixed, Urgent. Start 9/9/2026, due 9/18/2026, no expected date. Ticket: on SD login in the SDHS service, if face card expiry is not set (blank / 1900), still send the face card no, as it is not expired. Change done in sp usp_SDGetAllDrivers. Note (9 Sep): only done for the primary face card.",
+          "link": "https://track.itcurves.us/?view=ticket_details&ticketId=SR-TK-40",
+          "linkLabel": "SR-TK-40",
+          "addedDate": "2026-10-20",
+          "modifiedDate": "2026-10-20",
+          "items": [
+            {
+              "text": "Send the face card no when expiry is blank/1900 (usp_SDGetAllDrivers), for the primary face card.",
+              "done": true,
+              "addedDate": "2026-09-09",
+              "modifiedDate": "2026-09-09",
+              "completedDate": "2026-09-09",
+              "notes": ""
+            },
+            {
+              "text": "Confirm the SP change is in the SilverRide release package and deployed; verify a driver with no face card expiry gets it on login.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            },
+            {
+              "text": "Decide whether secondary face cards need the same rule, then resolve the ticket.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            }
+          ],
+          "completedDate": null
+        },
+        {
+          "id": "sr-tk-34-sf-bay-adjust-times-error",
+          "index": 20,
+          "heading": "#SR-TK-34 - Error when adjusting times in west coast SF Bay Area",
+          "priority": "high",
+          "notes": "Created by Dhurin Vahia on 1 Sep 2026 (Silver Ride). Track: Fixed, Urgent. Start 9/1/2026, due 9/10/2026, no expected date. Ticket: \"See screenshot from dispatcher Jessice\" (4 attachments). Note (10 Sep): issue was fixed and requires a new release to deploy; the URL could not be deduced from the screenshot, so not sure where the release deployment is needed.",
+          "link": "https://track.itcurves.us/?view=ticket_details&ticketId=SR-TK-34",
+          "linkLabel": "SR-TK-34",
+          "addedDate": "2026-10-20",
+          "modifiedDate": "2026-10-20",
+          "items": [
+            {
+              "text": "Fix the error when adjusting times.",
+              "done": true,
+              "addedDate": "2026-09-10",
+              "modifiedDate": "2026-09-10",
+              "completedDate": "2026-09-10",
+              "notes": ""
+            },
+            {
+              "text": "Ask Dhurin / dispatcher Jessica which URL/environment they use (West Coast SF Bay Area) and deploy the fixed release there via Hassam.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            },
+            {
+              "text": "Have the dispatcher retest adjusting times, then resolve the ticket.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            }
+          ],
+          "completedDate": null
+        },
+        {
+          "id": "gta-tk-29-overlapping-zones-attributes",
+          "index": 21,
+          "heading": "#GTA-TK-29 - GTA zones and wrong attributes issue",
+          "priority": "high",
+          "notes": "Created by Ihtesham Hussain on 6 Aug 2026 (Grant Transit Authority). Track: Open, Critical. Start 6/22/2026, due 7/1/2026, no expected date. Ticket: GTA has overlapping zones and they are not getting calculated consistently; the mechanism needs fixing. Also need to recompute and apply the attributes as per the new zones.",
+          "link": "https://track.itcurves.us/?view=ticket_details&ticketId=GTA-TK-29",
+          "linkLabel": "GTA-TK-29",
+          "addedDate": "2026-10-20",
+          "modifiedDate": "2026-10-20",
+          "items": [
+            {
+              "text": "Export GTA zones and list the overlapping polygons; decide the rule (zone priority / smallest-area wins) with the GTA team.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            },
+            {
+              "text": "Make zone resolution deterministic for overlaps in the zone calculation code and SPs, ordered by an explicit priority instead of whatever row comes first.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            },
+            {
+              "text": "Write a script to recompute zones for current and future trips and re-apply zone attributes; run on GTA staging, then production.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            },
+            {
+              "text": "Update the ticket (it is still Open on track).",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            }
+          ],
+          "completedDate": null
+        },
+        {
+          "id": "brt-tk-4-cleanup-pim-list",
+          "index": 22,
+          "heading": "#BRT-TK-4 - Barwood & Regency: cleanup PIM list",
+          "priority": "high",
+          "notes": "Created by Kevin Rivas on 22 May 2026 (Barwood & Regency). Track: Assigned, Critical. Start 4/15/2026, due 4/24/2026, no expected date. Ticket: \"Kindly remove any PIM devices which have a LastUpdatedDate before April 2026.\" 1 attachment, 1 pending subtask on track.",
+          "link": "https://track.itcurves.us/?view=ticket_details&ticketId=BRT-TK-4",
+          "linkLabel": "BRT-TK-4",
+          "addedDate": "2026-10-20",
+          "modifiedDate": "2026-10-20",
+          "items": [
+            {
+              "text": "Query the PIM device table for rows with LastUpdatedDate before 2026-04-01 and share the count/list with Kevin.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            },
+            {
+              "text": "Back up those rows, then delete or deactivate them (check FKs to vehicles and drivers first).",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            },
+            {
+              "text": "Confirm with Kevin, then close the track subtask and ticket.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            }
+          ],
+          "completedDate": null
+        },
+        {
+          "id": "imb-tk-9-agent-notes-not-saving",
+          "index": 23,
+          "heading": "#IMB-TK-9 - IMB: agent notes are not saving",
+          "priority": "high",
+          "notes": "Created by Muhammad Zahid on 1 Apr 2026 (IMB Serv). Track: Assigned, Critical. No start date, due 4/10/2026, no expected date. Ticket: \"Unable to save agent notes.\" No discussion yet.",
+          "link": "https://track.itcurves.us/?view=ticket_details&ticketId=IMB-TK-9",
+          "linkLabel": "IMB-TK-9",
+          "addedDate": "2026-10-20",
+          "modifiedDate": "2026-10-20",
+          "items": [
+            {
+              "text": "Ask Zahid for the screen, environment and an example trip/client; it has been open ~200 days, so confirm it still happens.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            },
+            {
+              "text": "Reproduce and check the save call (API/SP) for errors, field length or permission issues.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            },
+            {
+              "text": "Fix, release, verify, and update the ticket.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            }
+          ],
+          "completedDate": null
+        },
+        {
+          "id": "imb-tk-2-shell-user-profile-logic",
+          "index": 24,
+          "heading": "#IMB-TK-2 - Update logic for Shell User profile creation in assigned tenants",
+          "priority": "high",
+          "notes": "Created by Iqbal Ashraf on 30 Mar 2026 (IMB Serv). Track: Assigned, Critical. No start date, due 4/8/2026, no expected date. Ticket: when a Shell User profile is created in an assigned tenant, copy the Email from the primary user record; replace the generic username (e.g. ShellUser123) with ShellUser-[TSP-ID]-[OriginalUsername]. Example: Roschelle was manually updated to ShellUser-159-rayonayon. Purpose: let affiliate admins see which primary tenant user a shell user belongs to.",
+          "link": "https://track.itcurves.us/?view=ticket_details&ticketId=IMB-TK-2",
+          "linkLabel": "IMB-TK-2",
+          "addedDate": "2026-10-20",
+          "modifiedDate": "2026-10-20",
+          "items": [
+            {
+              "text": "Find the shell-user creation code/SP for assigned tenants.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            },
+            {
+              "text": "Copy Email from the primary user and generate the username as ShellUser-[TSP-ID]-[OriginalUsername] (handle length limits and uniqueness).",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            },
+            {
+              "text": "Write a one-time script to rename existing shell users and back-fill emails.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            },
+            {
+              "text": "Release, verify on IMB, and update the ticket.",
               "done": false,
               "addedDate": "2026-10-20",
               "modifiedDate": "2026-10-20",
