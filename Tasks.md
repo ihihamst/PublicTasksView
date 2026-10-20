@@ -53,11 +53,11 @@ Status: **pending** · Added 2026-09-11 · Updated 2026-09-11
 
 - [ ] Route not brokering. Upon take back, bTripCanceledInThirdParty was not getting set for the record of the previous affiliate (when certain conditions happen), and due to this the trip was not going to the new affiliate.
 
-### 9. [ ] SilverRide/IMB - migrate a merged affiliate back out as a separate affiliate
+### 9. [x] SilverRide/IMB - migrate a merged affiliate back out as a separate affiliate
 
-Status: **pending** · Added 2026-09-15 · Updated 2026-09-15
+Status: **done** · Added 2026-09-15 · Updated 2026-10-16 · Completed 2026-10-16
 
-- [ ] SilverRide/IMB want one of their merged affiliates to be migrated out as a separate affiliate. Discuss with Hassam and plan.
+- [x] SilverRide/IMB want one of their merged affiliates to be migrated out as a separate affiliate. Discuss with Hassam and plan.
 
 ### 10. [ ] Server Security Issues
 

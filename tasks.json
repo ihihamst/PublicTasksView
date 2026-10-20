@@ -179,18 +179,17 @@
           "id": "silverride-imb-affiliate-demerge",
           "index": 9,
           "heading": "SilverRide/IMB - migrate a merged affiliate back out as a separate affiliate",
-          "status": "pending",
           "addedDate": "2026-09-15",
-          "modifiedDate": "2026-09-15",
-          "completedDate": null,
+          "modifiedDate": "2026-10-16",
+          "completedDate": "2026-10-16",
           "items": [
             {
               "text": "SilverRide/IMB want one of their merged affiliates to be migrated out as a separate affiliate. Discuss with Hassam and plan.",
-              "done": false,
+              "done": true,
               "notes": "",
               "addedDate": "2026-09-15",
-              "modifiedDate": "2026-09-15",
-              "completedDate": null
+              "modifiedDate": "2026-10-16",
+              "completedDate": "2026-10-16"
             }
           ]
         },
