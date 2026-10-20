@@ -332,7 +332,7 @@
           "link": "https://track.itcurves.us/?view=ticket_details&ticketId=AT-TK-13",
           "linkLabel": "AT-TK-13",
           "addedDate": "2026-10-20",
-          "modifiedDate": "2026-10-20",
+          "modifiedDate": "2026-10-19",
           "items": [
             {
               "text": "Client merge screen created and integrated in WebMRMS-3.0 (Muhammad Awais).",
@@ -344,22 +344,22 @@
             },
             {
               "text": "Merge clients 424593 and 426738 on Annapolis with the new screen, or deploy the release that has it to Annapolis first.",
-              "done": false,
+              "done": true,
               "addedDate": "2026-10-20",
-              "modifiedDate": "2026-10-20",
+              "modifiedDate": "2026-10-19",
               "notes": "",
-              "completedDate": null
+              "completedDate": "2026-10-19"
             },
             {
               "text": "Verify trips, history and funding sources moved to the surviving profile, then move the ticket to Testing/Resolved.",
-              "done": false,
+              "done": true,
               "addedDate": "2026-10-20",
-              "modifiedDate": "2026-10-20",
+              "modifiedDate": "2026-10-19",
               "notes": "",
-              "completedDate": null
+              "completedDate": "2026-10-19"
             }
           ],
-          "completedDate": null
+          "completedDate": "2026-10-19"
         },
         {
           "id": "imb-tk-25-broker-unroute-takeback",
@@ -382,98 +382,22 @@
             },
             {
               "text": "Confirm the fix is released and deployed on the IMB environments; test unroute then take-back on staging.",
-              "done": false,
+              "done": true,
               "addedDate": "2026-10-20",
               "modifiedDate": "2026-10-20",
               "notes": "",
-              "completedDate": null
+              "completedDate": "2026-10-20"
             },
             {
               "text": "Move the ticket to Fixed/Resolved with the release reference (still shows Assigned).",
-              "done": false,
-              "addedDate": "2026-10-20",
-              "modifiedDate": "2026-10-20",
-              "notes": "",
-              "completedDate": null
-            }
-          ],
-          "completedDate": null
-        },
-        {
-          "id": "sr-tk-40-sdhs-face-card-expiry",
-          "index": 19,
-          "heading": "#SR-TK-40 - SDHS: send face card on login even when its expiry is not set",
-          "priority": "high",
-          "notes": "Created by Ihtesham Hussain on 9 Sep 2026 (Silver Ride). Track: Fixed, Urgent. Start 9/9/2026, due 9/18/2026, no expected date. Ticket: on SD login in the SDHS service, if face card expiry is not set (blank / 1900), still send the face card no, as it is not expired. Change done in sp usp_SDGetAllDrivers. Note (9 Sep): only done for the primary face card.",
-          "link": "https://track.itcurves.us/?view=ticket_details&ticketId=SR-TK-40",
-          "linkLabel": "SR-TK-40",
-          "addedDate": "2026-10-20",
-          "modifiedDate": "2026-10-20",
-          "items": [
-            {
-              "text": "Send the face card no when expiry is blank/1900 (usp_SDGetAllDrivers), for the primary face card.",
               "done": true,
-              "addedDate": "2026-09-09",
-              "modifiedDate": "2026-09-09",
-              "completedDate": "2026-09-09",
-              "notes": ""
-            },
-            {
-              "text": "Confirm the SP change is in the SilverRide release package and deployed; verify a driver with no face card expiry gets it on login.",
-              "done": false,
               "addedDate": "2026-10-20",
               "modifiedDate": "2026-10-20",
               "notes": "",
-              "completedDate": null
-            },
-            {
-              "text": "Decide whether secondary face cards need the same rule, then resolve the ticket.",
-              "done": false,
-              "addedDate": "2026-10-20",
-              "modifiedDate": "2026-10-20",
-              "notes": "",
-              "completedDate": null
+              "completedDate": "2026-10-20"
             }
           ],
-          "completedDate": null
-        },
-        {
-          "id": "sr-tk-34-sf-bay-adjust-times-error",
-          "index": 20,
-          "heading": "#SR-TK-34 - Error when adjusting times in west coast SF Bay Area",
-          "priority": "high",
-          "notes": "Created by Dhurin Vahia on 1 Sep 2026 (Silver Ride). Track: Fixed, Urgent. Start 9/1/2026, due 9/10/2026, no expected date. Ticket: \"See screenshot from dispatcher Jessice\" (4 attachments). Note (10 Sep): issue was fixed and requires a new release to deploy; the URL could not be deduced from the screenshot, so not sure where the release deployment is needed.",
-          "link": "https://track.itcurves.us/?view=ticket_details&ticketId=SR-TK-34",
-          "linkLabel": "SR-TK-34",
-          "addedDate": "2026-10-20",
-          "modifiedDate": "2026-10-20",
-          "items": [
-            {
-              "text": "Fix the error when adjusting times.",
-              "done": true,
-              "addedDate": "2026-09-10",
-              "modifiedDate": "2026-09-10",
-              "completedDate": "2026-09-10",
-              "notes": ""
-            },
-            {
-              "text": "Ask Dhurin / dispatcher Jessica which URL/environment they use (West Coast SF Bay Area) and deploy the fixed release there via Hassam.",
-              "done": false,
-              "addedDate": "2026-10-20",
-              "modifiedDate": "2026-10-20",
-              "notes": "",
-              "completedDate": null
-            },
-            {
-              "text": "Have the dispatcher retest adjusting times, then resolve the ticket.",
-              "done": false,
-              "addedDate": "2026-10-20",
-              "modifiedDate": "2026-10-20",
-              "notes": "",
-              "completedDate": null
-            }
-          ],
-          "completedDate": null
+          "completedDate": "2026-10-20"
         },
         {
           "id": "gta-tk-29-overlapping-zones-attributes",
@@ -1154,6 +1078,82 @@
               "completedDate": "2026-09-10"
             }
           ]
+        },
+        {
+          "id": "sr-tk-40-sdhs-face-card-expiry",
+          "index": 19,
+          "heading": "#SR-TK-40 - SDHS: send face card on login even when its expiry is not set",
+          "priority": "high",
+          "notes": "Created by Ihtesham Hussain on 9 Sep 2026 (Silver Ride). Track: Fixed, Urgent. Start 9/9/2026, due 9/18/2026, no expected date. Ticket: on SD login in the SDHS service, if face card expiry is not set (blank / 1900), still send the face card no, as it is not expired. Change done in sp usp_SDGetAllDrivers. Note (9 Sep): only done for the primary face card.",
+          "link": "https://track.itcurves.us/?view=ticket_details&ticketId=SR-TK-40",
+          "linkLabel": "SR-TK-40",
+          "addedDate": "2026-10-20",
+          "modifiedDate": "2026-09-09",
+          "items": [
+            {
+              "text": "Send the face card no when expiry is blank/1900 (usp_SDGetAllDrivers), for the primary face card.",
+              "done": true,
+              "addedDate": "2026-09-09",
+              "modifiedDate": "2026-09-09",
+              "completedDate": "2026-09-09",
+              "notes": ""
+            },
+            {
+              "text": "Confirm the SP change is in the SilverRide release package and deployed; verify a driver with no face card expiry gets it on login.",
+              "done": true,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-09-09",
+              "notes": "",
+              "completedDate": "2026-09-09"
+            },
+            {
+              "text": "Decide whether secondary face cards need the same rule, then resolve the ticket.",
+              "done": true,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-09-09",
+              "notes": "",
+              "completedDate": "2026-09-09"
+            }
+          ],
+          "completedDate": "2026-09-09"
+        },
+        {
+          "id": "sr-tk-34-sf-bay-adjust-times-error",
+          "index": 20,
+          "heading": "#SR-TK-34 - Error when adjusting times in west coast SF Bay Area",
+          "priority": "high",
+          "notes": "Created by Dhurin Vahia on 1 Sep 2026 (Silver Ride). Track: Fixed, Urgent. Start 9/1/2026, due 9/10/2026, no expected date. Ticket: \"See screenshot from dispatcher Jessice\" (4 attachments). Note (10 Sep): issue was fixed and requires a new release to deploy; the URL could not be deduced from the screenshot, so not sure where the release deployment is needed.",
+          "link": "https://track.itcurves.us/?view=ticket_details&ticketId=SR-TK-34",
+          "linkLabel": "SR-TK-34",
+          "addedDate": "2026-10-20",
+          "modifiedDate": "2026-09-10",
+          "items": [
+            {
+              "text": "Fix the error when adjusting times.",
+              "done": true,
+              "addedDate": "2026-09-10",
+              "modifiedDate": "2026-09-10",
+              "completedDate": "2026-09-10",
+              "notes": ""
+            },
+            {
+              "text": "Ask Dhurin / dispatcher Jessica which URL/environment they use (West Coast SF Bay Area) and deploy the fixed release there via Hassam.",
+              "done": true,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-09-10",
+              "notes": "",
+              "completedDate": "2026-09-10"
+            },
+            {
+              "text": "Have the dispatcher retest adjusting times, then resolve the ticket.",
+              "done": true,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-09-10",
+              "notes": "",
+              "completedDate": "2026-09-10"
+            }
+          ],
+          "completedDate": "2026-09-10"
         }
       ]
     },

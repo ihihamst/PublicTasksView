@@ -103,22 +103,22 @@ _Notes:_ Created by Tom Durfee on 6 Oct 2026 (IMB Serv). Track: Assigned, High. 
 - [ ] Fix the data: clear or close the stuck broker trip with the no-show outcome so it flushes and reports correctly.
 - [ ] Fix the root cause if it is a code path (e.g. a no-show on an unrouted or taken-back trip not propagating), and update the ticket.
 
-### 17. [ ] #AT-TK-13 - Annapolis: merge client profiles
+### 17. [x] #AT-TK-13 - Annapolis: merge client profiles
 
-Status: **pending** · Priority: **high** · Added 2026-10-20 · Updated 2026-10-20
+Status: **done** · Priority: **high** · Added 2026-10-20 · Updated 2026-10-19 · Completed 2026-10-19
 
 Link: [AT-TK-13](https://track.itcurves.us/?view=ticket_details&ticketId=AT-TK-13)
 
 _Notes:_ Created by Abhijeet Nawale on 17 Sep 2026 (Annapolis Transit / Annapolis Microtransit). Track: Fixed (since 19 Oct), Critical. Start 9/16/2026, due 9/25/2026, no expected date. Assigned to Muhammad Awais and Ihtesham Hussain. Ticket: "Client id # 424593 and 426738 are for the same client. Can we merge these 2 profiles." Awais (19 Oct): a new screen was created for this purpose and integrated in WebMRMS-3.0.
 
 - [x] Client merge screen created and integrated in WebMRMS-3.0 (Muhammad Awais).
-  - _Added 2026-10-19 · Completed 2026-10-19_
-- [ ] Merge clients 424593 and 426738 on Annapolis with the new screen, or deploy the release that has it to Annapolis first.
-- [ ] Verify trips, history and funding sources moved to the surviving profile, then move the ticket to Testing/Resolved.
+  - _Added 2026-10-19_
+- [x] Merge clients 424593 and 426738 on Annapolis with the new screen, or deploy the release that has it to Annapolis first.
+- [x] Verify trips, history and funding sources moved to the surviving profile, then move the ticket to Testing/Resolved.
 
-### 18. [ ] #IMB-TK-25 - On broker unroute, take-back did not occur on affiliate side
+### 18. [x] #IMB-TK-25 - On broker unroute, take-back did not occur on affiliate side
 
-Status: **pending** · Priority: **high** · Added 2026-10-20 · Updated 2026-10-20
+Status: **done** · Priority: **high** · Added 2026-10-20 · Updated 2026-10-20 · Completed 2026-10-20
 
 Link: [IMB-TK-25](https://track.itcurves.us/?view=ticket_details&ticketId=IMB-TK-25)
 
@@ -126,34 +126,8 @@ _Notes:_ Created by Ihtesham Hussain on 15 Sep 2026 (IMB Serv). Track: Assigned 
 
 - [x] Make broker take-back independent of the trip record existing in the main trips table.
   - _Added 2026-09-15 · Completed 2026-09-15_
-- [ ] Confirm the fix is released and deployed on the IMB environments; test unroute then take-back on staging.
-- [ ] Move the ticket to Fixed/Resolved with the release reference (still shows Assigned).
-
-### 19. [ ] #SR-TK-40 - SDHS: send face card on login even when its expiry is not set
-
-Status: **pending** · Priority: **high** · Added 2026-10-20 · Updated 2026-10-20
-
-Link: [SR-TK-40](https://track.itcurves.us/?view=ticket_details&ticketId=SR-TK-40)
-
-_Notes:_ Created by Ihtesham Hussain on 9 Sep 2026 (Silver Ride). Track: Fixed, Urgent. Start 9/9/2026, due 9/18/2026, no expected date. Ticket: on SD login in the SDHS service, if face card expiry is not set (blank / 1900), still send the face card no, as it is not expired. Change done in sp usp_SDGetAllDrivers. Note (9 Sep): only done for the primary face card.
-
-- [x] Send the face card no when expiry is blank/1900 (usp_SDGetAllDrivers), for the primary face card.
-  - _Added 2026-09-09 · Completed 2026-09-09_
-- [ ] Confirm the SP change is in the SilverRide release package and deployed; verify a driver with no face card expiry gets it on login.
-- [ ] Decide whether secondary face cards need the same rule, then resolve the ticket.
-
-### 20. [ ] #SR-TK-34 - Error when adjusting times in west coast SF Bay Area
-
-Status: **pending** · Priority: **high** · Added 2026-10-20 · Updated 2026-10-20
-
-Link: [SR-TK-34](https://track.itcurves.us/?view=ticket_details&ticketId=SR-TK-34)
-
-_Notes:_ Created by Dhurin Vahia on 1 Sep 2026 (Silver Ride). Track: Fixed, Urgent. Start 9/1/2026, due 9/10/2026, no expected date. Ticket: "See screenshot from dispatcher Jessice" (4 attachments). Note (10 Sep): issue was fixed and requires a new release to deploy; the URL could not be deduced from the screenshot, so not sure where the release deployment is needed.
-
-- [x] Fix the error when adjusting times.
-  - _Added 2026-09-10 · Completed 2026-09-10_
-- [ ] Ask Dhurin / dispatcher Jessica which URL/environment they use (West Coast SF Bay Area) and deploy the fixed release there via Hassam.
-- [ ] Have the dispatcher retest adjusting times, then resolve the ticket.
+- [x] Confirm the fix is released and deployed on the IMB environments; test unroute then take-back on staging.
+- [x] Move the ticket to Fixed/Resolved with the release reference (still shows Assigned).
 
 ### 21. [ ] #GTA-TK-29 - GTA zones and wrong attributes issue
 
@@ -361,6 +335,32 @@ Status: **done** · Added 2026-09-10 · Updated 2026-09-10 · Completed 2026-09-
 - [x] Two trips for rider Robert Fall (booked by the SanFran broker for Friday 09-05) were first handed to provider TransMetro. The broker then pulled them back and, the next day, handed them instead to Centurion Medical Transport.
 - [x] The pull-back from TransMetro was only half completed. Our system cancelled the trips at TransMetro correctly, but never recorded on its own side that the cancellation was done - so it kept thinking a cancellation was still pending with TransMetro.
 - [x] Because of that unfinished bookkeeping, the system refused to send the trips onward to Centurion.
+
+### 19. [x] #SR-TK-40 - SDHS: send face card on login even when its expiry is not set
+
+Status: **done** · Priority: **high** · Added 2026-10-20 · Updated 2026-09-09 · Completed 2026-09-09
+
+Link: [SR-TK-40](https://track.itcurves.us/?view=ticket_details&ticketId=SR-TK-40)
+
+_Notes:_ Created by Ihtesham Hussain on 9 Sep 2026 (Silver Ride). Track: Fixed, Urgent. Start 9/9/2026, due 9/18/2026, no expected date. Ticket: on SD login in the SDHS service, if face card expiry is not set (blank / 1900), still send the face card no, as it is not expired. Change done in sp usp_SDGetAllDrivers. Note (9 Sep): only done for the primary face card.
+
+- [x] Send the face card no when expiry is blank/1900 (usp_SDGetAllDrivers), for the primary face card.
+  - _Added 2026-09-09_
+- [x] Confirm the SP change is in the SilverRide release package and deployed; verify a driver with no face card expiry gets it on login.
+- [x] Decide whether secondary face cards need the same rule, then resolve the ticket.
+
+### 20. [x] #SR-TK-34 - Error when adjusting times in west coast SF Bay Area
+
+Status: **done** · Priority: **high** · Added 2026-10-20 · Updated 2026-09-10 · Completed 2026-09-10
+
+Link: [SR-TK-34](https://track.itcurves.us/?view=ticket_details&ticketId=SR-TK-34)
+
+_Notes:_ Created by Dhurin Vahia on 1 Sep 2026 (Silver Ride). Track: Fixed, Urgent. Start 9/1/2026, due 9/10/2026, no expected date. Ticket: "See screenshot from dispatcher Jessice" (4 attachments). Note (10 Sep): issue was fixed and requires a new release to deploy; the URL could not be deduced from the screenshot, so not sure where the release deployment is needed.
+
+- [x] Fix the error when adjusting times.
+  - _Added 2026-09-10_
+- [x] Ask Dhurin / dispatcher Jessica which URL/environment they use (West Coast SF Bay Area) and deploy the fixed release there via Hassam.
+- [x] Have the dispatcher retest adjusting times, then resolve the ticket.
 
 ## Week 2026-08-31 → 2026-09-06
 
