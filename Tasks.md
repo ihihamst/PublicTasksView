@@ -1,6 +1,6 @@
 # Tasks Assignment
 
-Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)** · Last updated: **2026-10-20**
+Owner: **ihihamst** · Timezone: **Asia/Karachi (PKT, UTC+05:00)**
 
 Mirror of `tasks.json` in readable form. `tasks.json` remains the source of truth — update it first, then regenerate this file with `python3 scripts/generate_tasks_md.py`.
 
@@ -8,7 +8,7 @@ Mirror of `tasks.json` in readable form. `tasks.json` remains the source of trut
 
 ### 1. [ ] Implement PendingAPICallsAndTripUpdatesUtility
 
-Status: **in-progress** · Added 2026-08-03 · Updated 2026-09-25
+Status: **in-progress** · Added 2026-08-03 · Updated 2026-10-20
 
 _Notes:_ The PendingAPICalls side is done and delivered. The points for SendTripUpdateToDevice - moving the implementation out of the Inload API into this utility - are still pending.
 
@@ -25,27 +25,9 @@ _Notes:_ The PendingAPICalls side is done and delivered. The points for SendTrip
 - [ ] Implement new udp layer to register/send the udp messages
 - [ ] Implement file based logging in it.
 
-### 2. [ ] Annapolis Stations and RCZ Syncing
-
-Status: **pending** · Priority: **low** · Added 2026-08-05 · Updated 2026-09-21
-
-- [ ] Annapolis needs Stations and RCZ syncing enabled via old path.
-
-### 3. [ ] Water Taxi - Trip cancelled state not synced to OL
-
-Status: **pending** · Added 2026-08-10 · Updated 2026-09-21
-
-- [ ] For Confirmation No. 1780034693 (WaterTaxi Microtransit, Service ID 4662746, due 8/9/2026 12:55:00PM), trip state (Cancelled) was not synced to OL. Service Status in IL is CancelledARQ.
-
-### 4. [ ] Saint Mary - trip zone becomes UNKWN on trip expansion
-
-Status: **pending** · Added 2026-08-24 · Updated 2026-09-25
-
-- [ ] Saint Mary trips zone become UNKWN on trip expansion. Issue needs to be fixed.
-
 ### 5. [ ] SilverRide SF Bay area pricing
 
-Status: **in-progress** · Priority: **high** · Added 2026-08-03 · Updated 2026-09-25
+Status: **in-progress** · Priority: **high** · Added 2026-08-03 · Updated 2026-10-20
 
 _Notes:_ Top priority as per Imran sb (Aug 24).
 
@@ -57,7 +39,7 @@ _Notes:_ Top priority as per Imran sb (Aug 24).
 
 ### 6. [ ] Email Matthew about my AI usage and its benefits
 
-Status: **pending** · Added 2026-09-10 · Updated 2026-09-16
+Status: **pending** · Added 2026-09-10 · Updated 2026-10-20
 
 - [ ] Send an email to Matthew explaining how my AI use is going and how I am benefitting from it.
 
