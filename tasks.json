@@ -3,13 +3,13 @@
     "title": "Tasks Assignment",
     "owner": "ihihamst",
     "weekStartsOn": "monday",
-    "lastUpdated": "2026-09-23",
+    "lastUpdated": "2026-10-20",
     "timezone": "Asia/Karachi (PKT, UTC+05:00)"
   },
   "weeks": [
     {
-      "weekStart": "2026-09-21",
-      "weekEnd": "2026-09-27",
+      "weekStart": "2026-10-19",
+      "weekEnd": "2026-10-25",
       "tasks": [
         {
           "id": "send-trip-update-to-device",
@@ -17,7 +17,7 @@
           "heading": "Implement PendingAPICallsAndTripUpdatesUtility",
           "status": "in-progress",
           "addedDate": "2026-08-03",
-          "modifiedDate": "2026-09-16",
+          "modifiedDate": "2026-09-25",
           "completedDate": null,
           "items": [
             {
@@ -127,41 +127,12 @@
           ]
         },
         {
-          "id": "email-matthew-ai-usage",
-          "index": 4,
-          "heading": "Email Matthew about my AI usage and its benefits",
-          "status": "pending",
-          "addedDate": "2026-09-10",
-          "modifiedDate": "2026-09-16",
-          "completedDate": null,
-          "items": [
-            {
-              "text": "Send an email to Matthew explaining how my AI use is going and how I am benefitting from it.",
-              "done": false,
-              "notes": "",
-              "addedDate": "2026-09-10",
-              "modifiedDate": "2026-09-10",
-              "completedDate": null
-            }
-          ]
-        },
-        {
-          "id": "auto-oara-dotnet-core",
-          "index": 5,
-          "heading": "Convert Auto Oara to .net Core Stand Alone Service",
-          "status": "pending",
-          "addedDate": "2026-08-05",
-          "modifiedDate": "2026-09-11",
-          "completedDate": null,
-          "items": []
-        },
-        {
           "id": "saintmary-zone-unknwn-trip-expansion",
-          "index": 6,
+          "index": 4,
           "heading": "Saint Mary - trip zone becomes UNKWN on trip expansion",
           "status": "pending",
           "addedDate": "2026-08-24",
-          "modifiedDate": "2026-09-11",
+          "modifiedDate": "2026-09-25",
           "completedDate": null,
           "items": [
             {
@@ -176,11 +147,11 @@
         },
         {
           "id": "silverride-sf-bay-pricing",
-          "index": 7,
+          "index": 5,
           "heading": "SilverRide SF Bay area pricing",
           "status": "in-progress",
           "addedDate": "2026-08-03",
-          "modifiedDate": "2026-09-11",
+          "modifiedDate": "2026-09-25",
           "completedDate": null,
           "items": [
             {
@@ -210,6 +181,35 @@
           ],
           "priority": "high",
           "notes": "Top priority as per Imran sb (Aug 24)."
+        },
+        {
+          "id": "email-matthew-ai-usage",
+          "index": 6,
+          "heading": "Email Matthew about my AI usage and its benefits",
+          "status": "pending",
+          "addedDate": "2026-09-10",
+          "modifiedDate": "2026-09-16",
+          "completedDate": null,
+          "items": [
+            {
+              "text": "Send an email to Matthew explaining how my AI use is going and how I am benefitting from it.",
+              "done": false,
+              "notes": "",
+              "addedDate": "2026-09-10",
+              "modifiedDate": "2026-09-10",
+              "completedDate": null
+            }
+          ]
+        },
+        {
+          "id": "auto-oara-dotnet-core",
+          "index": 7,
+          "heading": "Convert Auto Oara to .net Core Stand Alone Service",
+          "status": "pending",
+          "addedDate": "2026-08-05",
+          "modifiedDate": "2026-09-11",
+          "completedDate": null,
+          "items": []
         },
         {
           "id": "imb-tk-20-route-not-brokering",
@@ -250,6 +250,38 @@
           ]
         },
         {
+          "id": "server-security-node-upgrades",
+          "index": 10,
+          "heading": "Server Security Issues",
+          "addedDate": "2026-09-23",
+          "modifiedDate": "2026-09-25",
+          "items": [
+            {
+              "text": "Update Node.js and the global packages on the server to the latest version via script. Verify the script.",
+              "done": true,
+              "addedDate": "2026-09-23",
+              "modifiedDate": "2026-09-25",
+              "completedDate": "2026-09-25",
+              "notes": ""
+            },
+            {
+              "text": "Upgrade / pin the Node version in all Node apps, and upgrade the outdated Node libraries to the latest version (e.g. axios).",
+              "done": false,
+              "addedDate": "2026-09-23",
+              "modifiedDate": "2026-09-23",
+              "notes": "",
+              "completedDate": null
+            }
+          ],
+          "completedDate": null
+        }
+      ]
+    },
+    {
+      "weekStart": "2026-09-21",
+      "weekEnd": "2026-09-27",
+      "tasks": [
+        {
           "id": "slack-support-issues",
           "index": 10,
           "heading": "Slack Support Issues",
@@ -281,6 +313,24 @@
               "addedDate": "2026-09-21",
               "modifiedDate": "2026-09-21",
               "completedDate": "2026-09-21"
+            }
+          ]
+        },
+        {
+          "id": "client-de-duplication",
+          "index": 12,
+          "heading": "De-duplication of Clients",
+          "addedDate": "2026-09-23",
+          "modifiedDate": "2026-09-25",
+          "completedDate": "2026-09-25",
+          "items": [
+            {
+              "text": "Made a demo app which de-dups the clients after grouping them by criteria, and allows merging of the fields (excluding the system fields).",
+              "done": true,
+              "addedDate": "2026-09-23",
+              "modifiedDate": "2026-09-25",
+              "completedDate": "2026-09-25",
+              "notes": ""
             }
           ]
         }
