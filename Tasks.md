@@ -141,18 +141,6 @@ _Notes:_ Created by Kevin Rivas on 22 May 2026 (Barwood & Regency). Track: Assig
 - [x] Back up those rows, then delete or deactivate them (check FKs to vehicles and drivers first).
 - [x] Confirm with Kevin, then close the track subtask and ticket.
 
-### 23. [ ] #IMB-TK-9 - IMB: agent notes are not saving
-
-Status: **pending** · Priority: **high** · Added 2026-10-20 · Updated 2026-10-20
-
-Link: [IMB-TK-9](https://track.itcurves.us/?view=ticket_details&ticketId=IMB-TK-9)
-
-_Notes:_ Created by Muhammad Zahid on 1 Apr 2026 (IMB Serv). Track: Assigned, Critical. No start date, due 4/10/2026, no expected date. Ticket: "Unable to save agent notes." No discussion yet.
-
-- [ ] Ask Zahid for the screen, environment and an example trip/client; it has been open ~200 days, so confirm it still happens.
-- [ ] Reproduce and check the save call (API/SP) for errors, field length or permission issues.
-- [ ] Fix, release, verify, and update the ticket.
-
 ### 24. [ ] #IMB-TK-2 - Update logic for Shell User profile creation in assigned tenants
 
 Status: **pending** · Priority: **high** · Added 2026-10-20 · Updated 2026-10-20
@@ -452,6 +440,18 @@ Status: **done** · Added 2026-08-24 · Updated 2026-08-24 · Completed 2026-08-
 
 - [x] Playback code used the Google drawing library, which Google has now retired. Replaced it with another drawing tool library and gave the release.
 - [x] Release provided for Eastern production deployment - existing release backed up first, no DB scripts needed.
+
+### 23. [x] #IMB-TK-9 - IMB: agent notes are not saving
+
+Status: **done** · Priority: **high** · Added 2026-10-20 · Updated 2026-08-28 · Completed 2026-08-28
+
+Link: [IMB-TK-9](https://track.itcurves.us/?view=ticket_details&ticketId=IMB-TK-9)
+
+_Notes:_ Created by Muhammad Zahid on 1 Apr 2026 (IMB Serv). Track: Assigned, Critical. No start date, due 4/10/2026, no expected date. Ticket: "Unable to save agent notes." No discussion yet.
+
+- [x] Ask Zahid for the screen, environment and an example trip/client; it has been open ~200 days, so confirm it still happens.
+- [x] Reproduce and check the save call (API/SP) for errors, field length or permission issues.
+- [x] Fix, release, verify, and update the ticket.
 
 ## Week 2026-08-17 → 2026-08-23
 

@@ -445,44 +445,6 @@
           "completedDate": "2026-10-20"
         },
         {
-          "id": "imb-tk-9-agent-notes-not-saving",
-          "index": 23,
-          "heading": "#IMB-TK-9 - IMB: agent notes are not saving",
-          "priority": "high",
-          "notes": "Created by Muhammad Zahid on 1 Apr 2026 (IMB Serv). Track: Assigned, Critical. No start date, due 4/10/2026, no expected date. Ticket: \"Unable to save agent notes.\" No discussion yet.",
-          "link": "https://track.itcurves.us/?view=ticket_details&ticketId=IMB-TK-9",
-          "linkLabel": "IMB-TK-9",
-          "addedDate": "2026-10-20",
-          "modifiedDate": "2026-10-20",
-          "items": [
-            {
-              "text": "Ask Zahid for the screen, environment and an example trip/client; it has been open ~200 days, so confirm it still happens.",
-              "done": false,
-              "addedDate": "2026-10-20",
-              "modifiedDate": "2026-10-20",
-              "notes": "",
-              "completedDate": null
-            },
-            {
-              "text": "Reproduce and check the save call (API/SP) for errors, field length or permission issues.",
-              "done": false,
-              "addedDate": "2026-10-20",
-              "modifiedDate": "2026-10-20",
-              "notes": "",
-              "completedDate": null
-            },
-            {
-              "text": "Fix, release, verify, and update the ticket.",
-              "done": false,
-              "addedDate": "2026-10-20",
-              "modifiedDate": "2026-10-20",
-              "notes": "",
-              "completedDate": null
-            }
-          ],
-          "completedDate": null
-        },
-        {
           "id": "imb-tk-2-shell-user-profile-logic",
           "index": 24,
           "heading": "#IMB-TK-2 - Update logic for Shell User profile creation in assigned tenants",
@@ -1465,6 +1427,44 @@
               "completedDate": "2026-08-24"
             }
           ]
+        },
+        {
+          "id": "imb-tk-9-agent-notes-not-saving",
+          "index": 23,
+          "heading": "#IMB-TK-9 - IMB: agent notes are not saving",
+          "priority": "high",
+          "notes": "Created by Muhammad Zahid on 1 Apr 2026 (IMB Serv). Track: Assigned, Critical. No start date, due 4/10/2026, no expected date. Ticket: \"Unable to save agent notes.\" No discussion yet.",
+          "link": "https://track.itcurves.us/?view=ticket_details&ticketId=IMB-TK-9",
+          "linkLabel": "IMB-TK-9",
+          "addedDate": "2026-10-20",
+          "modifiedDate": "2026-08-28",
+          "items": [
+            {
+              "text": "Ask Zahid for the screen, environment and an example trip/client; it has been open ~200 days, so confirm it still happens.",
+              "done": true,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-08-28",
+              "notes": "",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "Reproduce and check the save call (API/SP) for errors, field length or permission issues.",
+              "done": true,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-08-28",
+              "notes": "",
+              "completedDate": "2026-08-28"
+            },
+            {
+              "text": "Fix, release, verify, and update the ticket.",
+              "done": true,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-08-28",
+              "notes": "",
+              "completedDate": "2026-08-28"
+            }
+          ],
+          "completedDate": "2026-08-28"
         }
       ]
     },
