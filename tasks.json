@@ -176,6 +176,236 @@
           ]
         },
         {
+          "id": "sdhs-crash-fix-2",
+          "index": 11,
+          "heading": "SDHS crash - second fix",
+          "addedDate": "2026-10-20",
+          "modifiedDate": "2026-10-20",
+          "completedDate": "2026-10-20",
+          "items": [
+            {
+              "text": "SDHS Service release containing the fix for SDHS crashing and the service getting stopped.",
+              "done": true,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "completedDate": "2026-10-20",
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "annapolis-rcz-to-zone-migration",
+          "index": 12,
+          "heading": "Annapolis RCZ to Zone migration - testing and verification",
+          "addedDate": "2026-10-20",
+          "modifiedDate": "2026-10-20",
+          "completedDate": "2026-10-20",
+          "items": [
+            {
+              "text": "Annapolis verification complete. One fix was needed, provided as a DB-Script to be made part of the package.",
+              "done": true,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "completedDate": "2026-10-20",
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "itc-common-data-endpoints",
+          "index": 13,
+          "heading": "ITC Common Data endpoints for third parties (Broker-Provider docs, OAuth, Swagger)",
+          "addedDate": "2026-10-14",
+          "modifiedDate": "2026-10-20",
+          "items": [
+            {
+              "text": "Implement and deploy the Common Data endpoints for third parties on Staging (Broker-Provider documentation, OAuth, Swagger).",
+              "done": true,
+              "addedDate": "2026-10-14",
+              "modifiedDate": "2026-10-14",
+              "completedDate": "2026-10-14",
+              "notes": ""
+            },
+            {
+              "text": "Edits need to be done via ITC entity ID, and this entity ID needs to be sent in the fetch response.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            }
+          ],
+          "completedDate": null
+        },
+        {
+          "id": "annapolis-migration-into-allegany",
+          "index": 14,
+          "heading": "Annapolis migration into Allegany DB via script",
+          "addedDate": "2026-10-20",
+          "modifiedDate": "2026-10-20",
+          "items": [
+            {
+              "text": "Migrate Annapolis into the Allegany DB via script, once Annapolis is on the latest release.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            }
+          ],
+          "completedDate": null
+        },
+        {
+          "id": "tls-check-utility",
+          "index": 15,
+          "heading": "TLS check utility for our APIs and endpoints",
+          "addedDate": "2026-10-20",
+          "modifiedDate": "2026-10-20",
+          "items": [
+            {
+              "text": "Provide a utility which calls our different APIs & endpoints and confirms if TLS works with them.",
+              "done": false,
+              "addedDate": "2026-10-20",
+              "modifiedDate": "2026-10-20",
+              "notes": "",
+              "completedDate": null
+            }
+          ],
+          "completedDate": null
+        }
+      ]
+    },
+    {
+      "weekStart": "2026-10-12",
+      "weekEnd": "2026-10-18",
+      "tasks": [
+        {
+          "id": "broker-unassign-cancel-single-affiliate",
+          "index": 1,
+          "heading": "Broker on UnAssign not sending cancel when only one affiliate is serving",
+          "addedDate": "2026-10-16",
+          "modifiedDate": "2026-10-16",
+          "completedDate": "2026-10-16",
+          "items": [
+            {
+              "text": "BOARA Mode 0: for unassign rows skipped because the trip went back to the same affiliate, queue an ExternalDispatch\\CancelRequest call to the third party through dtl_PendingAPICalls.",
+              "done": true,
+              "addedDate": "2026-10-16",
+              "modifiedDate": "2026-10-16",
+              "completedDate": "2026-10-16",
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "gta-poi-service-hours-fix",
+          "index": 2,
+          "heading": "GTA - POI service hours (cutoff time) fix",
+          "addedDate": "2026-10-16",
+          "modifiedDate": "2026-10-16",
+          "completedDate": "2026-10-16",
+          "items": [
+            {
+              "text": "Mode 5 added in usp_GetNUpdateAffiliateServiceHours to check if POI has its own service hours. GTA Reservation API patch release deployed in Production.",
+              "done": true,
+              "addedDate": "2026-10-16",
+              "modifiedDate": "2026-10-16",
+              "completedDate": "2026-10-16",
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "eastern-avl-to-silverride",
+          "index": 3,
+          "heading": "Eastern AVL to SilverRide",
+          "addedDate": "2026-10-16",
+          "modifiedDate": "2026-10-16",
+          "completedDate": "2026-10-16",
+          "items": [
+            {
+              "text": "Started sending vehicle location updates for the SilverRide affiliates on the Eastern2 server.",
+              "done": true,
+              "addedDate": "2026-10-16",
+              "modifiedDate": "2026-10-16",
+              "completedDate": "2026-10-16",
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "gta-ivr-ai-trip-attributes",
+          "index": 4,
+          "heading": "GTA - IVR-AI trips missing attributes",
+          "addedDate": "2026-10-16",
+          "modifiedDate": "2026-10-16",
+          "completedDate": "2026-10-16",
+          "items": [
+            {
+              "text": "IVR visibility was not set in zone attributes. Set the attribute visibility and fixed the attributes of current and future IVR trips.",
+              "done": true,
+              "addedDate": "2026-10-16",
+              "modifiedDate": "2026-10-16",
+              "completedDate": "2026-10-16",
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "gta-ivr-visibility-code-fix",
+          "index": 5,
+          "heading": "GTA IVR - skip attribute visibility check for bookings from apps without UI",
+          "addedDate": "2026-10-16",
+          "modifiedDate": "2026-10-16",
+          "completedDate": "2026-10-16",
+          "items": [
+            {
+              "text": "Code fix so trip booking from apps which don't have a UI does not check attribute visibility.",
+              "done": true,
+              "addedDate": "2026-10-16",
+              "modifiedDate": "2026-10-16",
+              "completedDate": "2026-10-16",
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "sdhs-crash-auto-recovery",
+          "index": 6,
+          "heading": "SDHS crash / auto-recovery - first fix",
+          "addedDate": "2026-10-16",
+          "modifiedDate": "2026-10-16",
+          "completedDate": "2026-10-16",
+          "items": [
+            {
+              "text": "SDHS service delayed start and recovery if the DB restarts or disconnects for some time. Fix for SDHS going down and throwing exceptions.",
+              "done": true,
+              "addedDate": "2026-10-16",
+              "modifiedDate": "2026-10-16",
+              "completedDate": "2026-10-16",
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "tgi-nd-smart-trips-latlong",
+          "index": 7,
+          "heading": "TGI ND - actual PU/DO lat/longs empty for Smart Trips",
+          "addedDate": "2026-10-16",
+          "modifiedDate": "2026-10-16",
+          "completedDate": "2026-10-16",
+          "items": [
+            {
+              "text": "Smart sent empty values to the affiliate, which caused the affiliate-side updates from the driver to fail. Code fixed; data was also already fixed.",
+              "done": true,
+              "addedDate": "2026-10-16",
+              "modifiedDate": "2026-10-16",
+              "completedDate": "2026-10-16",
+              "notes": ""
+            }
+          ]
+        },
+        {
           "id": "silverride-imb-affiliate-demerge",
           "index": 9,
           "heading": "SilverRide/IMB - migrate a merged affiliate back out as a separate affiliate",
@@ -190,6 +420,66 @@
               "addedDate": "2026-09-15",
               "modifiedDate": "2026-10-16",
               "completedDate": "2026-10-16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "weekStart": "2026-10-05",
+      "weekEnd": "2026-10-11",
+      "tasks": [
+        {
+          "id": "zone-management-assigned-affiliates",
+          "index": 1,
+          "heading": "Zone Management - auto login and show only the user's assigned affiliates; Planning Tool deployed on Eastern",
+          "addedDate": "2026-10-09",
+          "modifiedDate": "2026-10-09",
+          "completedDate": "2026-10-09",
+          "items": [
+            {
+              "text": "Zone Management should auto login and show the user assigned affiliates only. Fixed, released, and deployed on Eastern (provided support).",
+              "done": true,
+              "addedDate": "2026-10-09",
+              "modifiedDate": "2026-10-09",
+              "completedDate": "2026-10-09",
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "cat-common-booking-password-reset",
+          "index": 2,
+          "heading": "CAT - Common Booking password reset fix",
+          "addedDate": "2026-10-09",
+          "modifiedDate": "2026-10-09",
+          "completedDate": "2026-10-09",
+          "items": [
+            {
+              "text": "Common Web Booking release with the fix of Password Reset failing (CAT Password Reset Issue report).",
+              "done": true,
+              "addedDate": "2026-10-09",
+              "modifiedDate": "2026-10-09",
+              "completedDate": "2026-10-09",
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "mars-ringcentral-sms-gateway",
+          "index": 3,
+          "heading": "MARS - Ring Central SMS Gateway",
+          "addedDate": "2026-10-09",
+          "modifiedDate": "2026-10-09",
+          "completedDate": "2026-10-09",
+          "items": [
+            {
+              "text": "Outload API release containing Vijay's Ring Central SMS Gateway implementation provided for production; gateway added and activated.",
+              "done": true,
+              "addedDate": "2026-10-09",
+              "modifiedDate": "2026-10-09",
+              "completedDate": "2026-10-09",
+              "notes": ""
             }
           ]
         },

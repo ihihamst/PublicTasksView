@@ -53,11 +53,108 @@ Status: **pending** · Added 2026-09-11 · Updated 2026-09-11
 
 - [ ] Route not brokering. Upon take back, bTripCanceledInThirdParty was not getting set for the record of the previous affiliate (when certain conditions happen), and due to this the trip was not going to the new affiliate.
 
+### 11. [x] SDHS crash - second fix
+
+Status: **done** · Added 2026-10-20 · Updated 2026-10-20 · Completed 2026-10-20
+
+- [x] SDHS Service release containing the fix for SDHS crashing and the service getting stopped.
+
+### 12. [x] Annapolis RCZ to Zone migration - testing and verification
+
+Status: **done** · Added 2026-10-20 · Updated 2026-10-20 · Completed 2026-10-20
+
+- [x] Annapolis verification complete. One fix was needed, provided as a DB-Script to be made part of the package.
+
+### 13. [ ] ITC Common Data endpoints for third parties (Broker-Provider docs, OAuth, Swagger)
+
+Status: **pending** · Added 2026-10-14 · Updated 2026-10-20
+
+- [x] Implement and deploy the Common Data endpoints for third parties on Staging (Broker-Provider documentation, OAuth, Swagger).
+  - _Completed 2026-10-14_
+- [ ] Edits need to be done via ITC entity ID, and this entity ID needs to be sent in the fetch response.
+  - _Added 2026-10-20_
+
+### 14. [ ] Annapolis migration into Allegany DB via script
+
+Status: **pending** · Added 2026-10-20 · Updated 2026-10-20
+
+- [ ] Migrate Annapolis into the Allegany DB via script, once Annapolis is on the latest release.
+
+### 15. [ ] TLS check utility for our APIs and endpoints
+
+Status: **pending** · Added 2026-10-20 · Updated 2026-10-20
+
+- [ ] Provide a utility which calls our different APIs & endpoints and confirms if TLS works with them.
+
+## Week 2026-10-12 → 2026-10-18
+
+### 1. [x] Broker on UnAssign not sending cancel when only one affiliate is serving
+
+Status: **done** · Added 2026-10-16 · Updated 2026-10-16 · Completed 2026-10-16
+
+- [x] BOARA Mode 0: for unassign rows skipped because the trip went back to the same affiliate, queue an ExternalDispatch\CancelRequest call to the third party through dtl_PendingAPICalls.
+
+### 2. [x] GTA - POI service hours (cutoff time) fix
+
+Status: **done** · Added 2026-10-16 · Updated 2026-10-16 · Completed 2026-10-16
+
+- [x] Mode 5 added in usp_GetNUpdateAffiliateServiceHours to check if POI has its own service hours. GTA Reservation API patch release deployed in Production.
+
+### 3. [x] Eastern AVL to SilverRide
+
+Status: **done** · Added 2026-10-16 · Updated 2026-10-16 · Completed 2026-10-16
+
+- [x] Started sending vehicle location updates for the SilverRide affiliates on the Eastern2 server.
+
+### 4. [x] GTA - IVR-AI trips missing attributes
+
+Status: **done** · Added 2026-10-16 · Updated 2026-10-16 · Completed 2026-10-16
+
+- [x] IVR visibility was not set in zone attributes. Set the attribute visibility and fixed the attributes of current and future IVR trips.
+
+### 5. [x] GTA IVR - skip attribute visibility check for bookings from apps without UI
+
+Status: **done** · Added 2026-10-16 · Updated 2026-10-16 · Completed 2026-10-16
+
+- [x] Code fix so trip booking from apps which don't have a UI does not check attribute visibility.
+
+### 6. [x] SDHS crash / auto-recovery - first fix
+
+Status: **done** · Added 2026-10-16 · Updated 2026-10-16 · Completed 2026-10-16
+
+- [x] SDHS service delayed start and recovery if the DB restarts or disconnects for some time. Fix for SDHS going down and throwing exceptions.
+
+### 7. [x] TGI ND - actual PU/DO lat/longs empty for Smart Trips
+
+Status: **done** · Added 2026-10-16 · Updated 2026-10-16 · Completed 2026-10-16
+
+- [x] Smart sent empty values to the affiliate, which caused the affiliate-side updates from the driver to fail. Code fixed; data was also already fixed.
+
 ### 9. [x] SilverRide/IMB - migrate a merged affiliate back out as a separate affiliate
 
 Status: **done** · Added 2026-09-15 · Updated 2026-10-16 · Completed 2026-10-16
 
 - [x] SilverRide/IMB want one of their merged affiliates to be migrated out as a separate affiliate. Discuss with Hassam and plan.
+
+## Week 2026-10-05 → 2026-10-11
+
+### 1. [x] Zone Management - auto login and show only the user's assigned affiliates; Planning Tool deployed on Eastern
+
+Status: **done** · Added 2026-10-09 · Updated 2026-10-09 · Completed 2026-10-09
+
+- [x] Zone Management should auto login and show the user assigned affiliates only. Fixed, released, and deployed on Eastern (provided support).
+
+### 2. [x] CAT - Common Booking password reset fix
+
+Status: **done** · Added 2026-10-09 · Updated 2026-10-09 · Completed 2026-10-09
+
+- [x] Common Web Booking release with the fix of Password Reset failing (CAT Password Reset Issue report).
+
+### 3. [x] MARS - Ring Central SMS Gateway
+
+Status: **done** · Added 2026-10-09 · Updated 2026-10-09 · Completed 2026-10-09
+
+- [x] Outload API release containing Vijay's Ring Central SMS Gateway implementation provided for production; gateway added and activated.
 
 ### 10. [x] Server Security Issues
 
