@@ -376,8 +376,8 @@
               "text": "Make broker take-back independent of the trip record existing in the main trips table.",
               "done": true,
               "addedDate": "2026-09-15",
-              "modifiedDate": "2026-09-15",
-              "completedDate": "2026-09-15",
+              "modifiedDate": "2026-10-20",
+              "completedDate": "2026-10-20",
               "notes": ""
             },
             {

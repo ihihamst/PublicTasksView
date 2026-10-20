@@ -125,7 +125,7 @@ Link: [IMB-TK-25](https://track.itcurves.us/?view=ticket_details&ticketId=IMB-TK
 _Notes:_ Created by Ihtesham Hussain on 15 Sep 2026 (IMB Serv). Track: Assigned (since 21 Sep), Critical. Start 6/22/2026, due 7/1/2026, no expected date. Ticket: on un-route on the broker side, the system removes the trip entry from the main trips tables, so broker take-back could not happen because broker expected the parent leg. Fix described in ticket: broker take-back made independent of trip record existence in the main trips table.
 
 - [x] Make broker take-back independent of the trip record existing in the main trips table.
-  - _Added 2026-09-15 · Completed 2026-09-15_
+  - _Added 2026-09-15_
 - [x] Confirm the fix is released and deployed on the IMB environments; test unroute then take-back on staging.
 - [x] Move the ticket to Fixed/Resolved with the release reference (still shows Assigned).
 
